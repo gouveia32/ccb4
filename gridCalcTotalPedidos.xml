@@ -1,0 +1,29 @@
+﻿<XtraSerializer version="1.0" application="Appearances">
+  <property name="HeaderPanel" iskey="true" value="HeaderPanel">
+    <property name="Options" isnull="true" iskey="true">
+      <property name="UseFont">true</property>
+    </property>
+    <property name="Font">Tahoma, 9.75pt</property>
+  </property>
+  <property name="EvenRow" iskey="true" value="EvenRow">
+    <property name="Options" isnull="true" iskey="true">
+      <property name="UseFont">true</property>
+    </property>
+  </property>
+  <property name="OddRow" iskey="true" value="OddRow">
+    <property name="Options" isnull="true" iskey="true">
+      <property name="UseFont">true</property>
+    </property>
+    <property name="Font">Tahoma, 7pt</property>
+  </property>
+  <property name="Row" iskey="true" value="Row">
+    <property name="Options" isnull="true" iskey="true">
+      <property name="UseTextOptions">true</property>
+      <property name="UseFont">true</property>
+    </property>
+    <property name="TextOptions" isnull="true" iskey="true">
+      <property name="VAlignment">Center</property>
+    </property>
+    <property name="Font">Tahoma, 7pt</property>
+  </property>
+</XtraSerializer>
