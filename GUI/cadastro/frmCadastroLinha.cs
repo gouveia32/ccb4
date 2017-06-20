@@ -66,6 +66,12 @@ namespace GUI
                 Convert.ToString(modelo.estoque_2);
             txtMinimo.Text = Convert.ToString(modelo.minimo);
             txtPedido.Text = Convert.ToString(modelo.pedido);
+
+            imb_c.BackColor =
+            imb_e.BackColor =
+            imb_b.BackColor =
+            imb_m.BackColor =
+                ceCor.Color; 
         }
 
         private void TelaParaModelo(Linha modelo)
@@ -87,7 +93,7 @@ namespace GUI
             BLLLinha bll = new BLLLinha();
             dgRegistros.DataSource = bll.Filtrar(txtFiltrar.Text);
             if (Posicionar_codigo != "")
-                loc.LocalizarX(gdRegistros, Posicionar_codigo, 0, true);
+                loc.Localizar(gdRegistros, Posicionar_codigo, 0, true);
             if (txtFiltrar.Text == "")
             {
                 fp.sbRegistros.Caption = String.Format("{0} registros", gdRegistros.RowCount);
@@ -103,6 +109,7 @@ namespace GUI
         private void frmCadastroLinha_Load(object sender, EventArgs e)
         {
             scc1.SplitterPosition = 500;
+            deDataInicial.EditValue = DateTime.Now.AddMonths(-12);
             Filtrar();
             gdRegistros.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             gdRegistros.Columns[0].Width = 50;
@@ -111,6 +118,7 @@ namespace GUI
             gdRegistros.Columns[2].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             gdRegistros.Columns[3].Width = 70;
             gdRegistros.Columns[4].Width = 100;
+            tb_Codigo_Linha_g.Focus();
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
@@ -131,38 +139,48 @@ namespace GUI
             if (e.KeyChar == 27) btnX_Click(sender, e);
         }
 
+        private void CarregaLinha (string linha)
+        {
+            if (linha == "") return;
+
+            BLLLinha bll = new BLLLinha();
+            Linha modelo = bll.CarregaModeloLinha(linha);
+            ModeloParaTela(modelo);
+            //alterabotoes(1);
+
+            //Carrega Historico
+            BLLLinhaHistorico bllLH = new BLLLinhaHistorico();
+            dgLog.DataSource = bllLH.Filtrar("", string.Format("linha_id={0} AND data >= '{1:yyyy-MM-dd}'",
+                    linha,
+                    deDataInicial.EditValue));
+
+            chartLinhaHistorico.DataSource = dgLog.DataSource;
+            //ccHistorico.Series[0].DataSource = dgLog.DataSource;
+            chartLinhaHistorico.Series[0].ArgumentDataMember = "mes";
+            chartLinhaHistorico.Series[0].ValueDataMembers[0] = "compra";
+
+            chartLinhaHistorico.Series[1].ArgumentDataMember = "mes";
+            chartLinhaHistorico.Series[1].ValueDataMembers[0] = "uso";
+
+        }
+
         private void gdRegistros_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (e.FocusedRowHandle >= 0)
             {
-                BLLLinha bll = new BLLLinha();
-                Linha modelo = bll.CarregaModeloLinha(Convert.ToString(gdRegistros.GetDataRow(e.FocusedRowHandle).ItemArray[0]));
-                ModeloParaTela(modelo);
-                //alterabotoes(1);
-
-                //Carrega Historico
-                BLLLinhaHistorico bllLH = new BLLLinhaHistorico();
-                dgLog.DataSource = bllLH.Filtrar("","linha_id=" + Convert.ToInt32(gdRegistros.GetDataRow(e.FocusedRowHandle).ItemArray[0]));
-
-                chartLinhaHistorico.DataSource = dgLog.DataSource;
-                //ccHistorico.Series[0].DataSource = dgLog.DataSource;
-                chartLinhaHistorico.Series[0].ArgumentDataMember = "mes";
-                chartLinhaHistorico.Series[0].ValueDataMembers[0] = "compra";
-
-                chartLinhaHistorico.Series[1].ArgumentDataMember = "mes";
-                chartLinhaHistorico.Series[1].ValueDataMembers[0] = "uso";
+                CarregaLinha(Convert.ToString(gdRegistros.GetDataRow(e.FocusedRowHandle).ItemArray[0]));
             }
         }
 
         private void btnLocalizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            loc.LocalizarX(gdRegistros, Convert.ToString(txtLocalizar.EditValue), 0, true);
+            loc.Localizar(gdRegistros, Convert.ToString(txtLocalizar.EditValue), 0, true);
         }
 
         private void repositoryItemTextEdit1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                loc.LocalizarX(gdRegistros, (sender as TextEdit).Text, 0, true);
+                loc.Localizar(gdRegistros, (sender as TextEdit).Text, 0, true);
         }
 
         private void gdRegistros_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
@@ -240,7 +258,7 @@ namespace GUI
                 //txtLocalizar.Focus();
                 return;
             }
-            loc.LocalizarX(gdRegistros, txtProcurar, gdRegistros.FocusedRowHandle + 1, true);
+            loc.Localizar(gdRegistros, txtProcurar, gdRegistros.FocusedRowHandle + 1, true);
         }
 
         private void btnAnterior_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -252,7 +270,7 @@ namespace GUI
                 //txtLocalizar.Focus();
                 return;
             }
-            loc.LocalizarX(gdRegistros, txtProcurar, gdRegistros.FocusedRowHandle - 1, false);
+            loc.Localizar(gdRegistros, txtProcurar, gdRegistros.FocusedRowHandle - 1, false);
         }
 
         private void tbEst1_Quantidade_e_TextChanged(object sender, EventArgs e)
@@ -279,7 +297,7 @@ namespace GUI
         {
             if (e.KeyChar == 13)
             {
-                loc.LocalizarX(gdRegistros, Convert.ToString(txtCodigo.Text), 0, true);
+                loc.Localizar(gdRegistros, Convert.ToString(txtCodigo.Text), 0, true);
             }
         }
 
@@ -287,7 +305,7 @@ namespace GUI
         {
             if (e.KeyChar == 13)
             {
-                loc.LocalizarX(gdRegistros, Convert.ToString(tb_Codigo_Linha_e.Text), 0, true);
+                loc.Localizar(gdRegistros, Convert.ToString(tb_Codigo_Linha_e.Text), 0, true);
             }
         }
 
@@ -295,7 +313,7 @@ namespace GUI
         {
             if (e.KeyChar == 13)
             {
-                loc.LocalizarX(gdRegistros, Convert.ToString(tb_Codigo_Linha_b.Text), 0, true);
+                loc.Localizar(gdRegistros, Convert.ToString(tb_Codigo_Linha_b.Text), 0, true);
             }
         }
 
@@ -303,7 +321,7 @@ namespace GUI
         {
             if (e.KeyChar == 13)
             {
-                loc.LocalizarX(gdRegistros, Convert.ToString(tb_Codigo_Linha_m.Text), 0, true);
+                loc.Localizar(gdRegistros, Convert.ToString(tb_Codigo_Linha_m.Text), 0, true);
             }
         }
 
@@ -311,10 +329,18 @@ namespace GUI
         {
             if (e.KeyChar == 13)
             {
-                loc.LocalizarX(gdRegistros, Convert.ToString(tb_Codigo_Linha_g.Text), 0, true);
+                loc.Localizar(gdRegistros, Convert.ToString(tb_Codigo_Linha_g.Text), 0, true);
                 tb_Codigo_Linha_g.Focus();
                 tb_Codigo_Linha_g.SelectAll(); 
             }
+        }
+
+        private void deDataInicial_EditValueChanged(object sender, EventArgs e)
+        {
+            CarregaLinha(tb_Codigo_Linha_g.Text);
+            //loc.Localizar(gdRegistros, Convert.ToString(tb_Codigo_Linha_g.Text), 0, true);
+            tb_Codigo_Linha_g.Focus();
+            tb_Codigo_Linha_g.SelectAll();
         }
     }
 }

@@ -101,6 +101,7 @@ namespace GUI
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.btnPreferencias = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCalculaTotalPedido = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection();
             this.rbpProc = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpgAtendimento = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -110,6 +111,7 @@ namespace GUI
             this.rbpUtilitario = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpgAparencia = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpgConfiguracao = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbpgUtiliario = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.pmMain = new DevExpress.XtraBars.PopupMenu();
@@ -121,8 +123,6 @@ namespace GUI
             this.pmAppMain = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
-            this.btnCalculaTotalPedido = new DevExpress.XtraBars.BarButtonItem();
-            this.rbpgUtiliario = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riicStyle)).BeginInit();
@@ -839,7 +839,7 @@ namespace GUI
             // 
             // btnFornecedor
             // 
-            this.btnFornecedor.Caption = "Agenda Pedido";
+            this.btnFornecedor.Caption = "Fornecedo";
             this.btnFornecedor.Glyph = ((System.Drawing.Image)(resources.GetObject("btnFornecedor.Glyph")));
             this.btnFornecedor.Id = 420;
             this.btnFornecedor.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnFornecedor.LargeGlyph")));
@@ -945,6 +945,15 @@ namespace GUI
             this.btnPreferencias.Name = "btnPreferencias";
             this.btnPreferencias.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPreferencias_ItemClick);
             // 
+            // btnCalculaTotalPedido
+            // 
+            this.btnCalculaTotalPedido.Caption = "Calcula Total de Pedidos";
+            this.btnCalculaTotalPedido.Glyph = ((System.Drawing.Image)(resources.GetObject("btnCalculaTotalPedido.Glyph")));
+            this.btnCalculaTotalPedido.Id = 437;
+            this.btnCalculaTotalPedido.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnCalculaTotalPedido.LargeGlyph")));
+            this.btnCalculaTotalPedido.Name = "btnCalculaTotalPedido";
+            this.btnCalculaTotalPedido.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCalculaTotalPedido_ItemClick);
+            // 
             // imageCollection1
             // 
             this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
@@ -1014,6 +1023,12 @@ namespace GUI
             this.rbpgConfiguracao.ItemLinks.Add(this.btnPreferencias);
             this.rbpgConfiguracao.Name = "rbpgConfiguracao";
             this.rbpgConfiguracao.Text = "Configuração";
+            // 
+            // rbpgUtiliario
+            // 
+            this.rbpgUtiliario.ItemLinks.Add(this.btnCalculaTotalPedido);
+            this.rbpgUtiliario.Name = "rbpgUtiliario";
+            this.rbpgUtiliario.Text = "Utilitários";
             // 
             // repositoryItemComboBox1
             // 
@@ -1096,21 +1111,6 @@ namespace GUI
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // btnCalculaTotalPedido
-            // 
-            this.btnCalculaTotalPedido.Caption = "Calcula Total de Pedidos";
-            this.btnCalculaTotalPedido.Glyph = ((System.Drawing.Image)(resources.GetObject("btnCalculaTotalPedido.Glyph")));
-            this.btnCalculaTotalPedido.Id = 437;
-            this.btnCalculaTotalPedido.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnCalculaTotalPedido.LargeGlyph")));
-            this.btnCalculaTotalPedido.Name = "btnCalculaTotalPedido";
-            this.btnCalculaTotalPedido.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCalculaTotalPedido_ItemClick);
-            // 
-            // rbpgUtiliario
-            // 
-            this.rbpgUtiliario.ItemLinks.Add(this.btnCalculaTotalPedido);
-            this.rbpgUtiliario.Name = "rbpgUtiliario";
-            this.rbpgUtiliario.Text = "Utilitários";
             // 
             // frmPrincipal
             // 

@@ -102,7 +102,8 @@ namespace DAL
         private Linha BancoParaModelo(MySqlDataReader registro)
         {
             Linha modelo = new Linha();
-
+            if (!registro.HasRows)
+                return modelo;
             modelo.codigo = Convert.ToString(registro["codigo"]);
             modelo.nome = Convert.ToString(registro["nome"]);
             modelo.material_nome = Convert.ToString(registro["material_nome"]);

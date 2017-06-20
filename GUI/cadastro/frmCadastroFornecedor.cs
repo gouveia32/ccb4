@@ -85,7 +85,7 @@ namespace GUI
             dgRegistros.DataSource = bll.Filtrar(txtFiltrar.Text);
             dgRegistros.DataSource = bll.Filtrar(txtFiltrar.Text);
             if (Posicionar_id > 0)
-                loc.LocalizarX(gdRegistros, Posicionar_id.ToString(), 0, true);
+                loc.Localizar(gdRegistros, Posicionar_id.ToString(), 0, true);
             if (txtFiltrar.Text == "")
             {
                 fp.sbRegistros.Caption = String.Format("{0} registros", gdRegistros.RowCount);
@@ -205,7 +205,7 @@ namespace GUI
 
         private void btnLocalizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            loc.LocalizarX(gdRegistros, Convert.ToString(txtLocalizar.EditValue), 0, true);
+            loc.Localizar(gdRegistros, Convert.ToString(txtLocalizar.EditValue), 0, true);
          }
 
         private void btnAnterior_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -217,7 +217,7 @@ namespace GUI
                 //txtLocalizar.Focus();
                 return;
             }
-            loc.LocalizarX(gdRegistros, txtProcurar, gdRegistros.FocusedRowHandle - 1, false);
+            loc.Localizar(gdRegistros, txtProcurar, gdRegistros.FocusedRowHandle - 1, false);
         }
 
         private void btnProxima_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -229,7 +229,7 @@ namespace GUI
                 //txtLocalizar.Focus();
                 return;
             }
-            loc.LocalizarX(gdRegistros, txtProcurar, gdRegistros.FocusedRowHandle + 1, true);
+            loc.Localizar(gdRegistros, txtProcurar, gdRegistros.FocusedRowHandle + 1, true);
         }
 
         private void txtFiltrar_KeyPress(object sender, KeyPressEventArgs e)
@@ -260,7 +260,7 @@ namespace GUI
         private void repositoryItemTextEdit1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                loc.LocalizarX(gdRegistros, (sender as TextEdit).Text, 0, true);
+                loc.Localizar(gdRegistros, (sender as TextEdit).Text, 0, true);
         }
 
         private void btnAtualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

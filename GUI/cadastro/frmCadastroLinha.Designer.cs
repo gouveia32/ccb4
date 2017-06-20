@@ -122,13 +122,19 @@
             this.txtFiltrar = new DevExpress.XtraEditors.TextEdit();
             this.tb_Linha = new DevExpress.XtraTab.XtraTabControl();
             this.xtbpCadastro = new DevExpress.XtraTab.XtraTabPage();
+            this.imb_c = new DevExpress.XtraEditors.ImageListBoxControl();
             this.xtbpEntrada = new DevExpress.XtraTab.XtraTabPage();
+            this.imb_e = new DevExpress.XtraEditors.ImageListBoxControl();
             this.xtbpBaixa = new DevExpress.XtraTab.XtraTabPage();
+            this.imb_b = new DevExpress.XtraEditors.ImageListBoxControl();
             this.label46 = new System.Windows.Forms.Label();
             this.dtpData_Execucao = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.btnExecutarItem = new DevComponents.DotNetBar.ButtonX();
             this.xtbpMovimento = new DevExpress.XtraTab.XtraTabPage();
+            this.imb_m = new DevExpress.XtraEditors.ImageListBoxControl();
             this.xtbpGrafico = new DevExpress.XtraTab.XtraTabPage();
+            this.deDataInicial = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.tb_Codigo_Linha_g = new System.Windows.Forms.TextBox();
             this.chartLinhaHistorico = new DevExpress.XtraCharts.ChartControl();
@@ -166,11 +172,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.tb_Linha)).BeginInit();
             this.tb_Linha.SuspendLayout();
             this.xtbpCadastro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imb_c)).BeginInit();
             this.xtbpEntrada.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imb_e)).BeginInit();
             this.xtbpBaixa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imb_b)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpData_Execucao)).BeginInit();
             this.xtbpMovimento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imb_m)).BeginInit();
             this.xtbpGrafico.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deDataInicial.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deDataInicial.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartLinhaHistorico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
@@ -255,7 +267,7 @@
             // ceCor
             // 
             this.ceCor.EditValue = System.Drawing.Color.Empty;
-            this.ceCor.Location = new System.Drawing.Point(305, 23);
+            this.ceCor.Location = new System.Drawing.Point(324, 24);
             this.ceCor.Name = "ceCor";
             this.ceCor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -264,7 +276,7 @@
             // 
             // txtEstoque_2
             // 
-            this.txtEstoque_2.Location = new System.Drawing.Point(364, 198);
+            this.txtEstoque_2.Location = new System.Drawing.Point(383, 199);
             this.txtEstoque_2.Name = "txtEstoque_2";
             this.txtEstoque_2.Size = new System.Drawing.Size(64, 21);
             this.txtEstoque_2.TabIndex = 20;
@@ -272,7 +284,7 @@
             // 
             // txtEstoque_1
             // 
-            this.txtEstoque_1.Location = new System.Drawing.Point(78, 198);
+            this.txtEstoque_1.Location = new System.Drawing.Point(97, 199);
             this.txtEstoque_1.Name = "txtEstoque_1";
             this.txtEstoque_1.Size = new System.Drawing.Size(64, 21);
             this.txtEstoque_1.TabIndex = 14;
@@ -282,7 +294,7 @@
             // 
             this.LinhaIdLabel.AutoSize = true;
             this.LinhaIdLabel.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.LinhaIdLabel.Location = new System.Drawing.Point(25, 28);
+            this.LinhaIdLabel.Location = new System.Drawing.Point(44, 29);
             this.LinhaIdLabel.Name = "LinhaIdLabel";
             this.LinhaIdLabel.Size = new System.Drawing.Size(44, 13);
             this.LinhaIdLabel.TabIndex = 23;
@@ -291,7 +303,7 @@
             // 
             // txtMinimo
             // 
-            this.txtMinimo.Location = new System.Drawing.Point(78, 238);
+            this.txtMinimo.Location = new System.Drawing.Point(97, 239);
             this.txtMinimo.Name = "txtMinimo";
             this.txtMinimo.Size = new System.Drawing.Size(64, 21);
             this.txtMinimo.TabIndex = 16;
@@ -299,7 +311,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(75, 62);
+            this.txtNome.Location = new System.Drawing.Point(94, 63);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(350, 21);
             this.txtNome.TabIndex = 26;
@@ -308,7 +320,7 @@
             // 
             this.Label4.AutoSize = true;
             this.Label4.BackColor = System.Drawing.Color.Transparent;
-            this.Label4.Location = new System.Drawing.Point(303, 202);
+            this.Label4.Location = new System.Drawing.Point(322, 203);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(55, 13);
             this.Label4.TabIndex = 19;
@@ -318,7 +330,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label2.Location = new System.Drawing.Point(44, 65);
+            this.label2.Location = new System.Drawing.Point(63, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 25;
@@ -328,7 +340,7 @@
             // 
             this.PedidoLabel.AutoSize = true;
             this.PedidoLabel.BackColor = System.Drawing.Color.Transparent;
-            this.PedidoLabel.Location = new System.Drawing.Point(316, 236);
+            this.PedidoLabel.Location = new System.Drawing.Point(335, 237);
             this.PedidoLabel.Name = "PedidoLabel";
             this.PedidoLabel.Size = new System.Drawing.Size(43, 13);
             this.PedidoLabel.TabIndex = 17;
@@ -338,7 +350,7 @@
             // 
             this.EstoqueQuantidadeLabel.AutoSize = true;
             this.EstoqueQuantidadeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.EstoqueQuantidadeLabel.Location = new System.Drawing.Point(17, 202);
+            this.EstoqueQuantidadeLabel.Location = new System.Drawing.Point(36, 203);
             this.EstoqueQuantidadeLabel.Name = "EstoqueQuantidadeLabel";
             this.EstoqueQuantidadeLabel.Size = new System.Drawing.Size(55, 13);
             this.EstoqueQuantidadeLabel.TabIndex = 13;
@@ -347,7 +359,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(75, 15);
+            this.txtCodigo.Location = new System.Drawing.Point(94, 16);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(70, 30);
             this.txtCodigo.TabIndex = 24;
@@ -357,7 +369,7 @@
             // 
             this.EstoqueMinimoLabel.AutoSize = true;
             this.EstoqueMinimoLabel.BackColor = System.Drawing.Color.Transparent;
-            this.EstoqueMinimoLabel.Location = new System.Drawing.Point(27, 241);
+            this.EstoqueMinimoLabel.Location = new System.Drawing.Point(46, 242);
             this.EstoqueMinimoLabel.Name = "EstoqueMinimoLabel";
             this.EstoqueMinimoLabel.Size = new System.Drawing.Size(43, 13);
             this.EstoqueMinimoLabel.TabIndex = 15;
@@ -365,7 +377,7 @@
             // 
             // txtPedido
             // 
-            this.txtPedido.Location = new System.Drawing.Point(364, 233);
+            this.txtPedido.Location = new System.Drawing.Point(383, 234);
             this.txtPedido.Name = "txtPedido";
             this.txtPedido.Size = new System.Drawing.Size(63, 21);
             this.txtPedido.TabIndex = 18;
@@ -373,14 +385,14 @@
             // 
             // txtMaterial_Nome
             // 
-            this.txtMaterial_Nome.Location = new System.Drawing.Point(78, 107);
+            this.txtMaterial_Nome.Location = new System.Drawing.Point(97, 108);
             this.txtMaterial_Nome.Name = "txtMaterial_Nome";
             this.txtMaterial_Nome.Size = new System.Drawing.Size(350, 21);
             this.txtMaterial_Nome.TabIndex = 29;
             // 
             // txtMaterial_Tipo
             // 
-            this.txtMaterial_Tipo.Location = new System.Drawing.Point(78, 159);
+            this.txtMaterial_Tipo.Location = new System.Drawing.Point(97, 160);
             this.txtMaterial_Tipo.Name = "txtMaterial_Tipo";
             this.txtMaterial_Tipo.Size = new System.Drawing.Size(350, 21);
             this.txtMaterial_Tipo.TabIndex = 33;
@@ -389,7 +401,7 @@
             // 
             this.MaterialNomeLabel.AutoSize = true;
             this.MaterialNomeLabel.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.MaterialNomeLabel.Location = new System.Drawing.Point(25, 110);
+            this.MaterialNomeLabel.Location = new System.Drawing.Point(44, 111);
             this.MaterialNomeLabel.Name = "MaterialNomeLabel";
             this.MaterialNomeLabel.Size = new System.Drawing.Size(49, 13);
             this.MaterialNomeLabel.TabIndex = 28;
@@ -399,7 +411,7 @@
             // 
             this.MaterialTipoLabel.AutoSize = true;
             this.MaterialTipoLabel.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.MaterialTipoLabel.Location = new System.Drawing.Point(41, 162);
+            this.MaterialTipoLabel.Location = new System.Drawing.Point(60, 163);
             this.MaterialTipoLabel.Name = "MaterialTipoLabel";
             this.MaterialTipoLabel.Size = new System.Drawing.Size(31, 13);
             this.MaterialTipoLabel.TabIndex = 32;
@@ -409,7 +421,7 @@
             // 
             this.MaterialFabricanteLabel.AutoSize = true;
             this.MaterialFabricanteLabel.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.MaterialFabricanteLabel.Location = new System.Drawing.Point(13, 136);
+            this.MaterialFabricanteLabel.Location = new System.Drawing.Point(32, 137);
             this.MaterialFabricanteLabel.Name = "MaterialFabricanteLabel";
             this.MaterialFabricanteLabel.Size = new System.Drawing.Size(62, 13);
             this.MaterialFabricanteLabel.TabIndex = 30;
@@ -417,7 +429,7 @@
             // 
             // txtMaterial_Fabricante
             // 
-            this.txtMaterial_Fabricante.Location = new System.Drawing.Point(78, 133);
+            this.txtMaterial_Fabricante.Location = new System.Drawing.Point(97, 134);
             this.txtMaterial_Fabricante.Name = "txtMaterial_Fabricante";
             this.txtMaterial_Fabricante.Size = new System.Drawing.Size(350, 21);
             this.txtMaterial_Fabricante.TabIndex = 31;
@@ -429,9 +441,9 @@
             this.gpEstoque2m.Controls.Add(this.tbEst2_Atual_m);
             this.gpEstoque2m.Controls.Add(this.Label29);
             this.gpEstoque2m.DisabledBackColor = System.Drawing.Color.Empty;
-            this.gpEstoque2m.Location = new System.Drawing.Point(238, 67);
+            this.gpEstoque2m.Location = new System.Drawing.Point(260, 67);
             this.gpEstoque2m.Name = "gpEstoque2m";
-            this.gpEstoque2m.Size = new System.Drawing.Size(148, 137);
+            this.gpEstoque2m.Size = new System.Drawing.Size(148, 181);
             // 
             // 
             // 
@@ -487,7 +499,7 @@
             // 
             this.btnMov2p1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnMov2p1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnMov2p1.Location = new System.Drawing.Point(173, 173);
+            this.btnMov2p1.Location = new System.Drawing.Point(195, 173);
             this.btnMov2p1.Name = "btnMov2p1";
             this.btnMov2p1.Size = new System.Drawing.Size(59, 31);
             this.btnMov2p1.TabIndex = 36;
@@ -496,7 +508,7 @@
             // 
             this.btnMov1p2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnMov1p2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnMov1p2.Location = new System.Drawing.Point(173, 134);
+            this.btnMov1p2.Location = new System.Drawing.Point(195, 134);
             this.btnMov1p2.Name = "btnMov1p2";
             this.btnMov1p2.Size = new System.Drawing.Size(59, 31);
             this.btnMov1p2.TabIndex = 22;
@@ -513,7 +525,7 @@
             // 
             this.Label35.AutoSize = true;
             this.Label35.BackColor = System.Drawing.Color.Transparent;
-            this.Label35.Location = new System.Drawing.Point(173, 79);
+            this.Label35.Location = new System.Drawing.Point(195, 79);
             this.Label35.Name = "Label35";
             this.Label35.Size = new System.Drawing.Size(63, 13);
             this.Label35.TabIndex = 17;
@@ -521,9 +533,9 @@
             // 
             // tbQuantidade_m
             // 
-            this.tbQuantidade_m.Location = new System.Drawing.Point(173, 95);
+            this.tbQuantidade_m.Location = new System.Drawing.Point(195, 95);
             this.tbQuantidade_m.Name = "tbQuantidade_m";
-            this.tbQuantidade_m.Size = new System.Drawing.Size(64, 21);
+            this.tbQuantidade_m.Size = new System.Drawing.Size(59, 21);
             this.tbQuantidade_m.TabIndex = 0;
             this.tbQuantidade_m.Text = "1";
             this.tbQuantidade_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -531,7 +543,7 @@
             // tb_Codigo_Linha_m
             // 
             this.tb_Codigo_Linha_m.Font = new System.Drawing.Font("Tahoma", 13.8F);
-            this.tb_Codigo_Linha_m.Location = new System.Drawing.Point(106, 12);
+            this.tb_Codigo_Linha_m.Location = new System.Drawing.Point(128, 12);
             this.tb_Codigo_Linha_m.Name = "tb_Codigo_Linha_m";
             this.tb_Codigo_Linha_m.Size = new System.Drawing.Size(57, 30);
             this.tb_Codigo_Linha_m.TabIndex = 33;
@@ -542,7 +554,7 @@
             // 
             this.Label28.AutoSize = true;
             this.Label28.BackColor = System.Drawing.Color.Transparent;
-            this.Label28.Location = new System.Drawing.Point(23, 22);
+            this.Label28.Location = new System.Drawing.Point(45, 22);
             this.Label28.Name = "Label28";
             this.Label28.Size = new System.Drawing.Size(83, 13);
             this.Label28.TabIndex = 34;
@@ -555,9 +567,9 @@
             this.gpEstoque1m.Controls.Add(this.tbEst1_Atual_m);
             this.gpEstoque1m.Controls.Add(this.Label36);
             this.gpEstoque1m.DisabledBackColor = System.Drawing.Color.Empty;
-            this.gpEstoque1m.Location = new System.Drawing.Point(19, 65);
+            this.gpEstoque1m.Location = new System.Drawing.Point(41, 65);
             this.gpEstoque1m.Name = "gpEstoque1m";
-            this.gpEstoque1m.Size = new System.Drawing.Size(148, 137);
+            this.gpEstoque1m.Size = new System.Drawing.Size(148, 183);
             // 
             // 
             // 
@@ -611,16 +623,16 @@
             // 
             // tbNomeCor_b
             // 
-            this.tbNomeCor_b.Location = new System.Drawing.Point(211, 26);
+            this.tbNomeCor_b.Location = new System.Drawing.Point(200, 25);
             this.tbNomeCor_b.Name = "tbNomeCor_b";
             this.tbNomeCor_b.ReadOnly = true;
-            this.tbNomeCor_b.Size = new System.Drawing.Size(180, 21);
+            this.tbNomeCor_b.Size = new System.Drawing.Size(196, 21);
             this.tbNomeCor_b.TabIndex = 30;
             // 
             // tb_Codigo_Linha_b
             // 
             this.tb_Codigo_Linha_b.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Codigo_Linha_b.Location = new System.Drawing.Point(117, 18);
+            this.tb_Codigo_Linha_b.Location = new System.Drawing.Point(123, 18);
             this.tb_Codigo_Linha_b.Name = "tb_Codigo_Linha_b";
             this.tb_Codigo_Linha_b.Size = new System.Drawing.Size(71, 30);
             this.tb_Codigo_Linha_b.TabIndex = 28;
@@ -631,7 +643,7 @@
             // 
             this.Label27.AutoSize = true;
             this.Label27.BackColor = System.Drawing.Color.Transparent;
-            this.Label27.Location = new System.Drawing.Point(27, 21);
+            this.Label27.Location = new System.Drawing.Point(34, 25);
             this.Label27.Name = "Label27";
             this.Label27.Size = new System.Drawing.Size(83, 13);
             this.Label27.TabIndex = 29;
@@ -651,7 +663,7 @@
             this.gpEstoque2b.Controls.Add(this.Label20);
             this.gpEstoque2b.Controls.Add(this.Label21);
             this.gpEstoque2b.DisabledBackColor = System.Drawing.Color.Empty;
-            this.gpEstoque2b.Location = new System.Drawing.Point(211, 67);
+            this.gpEstoque2b.Location = new System.Drawing.Point(217, 67);
             this.gpEstoque2b.Name = "gpEstoque2b";
             this.gpEstoque2b.Size = new System.Drawing.Size(179, 191);
             // 
@@ -790,7 +802,7 @@
             this.gpEstoque1b.Controls.Add(this.Label25);
             this.gpEstoque1b.Controls.Add(this.Label26);
             this.gpEstoque1b.DisabledBackColor = System.Drawing.Color.Empty;
-            this.gpEstoque1b.Location = new System.Drawing.Point(26, 65);
+            this.gpEstoque1b.Location = new System.Drawing.Point(32, 65);
             this.gpEstoque1b.Name = "gpEstoque1b";
             this.gpEstoque1b.Size = new System.Drawing.Size(179, 193);
             // 
@@ -917,16 +929,16 @@
             // 
             // tbNomeCor_e
             // 
-            this.tbNomeCor_e.Location = new System.Drawing.Point(207, 24);
+            this.tbNomeCor_e.Location = new System.Drawing.Point(203, 21);
             this.tbNomeCor_e.Name = "tbNomeCor_e";
             this.tbNomeCor_e.ReadOnly = true;
-            this.tbNomeCor_e.Size = new System.Drawing.Size(181, 21);
+            this.tbNomeCor_e.Size = new System.Drawing.Size(193, 21);
             this.tbNomeCor_e.TabIndex = 27;
             // 
             // tb_Codigo_Linha_e
             // 
             this.tb_Codigo_Linha_e.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Codigo_Linha_e.Location = new System.Drawing.Point(114, 16);
+            this.tb_Codigo_Linha_e.Location = new System.Drawing.Point(123, 11);
             this.tb_Codigo_Linha_e.Name = "tb_Codigo_Linha_e";
             this.tb_Codigo_Linha_e.Size = new System.Drawing.Size(74, 30);
             this.tb_Codigo_Linha_e.TabIndex = 19;
@@ -937,7 +949,7 @@
             // 
             this.Label16.AutoSize = true;
             this.Label16.BackColor = System.Drawing.Color.Transparent;
-            this.Label16.Location = new System.Drawing.Point(24, 19);
+            this.Label16.Location = new System.Drawing.Point(34, 21);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(83, 13);
             this.Label16.TabIndex = 20;
@@ -957,7 +969,7 @@
             this.gpEstoque2e.Controls.Add(this.Label14);
             this.gpEstoque2e.Controls.Add(this.Label15);
             this.gpEstoque2e.DisabledBackColor = System.Drawing.Color.Empty;
-            this.gpEstoque2e.Location = new System.Drawing.Point(208, 60);
+            this.gpEstoque2e.Location = new System.Drawing.Point(217, 58);
             this.gpEstoque2e.Name = "gpEstoque2e";
             this.gpEstoque2e.Size = new System.Drawing.Size(179, 191);
             // 
@@ -1097,7 +1109,7 @@
             this.gpEstoque1e.Controls.Add(this.label10);
             this.gpEstoque1e.Controls.Add(this.label30);
             this.gpEstoque1e.DisabledBackColor = System.Drawing.Color.Empty;
-            this.gpEstoque1e.Location = new System.Drawing.Point(23, 58);
+            this.gpEstoque1e.Location = new System.Drawing.Point(32, 56);
             this.gpEstoque1e.Name = "gpEstoque1e";
             this.gpEstoque1e.Size = new System.Drawing.Size(179, 193);
             // 
@@ -1276,6 +1288,7 @@
             // 
             // xtbpCadastro
             // 
+            this.xtbpCadastro.Controls.Add(this.imb_c);
             this.xtbpCadastro.Controls.Add(this.txtEstoque_2);
             this.xtbpCadastro.Controls.Add(this.ceCor);
             this.xtbpCadastro.Controls.Add(this.txtEstoque_1);
@@ -1299,8 +1312,17 @@
             this.xtbpCadastro.Size = new System.Drawing.Size(704, 306);
             this.xtbpCadastro.Text = "Cadastro";
             // 
+            // imb_c
+            // 
+            this.imb_c.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imb_c.Location = new System.Drawing.Point(0, 0);
+            this.imb_c.Name = "imb_c";
+            this.imb_c.Size = new System.Drawing.Size(26, 306);
+            this.imb_c.TabIndex = 42;
+            // 
             // xtbpEntrada
             // 
+            this.xtbpEntrada.Controls.Add(this.imb_e);
             this.xtbpEntrada.Controls.Add(this.tbNomeCor_e);
             this.xtbpEntrada.Controls.Add(this.tb_Codigo_Linha_e);
             this.xtbpEntrada.Controls.Add(this.gpEstoque1e);
@@ -1310,8 +1332,17 @@
             this.xtbpEntrada.Size = new System.Drawing.Size(704, 306);
             this.xtbpEntrada.Text = "Entrada";
             // 
+            // imb_e
+            // 
+            this.imb_e.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imb_e.Location = new System.Drawing.Point(0, 0);
+            this.imb_e.Name = "imb_e";
+            this.imb_e.Size = new System.Drawing.Size(26, 306);
+            this.imb_e.TabIndex = 29;
+            // 
             // xtbpBaixa
             // 
+            this.xtbpBaixa.Controls.Add(this.imb_b);
             this.xtbpBaixa.Controls.Add(this.tbNomeCor_b);
             this.xtbpBaixa.Controls.Add(this.tb_Codigo_Linha_b);
             this.xtbpBaixa.Controls.Add(this.label46);
@@ -1323,6 +1354,14 @@
             this.xtbpBaixa.Name = "xtbpBaixa";
             this.xtbpBaixa.Size = new System.Drawing.Size(704, 306);
             this.xtbpBaixa.Text = "Baixa";
+            // 
+            // imb_b
+            // 
+            this.imb_b.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imb_b.Location = new System.Drawing.Point(0, 0);
+            this.imb_b.Name = "imb_b";
+            this.imb_b.Size = new System.Drawing.Size(26, 306);
+            this.imb_b.TabIndex = 102;
             // 
             // label46
             // 
@@ -1389,6 +1428,7 @@
             // 
             // xtbpMovimento
             // 
+            this.xtbpMovimento.Controls.Add(this.imb_m);
             this.xtbpMovimento.Controls.Add(this.btnMov2p1);
             this.xtbpMovimento.Controls.Add(this.gpEstoque2m);
             this.xtbpMovimento.Controls.Add(this.Label28);
@@ -1402,8 +1442,18 @@
             this.xtbpMovimento.Size = new System.Drawing.Size(704, 306);
             this.xtbpMovimento.Text = "Movimento";
             // 
+            // imb_m
+            // 
+            this.imb_m.Dock = System.Windows.Forms.DockStyle.Left;
+            this.imb_m.Location = new System.Drawing.Point(0, 0);
+            this.imb_m.Name = "imb_m";
+            this.imb_m.Size = new System.Drawing.Size(26, 306);
+            this.imb_m.TabIndex = 38;
+            // 
             // xtbpGrafico
             // 
+            this.xtbpGrafico.Controls.Add(this.deDataInicial);
+            this.xtbpGrafico.Controls.Add(this.labelControl2);
             this.xtbpGrafico.Controls.Add(this.labelControl1);
             this.xtbpGrafico.Controls.Add(this.tb_Codigo_Linha_g);
             this.xtbpGrafico.Controls.Add(this.chartLinhaHistorico);
@@ -1411,18 +1461,40 @@
             this.xtbpGrafico.Size = new System.Drawing.Size(704, 306);
             this.xtbpGrafico.Text = "Gráfico";
             // 
+            // deDataInicial
+            // 
+            this.deDataInicial.EditValue = null;
+            this.deDataInicial.Location = new System.Drawing.Point(3, 170);
+            this.deDataInicial.MenuManager = this.barManager1;
+            this.deDataInicial.Name = "deDataInicial";
+            this.deDataInicial.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deDataInicial.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deDataInicial.Size = new System.Drawing.Size(80, 20);
+            this.deDataInicial.TabIndex = 36;
+            this.deDataInicial.EditValueChanged += new System.EventHandler(this.deDataInicial_EditValueChanged);
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(3, 151);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(55, 13);
+            this.labelControl2.TabIndex = 35;
+            this.labelControl2.Text = "A partir de:";
+            // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(14, 24);
+            this.labelControl1.Location = new System.Drawing.Point(3, 31);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(25, 13);
+            this.labelControl1.Size = new System.Drawing.Size(29, 13);
             this.labelControl1.TabIndex = 35;
-            this.labelControl1.Text = "Linha";
+            this.labelControl1.Text = "Linha:";
             // 
             // tb_Codigo_Linha_g
             // 
             this.tb_Codigo_Linha_g.Font = new System.Drawing.Font("Tahoma", 13.8F);
-            this.tb_Codigo_Linha_g.Location = new System.Drawing.Point(14, 43);
+            this.tb_Codigo_Linha_g.Location = new System.Drawing.Point(3, 50);
             this.tb_Codigo_Linha_g.Name = "tb_Codigo_Linha_g";
             this.tb_Codigo_Linha_g.Size = new System.Drawing.Size(57, 30);
             this.tb_Codigo_Linha_g.TabIndex = 34;
@@ -1773,15 +1845,21 @@
             this.tb_Linha.ResumeLayout(false);
             this.xtbpCadastro.ResumeLayout(false);
             this.xtbpCadastro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imb_c)).EndInit();
             this.xtbpEntrada.ResumeLayout(false);
             this.xtbpEntrada.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imb_e)).EndInit();
             this.xtbpBaixa.ResumeLayout(false);
             this.xtbpBaixa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imb_b)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpData_Execucao)).EndInit();
             this.xtbpMovimento.ResumeLayout(false);
             this.xtbpMovimento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imb_m)).EndInit();
             this.xtbpGrafico.ResumeLayout(false);
             this.xtbpGrafico.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deDataInicial.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deDataInicial.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
@@ -1910,5 +1988,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn linha_id;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         internal System.Windows.Forms.TextBox tb_Codigo_Linha_g;
+        private DevExpress.XtraEditors.DateEdit deDataInicial;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.ImageListBoxControl imb_e;
+        private DevExpress.XtraEditors.ImageListBoxControl imb_b;
+        private DevExpress.XtraEditors.ImageListBoxControl imb_c;
+        private DevExpress.XtraEditors.ImageListBoxControl imb_m;
     }
 }
