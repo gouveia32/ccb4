@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BILLLinha.cs" />
+    <Compile Include="BLLLLinha.cs" />
     <Compile Include="BLLAgendaCriacao.cs" />
     <Compile Include="BLLAgendaPedido.cs" />
     <Compile Include="BLLBordado.cs" />

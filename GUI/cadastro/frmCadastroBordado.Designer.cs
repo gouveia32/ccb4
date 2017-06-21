@@ -184,7 +184,7 @@
             this.scc1.Panel2.Controls.Add(this.txtCaminho);
             this.scc1.Panel2.Controls.Add(this.LinhaIdLabel);
             this.scc1.Size = new System.Drawing.Size(984, 553);
-            this.scc1.SplitterPosition = 215;
+            this.scc1.SplitterPosition = 350;
             // 
             // repositoryItemTextEdit1
             // 
@@ -202,7 +202,7 @@
             // 
             this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltrar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnFiltrar.Location = new System.Drawing.Point(170, -2);
+            this.btnFiltrar.Location = new System.Drawing.Point(305, -2);
             this.btnFiltrar.MenuManager = this.barManager1;
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(44, 25);
@@ -214,7 +214,7 @@
             // 
             this.btnX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnX.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnX.Location = new System.Drawing.Point(152, -2);
+            this.btnX.Location = new System.Drawing.Point(287, -2);
             this.btnX.MenuManager = this.barManager1;
             this.btnX.Name = "btnX";
             this.btnX.Size = new System.Drawing.Size(18, 25);
@@ -233,7 +233,7 @@
             this.dgRegistros.Location = new System.Drawing.Point(0, 24);
             this.dgRegistros.MainView = this.gdRegistros;
             this.dgRegistros.Name = "dgRegistros";
-            this.dgRegistros.Size = new System.Drawing.Size(215, 566);
+            this.dgRegistros.Size = new System.Drawing.Size(350, 566);
             this.dgRegistros.TabIndex = 51;
             this.dgRegistros.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdRegistros});
@@ -274,7 +274,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFiltrar.Location = new System.Drawing.Point(-1, 1);
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(170, 20);
+            this.txtFiltrar.Size = new System.Drawing.Size(305, 20);
             this.txtFiltrar.TabIndex = 52;
             this.txtFiltrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltrar_KeyPress);
             // 
@@ -282,7 +282,7 @@
             // 
             this.txtObs_Restrita.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtObs_Restrita.Location = new System.Drawing.Point(533, 389);
+            this.txtObs_Restrita.Location = new System.Drawing.Point(398, 389);
             this.txtObs_Restrita.Multiline = true;
             this.txtObs_Restrita.Name = "txtObs_Restrita";
             this.txtObs_Restrita.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -293,7 +293,7 @@
             // btnBrowse
             // 
             this.btnBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowse.Location = new System.Drawing.Point(527, 37);
+            this.btnBrowse.Location = new System.Drawing.Point(392, 37);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(24, 23);
             this.btnBrowse.TabIndex = 202;
@@ -317,7 +317,7 @@
             this.txtObs_Publica.Multiline = true;
             this.txtObs_Publica.Name = "txtObs_Publica";
             this.txtObs_Publica.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Publica.Size = new System.Drawing.Size(480, 201);
+            this.txtObs_Publica.Size = new System.Drawing.Size(345, 201);
             this.txtObs_Publica.TabIndex = 200;
             // 
             // button1
@@ -396,7 +396,7 @@
             this.dgnotas.ShowCellErrors = false;
             this.dgnotas.ShowCellToolTips = false;
             this.dgnotas.ShowRowErrors = false;
-            this.dgnotas.Size = new System.Drawing.Size(708, 119);
+            this.dgnotas.Size = new System.Drawing.Size(573, 119);
             this.dgnotas.TabIndex = 196;
             this.dgnotas.TabStop = false;
             // 
@@ -452,7 +452,7 @@
             this.txtPreco.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtPreco.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPreco.Increment = 1D;
-            this.txtPreco.Location = new System.Drawing.Point(699, 209);
+            this.txtPreco.Location = new System.Drawing.Point(564, 209);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(58, 21);
             this.txtPreco.TabIndex = 194;
@@ -461,7 +461,7 @@
             // 
             this.chkAprovado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkAprovado.AutoSize = true;
-            this.chkAprovado.Location = new System.Drawing.Point(478, 14);
+            this.chkAprovado.Location = new System.Drawing.Point(343, 14);
             this.chkAprovado.Name = "chkAprovado";
             this.chkAprovado.Size = new System.Drawing.Size(73, 17);
             this.chkAprovado.TabIndex = 193;
@@ -471,7 +471,7 @@
             // txtBastidor
             // 
             this.txtBastidor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBastidor.Location = new System.Drawing.Point(455, 92);
+            this.txtBastidor.Location = new System.Drawing.Point(320, 92);
             this.txtBastidor.Name = "txtBastidor";
             this.txtBastidor.Size = new System.Drawing.Size(96, 21);
             this.txtBastidor.TabIndex = 192;
@@ -481,7 +481,7 @@
             this.picBordado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBordado.BackColor = System.Drawing.Color.Silver;
             this.picBordado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picBordado.Location = new System.Drawing.Point(557, 3);
+            this.picBordado.Location = new System.Drawing.Point(422, 3);
             this.picBordado.Name = "picBordado";
             this.picBordado.Size = new System.Drawing.Size(200, 200);
             this.picBordado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -502,7 +502,7 @@
             // 
             this.Label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(399, 96);
+            this.Label4.Location = new System.Drawing.Point(264, 96);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(50, 13);
             this.Label4.TabIndex = 189;
@@ -515,7 +515,7 @@
             this.cbGrupo.FormattingEnabled = true;
             this.cbGrupo.Location = new System.Drawing.Point(180, 92);
             this.cbGrupo.Name = "cbGrupo";
-            this.cbGrupo.Size = new System.Drawing.Size(203, 21);
+            this.cbGrupo.Size = new System.Drawing.Size(100, 21);
             this.cbGrupo.TabIndex = 185;
             // 
             // dgLinhas_Utilizadas
@@ -562,7 +562,7 @@
             this.dgLinhas_Utilizadas.ShowCellErrors = false;
             this.dgLinhas_Utilizadas.ShowCellToolTips = false;
             this.dgLinhas_Utilizadas.ShowRowErrors = false;
-            this.dgLinhas_Utilizadas.Size = new System.Drawing.Size(539, 104);
+            this.dgLinhas_Utilizadas.Size = new System.Drawing.Size(404, 104);
             this.dgLinhas_Utilizadas.TabIndex = 186;
             this.dgLinhas_Utilizadas.TabStop = false;
             // 
@@ -726,7 +726,7 @@
             // lblPreco
             // 
             this.lblPreco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPreco.Location = new System.Drawing.Point(632, 210);
+            this.lblPreco.Location = new System.Drawing.Point(497, 210);
             this.lblPreco.Name = "lblPreco";
             this.lblPreco.Size = new System.Drawing.Size(123, 17);
             this.lblPreco.TabIndex = 183;
@@ -739,7 +739,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescricao.Location = new System.Drawing.Point(67, 39);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(458, 21);
+            this.txtDescricao.Size = new System.Drawing.Size(323, 21);
             this.txtDescricao.TabIndex = 168;
             // 
             // txtId
@@ -768,7 +768,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtArquivo.Location = new System.Drawing.Point(180, 12);
             this.txtArquivo.Name = "txtArquivo";
-            this.txtArquivo.Size = new System.Drawing.Size(287, 21);
+            this.txtArquivo.Size = new System.Drawing.Size(152, 21);
             this.txtArquivo.TabIndex = 167;
             this.txtArquivo.Text = "teste.dst";
             // 
@@ -796,7 +796,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCaminho.Location = new System.Drawing.Point(67, 65);
             this.txtCaminho.Name = "txtCaminho";
-            this.txtCaminho.Size = new System.Drawing.Size(484, 21);
+            this.txtCaminho.Size = new System.Drawing.Size(349, 21);
             this.txtCaminho.TabIndex = 169;
             // 
             // LinhaIdLabel

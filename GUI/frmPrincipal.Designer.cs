@@ -32,6 +32,10 @@ namespace GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.imageCollection2 = new DevExpress.Utils.ImageCollection();
             this.iOpen = new DevExpress.XtraBars.BarButtonItem();
@@ -148,6 +152,7 @@ namespace GUI
             new DevExpress.XtraBars.BarManagerCategory("Format", new System.Guid("d3052f28-4b3e-4bae-b581-b3bb1c432258")),
             new DevExpress.XtraBars.BarManagerCategory("Help", new System.Guid("e07a4c24-66ac-4de6-bbcb-c0b6cfa7798b")),
             new DevExpress.XtraBars.BarManagerCategory("Status", new System.Guid("77795bb7-9bc5-4dd2-a297-cc758682e23d"))});
+            this.ribbon.ExpandCollapseItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Images = this.imageCollection2;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
@@ -826,6 +831,9 @@ namespace GUI
             this.btnBordado.Id = 418;
             this.btnBordado.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnBordado.LargeGlyph")));
             this.btnBordado.Name = "btnBordado";
+            toolTipTitleItem1.Text = "Bordados";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnBordado.SuperTip = superToolTip1;
             this.btnBordado.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBordado_ItemClick);
             // 
             // btnCliente
@@ -839,11 +847,15 @@ namespace GUI
             // 
             // btnFornecedor
             // 
-            this.btnFornecedor.Caption = "Fornecedo";
+            this.btnFornecedor.Caption = "Fornecedor";
             this.btnFornecedor.Glyph = ((System.Drawing.Image)(resources.GetObject("btnFornecedor.Glyph")));
             this.btnFornecedor.Id = 420;
             this.btnFornecedor.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnFornecedor.LargeGlyph")));
             this.btnFornecedor.Name = "btnFornecedor";
+            this.btnFornecedor.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            toolTipTitleItem2.Text = "Fornecedor";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnFornecedor.SuperTip = superToolTip2;
             this.btnFornecedor.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFornecedor_ItemClick);
             // 
             // btnEmpregado

@@ -42,6 +42,7 @@ namespace DAL
 
                 sql = "INSERT INTO linhas(codigo,nome,material_nome,material_fabricante,material_tipo,cor,@estoque_1,estoque_2,minimo,pedido) "
                 + "VALUES (@codigo,@nome,@material_nome,@material_fabricante,@material_tipo,@cor,@estoque_1,@estoque_2,@minimo,@pedido)";
+                bd.exeNonQuery(sql, p);
             }
             catch (Exception erro)
             {

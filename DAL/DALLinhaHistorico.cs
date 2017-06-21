@@ -28,7 +28,6 @@ namespace DAL
             try
             {
                 p = new List<MySqlParametro>();
-
                 p.Add(new MySqlParametro("@linha_id", modelo.linha_id));
                 p.Add(new MySqlParametro("@data", modelo.data));
                 p.Add(new MySqlParametro("@acao", modelo.acao));
@@ -37,7 +36,7 @@ namespace DAL
                 p.Add(new MySqlParametro("@est2_anterior", modelo.est2_anterior));
                 p.Add(new MySqlParametro("@est2_atual", modelo.est2_atual));
                 sql = "INSERT INTO linhas_historico (linha_id,data,acao,est1_anterior,est1_atual,est2_anterior,est2_atual) VALUES (@linha_id,@data,@acao,@est1_anterior,@est1_atual,est2_anterior,est2_atual)";
-                modelo.id = bd.exeNonQuery(sql, p);
+                bd.exeNonQuery(sql, p);
             }
             catch (Exception erro)
             {
@@ -143,7 +142,7 @@ namespace DAL
         {
             LinhaHistorico modelo = new LinhaHistorico();
 
-            modelo.linha_id = Convert.ToInt32(registro["linha_id"].ToString());
+            modelo.linha_id = Convert.ToString(registro["linha_id"].ToString());
             modelo.data = Convert.ToDateTime(registro["data"]);
             modelo.acao = Convert.ToString(registro["acao"]);
             modelo.est1_anterior = Convert.ToInt32(registro["est1_anterior"]);
@@ -168,9 +167,9 @@ namespace DAL
             {
                 p = new List<MySqlParametro>();
                 p.Add(new MySqlParametro("@linha_id", linha_id));
-                sql = "SELECT DATE_FORMAT(data,'%Y_%m') AS mes, acao,SUM(Est1_Anterior) AS est1_anterior,SUM(Est1_Atual) AS est1_atual,SUM(Est2_Anterior) AS est2_anterior,SUM(Est2_Atual) AS est2_atual, "
-                    + "SUM(IF(acao='Baixa',(Est1_Anterior-Est1_Atual),0))+SUM(IF(acao='Baixa',(Est2_Anterior-Est2_Atual),0)) AS uso, "
-                    + "SUM(IF(acao='Entrada',(Est1_Atual-Est1_Anterior),0))+SUM(IF(acao='Entrada',(Est2_Atual-Est2_Anterior),0)) AS compra "
+                sql = "SELECT DATE_FORMAT(data,'%Y_%m') AS mes,  "
+                    + "SUM(IF(acao='Entrada',(Est1_Atual-Est1_Anterior),0))+SUM(IF(acao='Entrada',(Est2_Atual-Est2_Anterior),0)) AS compra, "
+                    + "SUM(IF(acao='Baixa',(Est1_Anterior-Est1_Atual),0))+SUM(IF(acao='Baixa',(Est2_Anterior-Est2_Atual),0)) AS uso "
                     + "FROM linhas_historico "
                     + "WHERE linha_id = @linha_id";
                 registro = bd.Reader(sql, p);

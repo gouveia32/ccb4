@@ -20,7 +20,7 @@ namespace BLL
 
         public void Incluir(LinhaHistorico modelo)
         {
-            if (modelo.linha_id <= 0)
+            if (modelo.linha_id.Trim().Length == 0)
             {
                 throw new Exception("O linha_id é obrigatório!");
             }
@@ -29,7 +29,7 @@ namespace BLL
 
         public void Altera(LinhaHistorico modelo)
         {
-            if (modelo.linha_id <= 0)
+            if (modelo.linha_id.Trim().Length == 0)
             {
                 throw new Exception("O linha_id do log é obrigatório!");
             }

@@ -42,7 +42,7 @@ namespace GUI
             if (op == 1)
             {
                 scc1.Collapsed = false;
-                scc1.SplitterPosition = 400;
+                //scc1.SplitterPosition = 480;
                 scc1.Panel2.Visible = true;
                 btnInserir.Enabled = true;
                 btnExcluir.Enabled = true;

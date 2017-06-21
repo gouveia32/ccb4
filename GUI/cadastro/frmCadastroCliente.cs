@@ -96,6 +96,7 @@ namespace GUI
 
         private void frmCadastroCliente_Load(object sender, EventArgs e)
         {
+            //scc1.SplitterPosition = 400;
             Filtrar();
 
             gdRegistros.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;

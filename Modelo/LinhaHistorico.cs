@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Modelo
 {
-    public class LinhaHistorico : DbObject, IEquatable<LinhaHistorico>
+    public class LinhaHistorico : IEquatable<LinhaHistorico>
     {
-        public int linha_id { get; set; }
+        public string linha_id { get; set; }
         public DateTime? data { get; set; }
         public string acao { get; set; }
         public int est1_anterior { get; set; }
