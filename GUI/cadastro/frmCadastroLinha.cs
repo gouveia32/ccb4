@@ -68,9 +68,6 @@ namespace GUI
             txtPedido.Text = Convert.ToString(modelo.pedido);
 
             imb_c.BackColor =
-            imb_e.BackColor =
-            imb_b.BackColor =
-            imb_m.BackColor =
                 ceCor.Color; 
         }
 
