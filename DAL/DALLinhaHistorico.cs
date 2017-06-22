@@ -35,7 +35,7 @@ namespace DAL
                 p.Add(new MySqlParametro("@est1_atual", modelo.est1_atual));
                 p.Add(new MySqlParametro("@est2_anterior", modelo.est2_anterior));
                 p.Add(new MySqlParametro("@est2_atual", modelo.est2_atual));
-                sql = "INSERT INTO linhas_historico (linha_id,data,acao,est1_anterior,est1_atual,est2_anterior,est2_atual) VALUES (@linha_id,@data,@acao,@est1_anterior,@est1_atual,est2_anterior,est2_atual)";
+                sql = "INSERT INTO linhas_historico (linha_id,data,acao,est1_anterior,est1_atual,est2_anterior,est2_atual) VALUES (@linha_id,@data,@acao,@est1_anterior,@est1_atual,@est2_anterior,@est2_atual)";
                 bd.exeNonQuery(sql, p);
             }
             catch (Exception erro)
@@ -130,7 +130,7 @@ namespace DAL
             else
                 sWhere += ";";
 
-            sql = "SELECT linha_id,DATE_FORMAT(data,'%Y_%m') AS mes, acao,SUM(Est1_Anterior) AS est1_anterior,SUM(Est1_Atual) AS est1_atual,SUM(Est2_Anterior) AS est2_anterior,SUM(Est2_Atual) AS est2_atual, "
+            sql = "SELECT linha_id,DATE_FORMAT(data,'%Y_%m') AS mes, "
                 + "SUM(IF(acao='Baixa',(Est1_Anterior-Est1_Atual),0))+SUM(IF(acao='Baixa',(Est2_Anterior-Est2_Atual),0)) AS uso, "
                 + "SUM(IF(acao='Entrada',(Est1_Atual-Est1_Anterior),0))+SUM(IF(acao='Entrada',(Est2_Atual-Est2_Anterior),0)) AS compra "
                 + "FROM linhas_historico "

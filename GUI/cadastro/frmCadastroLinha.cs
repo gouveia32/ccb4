@@ -26,7 +26,7 @@ namespace GUI
 
         private void LimpaTela()
         {
-            txtCodigo.Text = "";
+            tb_Codigo_Linha_c.Text = "";
             txtNome.Text = "";
             txtMaterial_Nome.Text = "";
             txtMaterial_Fabricante.Text = "";
@@ -39,7 +39,7 @@ namespace GUI
 
         private void ModeloParaTela(Linha modelo)
         {
-            txtCodigo.Text =
+            tb_Codigo_Linha_c.Text =
             tb_Codigo_Linha_e.Text =
             tb_Codigo_Linha_b.Text =
             tb_Codigo_Linha_m.Text =
@@ -85,7 +85,7 @@ namespace GUI
 
         private void TelaParaModelo(Linha modelo)
         {
-            modelo.codigo = txtCodigo.Text;
+            modelo.codigo = tb_Codigo_Linha_c.Text;
             modelo.nome = txtNome.Text;
             modelo.material_nome = txtMaterial_Nome.Text;
             modelo.material_fabricante = txtMaterial_Fabricante.Text;
@@ -239,8 +239,8 @@ namespace GUI
                 else
                 {
                     //alerar um cliente
-                    codigoAtual = Convert.ToString(txtCodigo.Text);
-                    modelo.codigo = Convert.ToString(txtCodigo.Text);
+                    codigoAtual = Convert.ToString(tb_Codigo_Linha_c.Text);
+                    modelo.codigo = Convert.ToString(tb_Codigo_Linha_c.Text);
                     bll.Altera(modelo);
                     MessageBox.Show("Linha alterado!");
                     Filtrar(codigoAtual);
@@ -287,7 +287,9 @@ namespace GUI
         {
             if (e.KeyChar == 13)
             {
-                loc.Localizar(gdRegistros, Convert.ToString(txtCodigo.Text), 0, true);
+                loc.Localizar(gdRegistros, Convert.ToString(tb_Codigo_Linha_c.Text), 0, true);
+                tb_Codigo_Linha_c.Focus();
+                tb_Codigo_Linha_c.SelectAll();
             }
         }
 
@@ -297,6 +299,7 @@ namespace GUI
             {
                 loc.Localizar(gdRegistros, Convert.ToString(tb_Codigo_Linha_e.Text), 0, true);
                 tb_Codigo_Linha_e.Focus();
+                tb_Codigo_Linha_e.SelectAll();
             }
         }
 
@@ -306,6 +309,7 @@ namespace GUI
             {
                 loc.Localizar(gdRegistros, Convert.ToString(tb_Codigo_Linha_b.Text), 0, true);
                 tb_Codigo_Linha_b.Focus();
+                tb_Codigo_Linha_b.SelectAll();
             }
         }
 
@@ -314,6 +318,8 @@ namespace GUI
             if (e.KeyChar == 13)
             {
                 loc.Localizar(gdRegistros, Convert.ToString(tb_Codigo_Linha_m.Text), 0, true);
+                tb_Codigo_Linha_m.Focus();
+                tb_Codigo_Linha_m.SelectAll();
             }
         }
 
@@ -331,7 +337,6 @@ namespace GUI
             if (isNumber)
                 tbEst1_Final_b.Text = Convert.ToString(Convert.ToInt32(tbEst1_Atual_b.Text) -
                                                        Convert.ToInt32(tbEst1_Quantidade_b.Text));
-
         }
 
         private void tbEst1_Quantidade_e_TextChanged(object sender, EventArgs e)
@@ -362,7 +367,6 @@ namespace GUI
             if (isNumber)
                 tbEst2_Final_b.Text = Convert.ToString(Convert.ToInt32(tbEst2_Atual_b.Text) -
                                                        Convert.ToInt32(tbEst2_Quantidade_b.Text));
-
         }
 
         private void btnEst1_e_Click(object sender, EventArgs e)
@@ -383,7 +387,10 @@ namespace GUI
             modeloH.acao = "Entrada";
             modeloH.est1_anterior = Convert.ToInt32(tbEst1_Atual_e.Text);
             modeloH.est1_atual  = Convert.ToInt32(tbEst1_Final_e.Text);
+            modeloH.est2_anterior = Convert.ToInt32(tbEst2_Atual_e.Text);
+            modeloH.est2_atual = Convert.ToInt32(tbEst2_Final_e.Text);
             bllH.Incluir(modeloH);
+            Filtrar(modeloL.codigo);
         }
 
         private void btnEst2_e_Click(object sender, EventArgs e)
@@ -402,9 +409,12 @@ namespace GUI
             modeloH.linha_id = modeloL.codigo;
             modeloH.data = DateTime.Now;
             modeloH.acao = "Entrada";
+            modeloH.est1_anterior = Convert.ToInt32(tbEst1_Atual_e.Text);
+            modeloH.est1_atual = Convert.ToInt32(tbEst1_Final_e.Text);
             modeloH.est2_anterior = Convert.ToInt32(tbEst2_Atual_e.Text);
             modeloH.est2_atual = Convert.ToInt32(tbEst2_Final_e.Text);
             bllH.Incluir(modeloH);
+            Filtrar(modeloL.codigo);
         }
 
         private void btnEst2_b_Click(object sender, EventArgs e)
@@ -423,9 +433,12 @@ namespace GUI
             modeloH.linha_id = modeloL.codigo;
             modeloH.data = DateTime.Now;
             modeloH.acao = "Baixa";
+            modeloH.est1_anterior = Convert.ToInt32(tbEst1_Atual_b.Text);
+            modeloH.est1_atual = Convert.ToInt32(tbEst1_Final_b.Text);
             modeloH.est2_anterior = Convert.ToInt32(tbEst2_Atual_b.Text);
             modeloH.est2_atual = Convert.ToInt32(tbEst2_Final_b.Text);
             bllH.Incluir(modeloH);
+            Filtrar(modeloL.codigo);
         }
 
         private void btnEst1_b_Click(object sender, EventArgs e)
@@ -446,8 +459,16 @@ namespace GUI
             modeloH.acao = "Baixa";
             modeloH.est1_anterior = Convert.ToInt32(tbEst1_Atual_b.Text);
             modeloH.est1_atual = Convert.ToInt32(tbEst1_Final_b.Text);
+            modeloH.est2_anterior = Convert.ToInt32(tbEst2_Atual_b.Text);
+            modeloH.est2_atual = Convert.ToInt32(tbEst2_Final_b.Text);
             bllH.Incluir(modeloH);
 
+            Filtrar(modeloL.codigo);
+        }
+
+        private void btnAtualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Filtrar();
         }
     }
 }
