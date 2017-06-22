@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="AgendaCriacao.cs" />
     <Compile Include="AgendaPedido.cs" />
+    <Compile Include="Catalogo.cs" />
     <Compile Include="DbObject.cs" />
     <Compile Include="ItemCollection.cs" />
     <Compile Include="Bordado.cs" />

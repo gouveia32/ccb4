@@ -41,7 +41,7 @@ namespace GUI
 
             if (op == 1)
             {
-                scc1.Collapsed = false;
+                //scc1.Collapsed = false;
                 //scc1.SplitterPosition = 480;
                 scc1.Panel2.Visible = true;
                 btnInserir.Enabled = true;
@@ -56,7 +56,7 @@ namespace GUI
             }
             if (op == 2)
             {
-                scc1.Collapsed = true;
+                //scc1.Collapsed = true;
                 scc1.Panel2.Enabled = true;
                 scc1.Panel2.Visible = true;
                 btnGravar.Enabled = true;
@@ -65,7 +65,7 @@ namespace GUI
 
             if (op == 3)
             {
-                scc1.Collapsed = true;
+                //scc1.Collapsed = true;
                 scc1.Panel2.Enabled = false;
                 scc1.Panel2.Visible = true;
                 //btnAlterar.Enabled = true;

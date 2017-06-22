@@ -50,6 +50,7 @@
     <Compile Include="DALAgendaCriacao.cs" />
     <Compile Include="DALAgendaPedido.cs" />
     <Compile Include="DALBordados.cs" />
+    <Compile Include="DALCatalogo.cs" />
     <Compile Include="DALCliente.cs" />
     <Compile Include="DALEmpregado.cs" />
     <Compile Include="DALFornecedor.cs" />

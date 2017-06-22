@@ -35,11 +35,12 @@ namespace GUI
             txtDisquete.Text = "";
             txtPreco.Text = "";
             txtObs_Publica.Text = "";
+            txtObs_Restrita.Text = "";
             txtLargura.Text = "";
             txtAltura.Text = "";
             txtCores.Text = "";
             txtPontos.Text = "";
-            dgLinhas_Utilizadas.Rows.Clear();
+            //gvLinhas_Utilizadas.Rows.Clear();
             dgnotas.Rows.Clear();
             //Carrega a Imagem
             picBordado.Image = null;
@@ -56,7 +57,9 @@ namespace GUI
                 txtObs_Restrita.Visible = false;
                 txtId.Text = modelo.id.ToString();
                 txtArquivo.Text = modelo.arquivo;
-                cbGrupo.SelectedIndex = modelo.grupo_id - 1;
+
+                cbGrupo.SelectedValue = modelo.grupo_id;
+
                 txtDescricao.Text = modelo.descricao;
                 txtCaminho.Text = modelo.caminho;
                 txtLargura.Text = modelo.largura.ToString();
@@ -85,11 +88,12 @@ namespace GUI
             BLLLinha bll = new BLLLinha();
             DataTable tabela = new DataTable();
             tabela = bll.LinhasDoBordado(Convert.ToInt32(txtId.Text));
-            dgLinhas_Utilizadas.Rows.Clear();
-            foreach (DataRow r in tabela.Rows)
-            {
-                dgLinhas_Utilizadas.Rows.Add(r.ItemArray);
-            }
+            //dgLinhas_Utilizadas.Rows.Clear();
+            dgLinhas_Utilizadas.DataSource = tabela;
+            //foreach (DataRow r in tabela.Rows)
+            //{
+            //    dgLinhas_Utilizadas.Rows.Add(r.ItemArray);
+            //}
 
             //carrega Notas Específicas, se tiver
             BLLNotaEspecifica bllNota = new BLLNotaEspecifica();
@@ -106,7 +110,7 @@ namespace GUI
         {
             modelo.id = Convert.ToInt32(txtId.Text);
             modelo.arquivo = txtArquivo.Text;
-            modelo.grupo_id = cbGrupo.SelectedIndex + 1;
+            modelo.grupo_id = Convert.ToInt32(cbGrupo.SelectedValue); 
             modelo.descricao = txtDescricao.Text;
             modelo.caminho = txtCaminho.Text;
             modelo.largura = Convert.ToInt32(txtLargura.Text);

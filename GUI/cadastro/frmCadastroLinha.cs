@@ -193,28 +193,6 @@ namespace GUI
                 loc.Localizar(gdRegistros, (sender as TextEdit).Text, 0, true);
         }
 
-        private void gdRegistros_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-            GridView view = sender as GridView;
-            if (view == null) return;
-            if (e.RowHandle != view.FocusedRowHandle && e.Column.Name == "colcor")
-                {
-                    var cor = Convert.ToInt32(gdRegistros.GetRowCellValue(e.RowHandle, "cor"));
-                            e.Column.AppearanceCell.BackColor =
-                            e.Column.AppearanceCell.ForeColor = Color.FromArgb(cor);
-                }
-        }
-
-        private void gdRegistros_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
-        {
-            //GridView View = sender as GridView;
-            if (e.Column.FieldName == "cor" )
-            {
-                var cor = Convert.ToInt32(gdRegistros.GetRowCellValue(e.RowHandle, "cor"));
-                e.Appearance.BackColor = Color.FromArgb(cor);
-            }
-        }
-
         private void btnGravar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             string codigoAtual;
