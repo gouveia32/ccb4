@@ -52,7 +52,7 @@ namespace GUI
         {
             try
             {
-                Valor.Visible = false;
+                dgnotas.Columns[2].Visible = false;
                 txtPreco.Visible = false;
                 txtObs_Restrita.Visible = false;
                 txtId.Text = modelo.id.ToString();
@@ -88,7 +88,7 @@ namespace GUI
             //carrega Linhas do bordado
             BLLLinha bll = new BLLLinha();
             DataTable tabela = new DataTable();
-            tabela = bll.LinhasDoBordado(Convert.ToInt32(txtId.Text));
+            tabela = bll.LinhasDoBordado(modelo.id);
             //dgLinhas_Utilizadas.Rows.Clear();
             dgLinhas_Utilizadas.DataSource = tabela;
             //foreach (DataRow r in tabela.Rows)
@@ -98,13 +98,17 @@ namespace GUI
 
             //carrega Notas Específicas, se tiver
             BLLNotaEspecifica bllNota = new BLLNotaEspecifica();
-            DataTable tabelaNota = new DataTable();
-            tabelaNota = bllNota.NotasDoBordado(Convert.ToInt32(txtId.Text));
-            dgnotas.Rows.Clear();
-            foreach (DataRow r in tabelaNota.Rows)
-            {
-                dgnotas.Rows.Add(r.ItemArray);
-            }
+            //DataTable tabelaNota = new DataTable();
+            dgnotas.DataSource = bllNota.NotasDoBordado(modelo.id);
+            //dgnotas.Rows.Clear();
+            //foreach (DataRow r in tabelaNota.Rows)
+            //{
+                //dgnotas.Rows.Add(r.ItemArray);
+            //}
+
+            //Carrega catalogos
+            BLLCatalogo bllCat = new BLLCatalogo();
+            dgCatalogos.DataSource = bllCat.CarregaCatalogosDoBordado(modelo.id);
         }
 
         private void TelaParaModelo(Bordado modelo)
@@ -302,9 +306,9 @@ namespace GUI
 
         private void privilegioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Valor.Visible = !Valor.Visible;
-            txtPreco.Visible = Valor.Visible;
-            txtObs_Restrita.Visible = Valor.Visible;
+           dgnotas.Columns[2].Visible = !dgnotas.Columns[2].Visible;  //preço
+            txtPreco.Visible = dgnotas.Columns[2].Visible;
+            txtObs_Restrita.Visible = dgnotas.Columns[2].Visible;
         }
 
         private void btnAtualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

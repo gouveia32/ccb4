@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroBordado));
             this.colMetragem = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnFiltrar = new DevExpress.XtraEditors.DropDownButton();
@@ -52,10 +50,6 @@
             this.btnApagar = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.dgnotas = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.obs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Label15 = new System.Windows.Forms.Label();
             this.txtPreco = new DevComponents.Editors.DoubleInput();
             this.chkAprovado = new System.Windows.Forms.CheckBox();
@@ -148,8 +142,8 @@
             // 
             // scc1
             // 
-            this.scc1.Location = new System.Drawing.Point(0, 50);
-            this.scc1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.scc1.Location = new System.Drawing.Point(0, 40);
+            this.scc1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.scc1.Panel1.Controls.Add(this.btnFiltrar);
             this.scc1.Panel1.Controls.Add(this.btnX);
             this.scc1.Panel1.Controls.Add(this.dgRegistros);
@@ -196,7 +190,7 @@
             this.scc1.Panel2.Controls.Add(this.CorNomeLabel);
             this.scc1.Panel2.Controls.Add(this.txtCaminho);
             this.scc1.Panel2.Controls.Add(this.LinhaIdLabel);
-            this.scc1.Size = new System.Drawing.Size(1148, 680);
+            this.scc1.Size = new System.Drawing.Size(984, 553);
             this.scc1.SplitterPosition = 400;
             // 
             // repositoryItemTextEdit1
@@ -228,11 +222,10 @@
             // 
             this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltrar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnFiltrar.Location = new System.Drawing.Point(346, -4);
-            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnFiltrar.Location = new System.Drawing.Point(297, -3);
             this.btnFiltrar.MenuManager = this.barManager1;
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(51, 31);
+            this.btnFiltrar.Size = new System.Drawing.Size(44, 25);
             this.btnFiltrar.TabIndex = 54;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
@@ -241,11 +234,10 @@
             // 
             this.btnX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnX.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnX.Location = new System.Drawing.Point(319, -4);
-            this.btnX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnX.Location = new System.Drawing.Point(273, -3);
             this.btnX.MenuManager = this.barManager1;
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(21, 31);
+            this.btnX.Size = new System.Drawing.Size(18, 25);
             this.btnX.TabIndex = 53;
             this.btnX.Text = "X";
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
@@ -255,15 +247,13 @@
             this.dgRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgRegistros.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.dgRegistros.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.dgRegistros.Location = new System.Drawing.Point(0, 30);
+            gridLevelNode2});
+            this.dgRegistros.Location = new System.Drawing.Point(0, 24);
             this.dgRegistros.MainView = this.gdRegistros;
-            this.dgRegistros.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgRegistros.Name = "dgRegistros";
-            this.dgRegistros.Size = new System.Drawing.Size(461, 698);
+            this.dgRegistros.Size = new System.Drawing.Size(395, 566);
             this.dgRegistros.TabIndex = 51;
             this.dgRegistros.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdRegistros});
@@ -303,9 +293,8 @@
             this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFiltrar.Location = new System.Drawing.Point(-1, 1);
-            this.txtFiltrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(341, 22);
+            this.txtFiltrar.Size = new System.Drawing.Size(292, 20);
             this.txtFiltrar.TabIndex = 52;
             this.txtFiltrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltrar_KeyPress);
             // 
@@ -313,31 +302,29 @@
             // 
             this.txtObs_Restrita.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtObs_Restrita.Location = new System.Drawing.Point(373, 516);
-            this.txtObs_Restrita.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtObs_Restrita.Location = new System.Drawing.Point(318, 419);
             this.txtObs_Restrita.Multiline = true;
             this.txtObs_Restrita.Name = "txtObs_Restrita";
             this.txtObs_Restrita.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Restrita.Size = new System.Drawing.Size(299, 211);
+            this.txtObs_Restrita.Size = new System.Drawing.Size(314, 171);
             this.txtObs_Restrita.TabIndex = 203;
             this.txtObs_Restrita.Visible = false;
             // 
             // btnBrowse
             // 
             this.btnBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowse.Location = new System.Drawing.Point(406, 46);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBrowse.Location = new System.Drawing.Point(347, 10);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(28, 28);
+            this.btnBrowse.Size = new System.Drawing.Size(24, 23);
             this.btnBrowse.TabIndex = 202;
             this.btnBrowse.Text = "...";
             // 
             // Label7
             // 
             this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(13, 519);
+            this.Label7.Location = new System.Drawing.Point(11, 422);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(37, 17);
+            this.Label7.Size = new System.Drawing.Size(30, 13);
             this.Label7.TabIndex = 201;
             this.Label7.Text = "Obs:";
             // 
@@ -346,22 +333,20 @@
             this.txtObs_Publica.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtObs_Publica.Location = new System.Drawing.Point(55, 517);
-            this.txtObs_Publica.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtObs_Publica.Location = new System.Drawing.Point(47, 420);
             this.txtObs_Publica.Multiline = true;
             this.txtObs_Publica.Name = "txtObs_Publica";
             this.txtObs_Publica.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Publica.Size = new System.Drawing.Size(310, 211);
+            this.txtObs_Publica.Size = new System.Drawing.Size(265, 171);
             this.txtObs_Publica.TabIndex = 200;
             // 
             // button1
             // 
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(10, 468);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(9, 380);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 37);
+            this.button1.Size = new System.Drawing.Size(30, 30);
             this.button1.TabIndex = 199;
             this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = true;
@@ -370,10 +355,9 @@
             // 
             this.btnApagar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnApagar.Image = ((System.Drawing.Image)(resources.GetObject("btnApagar.Image")));
-            this.btnApagar.Location = new System.Drawing.Point(10, 431);
-            this.btnApagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnApagar.Location = new System.Drawing.Point(9, 350);
             this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(35, 37);
+            this.btnApagar.Size = new System.Drawing.Size(30, 30);
             this.btnApagar.TabIndex = 198;
             this.btnApagar.TabStop = false;
             this.btnApagar.UseVisualStyleBackColor = true;
@@ -382,10 +366,9 @@
             // 
             this.btnAdicionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.Image")));
-            this.btnAdicionar.Location = new System.Drawing.Point(10, 394);
-            this.btnAdicionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAdicionar.Location = new System.Drawing.Point(9, 320);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(35, 37);
+            this.btnAdicionar.Size = new System.Drawing.Size(30, 30);
             this.btnAdicionar.TabIndex = 197;
             this.btnAdicionar.TabStop = false;
             this.btnAdicionar.UseVisualStyleBackColor = true;
@@ -399,33 +382,27 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgnotas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgnotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgnotas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Cliente,
-            this.Valor,
-            this.obs});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgnotas.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgnotas.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgnotas.EnableHeadersVisualStyles = false;
-            this.dgnotas.Location = new System.Drawing.Point(55, 341);
-            this.dgnotas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgnotas.Location = new System.Drawing.Point(47, 277);
             this.dgnotas.MultiSelect = false;
             this.dgnotas.Name = "dgnotas";
             this.dgnotas.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgnotas.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgnotas.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgnotas.RowHeadersVisible = false;
             this.dgnotas.RowHeadersWidth = 25;
             this.dgnotas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -434,50 +411,16 @@
             this.dgnotas.ShowCellErrors = false;
             this.dgnotas.ShowCellToolTips = false;
             this.dgnotas.ShowRowErrors = false;
-            this.dgnotas.Size = new System.Drawing.Size(272, 167);
+            this.dgnotas.Size = new System.Drawing.Size(232, 136);
             this.dgnotas.TabIndex = 196;
             this.dgnotas.TabStop = false;
-            // 
-            // id
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.id.DefaultCellStyle = dataGridViewCellStyle3;
-            this.id.HeaderText = "Codigo";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.id.Width = 50;
-            // 
-            // Cliente
-            // 
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
-            this.Cliente.Width = 200;
-            // 
-            // Valor
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Valor.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
-            this.Valor.ReadOnly = true;
-            this.Valor.Visible = false;
-            this.Valor.Width = 50;
-            // 
-            // obs
-            // 
-            this.obs.HeaderText = "Observação";
-            this.obs.Name = "obs";
-            this.obs.ReadOnly = true;
-            this.obs.Width = 700;
             // 
             // Label15
             // 
             this.Label15.AutoSize = true;
-            this.Label15.Location = new System.Drawing.Point(7, 374);
+            this.Label15.Location = new System.Drawing.Point(6, 304);
             this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(48, 17);
+            this.Label15.Size = new System.Drawing.Size(39, 13);
             this.Label15.TabIndex = 195;
             this.Label15.Text = "Notas:";
             // 
@@ -490,20 +433,18 @@
             this.txtPreco.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtPreco.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPreco.Increment = 1D;
-            this.txtPreco.Location = new System.Drawing.Point(607, 257);
-            this.txtPreco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPreco.Location = new System.Drawing.Point(520, 210);
             this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(65, 23);
+            this.txtPreco.Size = new System.Drawing.Size(50, 21);
             this.txtPreco.TabIndex = 194;
             // 
             // chkAprovado
             // 
             this.chkAprovado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkAprovado.AutoSize = true;
-            this.chkAprovado.Location = new System.Drawing.Point(344, 17);
-            this.chkAprovado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkAprovado.Location = new System.Drawing.Point(391, 211);
             this.chkAprovado.Name = "chkAprovado";
-            this.chkAprovado.Size = new System.Drawing.Size(90, 21);
+            this.chkAprovado.Size = new System.Drawing.Size(73, 17);
             this.chkAprovado.TabIndex = 193;
             this.chkAprovado.Text = "Aprovado";
             this.chkAprovado.UseVisualStyleBackColor = true;
@@ -511,10 +452,9 @@
             // txtBastidor
             // 
             this.txtBastidor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBastidor.Location = new System.Drawing.Point(349, 113);
-            this.txtBastidor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBastidor.Location = new System.Drawing.Point(298, 92);
             this.txtBastidor.Name = "txtBastidor";
-            this.txtBastidor.Size = new System.Drawing.Size(84, 23);
+            this.txtBastidor.Size = new System.Drawing.Size(73, 21);
             this.txtBastidor.TabIndex = 192;
             // 
             // picBordado
@@ -522,10 +462,9 @@
             this.picBordado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBordado.BackColor = System.Drawing.Color.Silver;
             this.picBordado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picBordado.Location = new System.Drawing.Point(438, 5);
-            this.picBordado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picBordado.Location = new System.Drawing.Point(374, 1);
             this.picBordado.Name = "picBordado";
-            this.picBordado.Size = new System.Drawing.Size(233, 246);
+            this.picBordado.Size = new System.Drawing.Size(200, 200);
             this.picBordado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBordado.TabIndex = 191;
             this.picBordado.TabStop = false;
@@ -534,9 +473,9 @@
             // Label8
             // 
             this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(160, 118);
+            this.Label8.Location = new System.Drawing.Point(137, 96);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(51, 17);
+            this.Label8.Size = new System.Drawing.Size(40, 13);
             this.Label8.TabIndex = 190;
             this.Label8.Text = "Grupo:";
             this.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -545,53 +484,51 @@
             // 
             this.Label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(284, 118);
+            this.Label4.Location = new System.Drawing.Point(242, 96);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(62, 17);
+            this.Label4.Size = new System.Drawing.Size(50, 13);
             this.Label4.TabIndex = 189;
             this.Label4.Text = "Bastidor:";
             // 
             // cbGrupo
             // 
             this.cbGrupo.FormattingEnabled = true;
-            this.cbGrupo.Location = new System.Drawing.Point(210, 113);
-            this.cbGrupo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbGrupo.Location = new System.Drawing.Point(180, 92);
             this.cbGrupo.Name = "cbGrupo";
-            this.cbGrupo.Size = new System.Drawing.Size(129, 24);
+            this.cbGrupo.Size = new System.Drawing.Size(111, 21);
             this.cbGrupo.TabIndex = 185;
             // 
             // Label3
             // 
-            this.Label3.Location = new System.Drawing.Point(10, 117);
+            this.Label3.Location = new System.Drawing.Point(9, 95);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(64, 16);
+            this.Label3.Size = new System.Drawing.Size(55, 13);
             this.Label3.TabIndex = 188;
             this.Label3.Text = "Disquete:";
             this.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtDisquete
             // 
-            this.txtDisquete.Location = new System.Drawing.Point(78, 114);
-            this.txtDisquete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDisquete.Location = new System.Drawing.Point(67, 93);
             this.txtDisquete.Name = "txtDisquete";
-            this.txtDisquete.Size = new System.Drawing.Size(81, 23);
+            this.txtDisquete.Size = new System.Drawing.Size(70, 21);
             this.txtDisquete.TabIndex = 184;
             // 
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(7, 146);
+            this.Label2.Location = new System.Drawing.Point(6, 119);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(48, 17);
+            this.Label2.Size = new System.Drawing.Size(39, 13);
             this.Label2.TabIndex = 187;
             this.Label2.Text = "Cores:";
             // 
             // Label11
             // 
             this.Label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label11.Location = new System.Drawing.Point(558, 363);
+            this.Label11.Location = new System.Drawing.Point(477, 295);
             this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(49, 21);
+            this.Label11.Size = new System.Drawing.Size(42, 17);
             this.Label11.TabIndex = 182;
             this.Label11.Text = "Altura:";
             this.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -599,39 +536,36 @@
             // txtCores
             // 
             this.txtCores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCores.Location = new System.Drawing.Point(493, 309);
-            this.txtCores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCores.Location = new System.Drawing.Point(421, 251);
             this.txtCores.Name = "txtCores";
-            this.txtCores.Size = new System.Drawing.Size(62, 23);
+            this.txtCores.Size = new System.Drawing.Size(50, 21);
             this.txtCores.TabIndex = 175;
             this.txtCores.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtAltura
             // 
             this.txtAltura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAltura.Location = new System.Drawing.Point(609, 362);
-            this.txtAltura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAltura.Location = new System.Drawing.Point(520, 294);
             this.txtAltura.Name = "txtAltura";
-            this.txtAltura.Size = new System.Drawing.Size(62, 23);
+            this.txtAltura.Size = new System.Drawing.Size(50, 21);
             this.txtAltura.TabIndex = 181;
             this.txtAltura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtPontos
             // 
             this.txtPontos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPontos.Location = new System.Drawing.Point(493, 257);
-            this.txtPontos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPontos.Location = new System.Drawing.Point(521, 251);
             this.txtPontos.Name = "txtPontos";
-            this.txtPontos.Size = new System.Drawing.Size(62, 23);
+            this.txtPontos.Size = new System.Drawing.Size(50, 21);
             this.txtPontos.TabIndex = 176;
             this.txtPontos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Label9
             // 
             this.Label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label9.Location = new System.Drawing.Point(438, 362);
+            this.Label9.Location = new System.Drawing.Point(374, 294);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(56, 22);
+            this.Label9.Size = new System.Drawing.Size(48, 18);
             this.Label9.TabIndex = 180;
             this.Label9.Text = "Largura:";
             this.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -639,9 +573,9 @@
             // Label6
             // 
             this.Label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label6.Location = new System.Drawing.Point(436, 260);
+            this.Label6.Location = new System.Drawing.Point(472, 253);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(50, 25);
+            this.Label6.Size = new System.Drawing.Size(43, 20);
             this.Label6.TabIndex = 177;
             this.Label6.Text = "Pontos:";
             this.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -649,19 +583,18 @@
             // txtLargura
             // 
             this.txtLargura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLargura.Location = new System.Drawing.Point(497, 362);
-            this.txtLargura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtLargura.Location = new System.Drawing.Point(424, 294);
             this.txtLargura.Name = "txtLargura";
-            this.txtLargura.Size = new System.Drawing.Size(58, 23);
+            this.txtLargura.Size = new System.Drawing.Size(50, 21);
             this.txtLargura.TabIndex = 179;
             this.txtLargura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Label5
             // 
             this.Label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label5.Location = new System.Drawing.Point(436, 314);
+            this.Label5.Location = new System.Drawing.Point(372, 255);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(49, 21);
+            this.Label5.Size = new System.Drawing.Size(42, 17);
             this.Label5.TabIndex = 178;
             this.Label5.Text = "Cores:";
             this.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -669,9 +602,9 @@
             // lblPreco
             // 
             this.lblPreco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPreco.Location = new System.Drawing.Point(529, 258);
+            this.lblPreco.Location = new System.Drawing.Point(448, 210);
             this.lblPreco.Name = "lblPreco";
-            this.lblPreco.Size = new System.Drawing.Size(143, 21);
+            this.lblPreco.Size = new System.Drawing.Size(123, 17);
             this.lblPreco.TabIndex = 183;
             this.lblPreco.Text = "Preço:         ?????";
             this.lblPreco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -680,10 +613,9 @@
             // 
             this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescricao.Location = new System.Drawing.Point(78, 48);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDescricao.Location = new System.Drawing.Point(67, 39);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(325, 23);
+            this.txtDescricao.Size = new System.Drawing.Size(304, 21);
             this.txtDescricao.TabIndex = 168;
             // 
             // txtId
@@ -691,18 +623,17 @@
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.ForeColor = System.Drawing.Color.Navy;
-            this.txtId.Location = new System.Drawing.Point(78, 5);
-            this.txtId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtId.Location = new System.Drawing.Point(67, 4);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(69, 34);
+            this.txtId.Size = new System.Drawing.Size(60, 29);
             this.txtId.TabIndex = 171;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Label10
             // 
-            this.Label10.Location = new System.Drawing.Point(10, 52);
+            this.Label10.Location = new System.Drawing.Point(9, 42);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(64, 16);
+            this.Label10.Size = new System.Drawing.Size(55, 13);
             this.Label10.TabIndex = 174;
             this.Label10.Text = "Descrição:";
             this.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -711,18 +642,17 @@
             // 
             this.txtArquivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtArquivo.Location = new System.Drawing.Point(210, 15);
-            this.txtArquivo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtArquivo.Location = new System.Drawing.Point(180, 12);
             this.txtArquivo.Name = "txtArquivo";
-            this.txtArquivo.Size = new System.Drawing.Size(126, 23);
+            this.txtArquivo.Size = new System.Drawing.Size(165, 21);
             this.txtArquivo.TabIndex = 167;
             this.txtArquivo.Text = "teste.dst";
             // 
             // Label1
             // 
-            this.Label1.Location = new System.Drawing.Point(10, 84);
+            this.Label1.Location = new System.Drawing.Point(9, 68);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(64, 16);
+            this.Label1.Size = new System.Drawing.Size(55, 13);
             this.Label1.TabIndex = 173;
             this.Label1.Text = "Caminho:";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -730,9 +660,9 @@
             // CorNomeLabel
             // 
             this.CorNomeLabel.AutoSize = true;
-            this.CorNomeLabel.Location = new System.Drawing.Point(156, 18);
+            this.CorNomeLabel.Location = new System.Drawing.Point(134, 15);
             this.CorNomeLabel.Name = "CorNomeLabel";
-            this.CorNomeLabel.Size = new System.Drawing.Size(60, 17);
+            this.CorNomeLabel.Size = new System.Drawing.Size(48, 13);
             this.CorNomeLabel.TabIndex = 172;
             this.CorNomeLabel.Text = "Arquivo:";
             // 
@@ -740,17 +670,16 @@
             // 
             this.txtCaminho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCaminho.Location = new System.Drawing.Point(78, 80);
-            this.txtCaminho.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCaminho.Location = new System.Drawing.Point(67, 65);
             this.txtCaminho.Name = "txtCaminho";
-            this.txtCaminho.Size = new System.Drawing.Size(356, 23);
+            this.txtCaminho.Size = new System.Drawing.Size(304, 21);
             this.txtCaminho.TabIndex = 169;
             // 
             // LinhaIdLabel
             // 
-            this.LinhaIdLabel.Location = new System.Drawing.Point(10, 9);
+            this.LinhaIdLabel.Location = new System.Drawing.Point(9, 7);
             this.LinhaIdLabel.Name = "LinhaIdLabel";
-            this.LinhaIdLabel.Size = new System.Drawing.Size(64, 16);
+            this.LinhaIdLabel.Size = new System.Drawing.Size(55, 13);
             this.LinhaIdLabel.TabIndex = 170;
             this.LinhaIdLabel.Text = "Código:";
             this.LinhaIdLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -760,10 +689,9 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.privilegioToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 49);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 40);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1148, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(984, 24);
             this.menuStrip1.TabIndex = 69;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
@@ -772,7 +700,7 @@
             // 
             this.privilegioToolStripMenuItem.Name = "privilegioToolStripMenuItem";
             this.privilegioToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.privilegioToolStripMenuItem.Size = new System.Drawing.Size(83, 26);
+            this.privilegioToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.privilegioToolStripMenuItem.Text = "Privilegio";
             this.privilegioToolStripMenuItem.Click += new System.EventHandler(this.privilegioToolStripMenuItem_Click);
             // 
@@ -781,13 +709,13 @@
             this.dgLinhas_Utilizadas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgLinhas_Utilizadas.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.dgLinhas_Utilizadas.Location = new System.Drawing.Point(55, 146);
+            this.dgLinhas_Utilizadas.Location = new System.Drawing.Point(47, 119);
             this.dgLinhas_Utilizadas.MainView = this.gvLinhas_Utilizadas;
             this.dgLinhas_Utilizadas.Margin = new System.Windows.Forms.Padding(2);
             this.dgLinhas_Utilizadas.Name = "dgLinhas_Utilizadas";
             this.dgLinhas_Utilizadas.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemColorPickEdit1});
-            this.dgLinhas_Utilizadas.Size = new System.Drawing.Size(272, 188);
+            this.dgLinhas_Utilizadas.Size = new System.Drawing.Size(232, 153);
             this.dgLinhas_Utilizadas.TabIndex = 204;
             this.dgLinhas_Utilizadas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvLinhas_Utilizadas});
@@ -819,14 +747,14 @@
             this.gvLinhas_Utilizadas.FixedLineWidth = 1;
             this.gvLinhas_Utilizadas.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gvLinhas_Utilizadas.FooterPanelHeight = 10;
-            gridFormatRule1.Column = this.colMetragem;
-            gridFormatRule1.Name = "Format0";
-            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
-            formatConditionRuleValue1.Expression = "Sim";
-            formatConditionRuleValue1.PredefinedName = "Red Fill, Red Text";
-            formatConditionRuleValue1.Value1 = "Sim";
-            gridFormatRule1.Rule = formatConditionRuleValue1;
-            this.gvLinhas_Utilizadas.FormatRules.Add(gridFormatRule1);
+            gridFormatRule2.Column = this.colMetragem;
+            gridFormatRule2.Name = "Format0";
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue2.Expression = "Sim";
+            formatConditionRuleValue2.PredefinedName = "Red Fill, Red Text";
+            formatConditionRuleValue2.Value1 = "Sim";
+            gridFormatRule2.Rule = formatConditionRuleValue2;
+            this.gvLinhas_Utilizadas.FormatRules.Add(gridFormatRule2);
             this.gvLinhas_Utilizadas.GridControl = this.dgLinhas_Utilizadas;
             this.gvLinhas_Utilizadas.GroupFormat = "{0}: [#imagem]{1} {2}";
             this.gvLinhas_Utilizadas.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -927,27 +855,26 @@
             this.dgCatalogos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgCatalogos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgCatalogos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgCatalogos.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgCatalogos.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgCatalogos.EnableHeadersVisualStyles = false;
-            this.dgCatalogos.Location = new System.Drawing.Point(331, 188);
-            this.dgCatalogos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgCatalogos.Location = new System.Drawing.Point(282, 153);
             this.dgCatalogos.MultiSelect = false;
             this.dgCatalogos.Name = "dgCatalogos";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgCatalogos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgCatalogos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgCatalogos.RowHeadersVisible = false;
             this.dgCatalogos.RowHeadersWidth = 25;
             this.dgCatalogos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -956,7 +883,7 @@
             this.dgCatalogos.ShowCellErrors = false;
             this.dgCatalogos.ShowCellToolTips = false;
             this.dgCatalogos.ShowRowErrors = false;
-            this.dgCatalogos.Size = new System.Drawing.Size(104, 321);
+            this.dgCatalogos.Size = new System.Drawing.Size(89, 261);
             this.dgCatalogos.TabIndex = 208;
             this.dgCatalogos.TabStop = false;
             // 
@@ -965,10 +892,9 @@
             this.btnRemoverCatalogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRemoverCatalogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRemoverCatalogo.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoverCatalogo.Image")));
-            this.btnRemoverCatalogo.Location = new System.Drawing.Point(399, 149);
-            this.btnRemoverCatalogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRemoverCatalogo.Location = new System.Drawing.Point(340, 121);
             this.btnRemoverCatalogo.Name = "btnRemoverCatalogo";
-            this.btnRemoverCatalogo.Size = new System.Drawing.Size(35, 37);
+            this.btnRemoverCatalogo.Size = new System.Drawing.Size(30, 30);
             this.btnRemoverCatalogo.TabIndex = 207;
             this.btnRemoverCatalogo.TabStop = false;
             this.btnRemoverCatalogo.UseVisualStyleBackColor = true;
@@ -978,10 +904,9 @@
             this.btnNovoCatalogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNovoCatalogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnNovoCatalogo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovoCatalogo.Image")));
-            this.btnNovoCatalogo.Location = new System.Drawing.Point(364, 149);
-            this.btnNovoCatalogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnNovoCatalogo.Location = new System.Drawing.Point(310, 121);
             this.btnNovoCatalogo.Name = "btnNovoCatalogo";
-            this.btnNovoCatalogo.Size = new System.Drawing.Size(35, 37);
+            this.btnNovoCatalogo.Size = new System.Drawing.Size(30, 30);
             this.btnNovoCatalogo.TabIndex = 205;
             this.btnNovoCatalogo.TabStop = false;
             this.btnNovoCatalogo.UseVisualStyleBackColor = true;
@@ -990,10 +915,9 @@
             // 
             this.btnSelecionarCatalogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSelecionarCatalogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSelecionarCatalogo.Location = new System.Drawing.Point(331, 149);
-            this.btnSelecionarCatalogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSelecionarCatalogo.Location = new System.Drawing.Point(282, 121);
             this.btnSelecionarCatalogo.Name = "btnSelecionarCatalogo";
-            this.btnSelecionarCatalogo.Size = new System.Drawing.Size(35, 37);
+            this.btnSelecionarCatalogo.Size = new System.Drawing.Size(30, 30);
             this.btnSelecionarCatalogo.TabIndex = 206;
             this.btnSelecionarCatalogo.TabStop = false;
             this.btnSelecionarCatalogo.UseVisualStyleBackColor = true;
@@ -1003,8 +927,7 @@
             this.picBordadoAmpliado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBordadoAmpliado.BackColor = System.Drawing.Color.Silver;
             this.picBordadoAmpliado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picBordadoAmpliado.Location = new System.Drawing.Point(271, 5);
-            this.picBordadoAmpliado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picBordadoAmpliado.Location = new System.Drawing.Point(174, -4);
             this.picBordadoAmpliado.Name = "picBordadoAmpliado";
             this.picBordadoAmpliado.Size = new System.Drawing.Size(400, 400);
             this.picBordadoAmpliado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1016,11 +939,11 @@
             // 
             // frmCadastroBordado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
-            this.ClientSize = new System.Drawing.Size(1148, 730);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(984, 593);
             this.Controls.Add(this.menuStrip1);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCadastroBordado";
             this.Text = "Cadastro de Bordado";
             this.Load += new System.EventHandler(this.frmCadastroBordado_Load);
@@ -1063,10 +986,6 @@
         internal System.Windows.Forms.Button btnApagar;
         internal System.Windows.Forms.Button btnAdicionar;
         public System.Windows.Forms.DataGridView dgnotas;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn id;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn Valor;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn obs;
         internal System.Windows.Forms.Label Label15;
         public DevComponents.Editors.DoubleInput txtPreco;
         internal System.Windows.Forms.CheckBox chkAprovado;

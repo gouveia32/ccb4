@@ -140,7 +140,7 @@ namespace DAL
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Catalogo CarregaModeloGrupo(int id)
+        public Catalogo CarregaModeloCatalogo(int id)
         {
             Catalogo modelo = new Catalogo();
 
@@ -160,6 +160,20 @@ namespace DAL
                 bd.FecharReader(registro);
             }
             return modelo;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="bordado_id"></param>
+        /// <returns></returns>
+        public DataTable CarregaCatalogosDoBordado(int bordado_id)
+        {
+            DataTable tabela = new DataTable();
+            p = new List<MySqlParametro>();
+            p.Add(new MySqlParametro("@bordado_id", bordado_id));
+            sql = "SELECT nome FROM catalogos WHERE bordado_id = @bordado_id";
+            return bd.exePesquisa(sql, p);
         }
     }
 }

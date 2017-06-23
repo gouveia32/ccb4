@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModeloCadastro));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.scc1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.bar1 = new DevExpress.XtraBars.Bar();
@@ -65,7 +65,6 @@
             this.scc1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scc1.Location = new System.Drawing.Point(0, 40);
             this.scc1.Name = "scc1";
-            this.scc1.Panel1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.scc1.Panel1.Text = "Esquerdo";
             this.scc1.Panel2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.scc1.Panel2.Text = "direito";
@@ -182,12 +181,12 @@
             this.txtLocalizar.Edit = this.repositoryItemTextEdit1;
             this.txtLocalizar.Id = 6;
             this.txtLocalizar.Name = "txtLocalizar";
-            toolTipTitleItem2.Text = "Digite o que deseja localizar";
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = resources.GetString("toolTipItem2.Text");
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.txtLocalizar.SuperTip = superToolTip2;
+            toolTipTitleItem1.Text = "Digite o que deseja localizar";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = resources.GetString("toolTipItem1.Text");
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.txtLocalizar.SuperTip = superToolTip1;
             // 
             // repositoryItemTextEdit1
             // 
