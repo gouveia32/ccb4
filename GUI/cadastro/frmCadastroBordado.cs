@@ -41,7 +41,7 @@ namespace GUI
             txtCores.Text = "";
             txtPontos.Text = "";
             //gvLinhas_Utilizadas.Rows.Clear();
-            dgnotas.Rows.Clear();
+            //gvNotas.Rows.Clear();
             //Carrega a Imagem
             picBordado.Image = null;
             picBordadoAmpliado.Image = null;
@@ -52,7 +52,7 @@ namespace GUI
         {
             try
             {
-                dgnotas.Columns[2].Visible = false;
+                gvNotas.Columns[2].Visible = false;
                 txtPreco.Visible = false;
                 txtObs_Restrita.Visible = false;
                 txtId.Text = modelo.id.ToString();
@@ -99,7 +99,7 @@ namespace GUI
             //carrega Notas Específicas, se tiver
             BLLNotaEspecifica bllNota = new BLLNotaEspecifica();
             //DataTable tabelaNota = new DataTable();
-            dgnotas.DataSource = bllNota.NotasDoBordado(modelo.id);
+            dgNotas.DataSource = bllNota.NotasDoBordado(modelo.id);
             //dgnotas.Rows.Clear();
             //foreach (DataRow r in tabelaNota.Rows)
             //{
@@ -306,9 +306,9 @@ namespace GUI
 
         private void privilegioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           dgnotas.Columns[2].Visible = !dgnotas.Columns[2].Visible;  //preço
-            txtPreco.Visible = dgnotas.Columns[2].Visible;
-            txtObs_Restrita.Visible = dgnotas.Columns[2].Visible;
+            gvNotas.Columns[2].Visible = !gvNotas.Columns[2].Visible;  //preço
+            txtPreco.Visible = gvNotas.Columns[2].Visible;
+            txtObs_Restrita.Visible = gvNotas.Columns[2].Visible;
         }
 
         private void btnAtualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
