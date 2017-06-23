@@ -80,7 +80,7 @@
             // 
             // scc1
             // 
-            this.scc1.Location = new System.Drawing.Point(0, 40);
+            this.scc1.Location = new System.Drawing.Point(0, 50);
             this.scc1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.scc1.Panel1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.scc1.Panel1.Appearance.Options.UseBackColor = true;
@@ -92,7 +92,7 @@
             this.scc1.Panel2.Controls.Add(this.labelControl1);
             this.scc1.Panel2.Controls.Add(this.txtGrupo);
             this.scc1.Panel2.Controls.Add(this.txtId);
-            this.scc1.Size = new System.Drawing.Size(978, 545);
+            this.scc1.Size = new System.Drawing.Size(1141, 670);
             this.scc1.SplitterPosition = 150;
             // 
             // repositoryItemTextEdit1
@@ -103,34 +103,42 @@
             // 
             this.btnAtualizar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAtualizar_ItemClick);
             // 
+            // bar1
+            // 
+            this.bar1.OptionsBar.UseWholeRow = true;
+            // 
             // txtGrupo
             // 
-            this.txtGrupo.Location = new System.Drawing.Point(56, 89);
+            this.txtGrupo.Location = new System.Drawing.Point(65, 110);
+            this.txtGrupo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGrupo.Name = "txtGrupo";
-            this.txtGrupo.Size = new System.Drawing.Size(354, 20);
+            this.txtGrupo.Size = new System.Drawing.Size(413, 22);
             this.txtGrupo.TabIndex = 3;
             // 
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(56, 41);
+            this.txtId.Location = new System.Drawing.Point(65, 50);
+            this.txtId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(55, 20);
+            this.txtId.Size = new System.Drawing.Size(64, 22);
             this.txtId.TabIndex = 2;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(12, 92);
+            this.labelControl2.Location = new System.Drawing.Point(14, 113);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(33, 13);
+            this.labelControl2.Size = new System.Drawing.Size(39, 16);
             this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Grupo:";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(27, 44);
+            this.labelControl1.Location = new System.Drawing.Point(31, 54);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(14, 13);
+            this.labelControl1.Size = new System.Drawing.Size(16, 16);
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "Id:";
             // 
@@ -139,13 +147,15 @@
             this.dgRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgRegistros.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             gridLevelNode1.RelationName = "Level1";
             this.dgRegistros.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.dgRegistros.Location = new System.Drawing.Point(0, 28);
+            this.dgRegistros.Location = new System.Drawing.Point(0, 34);
             this.dgRegistros.MainView = this.gdRegistros;
+            this.dgRegistros.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgRegistros.Name = "dgRegistros";
-            this.dgRegistros.Size = new System.Drawing.Size(145, 512);
+            this.dgRegistros.Size = new System.Drawing.Size(198, 631);
             this.dgRegistros.TabIndex = 41;
             this.dgRegistros.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdRegistros});
@@ -183,9 +193,10 @@
             // 
             this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFiltrar.Location = new System.Drawing.Point(3, 3);
+            this.txtFiltrar.Location = new System.Drawing.Point(3, 4);
+            this.txtFiltrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(82, 20);
+            this.txtFiltrar.Size = new System.Drawing.Size(97, 22);
             this.txtFiltrar.TabIndex = 6;
             this.txtFiltrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltrar_KeyPress);
             // 
@@ -193,10 +204,11 @@
             // 
             this.btnX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnX.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnX.Location = new System.Drawing.Point(67, 3);
+            this.btnX.Location = new System.Drawing.Point(79, 4);
+            this.btnX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnX.MenuManager = this.barManager1;
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(18, 20);
+            this.btnX.Size = new System.Drawing.Size(21, 25);
             this.btnX.TabIndex = 6;
             this.btnX.Text = "X";
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
@@ -205,18 +217,19 @@
             // 
             this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltrar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnFiltrar.Location = new System.Drawing.Point(84, 3);
+            this.btnFiltrar.Location = new System.Drawing.Point(99, 4);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFiltrar.MenuManager = this.barManager1;
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(44, 20);
+            this.btnFiltrar.Size = new System.Drawing.Size(51, 25);
             this.btnFiltrar.TabIndex = 7;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // frmCadastroGrupos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(978, 585);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.ClientSize = new System.Drawing.Size(1141, 720);
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmCadastroGrupos";

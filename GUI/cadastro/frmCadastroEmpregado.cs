@@ -228,6 +228,7 @@ namespace GUI
         {
             this.operacao = "alterar";
             this.alterabotoes(2);
+            btnAlterar.Down = !btnAlterar.Down;
         }
 
         private void gdRegistros_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)

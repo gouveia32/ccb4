@@ -30,14 +30,14 @@ namespace GUI
             btnInserir.Enabled = false;
             //btnAlterar.Enabled = false;
             //btnAlterar.Down = true;
-            btnLocalizar.Enabled = false;
+            btnLocalizar.Enabled = true;
             btnExcluir.Enabled = false;
             btnCancelar.Enabled = false;
             btnGravar.Enabled = false;
             btnImprimir.Enabled = false;
-            btnProxima.Enabled = false;
-            btnAnterior.Enabled = false;
-            txtLocalizar.Enabled = false;
+            btnProxima.Enabled = true;
+            btnAnterior.Enabled = true;
+            txtLocalizar.Enabled = true;
 
             if (op == 1)
             {

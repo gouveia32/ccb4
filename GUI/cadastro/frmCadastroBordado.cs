@@ -44,7 +44,7 @@ namespace GUI
             dgnotas.Rows.Clear();
             //Carrega a Imagem
             picBordado.Image = null;
-            picBordado.Image = null;
+            picBordadoAmpliado.Image = null;
         }
 
 
@@ -81,6 +81,7 @@ namespace GUI
             {
                 MemoryStream ms = new MemoryStream(img);
                 picBordado.Image = Image.FromStream(ms);
+                picBordadoAmpliado.Image = Image.FromStream(ms);
                 ms.Dispose();
             }
 
@@ -201,6 +202,7 @@ namespace GUI
         {
             this.operacao = "alterar";
             this.alterabotoes(2);
+            btnAlterar.Down = !btnAlterar.Down;
         }
 
         private void btnAnterior_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -308,6 +310,21 @@ namespace GUI
         private void btnAtualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Filtrar();
+        }
+
+        private void picBordadoAmpliado_DoubleClick(object sender, EventArgs e)
+        {
+            picBordadoAmpliado.Visible = !picBordadoAmpliado.Visible;
+        }
+
+        private void picBordado_DoubleClick(object sender, EventArgs e)
+        {
+            picBordadoAmpliado.Visible = !picBordadoAmpliado.Visible;
+        }
+
+        private void picBordadoAmpliado_Click(object sender, EventArgs e)
+        {
+            picBordadoAmpliado.Visible = !picBordadoAmpliado.Visible;
         }
     }
 }

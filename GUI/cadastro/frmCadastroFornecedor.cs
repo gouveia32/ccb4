@@ -135,6 +135,7 @@ namespace GUI
         {
             this.operacao = "alterar";
             this.alterabotoes(2);
+            btnAlterar.Down = !btnAlterar.Down;
         }
 
         private void btnInserir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

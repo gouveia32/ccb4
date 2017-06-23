@@ -232,8 +232,8 @@
             // 
             // scc1
             // 
-            this.scc1.Location = new System.Drawing.Point(0, 40);
-            this.scc1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.scc1.Location = new System.Drawing.Point(0, 50);
+            this.scc1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.scc1.Panel1.Controls.Add(this.pnlFiltrar);
             this.scc1.Panel1.Controls.Add(this.dgRegistros);
             this.scc1.Panel2.Controls.Add(this.deDataInicial);
@@ -242,7 +242,7 @@
             this.scc1.Panel2.Controls.Add(this.imb_c);
             this.scc1.Panel2.Controls.Add(this.dgLog);
             this.scc1.Panel2.Controls.Add(this.tabEntraSaida);
-            this.scc1.Size = new System.Drawing.Size(1085, 549);
+            this.scc1.Size = new System.Drawing.Size(1266, 675);
             this.scc1.SplitterPosition = 485;
             // 
             // repositoryItemTextEdit1
@@ -282,26 +282,29 @@
             // ceCor
             // 
             this.ceCor.EditValue = System.Drawing.Color.Empty;
-            this.ceCor.Location = new System.Drawing.Point(264, 13);
+            this.ceCor.Location = new System.Drawing.Point(308, 16);
+            this.ceCor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ceCor.Name = "ceCor";
             this.ceCor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ceCor.Size = new System.Drawing.Size(120, 20);
+            this.ceCor.Size = new System.Drawing.Size(140, 22);
             this.ceCor.TabIndex = 41;
             // 
             // txtEstoque_2
             // 
-            this.txtEstoque_2.Location = new System.Drawing.Point(309, 204);
+            this.txtEstoque_2.Location = new System.Drawing.Point(360, 251);
+            this.txtEstoque_2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEstoque_2.Name = "txtEstoque_2";
-            this.txtEstoque_2.Size = new System.Drawing.Size(64, 21);
+            this.txtEstoque_2.Size = new System.Drawing.Size(74, 23);
             this.txtEstoque_2.TabIndex = 20;
             this.txtEstoque_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtEstoque_1
             // 
-            this.txtEstoque_1.Location = new System.Drawing.Point(97, 199);
+            this.txtEstoque_1.Location = new System.Drawing.Point(113, 245);
+            this.txtEstoque_1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEstoque_1.Name = "txtEstoque_1";
-            this.txtEstoque_1.Size = new System.Drawing.Size(64, 21);
+            this.txtEstoque_1.Size = new System.Drawing.Size(74, 23);
             this.txtEstoque_1.TabIndex = 14;
             this.txtEstoque_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -309,35 +312,37 @@
             // 
             this.LinhaIdLabel.AutoSize = true;
             this.LinhaIdLabel.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.LinhaIdLabel.Location = new System.Drawing.Point(44, 29);
+            this.LinhaIdLabel.Location = new System.Drawing.Point(51, 36);
             this.LinhaIdLabel.Name = "LinhaIdLabel";
-            this.LinhaIdLabel.Size = new System.Drawing.Size(44, 13);
+            this.LinhaIdLabel.Size = new System.Drawing.Size(56, 17);
             this.LinhaIdLabel.TabIndex = 23;
             this.LinhaIdLabel.Text = "Código:";
             this.LinhaIdLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtMinimo
             // 
-            this.txtMinimo.Location = new System.Drawing.Point(97, 239);
+            this.txtMinimo.Location = new System.Drawing.Point(113, 294);
+            this.txtMinimo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMinimo.Name = "txtMinimo";
-            this.txtMinimo.Size = new System.Drawing.Size(64, 21);
+            this.txtMinimo.Size = new System.Drawing.Size(74, 23);
             this.txtMinimo.TabIndex = 16;
             this.txtMinimo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(94, 63);
+            this.txtNome.Location = new System.Drawing.Point(110, 78);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(290, 21);
+            this.txtNome.Size = new System.Drawing.Size(338, 23);
             this.txtNome.TabIndex = 26;
             // 
             // Label4
             // 
             this.Label4.AutoSize = true;
             this.Label4.BackColor = System.Drawing.Color.Transparent;
-            this.Label4.Location = new System.Drawing.Point(248, 208);
+            this.Label4.Location = new System.Drawing.Point(289, 256);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(55, 13);
+            this.Label4.Size = new System.Drawing.Size(70, 17);
             this.Label4.TabIndex = 19;
             this.Label4.Text = "Estoque 2";
             // 
@@ -345,9 +350,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label2.Location = new System.Drawing.Point(63, 66);
+            this.label2.Location = new System.Drawing.Point(73, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.Size = new System.Drawing.Size(35, 17);
             this.label2.TabIndex = 25;
             this.label2.Text = "Cor:";
             // 
@@ -355,9 +360,9 @@
             // 
             this.PedidoLabel.AutoSize = true;
             this.PedidoLabel.BackColor = System.Drawing.Color.Transparent;
-            this.PedidoLabel.Location = new System.Drawing.Point(261, 242);
+            this.PedidoLabel.Location = new System.Drawing.Point(304, 298);
             this.PedidoLabel.Name = "PedidoLabel";
-            this.PedidoLabel.Size = new System.Drawing.Size(43, 13);
+            this.PedidoLabel.Size = new System.Drawing.Size(54, 17);
             this.PedidoLabel.TabIndex = 17;
             this.PedidoLabel.Text = "pedido:";
             // 
@@ -365,18 +370,19 @@
             // 
             this.EstoqueQuantidadeLabel.AutoSize = true;
             this.EstoqueQuantidadeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.EstoqueQuantidadeLabel.Location = new System.Drawing.Point(36, 203);
+            this.EstoqueQuantidadeLabel.Location = new System.Drawing.Point(42, 250);
             this.EstoqueQuantidadeLabel.Name = "EstoqueQuantidadeLabel";
-            this.EstoqueQuantidadeLabel.Size = new System.Drawing.Size(55, 13);
+            this.EstoqueQuantidadeLabel.Size = new System.Drawing.Size(70, 17);
             this.EstoqueQuantidadeLabel.TabIndex = 13;
             this.EstoqueQuantidadeLabel.Text = "Estoque 1";
             // 
             // tb_Codigo_Linha_c
             // 
             this.tb_Codigo_Linha_c.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Codigo_Linha_c.Location = new System.Drawing.Point(94, 16);
+            this.tb_Codigo_Linha_c.Location = new System.Drawing.Point(110, 20);
+            this.tb_Codigo_Linha_c.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Codigo_Linha_c.Name = "tb_Codigo_Linha_c";
-            this.tb_Codigo_Linha_c.Size = new System.Drawing.Size(70, 30);
+            this.tb_Codigo_Linha_c.Size = new System.Drawing.Size(81, 36);
             this.tb_Codigo_Linha_c.TabIndex = 24;
             this.tb_Codigo_Linha_c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
@@ -384,41 +390,44 @@
             // 
             this.EstoqueMinimoLabel.AutoSize = true;
             this.EstoqueMinimoLabel.BackColor = System.Drawing.Color.Transparent;
-            this.EstoqueMinimoLabel.Location = new System.Drawing.Point(46, 242);
+            this.EstoqueMinimoLabel.Location = new System.Drawing.Point(54, 298);
             this.EstoqueMinimoLabel.Name = "EstoqueMinimoLabel";
-            this.EstoqueMinimoLabel.Size = new System.Drawing.Size(43, 13);
+            this.EstoqueMinimoLabel.Size = new System.Drawing.Size(55, 17);
             this.EstoqueMinimoLabel.TabIndex = 15;
             this.EstoqueMinimoLabel.Text = "Mínimo:";
             // 
             // txtPedido
             // 
-            this.txtPedido.Location = new System.Drawing.Point(309, 239);
+            this.txtPedido.Location = new System.Drawing.Point(360, 294);
+            this.txtPedido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPedido.Name = "txtPedido";
-            this.txtPedido.Size = new System.Drawing.Size(63, 21);
+            this.txtPedido.Size = new System.Drawing.Size(73, 23);
             this.txtPedido.TabIndex = 18;
             this.txtPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtMaterial_Nome
             // 
-            this.txtMaterial_Nome.Location = new System.Drawing.Point(97, 108);
+            this.txtMaterial_Nome.Location = new System.Drawing.Point(113, 133);
+            this.txtMaterial_Nome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaterial_Nome.Name = "txtMaterial_Nome";
-            this.txtMaterial_Nome.Size = new System.Drawing.Size(287, 21);
+            this.txtMaterial_Nome.Size = new System.Drawing.Size(334, 23);
             this.txtMaterial_Nome.TabIndex = 29;
             // 
             // txtMaterial_Tipo
             // 
-            this.txtMaterial_Tipo.Location = new System.Drawing.Point(97, 160);
+            this.txtMaterial_Tipo.Location = new System.Drawing.Point(113, 197);
+            this.txtMaterial_Tipo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaterial_Tipo.Name = "txtMaterial_Tipo";
-            this.txtMaterial_Tipo.Size = new System.Drawing.Size(287, 21);
+            this.txtMaterial_Tipo.Size = new System.Drawing.Size(334, 23);
             this.txtMaterial_Tipo.TabIndex = 33;
             // 
             // MaterialNomeLabel
             // 
             this.MaterialNomeLabel.AutoSize = true;
             this.MaterialNomeLabel.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.MaterialNomeLabel.Location = new System.Drawing.Point(44, 111);
+            this.MaterialNomeLabel.Location = new System.Drawing.Point(51, 137);
             this.MaterialNomeLabel.Name = "MaterialNomeLabel";
-            this.MaterialNomeLabel.Size = new System.Drawing.Size(49, 13);
+            this.MaterialNomeLabel.Size = new System.Drawing.Size(58, 17);
             this.MaterialNomeLabel.TabIndex = 28;
             this.MaterialNomeLabel.Text = "Material:";
             // 
@@ -426,9 +435,9 @@
             // 
             this.MaterialTipoLabel.AutoSize = true;
             this.MaterialTipoLabel.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.MaterialTipoLabel.Location = new System.Drawing.Point(60, 163);
+            this.MaterialTipoLabel.Location = new System.Drawing.Point(70, 201);
             this.MaterialTipoLabel.Name = "MaterialTipoLabel";
-            this.MaterialTipoLabel.Size = new System.Drawing.Size(31, 13);
+            this.MaterialTipoLabel.Size = new System.Drawing.Size(39, 17);
             this.MaterialTipoLabel.TabIndex = 32;
             this.MaterialTipoLabel.Text = "Tipo:";
             // 
@@ -436,33 +445,36 @@
             // 
             this.MaterialFabricanteLabel.AutoSize = true;
             this.MaterialFabricanteLabel.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.MaterialFabricanteLabel.Location = new System.Drawing.Point(32, 137);
+            this.MaterialFabricanteLabel.Location = new System.Drawing.Point(37, 169);
             this.MaterialFabricanteLabel.Name = "MaterialFabricanteLabel";
-            this.MaterialFabricanteLabel.Size = new System.Drawing.Size(62, 13);
+            this.MaterialFabricanteLabel.Size = new System.Drawing.Size(76, 17);
             this.MaterialFabricanteLabel.TabIndex = 30;
             this.MaterialFabricanteLabel.Text = "Fabricante:";
             // 
             // txtMaterial_Fabricante
             // 
-            this.txtMaterial_Fabricante.Location = new System.Drawing.Point(97, 134);
+            this.txtMaterial_Fabricante.Location = new System.Drawing.Point(113, 165);
+            this.txtMaterial_Fabricante.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaterial_Fabricante.Name = "txtMaterial_Fabricante";
-            this.txtMaterial_Fabricante.Size = new System.Drawing.Size(287, 21);
+            this.txtMaterial_Fabricante.Size = new System.Drawing.Size(334, 23);
             this.txtMaterial_Fabricante.TabIndex = 31;
             // 
             // tbNomeCor_e
             // 
-            this.tbNomeCor_e.Location = new System.Drawing.Point(150, 11);
+            this.tbNomeCor_e.Location = new System.Drawing.Point(175, 14);
+            this.tbNomeCor_e.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbNomeCor_e.Name = "tbNomeCor_e";
             this.tbNomeCor_e.ReadOnly = true;
-            this.tbNomeCor_e.Size = new System.Drawing.Size(277, 21);
+            this.tbNomeCor_e.Size = new System.Drawing.Size(322, 23);
             this.tbNomeCor_e.TabIndex = 27;
             // 
             // tb_Codigo_Linha_e
             // 
             this.tb_Codigo_Linha_e.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Codigo_Linha_e.Location = new System.Drawing.Point(61, 4);
+            this.tb_Codigo_Linha_e.Location = new System.Drawing.Point(71, 5);
+            this.tb_Codigo_Linha_e.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Codigo_Linha_e.Name = "tb_Codigo_Linha_e";
-            this.tb_Codigo_Linha_e.Size = new System.Drawing.Size(74, 30);
+            this.tb_Codigo_Linha_e.Size = new System.Drawing.Size(86, 35);
             this.tb_Codigo_Linha_e.TabIndex = 19;
             this.tb_Codigo_Linha_e.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tb_Codigo_Linha_e.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Codigo_Linha_e_KeyPress);
@@ -471,18 +483,19 @@
             // 
             this.Label16.AutoSize = true;
             this.Label16.BackColor = System.Drawing.Color.Transparent;
-            this.Label16.Location = new System.Drawing.Point(11, 4);
+            this.Label16.Location = new System.Drawing.Point(13, 5);
             this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(44, 13);
+            this.Label16.Size = new System.Drawing.Size(56, 17);
             this.Label16.TabIndex = 20;
             this.Label16.Text = "Código:";
             // 
             // tbEst2_Final_e
             // 
-            this.tbEst2_Final_e.Location = new System.Drawing.Point(92, 113);
+            this.tbEst2_Final_e.Location = new System.Drawing.Point(107, 139);
+            this.tbEst2_Final_e.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst2_Final_e.Name = "tbEst2_Final_e";
             this.tbEst2_Final_e.ReadOnly = true;
-            this.tbEst2_Final_e.Size = new System.Drawing.Size(64, 21);
+            this.tbEst2_Final_e.Size = new System.Drawing.Size(74, 23);
             this.tbEst2_Final_e.TabIndex = 20;
             this.tbEst2_Final_e.TabStop = false;
             this.tbEst2_Final_e.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -491,17 +504,18 @@
             // 
             this.Label11.AutoSize = true;
             this.Label11.BackColor = System.Drawing.Color.Transparent;
-            this.Label11.Location = new System.Drawing.Point(15, 113);
+            this.Label11.Location = new System.Drawing.Point(17, 139);
             this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(71, 13);
+            this.Label11.Size = new System.Drawing.Size(88, 17);
             this.Label11.TabIndex = 19;
             this.Label11.Text = "Estoque Final";
             // 
             // tbEst2_Quantidade_e
             // 
-            this.tbEst2_Quantidade_e.Location = new System.Drawing.Point(92, 61);
+            this.tbEst2_Quantidade_e.Location = new System.Drawing.Point(107, 75);
+            this.tbEst2_Quantidade_e.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst2_Quantidade_e.Name = "tbEst2_Quantidade_e";
-            this.tbEst2_Quantidade_e.Size = new System.Drawing.Size(64, 21);
+            this.tbEst2_Quantidade_e.Size = new System.Drawing.Size(74, 23);
             this.tbEst2_Quantidade_e.TabIndex = 0;
             this.tbEst2_Quantidade_e.Text = "0";
             this.tbEst2_Quantidade_e.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -511,18 +525,19 @@
             // 
             this.Label12.AutoSize = true;
             this.Label12.BackColor = System.Drawing.Color.Transparent;
-            this.Label12.Location = new System.Drawing.Point(15, 64);
+            this.Label12.Location = new System.Drawing.Point(17, 79);
             this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(63, 13);
+            this.Label12.Size = new System.Drawing.Size(78, 17);
             this.Label12.TabIndex = 17;
             this.Label12.Text = "Quantidade";
             // 
             // tbEst2_Atual_e
             // 
-            this.tbEst2_Atual_e.Location = new System.Drawing.Point(92, 9);
+            this.tbEst2_Atual_e.Location = new System.Drawing.Point(107, 11);
+            this.tbEst2_Atual_e.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst2_Atual_e.Name = "tbEst2_Atual_e";
             this.tbEst2_Atual_e.ReadOnly = true;
-            this.tbEst2_Atual_e.Size = new System.Drawing.Size(64, 21);
+            this.tbEst2_Atual_e.Size = new System.Drawing.Size(74, 23);
             this.tbEst2_Atual_e.TabIndex = 16;
             this.tbEst2_Atual_e.TabStop = false;
             this.tbEst2_Atual_e.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -531,9 +546,9 @@
             // 
             this.Label13.AutoSize = true;
             this.Label13.BackColor = System.Drawing.Color.Transparent;
-            this.Label13.Location = new System.Drawing.Point(4, 12);
+            this.Label13.Location = new System.Drawing.Point(5, 15);
             this.Label13.Name = "Label13";
-            this.Label13.Size = new System.Drawing.Size(74, 13);
+            this.Label13.Size = new System.Drawing.Size(92, 17);
             this.Label13.TabIndex = 15;
             this.Label13.Text = "Estoque Atual";
             // 
@@ -542,9 +557,9 @@
             this.Label14.AutoSize = true;
             this.Label14.BackColor = System.Drawing.Color.Transparent;
             this.Label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label14.Location = new System.Drawing.Point(123, 34);
+            this.Label14.Location = new System.Drawing.Point(143, 42);
             this.Label14.Name = "Label14";
-            this.Label14.Size = new System.Drawing.Size(22, 24);
+            this.Label14.Size = new System.Drawing.Size(28, 29);
             this.Label14.TabIndex = 21;
             this.Label14.Text = "+";
             // 
@@ -553,18 +568,19 @@
             this.Label15.AutoSize = true;
             this.Label15.BackColor = System.Drawing.Color.Transparent;
             this.Label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label15.Location = new System.Drawing.Point(123, 84);
+            this.Label15.Location = new System.Drawing.Point(143, 103);
             this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(22, 24);
+            this.Label15.Size = new System.Drawing.Size(28, 29);
             this.Label15.TabIndex = 23;
             this.Label15.Text = "=";
             // 
             // tbEst1_Final_e
             // 
-            this.tbEst1_Final_e.Location = new System.Drawing.Point(98, 110);
+            this.tbEst1_Final_e.Location = new System.Drawing.Point(114, 135);
+            this.tbEst1_Final_e.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst1_Final_e.Name = "tbEst1_Final_e";
             this.tbEst1_Final_e.ReadOnly = true;
-            this.tbEst1_Final_e.Size = new System.Drawing.Size(64, 21);
+            this.tbEst1_Final_e.Size = new System.Drawing.Size(74, 23);
             this.tbEst1_Final_e.TabIndex = 20;
             this.tbEst1_Final_e.TabStop = false;
             this.tbEst1_Final_e.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -573,17 +589,18 @@
             // 
             this.Label8.AutoSize = true;
             this.Label8.BackColor = System.Drawing.Color.Transparent;
-            this.Label8.Location = new System.Drawing.Point(5, 114);
+            this.Label8.Location = new System.Drawing.Point(6, 140);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(71, 13);
+            this.Label8.Size = new System.Drawing.Size(88, 17);
             this.Label8.TabIndex = 19;
             this.Label8.Text = "Estoque Final";
             // 
             // tbEst1_Quantidade_e
             // 
-            this.tbEst1_Quantidade_e.Location = new System.Drawing.Point(102, 61);
+            this.tbEst1_Quantidade_e.Location = new System.Drawing.Point(119, 75);
+            this.tbEst1_Quantidade_e.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst1_Quantidade_e.Name = "tbEst1_Quantidade_e";
-            this.tbEst1_Quantidade_e.Size = new System.Drawing.Size(64, 21);
+            this.tbEst1_Quantidade_e.Size = new System.Drawing.Size(74, 23);
             this.tbEst1_Quantidade_e.TabIndex = 0;
             this.tbEst1_Quantidade_e.Text = "0";
             this.tbEst1_Quantidade_e.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -593,18 +610,19 @@
             // 
             this.Label7.AutoSize = true;
             this.Label7.BackColor = System.Drawing.Color.Transparent;
-            this.Label7.Location = new System.Drawing.Point(9, 64);
+            this.Label7.Location = new System.Drawing.Point(10, 79);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(63, 13);
+            this.Label7.Size = new System.Drawing.Size(78, 17);
             this.Label7.TabIndex = 17;
             this.Label7.Text = "Quantidade";
             // 
             // tbEst1_Atual_e
             // 
-            this.tbEst1_Atual_e.Location = new System.Drawing.Point(102, 9);
+            this.tbEst1_Atual_e.Location = new System.Drawing.Point(119, 11);
+            this.tbEst1_Atual_e.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst1_Atual_e.Name = "tbEst1_Atual_e";
             this.tbEst1_Atual_e.ReadOnly = true;
-            this.tbEst1_Atual_e.Size = new System.Drawing.Size(64, 21);
+            this.tbEst1_Atual_e.Size = new System.Drawing.Size(74, 23);
             this.tbEst1_Atual_e.TabIndex = 16;
             this.tbEst1_Atual_e.TabStop = false;
             this.tbEst1_Atual_e.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -613,9 +631,9 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(9, 12);
+            this.label9.Location = new System.Drawing.Point(10, 15);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 13);
+            this.label9.Size = new System.Drawing.Size(92, 17);
             this.label9.TabIndex = 15;
             this.label9.Text = "Estoque Atual";
             // 
@@ -624,9 +642,9 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(140, 34);
+            this.label10.Location = new System.Drawing.Point(163, 42);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(22, 24);
+            this.label10.Size = new System.Drawing.Size(28, 29);
             this.label10.TabIndex = 21;
             this.label10.Text = "+";
             // 
@@ -635,9 +653,9 @@
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.Transparent;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(140, 84);
+            this.label30.Location = new System.Drawing.Point(163, 103);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(22, 24);
+            this.label30.Size = new System.Drawing.Size(28, 29);
             this.label30.TabIndex = 23;
             this.label30.Text = "=";
             // 
@@ -645,10 +663,11 @@
             // 
             this.btnFiltrar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnFiltrar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnFiltrar.Location = new System.Drawing.Point(433, 2);
+            this.btnFiltrar.Location = new System.Drawing.Point(502, 2);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFiltrar.MenuManager = this.barManager1;
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(50, 23);
+            this.btnFiltrar.Size = new System.Drawing.Size(58, 29);
             this.btnFiltrar.TabIndex = 58;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
@@ -657,10 +676,11 @@
             // 
             this.btnX.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnX.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnX.Location = new System.Drawing.Point(415, 2);
+            this.btnX.Location = new System.Drawing.Point(481, 2);
+            this.btnX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnX.MenuManager = this.barManager1;
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(18, 23);
+            this.btnX.Size = new System.Drawing.Size(21, 29);
             this.btnX.TabIndex = 57;
             this.btnX.Text = "X";
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
@@ -669,17 +689,19 @@
             // 
             this.txtFiltrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtFiltrar.Location = new System.Drawing.Point(2, 2);
+            this.txtFiltrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(431, 20);
+            this.txtFiltrar.Size = new System.Drawing.Size(500, 22);
             this.txtFiltrar.TabIndex = 56;
             this.txtFiltrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltrar_KeyPress);
             // 
             // tabEntraSaida
             // 
-            this.tabEntraSaida.Location = new System.Drawing.Point(21, 0);
+            this.tabEntraSaida.Location = new System.Drawing.Point(24, 0);
+            this.tabEntraSaida.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabEntraSaida.Name = "tabEntraSaida";
             this.tabEntraSaida.SelectedTabPage = this.xtbpCadastro;
-            this.tabEntraSaida.Size = new System.Drawing.Size(448, 329);
+            this.tabEntraSaida.Size = new System.Drawing.Size(523, 405);
             this.tabEntraSaida.TabIndex = 167;
             this.tabEntraSaida.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtbpCadastro,
@@ -708,8 +730,9 @@
             this.xtbpCadastro.Controls.Add(this.txtMaterial_Nome);
             this.xtbpCadastro.Controls.Add(this.MaterialTipoLabel);
             this.xtbpCadastro.Controls.Add(this.txtMaterial_Tipo);
+            this.xtbpCadastro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtbpCadastro.Name = "xtbpCadastro";
-            this.xtbpCadastro.Size = new System.Drawing.Size(442, 301);
+            this.xtbpCadastro.Size = new System.Drawing.Size(516, 371);
             this.xtbpCadastro.Text = "Cadastro";
             // 
             // xtbpEntrada
@@ -721,18 +744,19 @@
             this.xtbpEntrada.Controls.Add(this.tbNomeCor_e);
             this.xtbpEntrada.Controls.Add(this.tb_Codigo_Linha_e);
             this.xtbpEntrada.Controls.Add(this.Label16);
+            this.xtbpEntrada.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtbpEntrada.Name = "xtbpEntrada";
-            this.xtbpEntrada.Size = new System.Drawing.Size(442, 301);
+            this.xtbpEntrada.Size = new System.Drawing.Size(516, 371);
             this.xtbpEntrada.Text = "Entrada";
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl4.Location = new System.Drawing.Point(247, 50);
+            this.labelControl4.Location = new System.Drawing.Point(288, 62);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(68, 19);
+            this.labelControl4.Size = new System.Drawing.Size(81, 23);
             this.labelControl4.TabIndex = 127;
             this.labelControl4.Text = " Estoque 2";
             // 
@@ -748,16 +772,18 @@
             this.panelControl1.Controls.Add(this.Label12);
             this.panelControl1.Controls.Add(this.Label13);
             this.panelControl1.Controls.Add(this.tbEst2_Atual_e);
-            this.panelControl1.Location = new System.Drawing.Point(247, 66);
+            this.panelControl1.Location = new System.Drawing.Point(288, 81);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(180, 200);
+            this.panelControl1.Size = new System.Drawing.Size(210, 246);
             this.panelControl1.TabIndex = 128;
             // 
             // btnEst2_e
             // 
-            this.btnEst2_e.Location = new System.Drawing.Point(8, 145);
+            this.btnEst2_e.Location = new System.Drawing.Point(9, 178);
+            this.btnEst2_e.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEst2_e.Name = "btnEst2_e";
-            this.btnEst2_e.Size = new System.Drawing.Size(164, 33);
+            this.btnEst2_e.Size = new System.Drawing.Size(191, 41);
             this.btnEst2_e.TabIndex = 24;
             this.btnEst2_e.Text = "&Gravar Entrada";
             this.btnEst2_e.ToolTipTitle = "Gravar";
@@ -767,10 +793,10 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl3.Location = new System.Drawing.Point(27, 50);
+            this.labelControl3.Location = new System.Drawing.Point(31, 62);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(68, 19);
+            this.labelControl3.Size = new System.Drawing.Size(81, 23);
             this.labelControl3.TabIndex = 25;
             this.labelControl3.Text = " Estoque 1";
             // 
@@ -786,16 +812,18 @@
             this.pnlEst1_e.Controls.Add(this.label9);
             this.pnlEst1_e.Controls.Add(this.Label7);
             this.pnlEst1_e.Controls.Add(this.tbEst1_Atual_e);
-            this.pnlEst1_e.Location = new System.Drawing.Point(27, 66);
+            this.pnlEst1_e.Location = new System.Drawing.Point(31, 81);
+            this.pnlEst1_e.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlEst1_e.Name = "pnlEst1_e";
-            this.pnlEst1_e.Size = new System.Drawing.Size(180, 200);
+            this.pnlEst1_e.Size = new System.Drawing.Size(210, 246);
             this.pnlEst1_e.TabIndex = 126;
             // 
             // btnEst1_e
             // 
-            this.btnEst1_e.Location = new System.Drawing.Point(8, 145);
+            this.btnEst1_e.Location = new System.Drawing.Point(9, 178);
+            this.btnEst1_e.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEst1_e.Name = "btnEst1_e";
-            this.btnEst1_e.Size = new System.Drawing.Size(164, 33);
+            this.btnEst1_e.Size = new System.Drawing.Size(191, 41);
             this.btnEst1_e.TabIndex = 24;
             this.btnEst1_e.Text = "&Gravar Entrada";
             this.btnEst1_e.ToolTipTitle = "Gravar";
@@ -813,18 +841,19 @@
             this.xtbpBaixa.Controls.Add(this.label46);
             this.xtbpBaixa.Controls.Add(this.dtpData_Execucao);
             this.xtbpBaixa.Controls.Add(this.btnExecutarItem);
+            this.xtbpBaixa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtbpBaixa.Name = "xtbpBaixa";
-            this.xtbpBaixa.Size = new System.Drawing.Size(442, 301);
+            this.xtbpBaixa.Size = new System.Drawing.Size(516, 371);
             this.xtbpBaixa.Text = "Baixa";
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl5.Location = new System.Drawing.Point(247, 52);
+            this.labelControl5.Location = new System.Drawing.Point(288, 64);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(68, 19);
+            this.labelControl5.Size = new System.Drawing.Size(81, 23);
             this.labelControl5.TabIndex = 134;
             this.labelControl5.Text = " Estoque 2";
             // 
@@ -840,16 +869,18 @@
             this.panelControl2.Controls.Add(this.label6);
             this.panelControl2.Controls.Add(this.label17);
             this.panelControl2.Controls.Add(this.tbEst2_Atual_b);
-            this.panelControl2.Location = new System.Drawing.Point(247, 68);
+            this.panelControl2.Location = new System.Drawing.Point(288, 84);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(180, 200);
+            this.panelControl2.Size = new System.Drawing.Size(210, 246);
             this.panelControl2.TabIndex = 135;
             // 
             // btnEst2_b
             // 
-            this.btnEst2_b.Location = new System.Drawing.Point(8, 145);
+            this.btnEst2_b.Location = new System.Drawing.Point(9, 178);
+            this.btnEst2_b.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEst2_b.Name = "btnEst2_b";
-            this.btnEst2_b.Size = new System.Drawing.Size(164, 33);
+            this.btnEst2_b.Size = new System.Drawing.Size(191, 41);
             this.btnEst2_b.TabIndex = 24;
             this.btnEst2_b.Text = "&Gravar Entrada";
             this.btnEst2_b.ToolTipTitle = "Gravar";
@@ -857,10 +888,11 @@
             // 
             // tbEst2_Final_b
             // 
-            this.tbEst2_Final_b.Location = new System.Drawing.Point(92, 113);
+            this.tbEst2_Final_b.Location = new System.Drawing.Point(107, 139);
+            this.tbEst2_Final_b.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst2_Final_b.Name = "tbEst2_Final_b";
             this.tbEst2_Final_b.ReadOnly = true;
-            this.tbEst2_Final_b.Size = new System.Drawing.Size(64, 21);
+            this.tbEst2_Final_b.Size = new System.Drawing.Size(74, 23);
             this.tbEst2_Final_b.TabIndex = 20;
             this.tbEst2_Final_b.TabStop = false;
             this.tbEst2_Final_b.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -869,9 +901,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(15, 113);
+            this.label1.Location = new System.Drawing.Point(17, 139);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(88, 17);
             this.label1.TabIndex = 19;
             this.label1.Text = "Estoque Final";
             // 
@@ -880,17 +912,18 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(123, 84);
+            this.label3.Location = new System.Drawing.Point(143, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 24);
+            this.label3.Size = new System.Drawing.Size(28, 29);
             this.label3.TabIndex = 23;
             this.label3.Text = "=";
             // 
             // tbEst2_Quantidade_b
             // 
-            this.tbEst2_Quantidade_b.Location = new System.Drawing.Point(92, 61);
+            this.tbEst2_Quantidade_b.Location = new System.Drawing.Point(107, 75);
+            this.tbEst2_Quantidade_b.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst2_Quantidade_b.Name = "tbEst2_Quantidade_b";
-            this.tbEst2_Quantidade_b.Size = new System.Drawing.Size(64, 21);
+            this.tbEst2_Quantidade_b.Size = new System.Drawing.Size(74, 23);
             this.tbEst2_Quantidade_b.TabIndex = 0;
             this.tbEst2_Quantidade_b.Text = "0";
             this.tbEst2_Quantidade_b.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -901,9 +934,9 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(123, 34);
+            this.label5.Location = new System.Drawing.Point(143, 42);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 24);
+            this.label5.Size = new System.Drawing.Size(28, 29);
             this.label5.TabIndex = 21;
             this.label5.Text = "+";
             // 
@@ -911,9 +944,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(15, 64);
+            this.label6.Location = new System.Drawing.Point(17, 79);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.Size = new System.Drawing.Size(78, 17);
             this.label6.TabIndex = 17;
             this.label6.Text = "Quantidade";
             // 
@@ -921,18 +954,19 @@
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Location = new System.Drawing.Point(4, 12);
+            this.label17.Location = new System.Drawing.Point(5, 15);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 13);
+            this.label17.Size = new System.Drawing.Size(92, 17);
             this.label17.TabIndex = 15;
             this.label17.Text = "Estoque Atual";
             // 
             // tbEst2_Atual_b
             // 
-            this.tbEst2_Atual_b.Location = new System.Drawing.Point(92, 9);
+            this.tbEst2_Atual_b.Location = new System.Drawing.Point(107, 11);
+            this.tbEst2_Atual_b.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst2_Atual_b.Name = "tbEst2_Atual_b";
             this.tbEst2_Atual_b.ReadOnly = true;
-            this.tbEst2_Atual_b.Size = new System.Drawing.Size(64, 21);
+            this.tbEst2_Atual_b.Size = new System.Drawing.Size(74, 23);
             this.tbEst2_Atual_b.TabIndex = 16;
             this.tbEst2_Atual_b.TabStop = false;
             this.tbEst2_Atual_b.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -941,10 +975,10 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl6.Location = new System.Drawing.Point(26, 52);
+            this.labelControl6.Location = new System.Drawing.Point(30, 64);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(68, 19);
+            this.labelControl6.Size = new System.Drawing.Size(81, 23);
             this.labelControl6.TabIndex = 131;
             this.labelControl6.Text = " Estoque 1";
             // 
@@ -960,16 +994,18 @@
             this.panelControl3.Controls.Add(this.label21);
             this.panelControl3.Controls.Add(this.label22);
             this.panelControl3.Controls.Add(this.tbEst1_Atual_b);
-            this.panelControl3.Location = new System.Drawing.Point(26, 68);
+            this.panelControl3.Location = new System.Drawing.Point(30, 84);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(180, 200);
+            this.panelControl3.Size = new System.Drawing.Size(210, 246);
             this.panelControl3.TabIndex = 133;
             // 
             // btnEst1_b
             // 
-            this.btnEst1_b.Location = new System.Drawing.Point(8, 145);
+            this.btnEst1_b.Location = new System.Drawing.Point(9, 178);
+            this.btnEst1_b.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEst1_b.Name = "btnEst1_b";
-            this.btnEst1_b.Size = new System.Drawing.Size(164, 33);
+            this.btnEst1_b.Size = new System.Drawing.Size(191, 41);
             this.btnEst1_b.TabIndex = 24;
             this.btnEst1_b.Text = "&Gravar Entrada";
             this.btnEst1_b.ToolTipTitle = "Gravar";
@@ -977,10 +1013,11 @@
             // 
             // tbEst1_Final_b
             // 
-            this.tbEst1_Final_b.Location = new System.Drawing.Point(98, 110);
+            this.tbEst1_Final_b.Location = new System.Drawing.Point(114, 135);
+            this.tbEst1_Final_b.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst1_Final_b.Name = "tbEst1_Final_b";
             this.tbEst1_Final_b.ReadOnly = true;
-            this.tbEst1_Final_b.Size = new System.Drawing.Size(64, 21);
+            this.tbEst1_Final_b.Size = new System.Drawing.Size(74, 23);
             this.tbEst1_Final_b.TabIndex = 20;
             this.tbEst1_Final_b.TabStop = false;
             this.tbEst1_Final_b.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -990,9 +1027,9 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(140, 84);
+            this.label18.Location = new System.Drawing.Point(163, 103);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(22, 24);
+            this.label18.Size = new System.Drawing.Size(28, 29);
             this.label18.TabIndex = 23;
             this.label18.Text = "=";
             // 
@@ -1000,9 +1037,9 @@
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Location = new System.Drawing.Point(5, 114);
+            this.label19.Location = new System.Drawing.Point(6, 140);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(71, 13);
+            this.label19.Size = new System.Drawing.Size(88, 17);
             this.label19.TabIndex = 19;
             this.label19.Text = "Estoque Final";
             // 
@@ -1011,17 +1048,18 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(140, 34);
+            this.label20.Location = new System.Drawing.Point(163, 42);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(22, 24);
+            this.label20.Size = new System.Drawing.Size(28, 29);
             this.label20.TabIndex = 21;
             this.label20.Text = "+";
             // 
             // tbEst1_Quantidade_b
             // 
-            this.tbEst1_Quantidade_b.Location = new System.Drawing.Point(102, 61);
+            this.tbEst1_Quantidade_b.Location = new System.Drawing.Point(119, 75);
+            this.tbEst1_Quantidade_b.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst1_Quantidade_b.Name = "tbEst1_Quantidade_b";
-            this.tbEst1_Quantidade_b.Size = new System.Drawing.Size(64, 21);
+            this.tbEst1_Quantidade_b.Size = new System.Drawing.Size(74, 23);
             this.tbEst1_Quantidade_b.TabIndex = 0;
             this.tbEst1_Quantidade_b.Text = "0";
             this.tbEst1_Quantidade_b.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1031,9 +1069,9 @@
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Location = new System.Drawing.Point(9, 12);
+            this.label21.Location = new System.Drawing.Point(10, 15);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(74, 13);
+            this.label21.Size = new System.Drawing.Size(92, 17);
             this.label21.TabIndex = 15;
             this.label21.Text = "Estoque Atual";
             // 
@@ -1041,36 +1079,39 @@
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Location = new System.Drawing.Point(9, 64);
+            this.label22.Location = new System.Drawing.Point(10, 79);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(63, 13);
+            this.label22.Size = new System.Drawing.Size(78, 17);
             this.label22.TabIndex = 17;
             this.label22.Text = "Quantidade";
             // 
             // tbEst1_Atual_b
             // 
-            this.tbEst1_Atual_b.Location = new System.Drawing.Point(102, 9);
+            this.tbEst1_Atual_b.Location = new System.Drawing.Point(119, 11);
+            this.tbEst1_Atual_b.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst1_Atual_b.Name = "tbEst1_Atual_b";
             this.tbEst1_Atual_b.ReadOnly = true;
-            this.tbEst1_Atual_b.Size = new System.Drawing.Size(64, 21);
+            this.tbEst1_Atual_b.Size = new System.Drawing.Size(74, 23);
             this.tbEst1_Atual_b.TabIndex = 16;
             this.tbEst1_Atual_b.TabStop = false;
             this.tbEst1_Atual_b.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbNomeCor_b
             // 
-            this.tbNomeCor_b.Location = new System.Drawing.Point(155, 13);
+            this.tbNomeCor_b.Location = new System.Drawing.Point(181, 16);
+            this.tbNomeCor_b.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbNomeCor_b.Name = "tbNomeCor_b";
             this.tbNomeCor_b.ReadOnly = true;
-            this.tbNomeCor_b.Size = new System.Drawing.Size(272, 21);
+            this.tbNomeCor_b.Size = new System.Drawing.Size(317, 23);
             this.tbNomeCor_b.TabIndex = 132;
             // 
             // tb_Codigo_Linha_b
             // 
             this.tb_Codigo_Linha_b.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Codigo_Linha_b.Location = new System.Drawing.Point(61, 6);
+            this.tb_Codigo_Linha_b.Location = new System.Drawing.Point(71, 7);
+            this.tb_Codigo_Linha_b.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Codigo_Linha_b.Name = "tb_Codigo_Linha_b";
-            this.tb_Codigo_Linha_b.Size = new System.Drawing.Size(74, 30);
+            this.tb_Codigo_Linha_b.Size = new System.Drawing.Size(86, 35);
             this.tb_Codigo_Linha_b.TabIndex = 129;
             this.tb_Codigo_Linha_b.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tb_Codigo_Linha_b.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Codigo_Linha_b_KeyPress);
@@ -1079,9 +1120,9 @@
             // 
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Location = new System.Drawing.Point(11, 16);
+            this.label23.Location = new System.Drawing.Point(13, 20);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(44, 13);
+            this.label23.Size = new System.Drawing.Size(56, 17);
             this.label23.TabIndex = 130;
             this.label23.Text = "Código:";
             // 
@@ -1089,9 +1130,9 @@
             // 
             this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label46.BackColor = System.Drawing.Color.Transparent;
-            this.label46.Location = new System.Drawing.Point(11505, 41);
+            this.label46.Location = new System.Drawing.Point(13421, 50);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(79, 13);
+            this.label46.Size = new System.Drawing.Size(92, 16);
             this.label46.TabIndex = 89;
             this.label46.Text = "Execução:";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1110,7 +1151,8 @@
             this.dtpData_Execucao.FocusHighlightEnabled = true;
             this.dtpData_Execucao.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Execucao.IsPopupCalendarOpen = false;
-            this.dtpData_Execucao.Location = new System.Drawing.Point(11591, 36);
+            this.dtpData_Execucao.Location = new System.Drawing.Point(13522, 44);
+            this.dtpData_Execucao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             // 
             // 
             // 
@@ -1134,7 +1176,7 @@
             this.dtpData_Execucao.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtpData_Execucao.MonthCalendar.TodayButtonVisible = true;
             this.dtpData_Execucao.Name = "dtpData_Execucao";
-            this.dtpData_Execucao.Size = new System.Drawing.Size(97, 21);
+            this.dtpData_Execucao.Size = new System.Drawing.Size(113, 23);
             this.dtpData_Execucao.TabIndex = 90;
             // 
             // btnExecutarItem
@@ -1142,9 +1184,10 @@
             this.btnExecutarItem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnExecutarItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExecutarItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnExecutarItem.Location = new System.Drawing.Point(11703, 25);
+            this.btnExecutarItem.Location = new System.Drawing.Point(13652, 31);
+            this.btnExecutarItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExecutarItem.Name = "btnExecutarItem";
-            this.btnExecutarItem.Size = new System.Drawing.Size(92, 32);
+            this.btnExecutarItem.Size = new System.Drawing.Size(107, 39);
             this.btnExecutarItem.TabIndex = 100;
             this.btnExecutarItem.Text = "Executar o Ítem";
             // 
@@ -1157,18 +1200,19 @@
             this.xtbpMovimento.Controls.Add(this.tbNomeCor_m);
             this.xtbpMovimento.Controls.Add(this.tb_Codigo_Linha_m);
             this.xtbpMovimento.Controls.Add(this.label35);
+            this.xtbpMovimento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtbpMovimento.Name = "xtbpMovimento";
-            this.xtbpMovimento.Size = new System.Drawing.Size(442, 301);
+            this.xtbpMovimento.Size = new System.Drawing.Size(516, 371);
             this.xtbpMovimento.Text = "Movimento";
             // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl7.Location = new System.Drawing.Point(263, 50);
+            this.labelControl7.Location = new System.Drawing.Point(307, 62);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(68, 19);
+            this.labelControl7.Size = new System.Drawing.Size(81, 23);
             this.labelControl7.TabIndex = 134;
             this.labelControl7.Text = " Estoque 2";
             // 
@@ -1184,26 +1228,29 @@
             this.panelControl4.Controls.Add(this.label27);
             this.panelControl4.Controls.Add(this.label28);
             this.panelControl4.Controls.Add(this.tbEst2_Atual_m);
-            this.panelControl4.Location = new System.Drawing.Point(263, 66);
+            this.panelControl4.Location = new System.Drawing.Point(307, 81);
+            this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(180, 200);
+            this.panelControl4.Size = new System.Drawing.Size(210, 246);
             this.panelControl4.TabIndex = 135;
             // 
             // btnEst2_m
             // 
-            this.btnEst2_m.Location = new System.Drawing.Point(8, 145);
+            this.btnEst2_m.Location = new System.Drawing.Point(9, 178);
+            this.btnEst2_m.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEst2_m.Name = "btnEst2_m";
-            this.btnEst2_m.Size = new System.Drawing.Size(164, 33);
+            this.btnEst2_m.Size = new System.Drawing.Size(191, 41);
             this.btnEst2_m.TabIndex = 24;
             this.btnEst2_m.Text = "&Gravar Entrada";
             this.btnEst2_m.ToolTipTitle = "Gravar";
             // 
             // tbEst2_Final_m
             // 
-            this.tbEst2_Final_m.Location = new System.Drawing.Point(92, 113);
+            this.tbEst2_Final_m.Location = new System.Drawing.Point(107, 139);
+            this.tbEst2_Final_m.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst2_Final_m.Name = "tbEst2_Final_m";
             this.tbEst2_Final_m.ReadOnly = true;
-            this.tbEst2_Final_m.Size = new System.Drawing.Size(64, 21);
+            this.tbEst2_Final_m.Size = new System.Drawing.Size(74, 23);
             this.tbEst2_Final_m.TabIndex = 20;
             this.tbEst2_Final_m.TabStop = false;
             this.tbEst2_Final_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1212,9 +1259,9 @@
             // 
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Location = new System.Drawing.Point(15, 113);
+            this.label24.Location = new System.Drawing.Point(17, 139);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(71, 13);
+            this.label24.Size = new System.Drawing.Size(88, 17);
             this.label24.TabIndex = 19;
             this.label24.Text = "Estoque Final";
             // 
@@ -1223,17 +1270,18 @@
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(123, 84);
+            this.label25.Location = new System.Drawing.Point(143, 103);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(22, 24);
+            this.label25.Size = new System.Drawing.Size(28, 29);
             this.label25.TabIndex = 23;
             this.label25.Text = "=";
             // 
             // tbEst2_Quantidade_m
             // 
-            this.tbEst2_Quantidade_m.Location = new System.Drawing.Point(92, 61);
+            this.tbEst2_Quantidade_m.Location = new System.Drawing.Point(107, 75);
+            this.tbEst2_Quantidade_m.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst2_Quantidade_m.Name = "tbEst2_Quantidade_m";
-            this.tbEst2_Quantidade_m.Size = new System.Drawing.Size(64, 21);
+            this.tbEst2_Quantidade_m.Size = new System.Drawing.Size(74, 23);
             this.tbEst2_Quantidade_m.TabIndex = 0;
             this.tbEst2_Quantidade_m.Text = "0";
             this.tbEst2_Quantidade_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1243,9 +1291,9 @@
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(123, 34);
+            this.label26.Location = new System.Drawing.Point(143, 42);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(22, 24);
+            this.label26.Size = new System.Drawing.Size(28, 29);
             this.label26.TabIndex = 21;
             this.label26.Text = "+";
             // 
@@ -1253,9 +1301,9 @@
             // 
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Location = new System.Drawing.Point(15, 64);
+            this.label27.Location = new System.Drawing.Point(17, 79);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(63, 13);
+            this.label27.Size = new System.Drawing.Size(78, 17);
             this.label27.TabIndex = 17;
             this.label27.Text = "Quantidade";
             // 
@@ -1263,18 +1311,19 @@
             // 
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Location = new System.Drawing.Point(4, 12);
+            this.label28.Location = new System.Drawing.Point(5, 15);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(74, 13);
+            this.label28.Size = new System.Drawing.Size(92, 17);
             this.label28.TabIndex = 15;
             this.label28.Text = "Estoque Atual";
             // 
             // tbEst2_Atual_m
             // 
-            this.tbEst2_Atual_m.Location = new System.Drawing.Point(92, 9);
+            this.tbEst2_Atual_m.Location = new System.Drawing.Point(107, 11);
+            this.tbEst2_Atual_m.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst2_Atual_m.Name = "tbEst2_Atual_m";
             this.tbEst2_Atual_m.ReadOnly = true;
-            this.tbEst2_Atual_m.Size = new System.Drawing.Size(64, 21);
+            this.tbEst2_Atual_m.Size = new System.Drawing.Size(74, 23);
             this.tbEst2_Atual_m.TabIndex = 16;
             this.tbEst2_Atual_m.TabStop = false;
             this.tbEst2_Atual_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1283,10 +1332,10 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl8.Location = new System.Drawing.Point(30, 50);
+            this.labelControl8.Location = new System.Drawing.Point(35, 62);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(68, 19);
+            this.labelControl8.Size = new System.Drawing.Size(81, 23);
             this.labelControl8.TabIndex = 131;
             this.labelControl8.Text = " Estoque 1";
             // 
@@ -1302,26 +1351,29 @@
             this.panelControl5.Controls.Add(this.label33);
             this.panelControl5.Controls.Add(this.label34);
             this.panelControl5.Controls.Add(this.tbEst1_Atual_m);
-            this.panelControl5.Location = new System.Drawing.Point(30, 66);
+            this.panelControl5.Location = new System.Drawing.Point(35, 81);
+            this.panelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(180, 200);
+            this.panelControl5.Size = new System.Drawing.Size(210, 246);
             this.panelControl5.TabIndex = 133;
             // 
             // btnEst1_m
             // 
-            this.btnEst1_m.Location = new System.Drawing.Point(8, 145);
+            this.btnEst1_m.Location = new System.Drawing.Point(9, 178);
+            this.btnEst1_m.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEst1_m.Name = "btnEst1_m";
-            this.btnEst1_m.Size = new System.Drawing.Size(164, 33);
+            this.btnEst1_m.Size = new System.Drawing.Size(191, 41);
             this.btnEst1_m.TabIndex = 24;
             this.btnEst1_m.Text = "&Gravar Entrada";
             this.btnEst1_m.ToolTipTitle = "Gravar";
             // 
             // tbEst1_Final_m
             // 
-            this.tbEst1_Final_m.Location = new System.Drawing.Point(98, 110);
+            this.tbEst1_Final_m.Location = new System.Drawing.Point(114, 135);
+            this.tbEst1_Final_m.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst1_Final_m.Name = "tbEst1_Final_m";
             this.tbEst1_Final_m.ReadOnly = true;
-            this.tbEst1_Final_m.Size = new System.Drawing.Size(64, 21);
+            this.tbEst1_Final_m.Size = new System.Drawing.Size(74, 23);
             this.tbEst1_Final_m.TabIndex = 20;
             this.tbEst1_Final_m.TabStop = false;
             this.tbEst1_Final_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1331,9 +1383,9 @@
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(140, 84);
+            this.label29.Location = new System.Drawing.Point(163, 103);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(22, 24);
+            this.label29.Size = new System.Drawing.Size(28, 29);
             this.label29.TabIndex = 23;
             this.label29.Text = "=";
             // 
@@ -1341,9 +1393,9 @@
             // 
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Location = new System.Drawing.Point(5, 114);
+            this.label31.Location = new System.Drawing.Point(6, 140);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(71, 13);
+            this.label31.Size = new System.Drawing.Size(88, 17);
             this.label31.TabIndex = 19;
             this.label31.Text = "Estoque Final";
             // 
@@ -1352,17 +1404,18 @@
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.Color.Transparent;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(140, 34);
+            this.label32.Location = new System.Drawing.Point(163, 42);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(22, 24);
+            this.label32.Size = new System.Drawing.Size(28, 29);
             this.label32.TabIndex = 21;
             this.label32.Text = "+";
             // 
             // tbEst1_Quantidade_m
             // 
-            this.tbEst1_Quantidade_m.Location = new System.Drawing.Point(102, 61);
+            this.tbEst1_Quantidade_m.Location = new System.Drawing.Point(119, 75);
+            this.tbEst1_Quantidade_m.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst1_Quantidade_m.Name = "tbEst1_Quantidade_m";
-            this.tbEst1_Quantidade_m.Size = new System.Drawing.Size(64, 21);
+            this.tbEst1_Quantidade_m.Size = new System.Drawing.Size(74, 23);
             this.tbEst1_Quantidade_m.TabIndex = 0;
             this.tbEst1_Quantidade_m.Text = "0";
             this.tbEst1_Quantidade_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1371,9 +1424,9 @@
             // 
             this.label33.AutoSize = true;
             this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.Location = new System.Drawing.Point(9, 12);
+            this.label33.Location = new System.Drawing.Point(10, 15);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(74, 13);
+            this.label33.Size = new System.Drawing.Size(92, 17);
             this.label33.TabIndex = 15;
             this.label33.Text = "Estoque Atual";
             // 
@@ -1381,36 +1434,39 @@
             // 
             this.label34.AutoSize = true;
             this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Location = new System.Drawing.Point(9, 64);
+            this.label34.Location = new System.Drawing.Point(10, 79);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(63, 13);
+            this.label34.Size = new System.Drawing.Size(78, 17);
             this.label34.TabIndex = 17;
             this.label34.Text = "Quantidade";
             // 
             // tbEst1_Atual_m
             // 
-            this.tbEst1_Atual_m.Location = new System.Drawing.Point(102, 9);
+            this.tbEst1_Atual_m.Location = new System.Drawing.Point(119, 11);
+            this.tbEst1_Atual_m.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEst1_Atual_m.Name = "tbEst1_Atual_m";
             this.tbEst1_Atual_m.ReadOnly = true;
-            this.tbEst1_Atual_m.Size = new System.Drawing.Size(64, 21);
+            this.tbEst1_Atual_m.Size = new System.Drawing.Size(74, 23);
             this.tbEst1_Atual_m.TabIndex = 16;
             this.tbEst1_Atual_m.TabStop = false;
             this.tbEst1_Atual_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbNomeCor_m
             // 
-            this.tbNomeCor_m.Location = new System.Drawing.Point(209, 19);
+            this.tbNomeCor_m.Location = new System.Drawing.Point(244, 23);
+            this.tbNomeCor_m.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbNomeCor_m.Name = "tbNomeCor_m";
             this.tbNomeCor_m.ReadOnly = true;
-            this.tbNomeCor_m.Size = new System.Drawing.Size(234, 21);
+            this.tbNomeCor_m.Size = new System.Drawing.Size(272, 23);
             this.tbNomeCor_m.TabIndex = 132;
             // 
             // tb_Codigo_Linha_m
             // 
             this.tb_Codigo_Linha_m.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Codigo_Linha_m.Location = new System.Drawing.Point(128, 14);
+            this.tb_Codigo_Linha_m.Location = new System.Drawing.Point(149, 17);
+            this.tb_Codigo_Linha_m.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Codigo_Linha_m.Name = "tb_Codigo_Linha_m";
-            this.tb_Codigo_Linha_m.Size = new System.Drawing.Size(74, 30);
+            this.tb_Codigo_Linha_m.Size = new System.Drawing.Size(86, 35);
             this.tb_Codigo_Linha_m.TabIndex = 129;
             this.tb_Codigo_Linha_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tb_Codigo_Linha_m.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Codigo_Linha_m_KeyPress);
@@ -1419,16 +1475,16 @@
             // 
             this.label35.AutoSize = true;
             this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.Location = new System.Drawing.Point(39, 24);
+            this.label35.Location = new System.Drawing.Point(45, 30);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(83, 13);
+            this.label35.Size = new System.Drawing.Size(106, 17);
             this.label35.TabIndex = 130;
             this.label35.Text = "Codigo da Linha";
             // 
             // deDataInicial
             // 
             this.deDataInicial.EditValue = null;
-            this.deDataInicial.Location = new System.Drawing.Point(23, 380);
+            this.deDataInicial.Location = new System.Drawing.Point(27, 468);
             this.deDataInicial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deDataInicial.MenuManager = this.barManager1;
             this.deDataInicial.Name = "deDataInicial";
@@ -1448,15 +1504,16 @@
             this.deDataInicial.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
             this.deDataInicial.Properties.VistaCalendarViewStyle = ((DevExpress.XtraEditors.VistaCalendarViewStyle)((DevExpress.XtraEditors.VistaCalendarViewStyle.MonthView | DevExpress.XtraEditors.VistaCalendarViewStyle.YearView)));
             this.deDataInicial.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.True;
-            this.deDataInicial.Size = new System.Drawing.Size(77, 20);
+            this.deDataInicial.Size = new System.Drawing.Size(90, 22);
             this.deDataInicial.TabIndex = 38;
             this.deDataInicial.EditValueChanged += new System.EventHandler(this.deDataInicial_EditValueChanged);
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(36, 351);
+            this.labelControl2.Location = new System.Drawing.Point(42, 432);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(55, 13);
+            this.labelControl2.Size = new System.Drawing.Size(66, 16);
             this.labelControl2.TabIndex = 35;
             this.labelControl2.Text = "A partir de:";
             // 
@@ -1464,8 +1521,9 @@
             // 
             this.imb_c.Dock = System.Windows.Forms.DockStyle.Left;
             this.imb_c.Location = new System.Drawing.Point(0, 0);
+            this.imb_c.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.imb_c.Name = "imb_c";
-            this.imb_c.Size = new System.Drawing.Size(17, 541);
+            this.imb_c.Size = new System.Drawing.Size(20, 667);
             this.imb_c.TabIndex = 42;
             // 
             // dgRegistros
@@ -1474,11 +1532,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgRegistros.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.dgRegistros.Location = new System.Drawing.Point(0, 24);
+            this.dgRegistros.Location = new System.Drawing.Point(0, 30);
             this.dgRegistros.MainView = this.gdRegistros;
             this.dgRegistros.Margin = new System.Windows.Forms.Padding(2);
             this.dgRegistros.Name = "dgRegistros";
-            this.dgRegistros.Size = new System.Drawing.Size(488, 556);
+            this.dgRegistros.Size = new System.Drawing.Size(569, 685);
             this.dgRegistros.TabIndex = 115;
             this.dgRegistros.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdRegistros});
@@ -1598,13 +1656,13 @@
             this.dgLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgLog.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.dgLog.Location = new System.Drawing.Point(474, 2);
+            this.dgLog.Location = new System.Drawing.Point(553, 2);
             this.dgLog.MainView = this.gvLog;
             this.dgLog.Margin = new System.Windows.Forms.Padding(2);
             this.dgLog.Name = "dgLog";
             this.dgLog.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemColorEdit2});
-            this.dgLog.Size = new System.Drawing.Size(239, 322);
+            this.dgLog.Size = new System.Drawing.Size(282, 396);
             this.dgLog.TabIndex = 168;
             this.dgLog.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvLog});
@@ -1712,14 +1770,15 @@
             this.chartLinhaHistorico.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.LeftOutside;
             this.chartLinhaHistorico.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.Bottom;
             this.chartLinhaHistorico.Legend.Name = "Default Legend";
-            this.chartLinhaHistorico.Location = new System.Drawing.Point(21, 328);
+            this.chartLinhaHistorico.Location = new System.Drawing.Point(24, 404);
+            this.chartLinhaHistorico.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chartLinhaHistorico.Name = "chartLinhaHistorico";
             series1.Name = "compra";
             series2.Name = "uso";
             this.chartLinhaHistorico.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2};
-            this.chartLinhaHistorico.Size = new System.Drawing.Size(567, 212);
+            this.chartLinhaHistorico.Size = new System.Drawing.Size(665, 262);
             this.chartLinhaHistorico.TabIndex = 169;
             // 
             // pnlFiltrar
@@ -1732,15 +1791,15 @@
             this.pnlFiltrar.Location = new System.Drawing.Point(0, 0);
             this.pnlFiltrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlFiltrar.Name = "pnlFiltrar";
-            this.pnlFiltrar.Size = new System.Drawing.Size(485, 27);
+            this.pnlFiltrar.Size = new System.Drawing.Size(562, 33);
             this.pnlFiltrar.TabIndex = 116;
             // 
             // frmCadastroLinha
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1085, 589);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.ClientSize = new System.Drawing.Size(1266, 725);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmCadastroLinha";
             this.Text = "Cadastro de Linha";
             this.Load += new System.EventHandler(this.frmCadastroLinha_Load);
