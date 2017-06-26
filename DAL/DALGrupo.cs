@@ -159,5 +159,21 @@ namespace DAL
             }
             return modelo;
         }
+
+        public DataTable TodosGrupos(string item = "")
+        {
+            DataTable tabela = new DataTable();
+            p = new List<MySqlParametro>();
+            if (item == "")
+            {
+                sql = "SELECT id,grupo FROM grupos;";
+            }
+            else
+            {
+                sql = "SELECT 0 AS id,'" + item + "' AS grupo UNION SELECT id,grupo FROM grupos;";
+            }
+            return bd.exePesquisa(sql, p);
+        }
+
     }
 }

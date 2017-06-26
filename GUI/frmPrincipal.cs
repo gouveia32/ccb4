@@ -268,7 +268,7 @@ namespace GUI
             MostraAgaurde("Aguarde", "Abrindo o formulário...");
             if (Application.OpenForms.OfType<frmCadastroGrupos>().Count() > 0)
             {
-                SelecionaTab("Cadastro de Cliente");
+                SelecionaTab("Cliente");
             }
             else
             {
@@ -300,7 +300,7 @@ namespace GUI
             MostraAgaurde("Aguarde", "Abrindo o formulário...");
             if (Application.OpenForms.OfType<frmCadastroBordado>().Count() > 0)
             {
-                SelecionaTab("Cadastro de Bordado");
+                SelecionaTab("Bordado");
             }
             else
             {
@@ -318,7 +318,7 @@ namespace GUI
             MostraAgaurde("Aguarde", "Abrindo o formulário...");
             if (Application.OpenForms.OfType<frmCadastroCliente>().Count() > 0)
             {
-                SelecionaTab("Cadastro de Cliente");
+                SelecionaTab("Cliente");
             }
             else
             {
@@ -334,7 +334,7 @@ namespace GUI
             MostraAgaurde("Aguarde", "Abrindo o formulário...");
             if (Application.OpenForms.OfType<frmCadastroFornecedor>().Count() > 0)
             {
-                SelecionaTab("Cadastro de Fornecedor");
+                SelecionaTab("Fornecedor");
             }
             else
             {
@@ -350,7 +350,7 @@ namespace GUI
             MostraAgaurde("Aguarde", "Abrindo o formulário...");
             if (Application.OpenForms.OfType<frmCadastroEmpregado>().Count() > 0)
             {
-                SelecionaTab("Cadastro de Empregado");
+                SelecionaTab("Empregado");
             }
             else
             {
@@ -366,7 +366,7 @@ namespace GUI
             MostraAgaurde("Aguarde", "Abrindo o formulário...");
             if (Application.OpenForms.OfType<frmCadastroGrupos>().Count() > 0)
             {
-                SelecionaTab("Cadastro de Grupo");
+                SelecionaTab("Grupo");
             }
             else
             {
@@ -382,7 +382,7 @@ namespace GUI
             MostraAgaurde("Aguarde", "Abrindo o formulário...");
             if (Application.OpenForms.OfType<frmCadastroLinha>().Count() > 0)
             {
-                SelecionaTab("Cadastro de Linha");
+                SelecionaTab("Linha");
             }
             else
             {

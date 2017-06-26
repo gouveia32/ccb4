@@ -175,5 +175,20 @@ namespace DAL
             sql = "SELECT nome FROM catalogos WHERE bordado_id = @bordado_id";
             return bd.exePesquisa(sql, p);
         }
+
+        public DataTable TodosCatalogos(string item = "")
+        {
+            DataTable tabela = new DataTable();
+            p = new List<MySqlParametro>();
+            if (item == "")
+            {
+                sql = "SELECT id,nome,bordado_id  FROM catalogos GROUP BY nome;";
+            }
+            else
+            {
+                sql = "SELECT 0 AS id,'" + item + "' AS nome, 0 AS bordado_id UNION SELECT id,nome,bordado_id FROM catalogos GROUP BY nome;";
+            }
+            return bd.exePesquisa(sql, p);
+        }
     }
 }

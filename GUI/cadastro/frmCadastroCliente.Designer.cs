@@ -514,7 +514,7 @@
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCadastroCliente";
-            this.Text = "Cadastro de Cliente";
+            this.Text = "Cliente";
             this.Activated += new System.EventHandler(this.frmCadastroCliente_Activated);
             this.Load += new System.EventHandler(this.frmCadastroCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

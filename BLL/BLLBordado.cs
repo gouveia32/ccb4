@@ -45,9 +45,9 @@ namespace BLL
             DALobj.Exclui(id);
         }
 
-        public DataTable Filtrar(String valor)
+        public DataTable Filtrar(String valor, String where = "")
         {
-            return DALobj.Filtrar(ra.RetiraAcento(valor));
+            return DALobj.Filtrar(ra.RetiraAcento(valor), where);
         }
 
         public Bordado CarregaModeloBordado(int id)

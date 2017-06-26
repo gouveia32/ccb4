@@ -47,7 +47,6 @@ namespace GUI
             picBordadoAmpliado.Image = null;
         }
 
-
         private void ModeloParaTela(Bordado modelo)
         {
             try
@@ -123,19 +122,33 @@ namespace GUI
         private void Filtrar(int Posicionar_id = 0)
         {
             fp.MostraAgaurde("Aguarde", "Carregando dados...");
+            LimpaTela(); 
             BLLBordado bll = new BLLBordado();
-            dgRegistros.DataSource = bll.Filtrar(txtFiltrar.Text);
+            string where = "";
+            if (cbFiltroCatalogo.Text != "Todos")
+            {
+                where = " catalogos.nome='" + cbFiltroCatalogo.Text + "'"; 
+            }
+            if (cbFiltroGrupo.Text != "Todos")
+            {
+                if (where == "")
+                   where = " grupo_id=" + cbFiltroGrupo.SelectedValue;
+                else
+                    where += " AND grupo_id=" + cbFiltroGrupo.SelectedValue;
+            }
+            dgRegistros.DataSource = bll.Filtrar(txtFiltrar.Text, where);
+
             if (Posicionar_id > 0)
                 loc.Localizar(gdRegistros, Posicionar_id.ToString(), 0, true);
-            if (txtFiltrar.Text == "")
+            if (txtFiltrar.Text == "" && where == "")
             {
                 fp.sbRegistros.Caption = String.Format("{0} registros", gdRegistros.RowCount);
-                btnX.Visible = false;
+                //btnX.Visible = false;
             }
             else
             {
                 fp.sbRegistros.Caption = String.Format("{0} registros (filtrado)", gdRegistros.RowCount);
-                btnX.Visible = true;
+                //btnX.Visible = true;
             }
             fp.OcultaAguarde();
         }
@@ -148,8 +161,10 @@ namespace GUI
         private void btnX_Click(object sender, EventArgs e)
         {
             txtFiltrar.Text = "";
+            cbFiltroCatalogo.SelectedIndex = 0;
+            cbFiltroGrupo.SelectedIndex = 0;
             Filtrar();
-            btnX.Visible = false;
+            //btnX.Visible = false;
         }
 
         private void txtFiltrar_KeyPress(object sender, KeyPressEventArgs e)
@@ -160,11 +175,24 @@ namespace GUI
 
         private void frmCadastroBordado_Load(object sender, EventArgs e)
         {
+            //Filtro Catalogo
+            BLLCatalogo c = new BLLCatalogo();
+            cbFiltroCatalogo.DataSource = c.TodosCatalogos("Todos");
+            cbFiltroCatalogo.DisplayMember = "nome";
+            cbFiltroCatalogo.ValueMember = "id";
+            //cbFiltroCatalogo.SelectedIndex = 0;
+
             //CarregaCombo Grupo_id
             BLLGrupo g = new BLLGrupo();
-            cbGrupo.DataSource = g.Filtrar("");
+            cbGrupo.DataSource = g.TodosGrupos("");
             cbGrupo.DisplayMember = "grupo";
             cbGrupo.ValueMember = "id";
+
+            //Filtro Grupo
+            cbFiltroGrupo.DataSource = g.TodosGrupos("Todos");
+            cbFiltroGrupo.DisplayMember = "grupo";
+            cbFiltroGrupo.ValueMember = "id";
+            cbFiltroGrupo.SelectedIndex = 0;
 
             Filtrar();
 
@@ -320,6 +348,18 @@ namespace GUI
         private void picBordadoAmpliado_Click(object sender, EventArgs e)
         {
             picBordadoAmpliado.Visible = !picBordadoAmpliado.Visible;
+        }
+
+        private void cbFiltroGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbFiltroGrupo.ContainsFocus)
+                Filtrar();
+        }
+
+        private void cbFiltroCatalogo_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbFiltroCatalogo.ContainsFocus)
+                Filtrar();
         }
     }
 }

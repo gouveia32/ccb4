@@ -1746,7 +1746,7 @@
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCadastroLinha";
-            this.Text = "Cadastro de Linha";
+            this.Text = "Linha";
             this.Load += new System.EventHandler(this.frmCadastroLinha_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scc1)).EndInit();

@@ -37,7 +37,7 @@ namespace BLL
             {
                 throw new Exception("O nome da categoria é obrigatório!");
             }
-            DALobj.Altera (modelo);
+            DALobj.Altera(modelo);
         }
 
         public void Excluir(int id)
@@ -54,5 +54,11 @@ namespace BLL
         {
             return DALobj.CarregaModeloGrupo(id);
         }
+
+        public DataTable TodosGrupos(string item = "")
+        {
+            return DALobj.TodosGrupos(item);
+        }
     }
 }
+

@@ -122,38 +122,59 @@ namespace DAL
         /// </summary>
         /// <param name="valor"></param>
         /// <returns></returns>
-        public DataTable Filtrar(String valor)
+        public DataTable Filtrar(String valor, String where = "")
         {
             DataTable tabela = new DataTable();
             string[] mValor;
             string sWhere = "";
 
-            if (valor.Contains("|"))
+            if (valor != "")
             {
-                mValor = valor.Split('|');
-                sWhere = "WHERE arquivo LIKE '%";
-                foreach (string s in mValor)
+                if (valor.Contains("|"))
                 {
-                    sWhere += s + "%' OR descricao LIKE '%" + s + "%' OR arquivo LIKE '%";
+                    mValor = valor.Split('|');
+                    sWhere = "WHERE arquivo LIKE '%";
+                    foreach (string s in mValor)
+                    {
+                        sWhere += s + "%' OR descricao LIKE '%" + s + "%' OR arquivo LIKE '%";
+                    }
+                    sWhere = sWhere.Substring(0, sWhere.Length - 15);  //retura o último o´perador
                 }
-                sWhere = sWhere.Substring(0, sWhere.Length - 15);  //retura o último o´perador
-            }
-            else if (valor.Contains("&"))
-            {
-                mValor = valor.Split('&');
-                sWhere = "WHERE (arquivo LIKE '%";
-                foreach (string s in mValor)
+                else if (valor.Contains("&"))
                 {
-                    sWhere += s + "%' OR descricao LIKE '%" + s + "%') AND (arquivo LIKE '%";
+                    mValor = valor.Split('&');
+                    sWhere = "WHERE (arquivo LIKE '%";
+                    foreach (string s in mValor)
+                    {
+                        sWhere += s + "%' OR descricao LIKE '%" + s + "%') AND (arquivo LIKE '%";
+                    }
+                    sWhere = sWhere.Substring(0, sWhere.Length - 21);  //retura o último o´perador
                 }
-                sWhere = sWhere.Substring(0, sWhere.Length - 17);  //retura o último o´perador
+                else
+                {
+                    sWhere = string.Format("WHERE (arquivo LIKE '%{0:s}%' OR descricao LIKE '%{0:s}%'", valor);
+                }
+                if (where != "")
+                {
+                    sql = "SELECT bordados.id, arquivo, descricao, obs_publica, obs_restrita FROM bordados LEFT JOIN catalogos ON catalogos.bordado_id = bordados.id " + sWhere + ") And " + where;
+                }
+                else
+                {
+                    sql = "SELECT bordados.id, arquivo, descricao, obs_publica, obs_restrita FROM bordados " + sWhere + ");";
+                }
             }
             else
             {
-                sWhere = string.Format("WHERE arquivo LIKE '%{0:s}%' OR descricao LIKE '%{0:s}%'", valor);
+                if (where != "")
+                {
+                    sql = "SELECT bordados.id, arquivo, descricao, obs_publica, obs_restrita FROM bordados LEFT JOIN catalogos ON catalogos.bordado_id = bordados.id " + "WHERE " + where;
+                }
+                else
+                {
+                    sql = "SELECT bordados.id, arquivo, descricao, obs_publica, obs_restrita FROM bordados;";
+                }
             }
 
-            sql = "SELECT id, arquivo, descricao, obs_publica, obs_restrita FROM bordados " + sWhere;
             return bd.exePesquisa(sql, p);
         }
 

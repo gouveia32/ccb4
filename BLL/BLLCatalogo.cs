@@ -59,5 +59,10 @@ namespace BLL
         {
             return DALobj.CarregaCatalogosDoBordado(bordado_id);
         }
+
+        public DataTable TodosCatalogos(string item = "")
+        {
+            return DALobj.TodosCatalogos(item);
+        }
     }
 }
