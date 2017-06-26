@@ -91,20 +91,11 @@ namespace GUI
             tabela = bll.LinhasDoBordado(modelo.id);
             //dgLinhas_Utilizadas.Rows.Clear();
             dgLinhas_Utilizadas.DataSource = tabela;
-            //foreach (DataRow r in tabela.Rows)
-            //{
-            //    dgLinhas_Utilizadas.Rows.Add(r.ItemArray);
-            //}
 
             //carrega Notas Específicas, se tiver
             BLLNotaEspecifica bllNota = new BLLNotaEspecifica();
             //DataTable tabelaNota = new DataTable();
             dgNotas.DataSource = bllNota.NotasDoBordado(modelo.id);
-            //dgnotas.Rows.Clear();
-            //foreach (DataRow r in tabelaNota.Rows)
-            //{
-                //dgnotas.Rows.Add(r.ItemArray);
-            //}
 
             //Carrega catalogos
             BLLCatalogo bllCat = new BLLCatalogo();
