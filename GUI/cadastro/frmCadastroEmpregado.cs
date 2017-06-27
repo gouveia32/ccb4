@@ -109,8 +109,8 @@ namespace GUI
 
             gdRegistros.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             gdRegistros.Columns[0].Width = 80;
-            gdRegistros.Columns[1].Width = 350;
-            gdRegistros.Columns[1].Width = 300;
+            gdRegistros.Columns[1].Width = 370;
+            gdRegistros.Columns[2].Width = 300;
         }
 
         private void repositoryItemTextEdit1_KeyDown(object sender, KeyEventArgs e)

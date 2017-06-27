@@ -227,6 +227,14 @@ namespace GUI
             if (GUI.Properties.Settings.Default.Conectado == true)
                 sbUsuario.Caption = GUI.Properties.Settings.Default.Usuario;
 
+            if (GUI.Properties.Settings.Default.BDTeste == true)
+            {
+                this.Text = "T E S T E";
+            }
+            else
+            {
+                this.Text = "ccb";
+            }
             String pele;
 
             try

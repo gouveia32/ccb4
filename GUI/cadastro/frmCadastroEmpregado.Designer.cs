@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroEmpregado));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.deDemissao = new DevExpress.XtraEditors.DateEdit();
             this.deAdmissao = new DevExpress.XtraEditors.DateEdit();
@@ -62,6 +63,8 @@
             this.dgRegistros = new DevExpress.XtraGrid.GridControl();
             this.gdRegistros = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtFiltrar = new DevExpress.XtraEditors.TextEdit();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scc1)).BeginInit();
             this.scc1.SuspendLayout();
@@ -75,6 +78,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgRegistros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdRegistros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFiltrar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnInserir
@@ -114,10 +121,8 @@
             // 
             this.scc1.Location = new System.Drawing.Point(0, 40);
             this.scc1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.scc1.Panel1.Controls.Add(this.btnFiltrar);
-            this.scc1.Panel1.Controls.Add(this.btnX);
-            this.scc1.Panel1.Controls.Add(this.dgRegistros);
-            this.scc1.Panel1.Controls.Add(this.txtFiltrar);
+            this.scc1.Panel1.Controls.Add(this.panelControl2);
+            this.scc1.Panel1.Controls.Add(this.panelControl1);
             this.scc1.Panel2.Controls.Add(this.deDemissao);
             this.scc1.Panel2.Controls.Add(this.deAdmissao);
             this.scc1.Panel2.Controls.Add(this.deNascimento);
@@ -429,10 +434,10 @@
             // 
             this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltrar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnFiltrar.Location = new System.Drawing.Point(405, 0);
+            this.btnFiltrar.Location = new System.Drawing.Point(405, 2);
             this.btnFiltrar.MenuManager = this.barManager1;
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(44, 25);
+            this.btnFiltrar.Size = new System.Drawing.Size(44, 21);
             this.btnFiltrar.TabIndex = 54;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
@@ -441,26 +446,26 @@
             // 
             this.btnX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnX.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnX.Location = new System.Drawing.Point(387, 0);
+            this.btnX.Image = ((System.Drawing.Image)(resources.GetObject("btnX.Image")));
+            this.btnX.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnX.Location = new System.Drawing.Point(385, 4);
             this.btnX.MenuManager = this.barManager1;
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(18, 25);
+            this.btnX.Size = new System.Drawing.Size(18, 18);
             this.btnX.TabIndex = 53;
             this.btnX.Text = "X";
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // dgRegistros
             // 
-            this.dgRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
             gridLevelNode1.RelationName = "Level1";
             this.dgRegistros.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.dgRegistros.Location = new System.Drawing.Point(5, 22);
+            this.dgRegistros.Location = new System.Drawing.Point(2, 2);
             this.dgRegistros.MainView = this.gdRegistros;
             this.dgRegistros.Name = "dgRegistros";
-            this.dgRegistros.Size = new System.Drawing.Size(450, 527);
+            this.dgRegistros.Size = new System.Drawing.Size(446, 515);
             this.dgRegistros.TabIndex = 51;
             this.dgRegistros.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdRegistros});
@@ -499,11 +504,31 @@
             // 
             this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFiltrar.Location = new System.Drawing.Point(0, 1);
+            this.txtFiltrar.Location = new System.Drawing.Point(3, 3);
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(405, 20);
+            this.txtFiltrar.Size = new System.Drawing.Size(400, 20);
             this.txtFiltrar.TabIndex = 52;
             this.txtFiltrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltrar_KeyPress);
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.btnX);
+            this.panelControl1.Controls.Add(this.txtFiltrar);
+            this.panelControl1.Controls.Add(this.btnFiltrar);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(450, 26);
+            this.panelControl1.TabIndex = 55;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.dgRegistros);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 26);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(450, 519);
+            this.panelControl2.TabIndex = 56;
             // 
             // frmCadastroEmpregado
             // 
@@ -528,6 +553,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgRegistros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdRegistros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFiltrar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -568,5 +597,7 @@
         private DevExpress.XtraGrid.GridControl dgRegistros;
         private DevExpress.XtraGrid.Views.Grid.GridView gdRegistros;
         private DevExpress.XtraEditors.TextEdit txtFiltrar;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
     }
 }

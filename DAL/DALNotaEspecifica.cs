@@ -18,6 +18,66 @@ namespace DAL
             bd = ClassBD.create();
         }
 
+        public void Insere(DALNotaEspecifica modelo)
+        {
+            try
+            {
+                p = new List<MySqlParametro>();
+
+                p.Add(new MySqlParametro("@nome", modelo.nome));
+                p.Add(new MySqlParametro("@bordado_id", modelo.bordado_id));
+                sql = "INSERT INTO catalogod(nome,bordado_id) VALUES (@nome,@bordado_id)";
+                modelo.id = bd.exeNonQuery(sql, p);
+            }
+            catch (Exception erro)
+            {
+                throw new Exception(erro.Message);
+            }
+        }
+
+        /// <Alterar os dados de um Grupo>
+        /// 
+        /// </summary>
+        /// <param name="modelo"></param>
+        public void Altera(Catalogo modelo)
+        {
+            try
+            {
+                p = new List<MySqlParametro>();
+                p.Add(new MySqlParametro("@id", modelo.id));
+                p.Add(new MySqlParametro("@nome", modelo.nome));
+                p.Add(new MySqlParametro("@bordado_id", modelo.bordado_id));
+
+                sql = "UPDATE catalogos SET nome=@nome,bordado_id=@bordado_id WHERE id = @id";
+                bd.exeNonQuery(sql, p);
+            }
+            catch (Exception erro)
+            {
+                throw new Exception(erro.Message);
+            }
+        }
+
+        /// <Excluir o registro>
+        /// 
+        /// </summary>
+        /// <param name="nome"></param>
+        public void Exclui(string nome)
+        {
+            try
+            {
+                p = new List<MySqlParametro>();
+                p.Add(new MySqlParametro("@nome", nome));
+
+                sql = "DELETE FROM catalogos WHERE nome=@nome";
+                bd.exeNonQuery(sql, p);
+            }
+            catch (Exception erro)
+            {
+                throw new Exception(erro.Message);
+            }
+        }
+
+
         public DataTable NotasDoBordado(int bordado_id)
         {
             DataTable tabela = new DataTable();

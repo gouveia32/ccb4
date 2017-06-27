@@ -111,6 +111,12 @@
     <Compile Include="cadastro\frmCadastroLinha.Designer.cs">
       <DependentUpon>frmCadastroLinha.cs</DependentUpon>
     </Compile>
+    <Compile Include="dialogo\dlgNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogo\dlgNota.Designer.cs">
+      <DependentUpon>dlgNota.cs</DependentUpon>
+    </Compile>
     <Compile Include="impressao\CoolPrintPreviewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     </Compile>
     <EmbeddedResource Include="cadastro\frmCadastroLinha.resx">
       <DependentUpon>frmCadastroLinha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogo\dlgNota.resx">
+      <DependentUpon>dlgNota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="impressao\CoolPrintPreviewControl.resx">
       <DependentUpon>CoolPrintPreviewControl.cs</DependentUpon>

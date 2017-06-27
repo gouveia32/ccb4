@@ -132,5 +132,17 @@ namespace GUI.Properties {
                 return ((string)(this["ccbConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool BDTeste {
+            get {
+                return ((bool)(this["BDTeste"]));
+            }
+            set {
+                this["BDTeste"] = value;
+            }
+        }
     }
 }

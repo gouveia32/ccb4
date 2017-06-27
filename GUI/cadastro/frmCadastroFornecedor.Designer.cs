@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroFornecedor));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.btnFiltrar = new DevExpress.XtraEditors.DropDownButton();
             this.btnX = new DevExpress.XtraEditors.DropDownButton();
@@ -63,6 +64,8 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtContato_Funcao = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scc1)).BeginInit();
             this.scc1.SuspendLayout();
@@ -70,6 +73,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgRegistros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdRegistros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFiltrar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnInserir
@@ -109,10 +116,8 @@
             // 
             this.scc1.Location = new System.Drawing.Point(0, 40);
             this.scc1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.scc1.Panel1.Controls.Add(this.btnFiltrar);
-            this.scc1.Panel1.Controls.Add(this.btnX);
-            this.scc1.Panel1.Controls.Add(this.dgRegistros);
-            this.scc1.Panel1.Controls.Add(this.txtFiltrar);
+            this.scc1.Panel1.Controls.Add(this.panelControl2);
+            this.scc1.Panel1.Controls.Add(this.panelControl1);
             this.scc1.Panel2.Controls.Add(this.txtObs);
             this.scc1.Panel2.Controls.Add(this.txtInscr_Estadual);
             this.scc1.Panel2.Controls.Add(this.MaterialTipoLabel);
@@ -143,7 +148,7 @@
             this.scc1.Panel2.Controls.Add(this.txtContato_Funcao);
             this.scc1.Panel2.Controls.Add(this.label1);
             this.scc1.Size = new System.Drawing.Size(984, 553);
-            this.scc1.SplitterPosition = 450;
+            this.scc1.SplitterPosition = 386;
             // 
             // repositoryItemTextEdit1
             // 
@@ -161,10 +166,10 @@
             // 
             this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltrar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnFiltrar.Location = new System.Drawing.Point(407, 2);
+            this.btnFiltrar.Location = new System.Drawing.Point(337, 4);
             this.btnFiltrar.MenuManager = this.barManager1;
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(44, 25);
+            this.btnFiltrar.Size = new System.Drawing.Size(47, 20);
             this.btnFiltrar.TabIndex = 48;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
@@ -173,26 +178,26 @@
             // 
             this.btnX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnX.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnX.Location = new System.Drawing.Point(388, 2);
+            this.btnX.Image = ((System.Drawing.Image)(resources.GetObject("btnX.Image")));
+            this.btnX.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnX.Location = new System.Drawing.Point(318, 5);
             this.btnX.MenuManager = this.barManager1;
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(18, 25);
+            this.btnX.Size = new System.Drawing.Size(18, 18);
             this.btnX.TabIndex = 47;
             this.btnX.Text = "X";
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // dgRegistros
             // 
-            this.dgRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
             gridLevelNode1.RelationName = "Level1";
             this.dgRegistros.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.dgRegistros.Location = new System.Drawing.Point(1, 27);
+            this.dgRegistros.Location = new System.Drawing.Point(2, 2);
             this.dgRegistros.MainView = this.gdRegistros;
             this.dgRegistros.Name = "dgRegistros";
-            this.dgRegistros.Size = new System.Drawing.Size(450, 527);
+            this.dgRegistros.Size = new System.Drawing.Size(382, 519);
             this.dgRegistros.TabIndex = 49;
             this.dgRegistros.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdRegistros});
@@ -231,9 +236,9 @@
             // 
             this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFiltrar.Location = new System.Drawing.Point(0, 4);
+            this.txtFiltrar.Location = new System.Drawing.Point(2, 5);
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(405, 20);
+            this.txtFiltrar.Size = new System.Drawing.Size(336, 20);
             this.txtFiltrar.TabIndex = 50;
             this.txtFiltrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltrar_KeyPress);
             // 
@@ -244,7 +249,7 @@
             this.txtObs.Location = new System.Drawing.Point(61, 318);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
-            this.txtObs.Size = new System.Drawing.Size(384, 85);
+            this.txtObs.Size = new System.Drawing.Size(448, 85);
             this.txtObs.TabIndex = 209;
             // 
             // txtInscr_Estadual
@@ -253,7 +258,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtInscr_Estadual.Location = new System.Drawing.Point(96, 214);
             this.txtInscr_Estadual.Name = "txtInscr_Estadual";
-            this.txtInscr_Estadual.Size = new System.Drawing.Size(188, 21);
+            this.txtInscr_Estadual.Size = new System.Drawing.Size(252, 21);
             this.txtInscr_Estadual.TabIndex = 194;
             // 
             // MaterialTipoLabel
@@ -271,7 +276,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCgc_Cpf.Location = new System.Drawing.Point(96, 181);
             this.txtCgc_Cpf.Name = "txtCgc_Cpf";
-            this.txtCgc_Cpf.Size = new System.Drawing.Size(188, 21);
+            this.txtCgc_Cpf.Size = new System.Drawing.Size(252, 21);
             this.txtCgc_Cpf.TabIndex = 193;
             // 
             // Label7
@@ -307,14 +312,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Location = new System.Drawing.Point(135, 65);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(310, 21);
+            this.txtEmail.Size = new System.Drawing.Size(374, 21);
             this.txtEmail.TabIndex = 207;
             // 
             // Label5
             // 
             this.Label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label5.AutoSize = true;
-            this.Label5.Location = new System.Drawing.Point(348, 289);
+            this.Label5.Location = new System.Drawing.Point(412, 289);
             this.Label5.Name = "Label5";
             this.Label5.Size = new System.Drawing.Size(30, 13);
             this.Label5.TabIndex = 205;
@@ -323,7 +328,7 @@
             // txtCEP
             // 
             this.txtCEP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCEP.Location = new System.Drawing.Point(384, 286);
+            this.txtCEP.Location = new System.Drawing.Point(448, 286);
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(61, 21);
             this.txtCEP.TabIndex = 204;
@@ -359,7 +364,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEndereco.Location = new System.Drawing.Point(61, 252);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(384, 21);
+            this.txtEndereco.Size = new System.Drawing.Size(448, 21);
             this.txtEndereco.TabIndex = 195;
             // 
             // txtTelefone1
@@ -383,7 +388,7 @@
             // 
             this.Label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(261, 289);
+            this.Label3.Location = new System.Drawing.Point(325, 289);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(24, 13);
             this.Label3.TabIndex = 201;
@@ -395,13 +400,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCidade.Location = new System.Drawing.Point(60, 288);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(194, 21);
+            this.txtCidade.Size = new System.Drawing.Size(258, 21);
             this.txtCidade.TabIndex = 200;
             // 
             // txtEstado
             // 
             this.txtEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEstado.Location = new System.Drawing.Point(291, 286);
+            this.txtEstado.Location = new System.Drawing.Point(355, 286);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(40, 21);
             this.txtEstado.TabIndex = 202;
@@ -440,7 +445,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtContato_Nome.Location = new System.Drawing.Point(96, 154);
             this.txtContato_Nome.Name = "txtContato_Nome";
-            this.txtContato_Nome.Size = new System.Drawing.Size(349, 21);
+            this.txtContato_Nome.Size = new System.Drawing.Size(413, 21);
             this.txtContato_Nome.TabIndex = 188;
             // 
             // MaterialNomeLabel
@@ -458,7 +463,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.Location = new System.Drawing.Point(137, 5);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(307, 21);
+            this.txtNome.Size = new System.Drawing.Size(371, 21);
             this.txtNome.TabIndex = 182;
             // 
             // CorNomeLabel
@@ -488,7 +493,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtContato_Funcao.Location = new System.Drawing.Point(96, 127);
             this.txtContato_Funcao.Name = "txtContato_Funcao";
-            this.txtContato_Funcao.Size = new System.Drawing.Size(188, 21);
+            this.txtContato_Funcao.Size = new System.Drawing.Size(252, 21);
             this.txtContato_Funcao.TabIndex = 184;
             // 
             // label1
@@ -500,6 +505,26 @@
             this.label1.TabIndex = 187;
             this.label1.Text = "Código:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.btnX);
+            this.panelControl1.Controls.Add(this.txtFiltrar);
+            this.panelControl1.Controls.Add(this.btnFiltrar);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(386, 26);
+            this.panelControl1.TabIndex = 51;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.dgRegistros);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 26);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(386, 523);
+            this.panelControl2.TabIndex = 52;
             // 
             // frmCadastroFornecedor
             // 
@@ -518,6 +543,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgRegistros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdRegistros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFiltrar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,5 +588,7 @@
         internal System.Windows.Forms.TextBox txtId;
         internal System.Windows.Forms.TextBox txtContato_Funcao;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }

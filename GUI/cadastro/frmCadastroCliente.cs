@@ -101,8 +101,8 @@ namespace GUI
 
             gdRegistros.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             gdRegistros.Columns[0].Width = 80;
-            gdRegistros.Columns[1].Width = 350;
-            gdRegistros.Columns[1].Width = 300;
+            gdRegistros.Columns[1].Width = 360;
+            gdRegistros.Columns[2].Width = 300;
         }
 
         private void dgClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -227,7 +227,7 @@ namespace GUI
             {
                 MessageBox.Show(erro.Message);
             }
-            alterabotoes(1);
+            alterabotoes(2);
         }
 
         private void btnExcluir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

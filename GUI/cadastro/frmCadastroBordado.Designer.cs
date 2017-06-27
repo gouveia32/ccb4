@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroBordado));
             this.colMetragem = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dgRegistros = new DevExpress.XtraGrid.GridControl();
@@ -242,13 +242,13 @@
             // dgRegistros
             // 
             this.dgRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.dgRegistros.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.dgRegistros.Location = new System.Drawing.Point(2, 2);
             this.dgRegistros.MainView = this.gdRegistros;
             this.dgRegistros.Name = "dgRegistros";
-            this.dgRegistros.Size = new System.Drawing.Size(382, 487);
+            this.dgRegistros.Size = new System.Drawing.Size(382, 489);
             this.dgRegistros.TabIndex = 51;
             this.dgRegistros.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdRegistros});
@@ -358,6 +358,7 @@
             this.btnAdicionar.TabIndex = 197;
             this.btnAdicionar.TabStop = false;
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // Label15
             // 
@@ -691,14 +692,14 @@
             this.gvLinhas_Utilizadas.FixedLineWidth = 1;
             this.gvLinhas_Utilizadas.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gvLinhas_Utilizadas.FooterPanelHeight = 10;
-            gridFormatRule3.Column = this.colMetragem;
-            gridFormatRule3.Name = "Format0";
-            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
-            formatConditionRuleValue3.Expression = "Sim";
-            formatConditionRuleValue3.PredefinedName = "Red Fill, Red Text";
-            formatConditionRuleValue3.Value1 = "Sim";
-            gridFormatRule3.Rule = formatConditionRuleValue3;
-            this.gvLinhas_Utilizadas.FormatRules.Add(gridFormatRule3);
+            gridFormatRule2.Column = this.colMetragem;
+            gridFormatRule2.Name = "Format0";
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue2.Expression = "Sim";
+            formatConditionRuleValue2.PredefinedName = "Red Fill, Red Text";
+            formatConditionRuleValue2.Value1 = "Sim";
+            gridFormatRule2.Rule = formatConditionRuleValue2;
+            this.gvLinhas_Utilizadas.FormatRules.Add(gridFormatRule2);
             this.gvLinhas_Utilizadas.GridControl = this.dgLinhas_Utilizadas;
             this.gvLinhas_Utilizadas.GroupFormat = "{0}: [#imagem]{1} {2}";
             this.gvLinhas_Utilizadas.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -878,13 +879,13 @@
             this.gvCatalogos.FixedLineWidth = 1;
             this.gvCatalogos.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gvCatalogos.FooterPanelHeight = 10;
-            gridFormatRule2.Name = "Format0";
-            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
-            formatConditionRuleValue2.Expression = "Sim";
-            formatConditionRuleValue2.PredefinedName = "Red Fill, Red Text";
-            formatConditionRuleValue2.Value1 = "Sim";
-            gridFormatRule2.Rule = formatConditionRuleValue2;
-            this.gvCatalogos.FormatRules.Add(gridFormatRule2);
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue1.Expression = "Sim";
+            formatConditionRuleValue1.PredefinedName = "Red Fill, Red Text";
+            formatConditionRuleValue1.Value1 = "Sim";
+            gridFormatRule1.Rule = formatConditionRuleValue1;
+            this.gvCatalogos.FormatRules.Add(gridFormatRule1);
             this.gvCatalogos.GridControl = this.dgCatalogos;
             this.gvCatalogos.GroupFormat = "{0}: [#imagem]{1} {2}";
             this.gvCatalogos.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -969,13 +970,13 @@
             this.gvNotas.FixedLineWidth = 1;
             this.gvNotas.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gvNotas.FooterPanelHeight = 10;
-            gridFormatRule1.Name = "Format0";
-            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
-            formatConditionRuleValue1.Expression = "Sim";
-            formatConditionRuleValue1.PredefinedName = "Red Fill, Red Text";
-            formatConditionRuleValue1.Value1 = "Sim";
-            gridFormatRule1.Rule = formatConditionRuleValue1;
-            this.gvNotas.FormatRules.Add(gridFormatRule1);
+            gridFormatRule4.Name = "Format0";
+            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue4.Expression = "Sim";
+            formatConditionRuleValue4.PredefinedName = "Red Fill, Red Text";
+            formatConditionRuleValue4.Value1 = "Sim";
+            gridFormatRule4.Rule = formatConditionRuleValue4;
+            this.gvNotas.FormatRules.Add(gridFormatRule4);
             this.gvNotas.GridControl = this.dgNotas;
             this.gvNotas.GroupFormat = "{0}: [#imagem]{1} {2}";
             this.gvNotas.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -1065,7 +1066,7 @@
             this.pnlFiltrar.Location = new System.Drawing.Point(0, 0);
             this.pnlFiltrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlFiltrar.Name = "pnlFiltrar";
-            this.pnlFiltrar.Size = new System.Drawing.Size(386, 58);
+            this.pnlFiltrar.Size = new System.Drawing.Size(386, 56);
             this.pnlFiltrar.TabIndex = 117;
             // 
             // cbFiltroCatalogo
@@ -1082,7 +1083,7 @@
             this.cbFiltroGrupo.FormattingEnabled = true;
             this.cbFiltroGrupo.Location = new System.Drawing.Point(236, 28);
             this.cbFiltroGrupo.Name = "cbFiltroGrupo";
-            this.cbFiltroGrupo.Size = new System.Drawing.Size(123, 21);
+            this.cbFiltroGrupo.Size = new System.Drawing.Size(120, 21);
             this.cbFiltroGrupo.TabIndex = 3;
             this.cbFiltroGrupo.SelectedIndexChanged += new System.EventHandler(this.cbFiltroGrupo_SelectedIndexChanged);
             // 
@@ -1114,7 +1115,7 @@
             this.btnX.Location = new System.Drawing.Point(357, 0);
             this.btnX.MenuManager = this.barManager1;
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(27, 51);
+            this.btnX.Size = new System.Drawing.Size(27, 49);
             this.btnX.TabIndex = 57;
             this.btnX.ToolTip = "Limpar Filtro";
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
@@ -1125,7 +1126,7 @@
             this.btnFiltrar.Location = new System.Drawing.Point(308, 2);
             this.btnFiltrar.MenuManager = this.barManager1;
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(51, 20);
+            this.btnFiltrar.Size = new System.Drawing.Size(48, 20);
             this.btnFiltrar.TabIndex = 58;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
@@ -1145,10 +1146,10 @@
             this.pnlRegistros.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlRegistros.Controls.Add(this.dgRegistros);
             this.pnlRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlRegistros.Location = new System.Drawing.Point(0, 58);
+            this.pnlRegistros.Location = new System.Drawing.Point(0, 56);
             this.pnlRegistros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlRegistros.Name = "pnlRegistros";
-            this.pnlRegistros.Size = new System.Drawing.Size(386, 491);
+            this.pnlRegistros.Size = new System.Drawing.Size(386, 493);
             this.pnlRegistros.TabIndex = 118;
             // 
             // frmCadastroBordado

@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroLinha));
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
             this.cor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemColorEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorEdit();
             this.ceCor = new DevExpress.XtraEditors.ColorEdit();
@@ -161,6 +162,7 @@
             this.repositoryItemColorEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemColorEdit();
             this.chartLinhaHistorico = new DevExpress.XtraCharts.ChartControl();
             this.pnlFiltrar = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scc1)).BeginInit();
             this.scc1.SuspendLayout();
@@ -196,18 +198,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartLinhaHistorico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlFiltrar)).BeginInit();
             this.pnlFiltrar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
+            this.panelControl6.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtLocalizar
             // 
-            toolTipTitleItem1.Text = "Digite o que deseja localizar";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.txtLocalizar.SuperTip = superToolTip1;
+            toolTipTitleItem2.Text = "Digite o que deseja localizar";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.txtLocalizar.SuperTip = superToolTip2;
             // 
             // btnGravar
             // 
@@ -234,8 +238,8 @@
             // 
             this.scc1.Location = new System.Drawing.Point(0, 40);
             this.scc1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.scc1.Panel1.Controls.Add(this.panelControl6);
             this.scc1.Panel1.Controls.Add(this.pnlFiltrar);
-            this.scc1.Panel1.Controls.Add(this.dgRegistros);
             this.scc1.Panel2.Controls.Add(this.deDataInicial);
             this.scc1.Panel2.Controls.Add(this.labelControl2);
             this.scc1.Panel2.Controls.Add(this.chartLinhaHistorico);
@@ -643,31 +647,33 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltrar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnFiltrar.Location = new System.Drawing.Point(433, 2);
+            this.btnFiltrar.Location = new System.Drawing.Point(439, 0);
             this.btnFiltrar.MenuManager = this.barManager1;
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(50, 23);
+            this.btnFiltrar.Size = new System.Drawing.Size(44, 23);
             this.btnFiltrar.TabIndex = 58;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // btnX
             // 
-            this.btnX.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnX.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnX.Location = new System.Drawing.Point(415, 2);
+            this.btnX.Image = ((System.Drawing.Image)(resources.GetObject("btnX.Image")));
+            this.btnX.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnX.Location = new System.Drawing.Point(422, 3);
             this.btnX.MenuManager = this.barManager1;
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(18, 23);
+            this.btnX.Size = new System.Drawing.Size(18, 18);
             this.btnX.TabIndex = 57;
             this.btnX.Text = "X";
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // txtFiltrar
             // 
-            this.txtFiltrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFiltrar.Location = new System.Drawing.Point(2, 2);
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(431, 20);
@@ -1470,15 +1476,13 @@
             // 
             // dgRegistros
             // 
-            this.dgRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgRegistros.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.dgRegistros.Location = new System.Drawing.Point(0, 25);
+            this.dgRegistros.Location = new System.Drawing.Point(2, 2);
             this.dgRegistros.MainView = this.gdRegistros;
             this.dgRegistros.Margin = new System.Windows.Forms.Padding(2);
             this.dgRegistros.Name = "dgRegistros";
-            this.dgRegistros.Size = new System.Drawing.Size(483, 556);
+            this.dgRegistros.Size = new System.Drawing.Size(481, 519);
             this.dgRegistros.TabIndex = 115;
             this.dgRegistros.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdRegistros});
@@ -1509,14 +1513,14 @@
             this.gdRegistros.FixedLineWidth = 1;
             this.gdRegistros.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gdRegistros.FooterPanelHeight = 10;
-            gridFormatRule1.Column = this.cor;
-            gridFormatRule1.Name = "Format0";
-            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
-            formatConditionRuleValue1.Expression = "Sim";
-            formatConditionRuleValue1.PredefinedName = "Red Fill, Red Text";
-            formatConditionRuleValue1.Value1 = "Sim";
-            gridFormatRule1.Rule = formatConditionRuleValue1;
-            this.gdRegistros.FormatRules.Add(gridFormatRule1);
+            gridFormatRule3.Column = this.cor;
+            gridFormatRule3.Name = "Format0";
+            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue3.Expression = "Sim";
+            formatConditionRuleValue3.PredefinedName = "Red Fill, Red Text";
+            formatConditionRuleValue3.Value1 = "Sim";
+            gridFormatRule3.Rule = formatConditionRuleValue3;
+            this.gdRegistros.FormatRules.Add(gridFormatRule3);
             this.gdRegistros.GridControl = this.dgRegistros;
             this.gdRegistros.GroupFormat = "{0}: [#imagem]{1} {2}";
             this.gdRegistros.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -1566,7 +1570,7 @@
             this.nome.Name = "nome";
             this.nome.Visible = true;
             this.nome.VisibleIndex = 1;
-            this.nome.Width = 150;
+            this.nome.Width = 149;
             // 
             // estoque_1
             // 
@@ -1633,13 +1637,13 @@
             this.gvLog.FixedLineWidth = 1;
             this.gvLog.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gvLog.FooterPanelHeight = 10;
-            gridFormatRule2.Name = "Format0";
-            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
-            formatConditionRuleValue2.Expression = "Sim";
-            formatConditionRuleValue2.PredefinedName = "Red Fill, Red Text";
-            formatConditionRuleValue2.Value1 = "Sim";
-            gridFormatRule2.Rule = formatConditionRuleValue2;
-            this.gvLog.FormatRules.Add(gridFormatRule2);
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue1.Expression = "Sim";
+            formatConditionRuleValue1.PredefinedName = "Red Fill, Red Text";
+            formatConditionRuleValue1.Value1 = "Sim";
+            gridFormatRule1.Rule = formatConditionRuleValue1;
+            this.gvLog.FormatRules.Add(gridFormatRule1);
             this.gvLog.GridControl = this.dgLog;
             this.gvLog.GroupFormat = "{0}: [#imagem]{1} {2}";
             this.gvLog.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -1710,19 +1714,19 @@
             this.chartLinhaHistorico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartLinhaHistorico.Diagram = xyDiagram1;
+            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartLinhaHistorico.Diagram = xyDiagram2;
             this.chartLinhaHistorico.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.LeftOutside;
             this.chartLinhaHistorico.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.Bottom;
             this.chartLinhaHistorico.Legend.Name = "Default Legend";
             this.chartLinhaHistorico.Location = new System.Drawing.Point(21, 328);
             this.chartLinhaHistorico.Name = "chartLinhaHistorico";
-            series1.Name = "compra";
-            series2.Name = "uso";
+            series3.Name = "compra";
+            series4.Name = "uso";
             this.chartLinhaHistorico.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1,
-        series2};
+        series3,
+        series4};
             this.chartLinhaHistorico.Size = new System.Drawing.Size(567, 212);
             this.chartLinhaHistorico.TabIndex = 169;
             // 
@@ -1736,8 +1740,17 @@
             this.pnlFiltrar.Location = new System.Drawing.Point(0, 0);
             this.pnlFiltrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlFiltrar.Name = "pnlFiltrar";
-            this.pnlFiltrar.Size = new System.Drawing.Size(485, 27);
+            this.pnlFiltrar.Size = new System.Drawing.Size(485, 22);
             this.pnlFiltrar.TabIndex = 116;
+            // 
+            // panelControl6
+            // 
+            this.panelControl6.Controls.Add(this.dgRegistros);
+            this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl6.Location = new System.Drawing.Point(0, 22);
+            this.panelControl6.Name = "panelControl6";
+            this.panelControl6.Size = new System.Drawing.Size(485, 523);
+            this.panelControl6.TabIndex = 117;
             // 
             // frmCadastroLinha
             // 
@@ -1792,12 +1805,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartLinhaHistorico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlFiltrar)).EndInit();
             this.pnlFiltrar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
+            this.panelControl6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1928,5 +1943,6 @@
         internal DevExpress.XtraCharts.ChartControl chartLinhaHistorico;
         private DevExpress.XtraEditors.PanelControl pnlFiltrar;
         private DevExpress.XtraEditors.Repository.RepositoryItemColorEdit repositoryItemColorEdit1;
+        private DevExpress.XtraEditors.PanelControl panelControl6;
     }
 }

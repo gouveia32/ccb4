@@ -139,7 +139,7 @@ namespace GUI
             dgRegistros.DataSource = bll.Filtrar(txtFiltrar.Text, where);
 
             if (Posicionar_id > 0)
-                loc.Localizar(gdRegistros, Posicionar_id.ToString(), 0, true);
+                loc.Localizar(gdRegistros, "id="+Posicionar_id.ToString(), 0, true);
             if (txtFiltrar.Text == "" && where == "")
             {
                 fp.sbRegistros.Caption = String.Format("{0} registros", gdRegistros.RowCount);
@@ -300,7 +300,7 @@ namespace GUI
             {
                 MessageBox.Show(erro.Message);
             }
-            alterabotoes(1);
+            alterabotoes(2);
         }
 
         private void btnExcluir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -360,6 +360,24 @@ namespace GUI
         {
             if (cbFiltroCatalogo.ContainsFocus)
                 Filtrar();
+        }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            //flagNotasespecialNova = true;
+            dlgNota f = new dlgNota();
+            f.CarregaComboClientes();
+            f.cbCliente.Text = "";
+            f.diValor.Value = Convert.ToDouble(txtPreco.Text);
+            f.txtObsEspecifica.Text = "";
+
+            f.cbCliente.Enabled = true;
+            f.cbCliente.Focus();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                BLLNotaEspecifica bll = new BLLNotaEspecifica();
+                bll.
+            }
         }
     }
 }

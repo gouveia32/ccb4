@@ -63,11 +63,13 @@ namespace GUI
                     {
                         ceBDTeste.Checked = true;
                         database = "ccb2";
+                        GUI.Properties.Settings.Default.BDTeste = true;
                     }
                     else
                     {
                         ceBDTeste.Checked = false;
                         database = "ccb";
+                        GUI.Properties.Settings.Default.BDTeste = false;
                     }
 
                     txtUsuario.Text = key.GetValue("Usuario", "visitante").ToString();
@@ -76,7 +78,7 @@ namespace GUI
                                           tbServidor.Text, tbUsuario.Text, tbSenha.Text, database);
                     if (!TestaConexao())
                     {
-                        expandablePanel1.Expanded = true;
+                        epnlConfigurar.Expanded = true;
                         this.AcceptButton = btnSalvar;
                     }
                     else
@@ -91,7 +93,7 @@ namespace GUI
             }
             else
             {
-                expandablePanel1.Expanded = true;
+                epnlConfigurar.Expanded = true;
             }
 
             parametros.CarregaParametros(1); //Carrega os parametros do perfil 1 para Settings
@@ -140,14 +142,16 @@ namespace GUI
                     {
                         ceBDTeste.Checked = true;
                         database = "ccb2";
+                        GUI.Properties.Settings.Default.BDTeste = true;
                     }
                     else
                     {
                         ceBDTeste.Checked = false;
                         database = "ccb";
+                        GUI.Properties.Settings.Default.BDTeste = false;
                     }
 
-                    expandablePanel1.Expanded = false;
+                    epnlConfigurar.Expanded = false;
                     ClassBD.StringDeConexao =
                            string.Format("server={0:s};user id={1:s};password={2:s};database={3:s};port=3306;default command timeout=600;",
                                           tbServidor.Text, tbUsuario.Text, tbSenha.Text, database);
@@ -181,8 +185,9 @@ namespace GUI
                 //testar a conexao
                 ClassBD db = new ClassBD();
                 db.TestarConexao();
-                lblStatus.Text = "Conectado";
+                lblStatus.Text = "Conectado (" + ClassBD.banco + ")";
                 lblStatus.ForeColor  = Color.Green;
+
                 this.AcceptButton = btnOK;
                 return true;
             }

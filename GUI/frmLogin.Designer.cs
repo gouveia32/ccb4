@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lblStatus = new DevExpress.XtraEditors.LabelControl();
             this.picLogo = new DevExpress.XtraEditors.PictureEdit();
-            this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
+            this.epnlConfigurar = new DevComponents.DotNetBar.ExpandablePanel();
             this.btnTesteConexao = new DevComponents.DotNetBar.ButtonX();
             this.btnSalvar = new DevComponents.DotNetBar.ButtonX();
             this.LabelX2 = new DevComponents.DotNetBar.LabelX();
@@ -51,7 +51,7 @@
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo.Properties)).BeginInit();
-            this.expandablePanel1.SuspendLayout();
+            this.epnlConfigurar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ceBDTeste.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -82,48 +82,48 @@
             this.picLogo.Size = new System.Drawing.Size(261, 70);
             this.picLogo.TabIndex = 8;
             // 
-            // expandablePanel1
+            // epnlConfigurar
             // 
-            this.expandablePanel1.ButtonImageCollapse = ((System.Drawing.Image)(resources.GetObject("expandablePanel1.ButtonImageCollapse")));
-            this.expandablePanel1.ButtonImageExpand = ((System.Drawing.Image)(resources.GetObject("expandablePanel1.ButtonImageExpand")));
-            this.expandablePanel1.CanvasColor = System.Drawing.SystemColors.Info;
-            this.expandablePanel1.CollapseDirection = DevComponents.DotNetBar.eCollapseDirection.RightToLeft;
-            this.expandablePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.expandablePanel1.Controls.Add(this.btnTesteConexao);
-            this.expandablePanel1.Controls.Add(this.btnSalvar);
-            this.expandablePanel1.Controls.Add(this.LabelX2);
-            this.expandablePanel1.Controls.Add(this.tbUsuario);
-            this.expandablePanel1.Controls.Add(this.tbServidor);
-            this.expandablePanel1.Controls.Add(this.ceBDTeste);
-            this.expandablePanel1.Controls.Add(this.LabelX3);
-            this.expandablePanel1.Controls.Add(this.LabelX1);
-            this.expandablePanel1.Controls.Add(this.tbSenha);
-            this.expandablePanel1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.expandablePanel1.Expanded = false;
-            this.expandablePanel1.ExpandedBounds = new System.Drawing.Rectangle(10, 12, 275, 159);
-            this.expandablePanel1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expandablePanel1.Location = new System.Drawing.Point(10, 12);
-            this.expandablePanel1.Name = "expandablePanel1";
-            this.expandablePanel1.Size = new System.Drawing.Size(26, 159);
-            this.expandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.expandablePanel1.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.expandablePanel1.Style.BackgroundImagePosition = DevComponents.DotNetBar.eBackgroundImagePosition.Tile;
-            this.expandablePanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.expandablePanel1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.expandablePanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.expandablePanel1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.expandablePanel1.Style.GradientAngle = 90;
-            this.expandablePanel1.Style.WordWrap = true;
-            this.expandablePanel1.TabIndex = 14;
-            this.expandablePanel1.TitleStyle.Alignment = System.Drawing.StringAlignment.Center;
-            this.expandablePanel1.TitleStyle.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.expandablePanel1.TitleStyle.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.expandablePanel1.TitleStyle.Border = DevComponents.DotNetBar.eBorderType.RaisedInner;
-            this.expandablePanel1.TitleStyle.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.expandablePanel1.TitleStyle.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
-            this.expandablePanel1.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.expandablePanel1.TitleStyle.GradientAngle = 90;
-            this.expandablePanel1.TitleText = "Configurar";
+            this.epnlConfigurar.ButtonImageCollapse = ((System.Drawing.Image)(resources.GetObject("epnlConfigurar.ButtonImageCollapse")));
+            this.epnlConfigurar.ButtonImageExpand = ((System.Drawing.Image)(resources.GetObject("epnlConfigurar.ButtonImageExpand")));
+            this.epnlConfigurar.CanvasColor = System.Drawing.SystemColors.Info;
+            this.epnlConfigurar.CollapseDirection = DevComponents.DotNetBar.eCollapseDirection.RightToLeft;
+            this.epnlConfigurar.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.epnlConfigurar.Controls.Add(this.btnTesteConexao);
+            this.epnlConfigurar.Controls.Add(this.btnSalvar);
+            this.epnlConfigurar.Controls.Add(this.LabelX2);
+            this.epnlConfigurar.Controls.Add(this.tbUsuario);
+            this.epnlConfigurar.Controls.Add(this.tbServidor);
+            this.epnlConfigurar.Controls.Add(this.ceBDTeste);
+            this.epnlConfigurar.Controls.Add(this.LabelX3);
+            this.epnlConfigurar.Controls.Add(this.LabelX1);
+            this.epnlConfigurar.Controls.Add(this.tbSenha);
+            this.epnlConfigurar.DisabledBackColor = System.Drawing.Color.Empty;
+            this.epnlConfigurar.Expanded = false;
+            this.epnlConfigurar.ExpandedBounds = new System.Drawing.Rectangle(10, 12, 275, 159);
+            this.epnlConfigurar.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.epnlConfigurar.Location = new System.Drawing.Point(10, 12);
+            this.epnlConfigurar.Name = "epnlConfigurar";
+            this.epnlConfigurar.Size = new System.Drawing.Size(26, 159);
+            this.epnlConfigurar.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.epnlConfigurar.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.epnlConfigurar.Style.BackgroundImagePosition = DevComponents.DotNetBar.eBackgroundImagePosition.Tile;
+            this.epnlConfigurar.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.epnlConfigurar.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.epnlConfigurar.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.epnlConfigurar.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
+            this.epnlConfigurar.Style.GradientAngle = 90;
+            this.epnlConfigurar.Style.WordWrap = true;
+            this.epnlConfigurar.TabIndex = 14;
+            this.epnlConfigurar.TitleStyle.Alignment = System.Drawing.StringAlignment.Center;
+            this.epnlConfigurar.TitleStyle.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.epnlConfigurar.TitleStyle.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.epnlConfigurar.TitleStyle.Border = DevComponents.DotNetBar.eBorderType.RaisedInner;
+            this.epnlConfigurar.TitleStyle.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.epnlConfigurar.TitleStyle.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
+            this.epnlConfigurar.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.epnlConfigurar.TitleStyle.GradientAngle = 90;
+            this.epnlConfigurar.TitleText = "Configurar";
             // 
             // btnTesteConexao
             // 
@@ -327,7 +327,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 217);
-            this.Controls.Add(this.expandablePanel1);
+            this.Controls.Add(this.epnlConfigurar);
             this.Controls.Add(this.Version);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.labelX5);
@@ -345,7 +345,7 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo.Properties)).EndInit();
-            this.expandablePanel1.ResumeLayout(false);
+            this.epnlConfigurar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ceBDTeste.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -356,7 +356,7 @@
         #endregion
         private DevExpress.XtraEditors.LabelControl lblStatus;
         private DevExpress.XtraEditors.PictureEdit picLogo;
-        private DevComponents.DotNetBar.ExpandablePanel expandablePanel1;
+        private DevComponents.DotNetBar.ExpandablePanel epnlConfigurar;
         private DevComponents.DotNetBar.LabelX LabelX2;
         private DevComponents.DotNetBar.Controls.TextBoxX tbUsuario;
         private DevComponents.DotNetBar.Controls.TextBoxX tbServidor;
