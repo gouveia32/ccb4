@@ -16,6 +16,7 @@ namespace Modelo
 
         public int pedido_id { get; set; }
         public string subject { get; set; }
+        public string description { get; set; }
         public string location { get; set; }
         public int label { get; set; }
         public int status { get; set; }
@@ -27,6 +28,7 @@ namespace Modelo
             return
                 this.pedido_id == other.pedido_id &&
                 this.subject == other.subject &&
+                this.description == other.description &&
                 this.location == other.location &&
                 this.label == other.label &&
                 this.status == other.status &&

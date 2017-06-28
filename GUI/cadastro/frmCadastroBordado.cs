@@ -17,6 +17,7 @@ namespace GUI
     {
         frmPrincipal fp;
         private fnLocalizar loc = new fnLocalizar();
+        bool flagNotasespecialNova = false;
 
         public frmCadastroBordado(frmPrincipal _fp)
         {
@@ -40,9 +41,6 @@ namespace GUI
             txtAltura.Text = "";
             txtCores.Text = "";
             txtPontos.Text = "";
-            //gvLinhas_Utilizadas.Rows.Clear();
-            //gvNotas.Rows.Clear();
-            //Carrega a Imagem
             picBordado.Image = null;
             picBordadoAmpliado.Image = null;
         }
@@ -366,9 +364,47 @@ namespace GUI
                 Filtrar();
         }
 
-        private void btnAdicionar_Click(object sender, EventArgs e)
+        private void GravaNota(dlgNota f)
         {
-            //flagNotasespecialNova = true;
+            BLLNotaEspecifica bll = new BLLNotaEspecifica();
+            NotaEspecifica modelo = new NotaEspecifica();
+            modelo.bordado_id = Convert.ToInt32(txtId.Text);
+            modelo.cliente_id = Convert.ToInt32(f.cbCliente.SelectedValue);
+            modelo.data_atualizacao = DateTime.Now;
+            modelo.valor = Convert.ToDecimal(f.diValor.Text);
+            modelo.obs = f.txtObsEspecifica.Text;
+
+            if (flagNotasespecialNova)
+                bll.Insere(modelo);
+            else
+                bll.Altera(modelo);
+
+            CarregaBordado(Convert.ToInt32(txtId.Text)); //atualiza tela com informaçoes dos bordado selecionado
+        }
+ 
+        private void btnEditarNota_Click(object sender, EventArgs e)
+        {
+            int id;
+
+            flagNotasespecialNova = false;
+            if (gvNotas.SelectedRowsCount < 1) return;
+
+            id = Convert.ToInt32(gvNotas.GetDataRow(gvNotas.FocusedRowHandle).ItemArray[0]);
+            dlgNota f = new dlgNota();
+            f.diValor.Value = Convert.ToDouble(gvNotas.GetDataRow(gvNotas.FocusedRowHandle).ItemArray[2]);
+            f.txtObsEspecifica.Text = gvNotas.GetDataRow(gvNotas.FocusedRowHandle).ItemArray[3].ToString();
+            f.CarregaComboClientes();
+            f.SelecionaClienteNoCombo(id);
+            f.cbCliente.Enabled = false;
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                GravaNota(f);
+            }
+        }
+
+        private void btnAdicionarNota_Click(object sender, EventArgs e)
+        {
+            flagNotasespecialNova = true;
             dlgNota f = new dlgNota();
             f.CarregaComboClientes();
             f.cbCliente.Text = "";
@@ -379,29 +415,23 @@ namespace GUI
             f.cbCliente.Focus();
             if (f.ShowDialog() == DialogResult.OK)
             {
-                BLLNotaEspecifica bll = new BLLNotaEspecifica();
-                NotaEspecifica modelo = new NotaEspecifica();
-                modelo.bordado_id = Convert.ToInt32(txtId.Text);
-                modelo.cliente_id = Convert.ToInt32(f.cbCliente.SelectedValue);
-                modelo.data_atualizacao = DateTime.Now;
-                modelo.valor = Convert.ToDecimal(f.diValor.Text);
-                modelo.obs = f.txtObsEspecifica.Text;
-
-                bll.Insere(modelo);
-                CarregaBordado(Convert.ToInt32(txtId.Text)); //atualiza tela com informaçoes dos bordado selecionado
-
+                GravaNota(f);
             }
         }
 
-        private void btnApagar_Click(object sender, EventArgs e)
+        private void btnApagarNota_Click(object sender, EventArgs e)
         {
-
             if (gvNotas.SelectedRowsCount < 1) return;
             BLLNotaEspecifica bll = new BLLNotaEspecifica();
-            bll.Exclui(Convert.ToInt32(txtId.Text),
+            if (MessageBox.Show("Confirma exclusão? ",
+                "NOTA: " + gvNotas.GetDataRow(gvNotas.FocusedRowHandle).ItemArray[1].ToString(), 
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                bll.Exclui(Convert.ToInt32(txtId.Text),
                        Convert.ToInt32(gvNotas.GetDataRow(gvNotas.FocusedRowHandle).ItemArray[0]));
 
-            CarregaBordado(Convert.ToInt32(txtId.Text)); //atualiza tela com informaçoes dos bordado selecionado
+                CarregaBordado(Convert.ToInt32(txtId.Text)); //atualiza tela com informaçoes dos bordado selecionado
+            }
         }
     }
 }

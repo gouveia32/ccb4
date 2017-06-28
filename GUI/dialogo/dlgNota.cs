@@ -56,15 +56,7 @@ namespace GUI
         public void SelecionaClienteNoCombo(int id)
         {
             //string obj;
-
-            foreach (var item in cbCliente.Items)
-            {
-                if (item.GetHashCode() == id)
-                {
-                    cbCliente.Text = item.ToString(); 
-                    return;
-                }
-            }
+            cbCliente.SelectedValue = id;
         }
 
         private void dlgNota_Activated(object sender, EventArgs e)

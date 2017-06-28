@@ -104,9 +104,10 @@ namespace GUI
 
             modelo.desconto = txtDesconto.Value;
             modelo.pago = txtAmortizacao.Value;
+            modelo.executado = cbExecutado.Checked;
 
             modelo.obs_pedido = txtObs_Pedido.Text;
-         }
+        }
 
         private void PedidoModeloParaTela(Pedido modelo)
         {
@@ -182,7 +183,7 @@ namespace GUI
             foreach (DataGridViewRow r in dgItens.Rows)
             {
                 item.pedido_id = Convert.ToInt32(txtId.Text);
-                item.bordado_id  = Convert.ToInt32(r.Cells["bordado_id"].Value);
+                item.bordado_id = Convert.ToInt32(r.Cells["bordado_id"].Value);
                 item.item = Convert.ToInt32(r.Cells["item"].Value);
                 item.data_entrega = Convert.ToDateTime(r.Cells["data_entrega"].Value);
                 item.descricao = Convert.ToString(r.Cells["descricao"].Value);
@@ -544,51 +545,6 @@ namespace GUI
             btnX.Visible = false;
         }
 
-        private void btnQuitar_CheckedChanged(object sender, EventArgs e)
-        {
-            string caixa;
-            double mPago, mSaldo;
-            int pedido_atual = Convert.ToInt32(txtId.Text);
-
-            if (MessageBox.Show("Confirma a baixa do pedido: " + txtId.Text + "?",
-                                "Baixa de Pedido",
-                                MessageBoxButtons.YesNo) != DialogResult.Yes)
-                return;
-            if (this.cbQuitado.Checked && cbExecutado.Checked)
-            {
-                MessageBox.Show("Pedido já finalizado!",
-                                "Alerta",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Stop,
-                                MessageBoxDefaultButton.Button1);
-                return;
-            }
-
-            dePagamento.EditValue = DateTime.Now;
-            mPago = Pago.Value;
-            mSaldo = Saldo.Value;
-            caixa = String.Format("{0:N2}", mSaldo);
-            Pago.Text = String.Format("{0:N2}", mPago + mSaldo);
-            Saldo.Text = "0,00";
-            ckbPAGO.Checked = true;
-            cbQuitado.Checked = true;
-            cbExecutado.Checked = true;
-
-            //GravarRegistro(False, False, False)
-
-            //MySQL_cmd(MySQL_Conn, "UPDATE `agenda_pedido` SET status=0 WHERE pedido_id=" & pedido_atual)
-
-            if (chkFiltroQuitado.Checked)
-            {
-                MessageBox.Show("Pedido Finalizado.");
-                Filtrar(pedido_atual);
-            }
-            else
-            {
-                MessageBox.Show("Pedido Finalizado. Após pressionar <Ok> este pedido não será mostrado!");
-            }
-        }
-
         private void btnImprimir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             SplashScreenManager.ShowDefaultWaitForm("Aguarde", "Carregando...");
@@ -824,7 +780,7 @@ namespace GUI
                 linha = Convert.ToString(row.Cells["obs"].Value);
                 string[] aLinhas = linha.Split(new[] { '\n', '\t' });
                 int i, j;
-                for (i=0; i<aLinhas.Length;i++)
+                for (i = 0; i < aLinhas.Length; i++)
                 {
                     if (aLinhas[i] != "")
                     {
@@ -1025,7 +981,52 @@ namespace GUI
 
         #endregion
 
-        private void btnGravar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private DateTime UltimoDoDia(DateTime dia, int pedido_id)
+        {
+            DateTime d1;
+
+            BLLAgendaPedido bll = new BLLAgendaPedido();
+            DataTable dt;
+            dt = bll.CarregaUltimaEntrada(DateTime.Now);
+            if (dt.Rows.Count == 0)
+            {
+                d1 = Convert.ToDateTime(string.Format("{0:dd/MM/yyyy 08:00}", DateTime.Now));
+                return d1;
+            }
+            else
+                return Convert.ToDateTime(dt.Rows[0].ItemArray[0]);
+        }
+
+
+        private void GravaAgenda(int pedido_id)
+        {
+            if (dgItens.CurrentRow.Index < 0) return;
+            DateTime dtI;
+
+            BLLAgendaPedido bll = new BLLAgendaPedido();
+            AgendaPedido modelo = new AgendaPedido();
+            modelo.pedido_id = pedido_id;
+            modelo.subject = string.Format("[{0:d}]{1:s}",
+                                           txtTot_Pecas.Text,
+                                           cbCliente.Text);
+            //modelo.description = string.Format("{3:s}", dgItens.Item(dgItens.Columns("descricao").Index, 0).Value.ToString);
+            //if (bll.CarregaEntrada())
+            //{
+            //dt = bll.CarregaUltimaEntrada();
+
+            modelo.location = "0";
+            modelo.status = 2;
+            //}
+
+
+            dtI = UltimoDoDia(dtpData_Entrega.Value, pedido_id);
+
+            modelo.start = dtI;
+            modelo.end = dtI.AddMinutes(9);
+
+        }
+
+        private void Gravar()
         {
             int idAtual;
 
@@ -1038,7 +1039,7 @@ namespace GUI
                 PedidoTelaParaModelo(modelo);
                 ItensTelaParaModelo(modeloItens);
                 modelo.Itens = modeloItens;
-                
+
 
                 //objeto para gravar os dados no bd
                 BLLPedido bll = new BLLPedido();
@@ -1057,7 +1058,15 @@ namespace GUI
                     idAtual = Convert.ToInt32(txtId.Text);
                     modelo.id = Convert.ToInt32(txtId.Text);
                     bll.Altera(modelo);
-                    MessageBox.Show("Pedido alterado!");
+                    if (cbMensal.Checked)
+                    {
+                        //if cbMensal.Checked Then MySQL_cmd(Conn, "DELETE FROM agenda_pedido WHERE pedido_id=" & Pedido_Id_Atual) 'Apaga entrada na agenda
+                    }
+                    else
+                    {
+                        //Gravar agenda ...
+                        GravaAgenda(idAtual);
+                    }
                     Filtrar(idAtual);
                 }
             }
@@ -1065,7 +1074,12 @@ namespace GUI
             {
                 MessageBox.Show(erro.Message);
             }
-            alterabotoes(1);
+        }
+
+        private void btnGravar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Gravar();
+            alterabotoes(2);
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
@@ -1133,7 +1147,7 @@ namespace GUI
 
         private void btnApagar_Click(object sender, EventArgs e)
         {
-            if (dgItens.CurrentRow.Index  < 0 ) return;
+            if (dgItens.CurrentRow.Index < 0) return;
 
             dgItens.Rows.Remove(dgItens.CurrentRow);
             if (dgItens.CurrentRow.Index < 0) return;
@@ -1164,11 +1178,11 @@ namespace GUI
                     dgItens.Rows[LinhaNovaNr].Cells[Coluna].Value = dgItens.Rows[LinhaAtualNr].Cells[Coluna].Value;
                     dgItens.Rows[LinhaAtualNr].Cells[Coluna].Value = Valor;
                 }
-            dgItens.CurrentCell = dgItens.Rows[LinhaNovaNr].Cells[0];
-            dgItens.Focus();
+                dgItens.CurrentCell = dgItens.Rows[LinhaNovaNr].Cells[0];
+                dgItens.Focus();
 
-            LinhaAtualNr = dgItens.CurrentRow.Index;
-            btnGravar.Enabled = true;
+                LinhaAtualNr = dgItens.CurrentRow.Index;
+                btnGravar.Enabled = true;
             }
         }
 
@@ -1222,6 +1236,52 @@ namespace GUI
 
             txtBordado_Descricao.Focus();
             //mAtualizarGradeItens = true;
+        }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            string caixa;
+            double mPago, mSaldo;
+            int pedido_atual = Convert.ToInt32(txtId.Text);
+
+            if (MessageBox.Show("Confirma a baixa do pedido: " + txtId.Text + "?",
+                                "Baixa de Pedido",
+                                MessageBoxButtons.YesNo) != DialogResult.Yes)
+                return;
+            if (this.cbQuitado.Checked && cbExecutado.Checked)
+            {
+                MessageBox.Show("Pedido já finalizado!",
+                                "Alerta",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Stop,
+                                MessageBoxDefaultButton.Button1);
+                return;
+            }
+
+            dePagamento.EditValue = DateTime.Now;
+            mPago = Pago.Value;
+            mSaldo = Saldo.Value;
+            caixa = String.Format("{0:N2}", mSaldo);
+            Pago.Text = String.Format("{0:N2}", mPago + mSaldo);
+            Saldo.Text = "0,00";
+            ckbPAGO.Checked = true;
+            cbQuitado.Checked = true;
+            cbExecutado.Checked = true;
+
+            operacao = "Alterar";
+            Gravar(); //Efetiva a baixa
+
+            //MySQL_cmd(MySQL_Conn, "UPDATE `agenda_pedido` SET status=0 WHERE pedido_id=" & pedido_atual)
+
+            if (chkFiltroQuitado.Checked)
+            {
+                MessageBox.Show("Pedido Finalizado.");
+                Filtrar(pedido_atual);
+            }
+            else
+            {
+                MessageBox.Show("Pedido Finalizado. Após pressionar <Ok> este pedido não será mostrado!");
+            }
         }
     }
 }

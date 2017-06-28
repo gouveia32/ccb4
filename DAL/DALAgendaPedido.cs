@@ -31,15 +31,18 @@ namespace DAL
             {
                 p = new List<MySqlParametro>();
                 p.Add(new MySqlParametro("@pedido_id", modelo.pedido_id));
-                p.Add(new MySqlParametro("@contato_funcao", modelo.subject));
-                p.Add(new MySqlParametro("@contato_nome", modelo.location));
-                p.Add(new MySqlParametro("@cgc_cpf", modelo.label));
-                p.Add(new MySqlParametro("@inscr_estadual", modelo.status));
-                p.Add(new MySqlParametro("@endereco", modelo.start));
-                p.Add(new MySqlParametro("@cidade", modelo.end));
+                p.Add(new MySqlParametro("@pedido_id", modelo.pedido_id));
+                p.Add(new MySqlParametro("@subject", modelo.subject));
+                p.Add(new MySqlParametro("@description", modelo.description));
+                p.Add(new MySqlParametro("@location", modelo.location));
+                p.Add(new MySqlParametro("@label", modelo.label));
+                p.Add(new MySqlParametro("@status", modelo.status));
+                p.Add(new MySqlParametro("@start", modelo.start));
+                p.Add(new MySqlParametro("@end", modelo.end));
+                p.Add(new MySqlParametro("@id", Convert.ToInt32(modelo.id)));
 
-                sql = "INSERT INTO agenda_pedido(pedido_id,subject,location,label,status,endereco,start,end)"
-                    + "VALUES (@pedido_id,@subject,@location,@label,@status,@start,@end)";
+                sql = "INSERT INTO agenda_pedido(pedido_id,subject,description,location,label,status,endereco,start,end)"
+                    + "VALUES (@pedido_id,@subject,@description,@location,@label,@status,@start,@end)";
                 modelo.id = bd.exeNonQuery(sql, p);
             }
             catch (Exception erro)
@@ -59,6 +62,7 @@ namespace DAL
                 p = new List<MySqlParametro>();
                 p.Add(new MySqlParametro("@pedido_id", modelo.pedido_id));
                 p.Add(new MySqlParametro("@subject", modelo.subject));
+                p.Add(new MySqlParametro("@description", modelo.description));
                 p.Add(new MySqlParametro("@location", modelo.location));
                 p.Add(new MySqlParametro("@label", modelo.label));
                 p.Add(new MySqlParametro("@status", modelo.status));
@@ -66,7 +70,7 @@ namespace DAL
                 p.Add(new MySqlParametro("@end", modelo.end));
                 p.Add(new MySqlParametro("@id", Convert.ToInt32(modelo.id)));
 
-                sql = "UPDATE agena_pedido SET pedido_id=@pedido_id,subject=@subject,location=@location,"
+                sql = "UPDATE agena_pedido SET pedido_id=@pedido_id,subject=@subject,description=@description,location=@location,"
                     + "label=@label,status=@status,start=@start,end=@end"
                     + " WHERE id=@id;";
                 bd.exeNonQuery(sql, p);
@@ -104,6 +108,7 @@ namespace DAL
             modelo.id = Convert.ToInt32(registro["id"].ToString());
             modelo.pedido_id = Convert.ToInt32(registro["pedido_id"].ToString());
             modelo.subject = Convert.ToString(registro["subject"]);
+            modelo.description = Convert.ToString(registro["description"]);
             modelo.location = Convert.ToString(registro["location"]);
             modelo.label = Convert.ToInt32(registro["label"].ToString());
             modelo.status = Convert.ToInt32(registro["status"].ToString());
@@ -140,12 +145,37 @@ namespace DAL
             return modelo;
         }
 
-        /// <Carrega todos registros>
-        /// 
-        /// </summary>
-        /// <param name=""></param>
-        /// <returns></returns>
-        public DataTable CarregaTodasEntradas()
+        public AgendaPedido EntradaDoPedido(int pedido_id)
+        {
+            AgendaPedido modelo = new AgendaPedido();
+
+            MySqlDataReader registro = null;
+            try
+            {
+                p = new List<MySqlParametro>();
+                p.Add(new MySqlParametro("@pedido_id", pedido_id));
+                sql = "SELECT * FROM agenda_pedido WHERE pedido_id = @pedido_id";
+                registro = bd.Reader(sql, p);
+
+                if (registro.HasRows )
+                {
+                    registro.Read(); //Le o primeiro registro, como é chave única só existe este
+                    modelo = BancoParaModelo(registro);
+                }
+            }
+            finally
+            {
+                bd.FecharReader(registro);
+            }
+            return modelo;
+        }
+
+/// <Carrega todos registros>
+/// 
+/// </summary>
+/// <param name=""></param>
+/// <returns></returns>
+public DataTable CarregaTodasEntradas()
         {
             sql = "SELECT * FROM agenda_pedido ORDER BY id DESC;";
             return bd.exePesquisa(sql, null);

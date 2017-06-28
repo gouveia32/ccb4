@@ -191,7 +191,6 @@ namespace GUI
             this.cbFiltroCliente = new System.Windows.Forms.ComboBox();
             this.chkFiltroCliente = new System.Windows.Forms.CheckBox();
             this.ckbPAGO = new DevExpress.XtraEditors.CheckButton();
-            this.btnQuitar = new DevExpress.XtraEditors.CheckButton();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
@@ -200,6 +199,7 @@ namespace GUI
             this.btnProtocolo = new DevExpress.XtraBars.BarButtonItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.btnQuitar = new DevExpress.XtraEditors.DropDownButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scc1)).BeginInit();
             this.scc1.SuspendLayout();
@@ -969,7 +969,7 @@ namespace GUI
             this.btnExecutarItem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnExecutarItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExecutarItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnExecutarItem.Location = new System.Drawing.Point(12332, 25);
+            this.btnExecutarItem.Location = new System.Drawing.Point(12696, 25);
             this.btnExecutarItem.Name = "btnExecutarItem";
             this.btnExecutarItem.Size = new System.Drawing.Size(92, 32);
             this.btnExecutarItem.TabIndex = 100;
@@ -989,7 +989,7 @@ namespace GUI
             this.dtpData_Execucao.FocusHighlightEnabled = true;
             this.dtpData_Execucao.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Execucao.IsPopupCalendarOpen = false;
-            this.dtpData_Execucao.Location = new System.Drawing.Point(12221, 36);
+            this.dtpData_Execucao.Location = new System.Drawing.Point(12585, 36);
             // 
             // 
             // 
@@ -1020,7 +1020,7 @@ namespace GUI
             // 
             this.Label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label27.BackColor = System.Drawing.Color.Transparent;
-            this.Label27.Location = new System.Drawing.Point(12134, 41);
+            this.Label27.Location = new System.Drawing.Point(12498, 41);
             this.Label27.Name = "Label27";
             this.Label27.Size = new System.Drawing.Size(79, 13);
             this.Label27.TabIndex = 89;
@@ -1069,7 +1069,7 @@ namespace GUI
             this.dgLinhas_Item.ShowCellErrors = false;
             this.dgLinhas_Item.ShowCellToolTips = false;
             this.dgLinhas_Item.ShowRowErrors = false;
-            this.dgLinhas_Item.Size = new System.Drawing.Size(254, 53);
+            this.dgLinhas_Item.Size = new System.Drawing.Size(254, 0);
             this.dgLinhas_Item.TabIndex = 8;
             this.dgLinhas_Item.TabStop = false;
             // 
@@ -1295,7 +1295,7 @@ namespace GUI
             this.txtObs_Pagamento.Multiline = true;
             this.txtObs_Pagamento.Name = "txtObs_Pagamento";
             this.txtObs_Pagamento.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Pagamento.Size = new System.Drawing.Size(12393, 54);
+            this.txtObs_Pagamento.Size = new System.Drawing.Size(12757, 0);
             this.txtObs_Pagamento.TabIndex = 3;
             // 
             // Label24
@@ -2003,7 +2003,7 @@ namespace GUI
             this.xtbpPagamento.Controls.Add(this.btnAmortizar);
             this.xtbpPagamento.Controls.Add(this.cbQuitado);
             this.xtbpPagamento.Name = "xtbpPagamento";
-            this.xtbpPagamento.Size = new System.Drawing.Size(717, 475);
+            this.xtbpPagamento.Size = new System.Drawing.Size(717, 479);
             this.xtbpPagamento.Text = "Pagamento";
             // 
             // xtbpExecucao
@@ -2027,7 +2027,7 @@ namespace GUI
             this.xtbpExecucao.Controls.Add(this.txtPC_Defeito);
             this.xtbpExecucao.Controls.Add(this.txtPC_Nao_Bordadas);
             this.xtbpExecucao.Name = "xtbpExecucao";
-            this.xtbpExecucao.Size = new System.Drawing.Size(717, 475);
+            this.xtbpExecucao.Size = new System.Drawing.Size(717, 479);
             this.xtbpExecucao.Text = "Execução";
             // 
             // dgRegistros
@@ -2188,15 +2188,6 @@ namespace GUI
             this.ckbPAGO.TabIndex = 216;
             this.ckbPAGO.Text = "PAGO";
             // 
-            // btnQuitar
-            // 
-            this.btnQuitar.Location = new System.Drawing.Point(190, 52);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(95, 33);
-            this.btnQuitar.TabIndex = 216;
-            this.btnQuitar.Text = "Baixar o Pedido";
-            this.btnQuitar.CheckedChanged += new System.EventHandler(this.btnQuitar_CheckedChanged);
-            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
@@ -2269,6 +2260,17 @@ namespace GUI
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(261, 429);
             this.panelControl2.TabIndex = 107;
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
+            this.btnQuitar.Location = new System.Drawing.Point(193, 50);
+            this.btnQuitar.MenuManager = this.barManager1;
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(92, 37);
+            this.btnQuitar.TabIndex = 217;
+            this.btnQuitar.Text = "Baixar o Pedido";
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
             // frmPedido
             // 
@@ -2475,7 +2477,6 @@ namespace GUI
         internal System.Windows.Forms.ComboBox cbFiltroCliente;
         internal System.Windows.Forms.CheckBox chkFiltroCliente;
         internal DevExpress.XtraEditors.CheckButton ckbPAGO;
-        internal DevExpress.XtraEditors.CheckButton btnQuitar;
         private DevComponents.Editors.DoubleInput txtAmortizacao;
         internal System.Windows.Forms.Label label6;
         private System.Windows.Forms.PrintDialog printDialog1;
@@ -2492,5 +2493,6 @@ namespace GUI
         private DevComponents.Editors.IntegerInput nudBordado_Id;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.DropDownButton btnQuitar;
     }
 }

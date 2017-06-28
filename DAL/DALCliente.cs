@@ -148,7 +148,7 @@ namespace DAL
                 sWhere = string.Format("WHERE nome LIKE '%{0:s}%' OR contato_nome LIKE '%{0:s}%'", valor);
             }
 
-            sql = "SELECT id, nome, contato_nome FROM clientes " + sWhere;
+            sql = "SELECT id, nome, contato_nome FROM clientes " + sWhere + " ORDER BY nome";
             return bd.exePesquisa(sql, null);
         }
 

@@ -48,13 +48,16 @@ namespace DAL
         {
             try
             {
+                p = new List<MySqlParametro>();
+
                 p.Add(new MySqlParametro("@bordado_id", modelo.bordado_id));
                 p.Add(new MySqlParametro("@cliente_id", modelo.cliente_id));
                 p.Add(new MySqlParametro("@valor", modelo.valor));
                 p.Add(new MySqlParametro("@data_atualizacao", modelo.data_atualizacao));
                 p.Add(new MySqlParametro("@obs", modelo.obs));
 
-                sql = "UPDATE notas_especificas SET valor=@valor,data_atualizacao=@data_atualizacao,obs=@obs WHERE bordado_id=@bordado_id AND cliente_id=@cliente_id";
+                sql = "UPDATE notas_especificas SET valor=@valor, data_atualizacao=@data_atualizacao, obs=@obs " +
+                      "WHERE bordado_id=@bordado_id AND cliente_id=@cliente_id";
                 bd.exeNonQuery(sql, p);
             }
             catch (Exception erro)
@@ -84,14 +87,13 @@ namespace DAL
             }
         }
 
-
         public DataTable NotasDoBordado(int bordado_id)
         {
             DataTable tabela = new DataTable();
 
             p = new List<MySqlParametro>();
             p.Add(new MySqlParametro("@bordado_id", bordado_id));
-            sql = "SELECT clientes.id as id, clientes.nome as cliente, " +
+            sql = "SELECT notas_especificas.cliente_id as id, clientes.nome as cliente, " +
                   "notas_especificas.valor as valor, notas_especificas.obs as obs," +
                   "notas_especificas.data_atualizacao as data_atualizacao FROM notas_especificas left Join clientes On " +
                   "notas_especificas.cliente_id = clientes.id WHERE notas_especificas.bordado_id=@bordado_id";
