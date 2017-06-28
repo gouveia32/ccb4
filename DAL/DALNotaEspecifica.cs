@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Modelo;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,16 +19,20 @@ namespace DAL
             bd = ClassBD.create();
         }
 
-        public void Insere(DALNotaEspecifica modelo)
+        public void Insere(NotaEspecifica modelo)
         {
             try
             {
                 p = new List<MySqlParametro>();
 
-                p.Add(new MySqlParametro("@nome", modelo.nome));
                 p.Add(new MySqlParametro("@bordado_id", modelo.bordado_id));
-                sql = "INSERT INTO catalogod(nome,bordado_id) VALUES (@nome,@bordado_id)";
-                modelo.id = bd.exeNonQuery(sql, p);
+                p.Add(new MySqlParametro("@cliente_id", modelo.cliente_id));
+                p.Add(new MySqlParametro("@valor", modelo.valor));
+                p.Add(new MySqlParametro("@data_atualizacao", modelo.data_atualizacao));
+                p.Add(new MySqlParametro("@obs", modelo.obs));
+
+                sql = "INSERT INTO notas_especificas(bordado_id,cliente_id,valor,data_atualizacao,obs) VALUES (@bordado_id,@cliente_id,@valor,@data_atualizacao,@obs)";
+                bd.exeNonQuery(sql, p);
             }
             catch (Exception erro)
             {
@@ -39,16 +44,17 @@ namespace DAL
         /// 
         /// </summary>
         /// <param name="modelo"></param>
-        public void Altera(Catalogo modelo)
+        public void Altera(NotaEspecifica modelo)
         {
             try
             {
-                p = new List<MySqlParametro>();
-                p.Add(new MySqlParametro("@id", modelo.id));
-                p.Add(new MySqlParametro("@nome", modelo.nome));
                 p.Add(new MySqlParametro("@bordado_id", modelo.bordado_id));
+                p.Add(new MySqlParametro("@cliente_id", modelo.cliente_id));
+                p.Add(new MySqlParametro("@valor", modelo.valor));
+                p.Add(new MySqlParametro("@data_atualizacao", modelo.data_atualizacao));
+                p.Add(new MySqlParametro("@obs", modelo.obs));
 
-                sql = "UPDATE catalogos SET nome=@nome,bordado_id=@bordado_id WHERE id = @id";
+                sql = "UPDATE notas_especificas SET valor=@valor,data_atualizacao=@data_atualizacao,obs=@obs WHERE bordado_id=@bordado_id AND cliente_id=@cliente_id";
                 bd.exeNonQuery(sql, p);
             }
             catch (Exception erro)
@@ -61,14 +67,15 @@ namespace DAL
         /// 
         /// </summary>
         /// <param name="nome"></param>
-        public void Exclui(string nome)
+        public void Exclui(int bordado_id, int cliente_id)
         {
             try
             {
                 p = new List<MySqlParametro>();
-                p.Add(new MySqlParametro("@nome", nome));
+                p.Add(new MySqlParametro("@bordado_id", bordado_id));
+                p.Add(new MySqlParametro("@cliente_id", cliente_id));
 
-                sql = "DELETE FROM catalogos WHERE nome=@nome";
+                sql = "DELETE FROM notas_especificas WHERE bordado_id=@bordado_id AND cliente_id=@cliente_id";
                 bd.exeNonQuery(sql, p);
             }
             catch (Exception erro)

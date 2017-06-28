@@ -63,7 +63,6 @@ namespace GUI
                 {
                     cbCliente.Text = item.ToString(); 
                     return;
-
                 }
             }
         }
@@ -78,6 +77,13 @@ namespace GUI
                 diValor.Focus();
             else
                 txtObsEspecifica.Focus();
+        }
+
+        private void RestritoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (GUI.Properties.Settings.Default.Nivel < -1) return;  //Só pode habilitar usuário nível 5
+
+            diValor.Visible = !diValor.Visible;
         }
     }
 }

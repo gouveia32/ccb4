@@ -6,11 +6,9 @@ namespace Modelo
     public partial class NotaEspecifica : IEquatable<NotaEspecifica>
     {
         public int bordado_id { get; set; } = 0;
-
         public int cliente_id { get; set; } = 0;
-
         public decimal valor { get; set; } = 0;
-
+        public DateTime? data_atualizacao { get; set; }
         public string obs { get; set; } = "";
 
         public bool Equals(NotaEspecifica other)

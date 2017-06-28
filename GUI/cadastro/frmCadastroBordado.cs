@@ -210,14 +210,18 @@ namespace GUI
                 loc.Localizar(gdRegistros, (sender as TextEdit).Text, 0, true);
         }
 
+        private void CarregaBordado(int bordado_id)
+        {
+            BLLBordado bll = new BLLBordado();
+            Bordado modelo = bll.CarregaModeloBordado(bordado_id);
+            ModeloParaTela(modelo);
+        }
+
         private void gdRegistros_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (e.FocusedRowHandle >= 0)
             {
-                BLLBordado bll = new BLLBordado();
-                Bordado modelo = bll.CarregaModeloBordado(Convert.ToInt32(gdRegistros.GetDataRow(e.FocusedRowHandle).ItemArray[0]));
-                ModeloParaTela(modelo);
-                //alterabotoes(1);
+                CarregaBordado(Convert.ToInt32(gdRegistros.GetDataRow(e.FocusedRowHandle).ItemArray[0]));
             }
         }
 
@@ -376,8 +380,28 @@ namespace GUI
             if (f.ShowDialog() == DialogResult.OK)
             {
                 BLLNotaEspecifica bll = new BLLNotaEspecifica();
-                bll.
+                NotaEspecifica modelo = new NotaEspecifica();
+                modelo.bordado_id = Convert.ToInt32(txtId.Text);
+                modelo.cliente_id = Convert.ToInt32(f.cbCliente.SelectedValue);
+                modelo.data_atualizacao = DateTime.Now;
+                modelo.valor = Convert.ToDecimal(f.diValor.Text);
+                modelo.obs = f.txtObsEspecifica.Text;
+
+                bll.Insere(modelo);
+                CarregaBordado(Convert.ToInt32(txtId.Text)); //atualiza tela com informaçoes dos bordado selecionado
+
             }
+        }
+
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
+
+            if (gvNotas.SelectedRowsCount < 1) return;
+            BLLNotaEspecifica bll = new BLLNotaEspecifica();
+            bll.Exclui(Convert.ToInt32(txtId.Text),
+                       Convert.ToInt32(gvNotas.GetDataRow(gvNotas.FocusedRowHandle).ItemArray[0]));
+
+            CarregaBordado(Convert.ToInt32(txtId.Text)); //atualiza tela com informaçoes dos bordado selecionado
         }
     }
 }
