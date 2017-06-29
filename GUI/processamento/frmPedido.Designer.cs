@@ -138,6 +138,7 @@ namespace GUI
             this.txtFiltrar = new DevExpress.XtraEditors.TextEdit();
             this.xtabItenPagamentoExecucao = new DevExpress.XtraTab.XtraTabControl();
             this.xtbpItem = new DevExpress.XtraTab.XtraTabPage();
+            this.txtPC_Bordadas = new DevComponents.Editors.IntegerInput();
             this.nudBordado_Id = new DevComponents.Editors.IntegerInput();
             this.txtTot_a_pagar = new DevComponents.Editors.DoubleInput();
             this.txtPreco_Por_Peca = new DevComponents.Editors.DoubleInput();
@@ -145,15 +146,12 @@ namespace GUI
             this.btnAdicionar = new DevComponents.DotNetBar.ButtonX();
             this.Label20 = new System.Windows.Forms.Label();
             this.txtPC_Solicitadas = new DevComponents.Editors.IntegerInput();
-            this.txtTotal_Item = new System.Windows.Forms.TextBox();
             this.lblPeca_solicitadas = new System.Windows.Forms.Label();
             this.lblArquivo = new System.Windows.Forms.Label();
-            this.txtPC_Bordadas = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblLado = new System.Windows.Forms.Label();
             this.dtpData_Entrega = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.btnBaixo = new DevComponents.DotNetBar.ButtonX();
-            this.Label19 = new System.Windows.Forms.Label();
             this.txtBordado_Arquivo = new System.Windows.Forms.TextBox();
             this.lblDiaSemana = new System.Windows.Forms.Label();
             this.Label16 = new System.Windows.Forms.Label();
@@ -178,6 +176,7 @@ namespace GUI
             this.lblLocal = new System.Windows.Forms.Label();
             this.rg_local = new DevExpress.XtraEditors.RadioGroup();
             this.pnlItens = new DevExpress.XtraEditors.PanelControl();
+            this.Label19 = new System.Windows.Forms.Label();
             this.xtbpPagamento = new DevExpress.XtraTab.XtraTabPage();
             this.xtbpExecucao = new DevExpress.XtraTab.XtraTabPage();
             this.dgRegistros = new DevExpress.XtraGrid.GridControl();
@@ -200,6 +199,7 @@ namespace GUI
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnQuitar = new DevExpress.XtraEditors.DropDownButton();
+            this.txtTotal_Item = new DevComponents.Editors.DoubleInput();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scc1)).BeginInit();
             this.scc1.SuspendLayout();
@@ -228,6 +228,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.xtabItenPagamentoExecucao)).BeginInit();
             this.xtabItenPagamentoExecucao.SuspendLayout();
             this.xtbpItem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPC_Bordadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBordado_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTot_a_pagar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPreco_Por_Peca)).BeginInit();
@@ -246,6 +247,7 @@ namespace GUI
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal_Item)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -969,7 +971,7 @@ namespace GUI
             this.btnExecutarItem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnExecutarItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExecutarItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnExecutarItem.Location = new System.Drawing.Point(12696, 25);
+            this.btnExecutarItem.Location = new System.Drawing.Point(13788, 25);
             this.btnExecutarItem.Name = "btnExecutarItem";
             this.btnExecutarItem.Size = new System.Drawing.Size(92, 32);
             this.btnExecutarItem.TabIndex = 100;
@@ -989,7 +991,7 @@ namespace GUI
             this.dtpData_Execucao.FocusHighlightEnabled = true;
             this.dtpData_Execucao.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Execucao.IsPopupCalendarOpen = false;
-            this.dtpData_Execucao.Location = new System.Drawing.Point(12585, 36);
+            this.dtpData_Execucao.Location = new System.Drawing.Point(13677, 36);
             // 
             // 
             // 
@@ -1020,7 +1022,7 @@ namespace GUI
             // 
             this.Label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label27.BackColor = System.Drawing.Color.Transparent;
-            this.Label27.Location = new System.Drawing.Point(12498, 41);
+            this.Label27.Location = new System.Drawing.Point(13590, 41);
             this.Label27.Name = "Label27";
             this.Label27.Size = new System.Drawing.Size(79, 13);
             this.Label27.TabIndex = 89;
@@ -1295,7 +1297,7 @@ namespace GUI
             this.txtObs_Pagamento.Multiline = true;
             this.txtObs_Pagamento.Name = "txtObs_Pagamento";
             this.txtObs_Pagamento.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Pagamento.Size = new System.Drawing.Size(12757, 0);
+            this.txtObs_Pagamento.Size = new System.Drawing.Size(13849, 0);
             this.txtObs_Pagamento.TabIndex = 3;
             // 
             // Label24
@@ -1429,6 +1431,8 @@ namespace GUI
             // 
             // xtbpItem
             // 
+            this.xtbpItem.Controls.Add(this.txtTotal_Item);
+            this.xtbpItem.Controls.Add(this.txtPC_Bordadas);
             this.xtbpItem.Controls.Add(this.nudBordado_Id);
             this.xtbpItem.Controls.Add(this.txtTot_a_pagar);
             this.xtbpItem.Controls.Add(this.txtPreco_Por_Peca);
@@ -1436,15 +1440,12 @@ namespace GUI
             this.xtbpItem.Controls.Add(this.btnAdicionar);
             this.xtbpItem.Controls.Add(this.Label20);
             this.xtbpItem.Controls.Add(this.txtPC_Solicitadas);
-            this.xtbpItem.Controls.Add(this.txtTotal_Item);
             this.xtbpItem.Controls.Add(this.lblPeca_solicitadas);
             this.xtbpItem.Controls.Add(this.lblArquivo);
-            this.xtbpItem.Controls.Add(this.txtPC_Bordadas);
             this.xtbpItem.Controls.Add(this.label8);
             this.xtbpItem.Controls.Add(this.lblLado);
             this.xtbpItem.Controls.Add(this.dtpData_Entrega);
             this.xtbpItem.Controls.Add(this.btnBaixo);
-            this.xtbpItem.Controls.Add(this.Label19);
             this.xtbpItem.Controls.Add(this.txtBordado_Arquivo);
             this.xtbpItem.Controls.Add(this.lblDiaSemana);
             this.xtbpItem.Controls.Add(this.Label16);
@@ -1469,13 +1470,30 @@ namespace GUI
             this.xtbpItem.Controls.Add(this.lblLocal);
             this.xtbpItem.Controls.Add(this.rg_local);
             this.xtbpItem.Controls.Add(this.pnlItens);
+            this.xtbpItem.Controls.Add(this.Label19);
             this.xtbpItem.Name = "xtbpItem";
             this.xtbpItem.Size = new System.Drawing.Size(899, 414);
             this.xtbpItem.Text = "Ítem";
             // 
+            // txtPC_Bordadas
+            // 
+            this.txtPC_Bordadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.txtPC_Bordadas.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtPC_Bordadas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPC_Bordadas.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtPC_Bordadas.Enabled = false;
+            this.txtPC_Bordadas.Location = new System.Drawing.Point(814, 230);
+            this.txtPC_Bordadas.Name = "txtPC_Bordadas";
+            this.txtPC_Bordadas.Size = new System.Drawing.Size(68, 21);
+            this.txtPC_Bordadas.TabIndex = 116;
+            this.txtPC_Bordadas.TabStop = false;
+            // 
             // nudBordado_Id
             // 
-            this.nudBordado_Id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudBordado_Id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -1513,10 +1531,10 @@ namespace GUI
             this.txtPreco_Por_Peca.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtPreco_Por_Peca.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPreco_Por_Peca.Increment = 1D;
-            this.txtPreco_Por_Peca.Location = new System.Drawing.Point(825, 265);
+            this.txtPreco_Por_Peca.Location = new System.Drawing.Point(814, 269);
             this.txtPreco_Por_Peca.Name = "txtPreco_Por_Peca";
             this.txtPreco_Por_Peca.Size = new System.Drawing.Size(68, 21);
-            this.txtPreco_Por_Peca.TabIndex = 118;
+            this.txtPreco_Por_Peca.TabIndex = 117;
             // 
             // btnImportar
             // 
@@ -1547,7 +1565,7 @@ namespace GUI
             this.Label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label20.BackColor = System.Drawing.Color.Transparent;
             this.Label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label20.Location = new System.Drawing.Point(877, 282);
+            this.Label20.Location = new System.Drawing.Point(862, 290);
             this.Label20.Name = "Label20";
             this.Label20.Size = new System.Drawing.Size(18, 25);
             this.Label20.TabIndex = 139;
@@ -1567,24 +1585,14 @@ namespace GUI
             this.txtPC_Solicitadas.Name = "txtPC_Solicitadas";
             this.txtPC_Solicitadas.Size = new System.Drawing.Size(49, 21);
             this.txtPC_Solicitadas.TabIndex = 115;
-            // 
-            // txtTotal_Item
-            // 
-            this.txtTotal_Item.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTotal_Item.Enabled = false;
-            this.txtTotal_Item.Location = new System.Drawing.Point(825, 313);
-            this.txtTotal_Item.Name = "txtTotal_Item";
-            this.txtTotal_Item.Size = new System.Drawing.Size(68, 21);
-            this.txtTotal_Item.TabIndex = 137;
-            this.txtTotal_Item.TabStop = false;
-            this.txtTotal_Item.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPC_Solicitadas.ValueChanged += new System.EventHandler(this.txtPC_Solicitadas_ValueChanged);
             // 
             // lblPeca_solicitadas
             // 
             this.lblPeca_solicitadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPeca_solicitadas.BackColor = System.Drawing.Color.Transparent;
             this.lblPeca_solicitadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeca_solicitadas.Location = new System.Drawing.Point(545, 230);
+            this.lblPeca_solicitadas.Location = new System.Drawing.Point(544, 234);
             this.lblPeca_solicitadas.Name = "lblPeca_solicitadas";
             this.lblPeca_solicitadas.Size = new System.Drawing.Size(100, 13);
             this.lblPeca_solicitadas.TabIndex = 126;
@@ -1601,17 +1609,6 @@ namespace GUI
             this.lblArquivo.TabIndex = 141;
             this.lblArquivo.Text = "Arquivo:";
             this.lblArquivo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtPC_Bordadas
-            // 
-            this.txtPC_Bordadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPC_Bordadas.Enabled = false;
-            this.txtPC_Bordadas.Location = new System.Drawing.Point(825, 230);
-            this.txtPC_Bordadas.Name = "txtPC_Bordadas";
-            this.txtPC_Bordadas.Size = new System.Drawing.Size(68, 21);
-            this.txtPC_Bordadas.TabIndex = 129;
-            this.txtPC_Bordadas.TabStop = false;
-            this.txtPC_Bordadas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label8
             // 
@@ -1698,18 +1695,6 @@ namespace GUI
             this.btnBaixo.TabIndex = 147;
             this.btnBaixo.Click += new System.EventHandler(this.btnBaixo_Click);
             // 
-            // Label19
-            // 
-            this.Label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label19.BackColor = System.Drawing.Color.Transparent;
-            this.Label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label19.Location = new System.Drawing.Point(865, 248);
-            this.Label19.Name = "Label19";
-            this.Label19.Size = new System.Drawing.Size(29, 25);
-            this.Label19.TabIndex = 138;
-            this.Label19.Text = "x";
-            this.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // txtBordado_Arquivo
             // 
             this.txtBordado_Arquivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -1736,7 +1721,7 @@ namespace GUI
             this.Label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label16.BackColor = System.Drawing.Color.Transparent;
             this.Label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label16.Location = new System.Drawing.Point(726, 235);
+            this.Label16.Location = new System.Drawing.Point(709, 231);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(105, 16);
             this.Label16.TabIndex = 135;
@@ -1770,7 +1755,7 @@ namespace GUI
             this.btnAgenda.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnAgenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgenda.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAgenda.Location = new System.Drawing.Point(867, 339);
+            this.btnAgenda.Location = new System.Drawing.Point(856, 341);
             this.btnAgenda.Name = "btnAgenda";
             this.btnAgenda.Size = new System.Drawing.Size(26, 23);
             this.btnAgenda.TabIndex = 150;
@@ -1983,6 +1968,18 @@ namespace GUI
             this.pnlItens.Name = "pnlItens";
             this.pnlItens.Size = new System.Drawing.Size(516, 209);
             this.pnlItens.TabIndex = 0;
+            // 
+            // Label19
+            // 
+            this.Label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Label19.BackColor = System.Drawing.Color.Transparent;
+            this.Label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label19.Location = new System.Drawing.Point(851, 247);
+            this.Label19.Name = "Label19";
+            this.Label19.Size = new System.Drawing.Size(29, 25);
+            this.Label19.TabIndex = 138;
+            this.Label19.Text = "x";
+            this.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // xtbpPagamento
             // 
@@ -2272,6 +2269,20 @@ namespace GUI
             this.btnQuitar.Text = "Baixar o Pedido";
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
+            // txtTotal_Item
+            // 
+            this.txtTotal_Item.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.txtTotal_Item.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTotal_Item.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTotal_Item.Increment = 1D;
+            this.txtTotal_Item.Location = new System.Drawing.Point(814, 309);
+            this.txtTotal_Item.Name = "txtTotal_Item";
+            this.txtTotal_Item.Size = new System.Drawing.Size(68, 21);
+            this.txtTotal_Item.TabIndex = 152;
+            // 
             // frmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2311,6 +2322,7 @@ namespace GUI
             this.xtabItenPagamentoExecucao.ResumeLayout(false);
             this.xtbpItem.ResumeLayout(false);
             this.xtbpItem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPC_Bordadas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBordado_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTot_a_pagar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPreco_Por_Peca)).EndInit();
@@ -2332,6 +2344,7 @@ namespace GUI
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal_Item)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2437,10 +2450,8 @@ namespace GUI
         internal DevComponents.DotNetBar.ButtonX btnAdicionar;
         internal System.Windows.Forms.Label Label20;
         internal DevComponents.Editors.IntegerInput txtPC_Solicitadas;
-        internal System.Windows.Forms.TextBox txtTotal_Item;
         internal System.Windows.Forms.Label lblPeca_solicitadas;
         internal System.Windows.Forms.Label lblArquivo;
-        internal System.Windows.Forms.TextBox txtPC_Bordadas;
         internal System.Windows.Forms.Label lblLado;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dtpData_Entrega;
         internal DevComponents.DotNetBar.ButtonX btnBaixo;
@@ -2494,5 +2505,7 @@ namespace GUI
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.DropDownButton btnQuitar;
+        internal DevComponents.Editors.IntegerInput txtPC_Bordadas;
+        private DevComponents.Editors.DoubleInput txtTotal_Item;
     }
 }

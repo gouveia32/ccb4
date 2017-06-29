@@ -562,5 +562,10 @@ namespace GUI
         {
             rgrpView.DoValidate(); 
         }
+
+        private void frmAgendaPedido_Activated(object sender, EventArgs e)
+        {
+            SelecionaEntradas();
+        }
     }
 }

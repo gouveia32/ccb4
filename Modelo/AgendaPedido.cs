@@ -14,7 +14,7 @@ namespace Modelo
         public AgendaPedido()
         { }
 
-        public int pedido_id { get; set; }
+        public int pedido_id { get; set; } = 0;
         public string subject { get; set; }
         public string description { get; set; }
         public string location { get; set; }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraScheduler.Printing.DailyPrintStyle dailyPrintStyle1 = new DevExpress.XtraScheduler.Printing.DailyPrintStyle();
             DevExpress.XtraScheduler.Printing.WeeklyPrintStyle weeklyPrintStyle1 = new DevExpress.XtraScheduler.Printing.WeeklyPrintStyle();
             DevExpress.XtraScheduler.Printing.MonthlyPrintStyle monthlyPrintStyle1 = new DevExpress.XtraScheduler.Printing.MonthlyPrintStyle();
@@ -45,10 +46,10 @@
             this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.ControlContainerItem7 = new DevComponents.DotNetBar.ControlContainerItem();
             this.ControlContainerItem6 = new DevComponents.DotNetBar.ControlContainerItem();
-            this.ToolTip1 = new System.Windows.Forms.ToolTip();
+            this.ToolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnEntrada = new DevExpress.XtraEditors.SimpleButton();
             this.rgrpView = new DevExpress.XtraEditors.RadioGroup();
-            this.ToolTipController1 = new DevExpress.Utils.ToolTipController();
+            this.ToolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
             this.pnlEntrada = new DevExpress.XtraEditors.PanelControl();
             this.dnEntrada = new DevExpress.XtraScheduler.DateNavigator();
             this.Label25 = new System.Windows.Forms.Label();
@@ -56,18 +57,18 @@
             this.nudQuantidade = new System.Windows.Forms.NumericUpDown();
             this.txtItem = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.SchedulerStorage1 = new DevExpress.XtraScheduler.SchedulerStorage();
-            this.StyleController1 = new DevExpress.XtraEditors.StyleController();
+            this.SchedulerStorage1 = new DevExpress.XtraScheduler.SchedulerStorage(this.components);
+            this.StyleController1 = new DevExpress.XtraEditors.StyleController(this.components);
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmSaida = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEntrada = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBordando = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNaProducao = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuIndefinido = new System.Windows.Forms.ToolStripMenuItem();
-            this.Timer1 = new System.Windows.Forms.Timer();
+            this.Timer1 = new System.Windows.Forms.Timer(this.components);
             this.dnVisao = new DevExpress.XtraScheduler.DateNavigator();
             this.SchedulerControl = new DevExpress.XtraScheduler.SchedulerControl();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.chkTotasTarefas = new DevExpress.XtraBars.BarToggleSwitchItem();
             this.btnHoje = new DevExpress.XtraBars.BarButtonItem();
@@ -83,7 +84,7 @@
             this.barDockControl3 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl4 = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.TBindingSource = new System.Windows.Forms.BindingSource();
+            this.TBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TDataSet = new System.Data.DataSet();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -786,6 +787,7 @@
             this.Controls.Add(this.barDockControl1);
             this.Name = "frmAgendaPedido";
             this.Text = "Agenda de Pedidos";
+            this.Activated += new System.EventHandler(this.frmAgendaPedido_Activated);
             this.Load += new System.EventHandler(this.frmAgendaPedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgrpView.Properties)).EndInit();

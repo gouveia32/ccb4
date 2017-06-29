@@ -58,6 +58,11 @@ namespace BLL
             return DALobj.Filtrar(ra.RetiraAcento(valor), where);
         }
 
+        public AgendaPedido EntradaDoPedido(int pedido_id)
+        {
+            return DALobj.EntradaDoPedido(pedido_id);
+        }
+
         public DataTable CarregaEntradas(string where = "")
         {
             return DALobj.CarregaEntradas(where);

@@ -105,8 +105,7 @@ namespace GUI
             modelo.desconto = txtDesconto.Value;
             modelo.pago = txtAmortizacao.Value;
             modelo.executado = cbExecutado.Checked;
-            modelo.mensal = cbMensal.Checked;
-            modelo.pago_antecipado = ckbPAGO.Checked;
+
             modelo.obs_pedido = txtObs_Pedido.Text;
         }
 
@@ -120,9 +119,6 @@ namespace GUI
             lblTelefone.Text = modelo.Cliente.telefone1;
             txtAmortizacao.Value = modelo.pago;
             txtDesconto.Value = modelo.desconto;
-            cbExecutado.Checked = modelo.executado;
-            cbMensal.Checked = modelo.mensal;
-            ckbPAGO.Checked = modelo.pago_antecipado;
             txtObs_Pedido.Text = modelo.obs_pedido;
             //lblContato.Text = modelo.Cliente.telefone1;
         }
@@ -140,6 +136,11 @@ namespace GUI
             rg_lado.SelectedIndex = item.lado;
 
             txtObs_Item.Text = item.obs;
+
+            txtPC_Solicitadas.Value = txtPC_Bordadas.Value = item.pc_solicitadas;
+            txtPreco_Por_Peca.Value = item.preco_por_peca;
+            txtTotal_Item.Text = (item.pc_entregues * item.preco_por_peca).ToString();
+
 
             dtpData_Entrega.Value = Convert.ToDateTime(item.data_entrega);
             //Carrega a Imagem
@@ -257,9 +258,10 @@ namespace GUI
                 tot_pecas += Convert.ToInt32(row.Cells[3].Value);
                 tot_valor += Convert.ToDouble(row.Cells[5].Value);
             }
-            txtTot_Pecas.Text = Convert.ToString(tot_pecas);
+            txtTot_Pecas.Value = tot_pecas;
             txtQtde_Itens.Text = Convert.ToString(dgItens.RowCount);
-            txtTotal_Pedido.Text = Convert.ToString(tot_valor - txtDesconto.Value);
+            txtTotal_Pedido.Value = (tot_valor - txtDesconto.Value);
+            txtPC_Bordadas.Value = txtPC_Entregues.Value;
             if (ckbPAGO.Checked)
             {
                 txtTot_a_pagar.Value = 0;
@@ -987,20 +989,16 @@ namespace GUI
 
         private DateTime UltimoDoDia(DateTime dia, int pedido_id)
         {
-            DateTime d1;
-
             BLLAgendaPedido bll = new BLLAgendaPedido();
-
-            bll.ExcluirPorPedido(pedido_id); //Apaga registro anterior caso exista
+            bll.ExcluirPorPedido(pedido_id);   // apaga inicialmente qualquer entrada do pedido 
             DataTable dt;
             dt = bll.CarregaUltimaEntrada(dia);
             if (dt.Rows.Count == 0)
             {
-                d1 = Convert.ToDateTime(string.Format("{0:dd/MM/yyyy 08:00}", DateTime.Now));
-                return d1;
+                return Convert.ToDateTime(string.Format("{0:dd/MM/yyyy 08:00}", dia));
             }
             else
-                return Convert.ToDateTime(dt.Rows[0].ItemArray[0]);
+                return Convert.ToDateTime(dt.Rows[0].ItemArray[7]);
         }
 
 
@@ -1011,25 +1009,25 @@ namespace GUI
 
             BLLAgendaPedido bll = new BLLAgendaPedido();
             AgendaPedido modelo = new AgendaPedido();
-            modelo.pedido_id = pedido_id;
-            modelo.subject = string.Format("[{0:d}]{1:s}",
-                                           txtTot_Pecas.Text,
-                                           cbCliente.Text);
-            //modelo.description = string.Format("{3:s}", dgItens.Item(dgItens.Columns("descricao").Index, 0).Value.ToString);
-            //if (bll.CarregaEntrada())
-            //{
-            //dt = bll.CarregaUltimaEntrada();
 
-            modelo.location = "0";
-            modelo.status = 2;
-            //}
+            modelo = bll.EntradaDoPedido(pedido_id); // se não existir vem nulo
+
+            if (modelo.pedido_id == 0)
+            {
+                modelo.pedido_id = pedido_id;
+                modelo.location = "0";
+                modelo.status = 2;
+
+            }
+            modelo.subject = string.Format("[{0:d}]{1:s}",txtTot_Pecas.Text,cbCliente.Text);
+            modelo.description = dgItens.Rows[0].Cells["descricao"].Value.ToString();
+            modelo.location = Convert.ToString (pedido_id);
 
             dtI = UltimoDoDia(dtpData_Entrega.Value, pedido_id);
 
-            modelo.start = dtI;
-            modelo.end = dtI.AddMinutes(9);
-
-            bll.Incluir(modelo);
+            modelo.start = dtI.AddMinutes(10);
+            modelo.end = dtI.AddMinutes(19);
+            bll.Incluir(modelo); 
         }
 
         private void Gravar()
@@ -1064,11 +1062,7 @@ namespace GUI
                     idAtual = Convert.ToInt32(txtId.Text);
                     modelo.id = Convert.ToInt32(txtId.Text);
                     bll.Altera(modelo);
-                    if (cbMensal.Checked)
-                    {
-                        //if cbMensal.Checked Then MySQL_cmd(Conn, "DELETE FROM agenda_pedido WHERE pedido_id=" & Pedido_Id_Atual) 'Apaga entrada na agenda
-                    }
-                    else
+                    if (!cbMensal.Checked)
                     {
                         //Gravar agenda ...
                         GravaAgenda(idAtual);
@@ -1288,6 +1282,11 @@ namespace GUI
             {
                 MessageBox.Show("Pedido Finalizado. Após pressionar <Ok> este pedido não será mostrado!");
             }
+        }
+
+        private void txtPC_Solicitadas_ValueChanged(object sender, EventArgs e)
+        {
+            txtPC_Bordadas.Value = txtPC_Solicitadas.Value;
         }
     }
 }
