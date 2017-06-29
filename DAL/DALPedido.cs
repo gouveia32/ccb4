@@ -136,10 +136,21 @@ namespace DAL
                 ped.quitado = (i == 1) ? true : false; 
             else
                 ped.quitado = false;
+
             if (int.TryParse(registro["executado"].ToString(), out i))
                 ped.executado = (i == 1) ? true : false;
             else
                 ped.executado = false;
+
+            if (int.TryParse(registro["pago_antecipado"].ToString(), out i))
+                ped.pago_antecipado = (i == 1) ? true : false;
+            else
+                ped.pago_antecipado = false;
+
+            if (int.TryParse(registro["mensal"].ToString(), out i))
+                ped.mensal = (i == 1) ? true : false;
+            else
+                ped.mensal = false;
 
             ped.Cliente.nome = Convert.ToString(registro["nome"]);
             ped.Cliente.telefone1 = Convert.ToString(registro["telefone1"]);

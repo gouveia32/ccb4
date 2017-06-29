@@ -18,9 +18,9 @@ namespace BLL
 
         public void Incluir(AgendaPedido modelo)
         {
-            if (modelo.id == 0)
+            if (modelo.pedido_id == 0)
             {
-                throw new Exception("O id é obrigatório!");
+                throw new Exception("O pedido_id é obrigatório!");
             }
             DALobj.Insere(modelo);
         }
@@ -36,6 +36,11 @@ namespace BLL
                 throw new Exception("O pedido_id é obrigatório!");
             }
             DALobj.Altera(modelo);
+        }
+
+        public void ExcluirPorPedido(int pedido_id)
+        {
+            DALobj.ExcluirPorPedido(pedido_id);
         }
 
         public void Exclui(int id)

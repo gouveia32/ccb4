@@ -30,7 +30,7 @@ namespace DAL
             try
             {
                 p = new List<MySqlParametro>();
-                p.Add(new MySqlParametro("@pedido_id", modelo.pedido_id));
+
                 p.Add(new MySqlParametro("@pedido_id", modelo.pedido_id));
                 p.Add(new MySqlParametro("@subject", modelo.subject));
                 p.Add(new MySqlParametro("@description", modelo.description));
@@ -41,7 +41,7 @@ namespace DAL
                 p.Add(new MySqlParametro("@end", modelo.end));
                 p.Add(new MySqlParametro("@id", Convert.ToInt32(modelo.id)));
 
-                sql = "INSERT INTO agenda_pedido(pedido_id,subject,description,location,label,status,endereco,start,end)"
+                sql = "INSERT INTO agenda_pedido(pedido_id,subject,description,location,label,status,start,end)"
                     + "VALUES (@pedido_id,@subject,@description,@location,@label,@status,@start,@end)";
                 modelo.id = bd.exeNonQuery(sql, p);
             }
@@ -60,6 +60,7 @@ namespace DAL
             try
             {
                 p = new List<MySqlParametro>();
+
                 p.Add(new MySqlParametro("@pedido_id", modelo.pedido_id));
                 p.Add(new MySqlParametro("@subject", modelo.subject));
                 p.Add(new MySqlParametro("@description", modelo.description));
@@ -93,6 +94,22 @@ namespace DAL
                 p.Add(new MySqlParametro("@id", id));
 
                 sql = "DELETE FROM agenda_pedido WHERE id = @id";
+                bd.exeNonQuery(sql, p);
+            }
+            catch (Exception erro)
+            {
+                throw new Exception(erro.Message);
+            }
+        }
+
+        public void ExcluirPorPedido(int pedido_id)
+        {
+            try
+            {
+                p = new List<MySqlParametro>();
+                p.Add(new MySqlParametro("@pedido_id", pedido_id));
+
+                sql = "DELETE FROM agenda_pedido WHERE pedido_id = @pedido_id";
                 bd.exeNonQuery(sql, p);
             }
             catch (Exception erro)
@@ -211,7 +228,6 @@ public DataTable CarregaTodasEntradas()
             return bd.exePesquisa(sql, null);
         }
 
-
         /// <summary>
         /// 
         /// </summary>
@@ -224,7 +240,6 @@ public DataTable CarregaTodasEntradas()
                dia);
             return bd.exePesquisa(sql, null);
         }
-
 
         /// <Carrega registros que atendem ao filtro valor>
         /// 

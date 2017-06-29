@@ -105,7 +105,8 @@ namespace GUI
             modelo.desconto = txtDesconto.Value;
             modelo.pago = txtAmortizacao.Value;
             modelo.executado = cbExecutado.Checked;
-
+            modelo.mensal = cbMensal.Checked;
+            modelo.pago_antecipado = ckbPAGO.Checked;
             modelo.obs_pedido = txtObs_Pedido.Text;
         }
 
@@ -119,6 +120,9 @@ namespace GUI
             lblTelefone.Text = modelo.Cliente.telefone1;
             txtAmortizacao.Value = modelo.pago;
             txtDesconto.Value = modelo.desconto;
+            cbExecutado.Checked = modelo.executado;
+            cbMensal.Checked = modelo.mensal;
+            ckbPAGO.Checked = modelo.pago_antecipado;
             txtObs_Pedido.Text = modelo.obs_pedido;
             //lblContato.Text = modelo.Cliente.telefone1;
         }
@@ -986,8 +990,10 @@ namespace GUI
             DateTime d1;
 
             BLLAgendaPedido bll = new BLLAgendaPedido();
+
+            bll.ExcluirPorPedido(pedido_id); //Apaga registro anterior caso exista
             DataTable dt;
-            dt = bll.CarregaUltimaEntrada(DateTime.Now);
+            dt = bll.CarregaUltimaEntrada(dia);
             if (dt.Rows.Count == 0)
             {
                 d1 = Convert.ToDateTime(string.Format("{0:dd/MM/yyyy 08:00}", DateTime.Now));
@@ -1018,12 +1024,12 @@ namespace GUI
             modelo.status = 2;
             //}
 
-
             dtI = UltimoDoDia(dtpData_Entrega.Value, pedido_id);
 
             modelo.start = dtI;
             modelo.end = dtI.AddMinutes(9);
 
+            bll.Incluir(modelo);
         }
 
         private void Gravar()
