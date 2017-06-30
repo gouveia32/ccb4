@@ -169,6 +169,11 @@ namespace GUI
         {
             //dgItens.Rows[row].Cells["pedido_id"].Value = Convert.ToInt32(txtId.Text);
             dgItens.Rows[row].Cells["bordado_id"].Value = nudBordado_Id.Value;
+            dgItens.Rows[row].Cells["qtde"].Value = txtPC_Solicitadas.Value;
+            dgItens.Rows[row].Cells["preco"].Value = txtPreco_Por_Peca.Value;
+            dgItens.Rows[row].Cells["Tot_item"].Value =
+            txtTotal_Item.Value = 
+                       txtPC_Solicitadas.Value * txtPreco_Por_Peca.Value;
             dgItens.Rows[row].Cells["data_entrega"].Value = dtpData_Entrega.Value;
             dgItens.Rows[row].Cells["obs"].Value = txtObs_Item.Text;
             dgItens.Rows[row].Cells["local_id"].Value = rg_local.SelectedIndex;
@@ -190,6 +195,10 @@ namespace GUI
                 item.pedido_id = Convert.ToInt32(txtId.Text);
                 item.bordado_id = Convert.ToInt32(r.Cells["bordado_id"].Value);
                 item.item = Convert.ToInt32(r.Cells["item"].Value);
+                item.pc_entregues = 
+                item.pc_solicitadas = 
+                    Convert.ToInt32(r.Cells["qtde"].Value);
+                item.preco_por_peca = Convert.ToInt32(r.Cells["preco"].Value);
                 item.data_entrega = Convert.ToDateTime(r.Cells["data_entrega"].Value);
                 item.descricao = Convert.ToString(r.Cells["descricao"].Value);
                 item.obs = Convert.ToString(r.Cells["obs"].Value);
@@ -253,6 +262,8 @@ namespace GUI
             int tot_pecas = 0;
             Double tot_valor = 0;
 
+            //primeiro guarda os dados da tela na grid
+            if (dgItens.CurrentRow != null) ItemTelaParaGrade(dgItens.CurrentRow.Index);
             foreach (DataGridViewRow row in dgItens.Rows)
             {
                 tot_pecas += Convert.ToInt32(row.Cells[3].Value);
@@ -261,7 +272,7 @@ namespace GUI
             txtTot_Pecas.Value = tot_pecas;
             txtQtde_Itens.Text = Convert.ToString(dgItens.RowCount);
             txtTotal_Pedido.Value = (tot_valor - txtDesconto.Value);
-            txtPC_Bordadas.Value = txtPC_Entregues.Value;
+            txtPC_Bordadas.Value = txtPC_Solicitadas.Value;
             if (ckbPAGO.Checked)
             {
                 txtTot_a_pagar.Value = 0;
@@ -390,7 +401,14 @@ namespace GUI
                 dgRegistros.DataSource = bll.Filtrar(txtFiltrar.Text, filtro);
 
             if (Posicionar_id > 0)
-                loc.Localizar(gdRegistros, Posicionar_id.ToString(), 0, true);
+            {
+                loc.Localizar(gdRegistros, "id=" + Posicionar_id.ToString(), 0, true);
+                CarregaPedidoAtual(Posicionar_id);
+            }
+            else
+            {
+                if (gdRegistros.RowCount > 0) ExibeItens(0);
+            }
             if (txtFiltrar.Text == "")
             {
                 fp.sbRegistros.Caption = String.Format("{0} registros", gdRegistros.RowCount);
@@ -402,7 +420,6 @@ namespace GUI
                 btnX.Visible = true;
             }
 
-            if (gdRegistros.RowCount > 0) ExibeItens(0);
             fp.OcultaAguarde();
         }
 
@@ -442,31 +459,35 @@ namespace GUI
             gdRegistros.Columns[1].Width = 125;
             gdRegistros.Columns[2].Width = 90;
             gdRegistros.Columns[3].Visible = false;
+        }
 
+        private void CarregaPedidoAtual(int pedido_id)
+        {
+            BLLPedido bll = new BLLPedido();
+            Pedido modelo = bll.CarregaPedido(pedido_id);
+            PedidoModeloParaTela(modelo);
+
+            //Carrega itens
+            BLLItem bllItem = new BLLItem();
+            ItemCollection itemCollection = bllItem.CarregaItensDoPedido(modelo.id);
+            //dgItens.DataSource = itemCollection;
+            ItensModeloParaTela(itemCollection);
+
+            //alterabotoes(1);
         }
 
         private void gdRegistros_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (e.FocusedRowHandle >= 0)
             {
-                BLLPedido bll = new BLLPedido();
-                Pedido modelo = bll.CarregaPedido(Convert.ToInt32(gdRegistros.GetDataRow(e.FocusedRowHandle).ItemArray[0]));
-                PedidoModeloParaTela(modelo);
-
-                //Carrega itens
-                BLLItem bllItem = new BLLItem();
-                ItemCollection itemCollection = bllItem.CarregaItensDoPedido(modelo.id);
-                //dgItens.DataSource = itemCollection;
-                ItensModeloParaTela(itemCollection);
-
-                //alterabotoes(1);
+                CarregaPedidoAtual(Convert.ToInt32(gdRegistros.GetDataRow(e.FocusedRowHandle).ItemArray[0]));
             }
-            {
-                BLLPedido bll = new BLLPedido();
-                Pedido modelo = bll.CarregaPedido(Convert.ToInt32(gdRegistros.GetDataRow(e.FocusedRowHandle).ItemArray[0]));
-                PedidoModeloParaTela(modelo);
-                //alterabotoes(1);
-            }
+            //{
+            //    BLLPedido bll = new BLLPedido();
+            //    Pedido modelo = bll.CarregaPedido(Convert.ToInt32(gdRegistros.GetDataRow(e.FocusedRowHandle).ItemArray[0]));
+            //    PedidoModeloParaTela(modelo);
+            //    //alterabotoes(1);
+            // }
         }
 
         private void gdRegistros_DoubleClick(object sender, EventArgs e)
@@ -1286,7 +1307,42 @@ namespace GUI
 
         private void txtPC_Solicitadas_ValueChanged(object sender, EventArgs e)
         {
-            txtPC_Bordadas.Value = txtPC_Solicitadas.Value;
+            //txtPC_Bordadas.Value = txtPC_Solicitadas.Value;
+        }
+
+        private void txtPC_Solicitadas_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //ItemTelaParaGrade(dgItens.CurrentRow.Index);
+                CalculaTotais();
+                btnImportar.Focus();
+            }
+        }
+
+        private void txtPreco_Por_Peca_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CalculaTotais();
+                txtDescricao.Focus();
+            }
+        }
+
+        private void btnImportar_Click(object sender, EventArgs e)
+        {
+            if (txtBordado_Descricao.Text != ".")
+            {
+                txtPreco_Por_Peca.Text = txtBordado_Preco.Text;
+                txtDescricao.Text = txtBordado_Descricao.Text;
+             }
+            txtPreco_Por_Peca.Focus();
+        }
+
+        private void txtPC_Solicitadas_Leave(object sender, EventArgs e)
+        {
+            CalculaTotais();
+            btnImportar.Focus();
         }
     }
 }

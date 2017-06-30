@@ -30,21 +30,21 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPedido));
             this.deFechamento = new DevExpress.XtraEditors.DateEdit();
             this.deAbertura = new DevExpress.XtraEditors.DateEdit();
@@ -138,6 +138,7 @@ namespace GUI
             this.txtFiltrar = new DevExpress.XtraEditors.TextEdit();
             this.xtabItenPagamentoExecucao = new DevExpress.XtraTab.XtraTabControl();
             this.xtbpItem = new DevExpress.XtraTab.XtraTabPage();
+            this.txtTotal_Item = new DevComponents.Editors.DoubleInput();
             this.txtPC_Bordadas = new DevComponents.Editors.IntegerInput();
             this.nudBordado_Id = new DevComponents.Editors.IntegerInput();
             this.txtTot_a_pagar = new DevComponents.Editors.DoubleInput();
@@ -199,7 +200,6 @@ namespace GUI
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnQuitar = new DevExpress.XtraEditors.DropDownButton();
-            this.txtTotal_Item = new DevComponents.Editors.DoubleInput();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scc1)).BeginInit();
             this.scc1.SuspendLayout();
@@ -228,6 +228,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.xtabItenPagamentoExecucao)).BeginInit();
             this.xtabItenPagamentoExecucao.SuspendLayout();
             this.xtbpItem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal_Item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPC_Bordadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBordado_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTot_a_pagar)).BeginInit();
@@ -247,7 +248,6 @@ namespace GUI
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotal_Item)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -479,28 +479,28 @@ namespace GUI
             this.troca_rapida,
             this.obs,
             this.Bordado_Id});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgItens.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgItens.DefaultCellStyle = dataGridViewCellStyle21;
             this.dgItens.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgItens.EnableHeadersVisualStyles = false;
             this.dgItens.Location = new System.Drawing.Point(2, 2);
             this.dgItens.MultiSelect = false;
             this.dgItens.Name = "dgItens";
             this.dgItens.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgItens.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgItens.RowHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgItens.RowHeadersVisible = false;
             this.dgItens.RowHeadersWidth = 25;
             this.dgItens.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -517,9 +517,9 @@ namespace GUI
             // 
             // item
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Info;
-            this.item.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Info;
+            this.item.DefaultCellStyle = dataGridViewCellStyle15;
             this.item.HeaderText = "Ítem";
             this.item.Name = "item";
             this.item.ReadOnly = true;
@@ -529,9 +529,9 @@ namespace GUI
             // descricao
             // 
             this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
-            this.descricao.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Info;
+            this.descricao.DefaultCellStyle = dataGridViewCellStyle16;
             this.descricao.HeaderText = "Descricao";
             this.descricao.Name = "descricao";
             this.descricao.ReadOnly = true;
@@ -539,8 +539,8 @@ namespace GUI
             // 
             // data_entrega
             // 
-            dataGridViewCellStyle3.Format = "dd/MM/yy hh:mm";
-            this.data_entrega.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle17.Format = "dd/MM/yy hh:mm";
+            this.data_entrega.DefaultCellStyle = dataGridViewCellStyle17;
             this.data_entrega.HeaderText = "data_entrega";
             this.data_entrega.Name = "data_entrega";
             this.data_entrega.ReadOnly = true;
@@ -548,9 +548,9 @@ namespace GUI
             // 
             // Qtde
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Info;
-            this.Qtde.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Info;
+            this.Qtde.DefaultCellStyle = dataGridViewCellStyle18;
             this.Qtde.HeaderText = "Qtde";
             this.Qtde.Name = "Qtde";
             this.Qtde.ReadOnly = true;
@@ -558,11 +558,11 @@ namespace GUI
             // 
             // preco
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.preco.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle19.Format = "N2";
+            dataGridViewCellStyle19.NullValue = null;
+            this.preco.DefaultCellStyle = dataGridViewCellStyle19;
             this.preco.HeaderText = "Preço";
             this.preco.Name = "preco";
             this.preco.ReadOnly = true;
@@ -571,11 +571,11 @@ namespace GUI
             // 
             // Tot_Item
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle6.Format = "N2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.Tot_Item.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle20.Format = "N2";
+            dataGridViewCellStyle20.NullValue = null;
+            this.Tot_Item.DefaultCellStyle = dataGridViewCellStyle20;
             this.Tot_Item.HeaderText = "Tot.Ítem";
             this.Tot_Item.Name = "Tot_Item";
             this.Tot_Item.ReadOnly = true;
@@ -733,6 +733,7 @@ namespace GUI
             // 
             this.txtAmortizacao.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtAmortizacao.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAmortizacao.FocusHighlightEnabled = true;
             this.txtAmortizacao.Increment = 1D;
             this.txtAmortizacao.Location = new System.Drawing.Point(108, 1);
             this.txtAmortizacao.Name = "txtAmortizacao";
@@ -763,6 +764,7 @@ namespace GUI
             // 
             this.txtDesconto.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtDesconto.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtDesconto.FocusHighlightEnabled = true;
             this.txtDesconto.Increment = 1D;
             this.txtDesconto.Location = new System.Drawing.Point(256, 1);
             this.txtDesconto.Name = "txtDesconto";
@@ -971,7 +973,7 @@ namespace GUI
             this.btnExecutarItem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnExecutarItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExecutarItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnExecutarItem.Location = new System.Drawing.Point(13788, 25);
+            this.btnExecutarItem.Location = new System.Drawing.Point(15062, 25);
             this.btnExecutarItem.Name = "btnExecutarItem";
             this.btnExecutarItem.Size = new System.Drawing.Size(92, 32);
             this.btnExecutarItem.TabIndex = 100;
@@ -991,7 +993,7 @@ namespace GUI
             this.dtpData_Execucao.FocusHighlightEnabled = true;
             this.dtpData_Execucao.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Execucao.IsPopupCalendarOpen = false;
-            this.dtpData_Execucao.Location = new System.Drawing.Point(13677, 36);
+            this.dtpData_Execucao.Location = new System.Drawing.Point(14951, 36);
             // 
             // 
             // 
@@ -1022,7 +1024,7 @@ namespace GUI
             // 
             this.Label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label27.BackColor = System.Drawing.Color.Transparent;
-            this.Label27.Location = new System.Drawing.Point(13590, 41);
+            this.Label27.Location = new System.Drawing.Point(14864, 41);
             this.Label27.Name = "Label27";
             this.Label27.Size = new System.Drawing.Size(79, 13);
             this.Label27.TabIndex = 89;
@@ -1043,26 +1045,26 @@ namespace GUI
             this.codigo,
             this.nome,
             this.Cor});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgLinhas_Item.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgLinhas_Item.DefaultCellStyle = dataGridViewCellStyle27;
             this.dgLinhas_Item.EnableHeadersVisualStyles = false;
             this.dgLinhas_Item.Location = new System.Drawing.Point(16, 63);
             this.dgLinhas_Item.MultiSelect = false;
             this.dgLinhas_Item.Name = "dgLinhas_Item";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgLinhas_Item.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLinhas_Item.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dgLinhas_Item.RowHeadersVisible = false;
             this.dgLinhas_Item.RowHeadersWidth = 25;
             this.dgLinhas_Item.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -1077,9 +1079,9 @@ namespace GUI
             // 
             // seq
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Info;
-            this.seq.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Info;
+            this.seq.DefaultCellStyle = dataGridViewCellStyle23;
             this.seq.HeaderText = "Seq";
             this.seq.Name = "seq";
             this.seq.ReadOnly = true;
@@ -1088,8 +1090,8 @@ namespace GUI
             // 
             // codigo
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.codigo.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.codigo.DefaultCellStyle = dataGridViewCellStyle24;
             this.codigo.HeaderText = "Codigo";
             this.codigo.Name = "codigo";
             this.codigo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1097,9 +1099,9 @@ namespace GUI
             // 
             // nome
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Info;
-            this.nome.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Info;
+            this.nome.DefaultCellStyle = dataGridViewCellStyle25;
             this.nome.HeaderText = "Nome";
             this.nome.Name = "nome";
             this.nome.ReadOnly = true;
@@ -1107,8 +1109,8 @@ namespace GUI
             // 
             // Cor
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Cor.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Cor.DefaultCellStyle = dataGridViewCellStyle26;
             this.Cor.HeaderText = "Cor";
             this.Cor.Name = "Cor";
             this.Cor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1297,7 +1299,7 @@ namespace GUI
             this.txtObs_Pagamento.Multiline = true;
             this.txtObs_Pagamento.Name = "txtObs_Pagamento";
             this.txtObs_Pagamento.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Pagamento.Size = new System.Drawing.Size(13849, 0);
+            this.txtObs_Pagamento.Size = new System.Drawing.Size(15123, 0);
             this.txtObs_Pagamento.TabIndex = 3;
             // 
             // Label24
@@ -1475,6 +1477,20 @@ namespace GUI
             this.xtbpItem.Size = new System.Drawing.Size(899, 414);
             this.xtbpItem.Text = "Ítem";
             // 
+            // txtTotal_Item
+            // 
+            this.txtTotal_Item.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.txtTotal_Item.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtTotal_Item.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTotal_Item.Increment = 1D;
+            this.txtTotal_Item.Location = new System.Drawing.Point(814, 309);
+            this.txtTotal_Item.Name = "txtTotal_Item";
+            this.txtTotal_Item.Size = new System.Drawing.Size(68, 21);
+            this.txtTotal_Item.TabIndex = 152;
+            // 
             // txtPC_Bordadas
             // 
             this.txtPC_Bordadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -1530,11 +1546,13 @@ namespace GUI
             // 
             this.txtPreco_Por_Peca.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtPreco_Por_Peca.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPreco_Por_Peca.FocusHighlightEnabled = true;
             this.txtPreco_Por_Peca.Increment = 1D;
             this.txtPreco_Por_Peca.Location = new System.Drawing.Point(814, 269);
             this.txtPreco_Por_Peca.Name = "txtPreco_Por_Peca";
             this.txtPreco_Por_Peca.Size = new System.Drawing.Size(68, 21);
             this.txtPreco_Por_Peca.TabIndex = 117;
+            this.txtPreco_Por_Peca.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPreco_Por_Peca_KeyDown);
             // 
             // btnImportar
             // 
@@ -1545,6 +1563,7 @@ namespace GUI
             this.btnImportar.TabIndex = 116;
             this.btnImportar.Text = "Carregar";
             this.btnImportar.UseVisualStyleBackColor = true;
+            this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
             // 
             // btnAdicionar
             // 
@@ -1581,11 +1600,12 @@ namespace GUI
             this.txtPC_Solicitadas.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtPC_Solicitadas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPC_Solicitadas.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtPC_Solicitadas.FocusHighlightEnabled = true;
             this.txtPC_Solicitadas.Location = new System.Drawing.Point(654, 230);
             this.txtPC_Solicitadas.Name = "txtPC_Solicitadas";
             this.txtPC_Solicitadas.Size = new System.Drawing.Size(49, 21);
             this.txtPC_Solicitadas.TabIndex = 115;
-            this.txtPC_Solicitadas.ValueChanged += new System.EventHandler(this.txtPC_Solicitadas_ValueChanged);
+            this.txtPC_Solicitadas.Leave += new System.EventHandler(this.txtPC_Solicitadas_Leave);
             // 
             // lblPeca_solicitadas
             // 
@@ -1645,6 +1665,7 @@ namespace GUI
             this.dtpData_Entrega.ButtonClear.Visible = true;
             this.dtpData_Entrega.ButtonDropDown.Visible = true;
             this.dtpData_Entrega.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpData_Entrega.FocusHighlightEnabled = true;
             this.dtpData_Entrega.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Entrega.IsPopupCalendarOpen = false;
             this.dtpData_Entrega.Location = new System.Drawing.Point(744, 382);
@@ -2030,9 +2051,9 @@ namespace GUI
             // dgRegistros
             // 
             this.dgRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.dgRegistros.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.dgRegistros.Location = new System.Drawing.Point(2, 2);
             this.dgRegistros.MainView = this.gdRegistros;
             this.dgRegistros.Name = "dgRegistros";
@@ -2269,20 +2290,6 @@ namespace GUI
             this.btnQuitar.Text = "Baixar o Pedido";
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
-            // txtTotal_Item
-            // 
-            this.txtTotal_Item.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.txtTotal_Item.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtTotal_Item.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTotal_Item.Increment = 1D;
-            this.txtTotal_Item.Location = new System.Drawing.Point(814, 309);
-            this.txtTotal_Item.Name = "txtTotal_Item";
-            this.txtTotal_Item.Size = new System.Drawing.Size(68, 21);
-            this.txtTotal_Item.TabIndex = 152;
-            // 
             // frmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2322,6 +2329,7 @@ namespace GUI
             this.xtabItenPagamentoExecucao.ResumeLayout(false);
             this.xtbpItem.ResumeLayout(false);
             this.xtbpItem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal_Item)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPC_Bordadas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBordado_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTot_a_pagar)).EndInit();
@@ -2344,7 +2352,6 @@ namespace GUI
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotal_Item)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
