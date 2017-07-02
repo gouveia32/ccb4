@@ -82,11 +82,16 @@ namespace DAL
                       "WHERE id = @id";
                 bd.exeNonQuery(sql, p);
 
+                DALItem dalItem = new DALItem();
+                dalItem.ExcluiItensDoPedido(modelo.id);    // apaga inicialmente todos itens do pedido
+
                 if (modelo.Itens.Count > 0)
                 {
-                    //objeto para gravar os dados no bd
-                    DALItem dalItem = new DALItem();
-                    dalItem.AlteraItens(modelo.Itens);
+                    
+                    foreach (var item in modelo.Itens)
+                    {
+                        dalItem.Insere(item);
+                    }
                 }
             }
             catch (Exception erro)

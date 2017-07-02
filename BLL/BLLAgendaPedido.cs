@@ -38,6 +38,15 @@ namespace BLL
             DALobj.Altera(modelo);
         }
 
+        public void AlteraSituacao(int pedido_id, int situacao)
+        {
+            if (pedido_id <= 0)
+            {
+                throw new Exception("O pedido_id é obrigatório!");
+            }
+            DALobj.AlteraSituacao(pedido_id, situacao);
+        }
+
         public void ExcluirPorPedido(int pedido_id)
         {
             DALobj.ExcluirPorPedido(pedido_id);

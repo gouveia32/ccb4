@@ -146,9 +146,10 @@
             // 
             // btnEntrada
             // 
-            this.btnEntrada.Location = new System.Drawing.Point(2, 87);
+            this.btnEntrada.Location = new System.Drawing.Point(2, 107);
+            this.btnEntrada.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEntrada.Name = "btnEntrada";
-            this.btnEntrada.Size = new System.Drawing.Size(174, 33);
+            this.btnEntrada.Size = new System.Drawing.Size(203, 41);
             this.btnEntrada.TabIndex = 4;
             this.btnEntrada.Text = "&Gravar Entrada";
             this.ToolTip1.SetToolTip(this.btnEntrada, "Registrar entrada");
@@ -158,7 +159,8 @@
             // rgrpView
             // 
             this.rgrpView.EditValue = DevExpress.XtraScheduler.SchedulerViewType.WorkWeek;
-            this.rgrpView.Location = new System.Drawing.Point(7, 167);
+            this.rgrpView.Location = new System.Drawing.Point(8, 206);
+            this.rgrpView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rgrpView.Name = "rgrpView";
             this.rgrpView.Properties.Appearance.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.rgrpView.Properties.Appearance.Options.UseBackColor = true;
@@ -170,7 +172,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(DevExpress.XtraScheduler.SchedulerViewType.WorkWeek, "Semana de Trabalho"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(DevExpress.XtraScheduler.SchedulerViewType.FullWeek, "Semana Completa"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(DevExpress.XtraScheduler.SchedulerViewType.Timeline, "Linha de Tempo")});
-            this.rgrpView.Size = new System.Drawing.Size(169, 102);
+            this.rgrpView.Size = new System.Drawing.Size(197, 126);
             this.rgrpView.TabIndex = 114;
             this.rgrpView.TabStop = false;
             this.ToolTip1.SetToolTip(this.rgrpView, "Escolha a forma de Visualização");
@@ -206,8 +208,9 @@
             this.pnlEntrada.Controls.Add(this.txtDescricao);
             this.pnlEntrada.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEntrada.Location = new System.Drawing.Point(0, 0);
+            this.pnlEntrada.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlEntrada.Name = "pnlEntrada";
-            this.pnlEntrada.Size = new System.Drawing.Size(179, 286);
+            this.pnlEntrada.Size = new System.Drawing.Size(209, 352);
             this.pnlEntrada.TabIndex = 125;
             this.ToolTipController1.SetTitle(this.pnlEntrada, "Entrada");
             // 
@@ -220,21 +223,22 @@
             this.dnEntrada.DateTime = new System.DateTime(2021, 1, 28, 0, 0, 0, 0);
             this.dnEntrada.EditValue = new System.DateTime(2021, 1, 28, 0, 0, 0, 0);
             this.dnEntrada.FirstDayOfWeek = System.DayOfWeek.Sunday;
-            this.dnEntrada.Location = new System.Drawing.Point(5, 131);
+            this.dnEntrada.Location = new System.Drawing.Point(6, 161);
+            this.dnEntrada.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dnEntrada.Name = "dnEntrada";
             this.dnEntrada.SelectionMode = DevExpress.XtraEditors.Repository.CalendarSelectionMode.Single;
             this.dnEntrada.ShowFooter = false;
             this.dnEntrada.ShowMonthHeaders = false;
             this.dnEntrada.ShowWeekNumbers = false;
-            this.dnEntrada.Size = new System.Drawing.Size(171, 150);
+            this.dnEntrada.Size = new System.Drawing.Size(199, 185);
             this.dnEntrada.TabIndex = 106;
             // 
             // Label25
             // 
             this.Label25.BackColor = System.Drawing.Color.Transparent;
-            this.Label25.Location = new System.Drawing.Point(3, 3);
+            this.Label25.Location = new System.Drawing.Point(3, 4);
             this.Label25.Name = "Label25";
-            this.Label25.Size = new System.Drawing.Size(72, 13);
+            this.Label25.Size = new System.Drawing.Size(84, 16);
             this.Label25.TabIndex = 103;
             this.Label25.Text = "Descrição:";
             this.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,23 +246,24 @@
             // Label13
             // 
             this.Label13.BackColor = System.Drawing.Color.Transparent;
-            this.Label13.Location = new System.Drawing.Point(8, 65);
+            this.Label13.Location = new System.Drawing.Point(9, 80);
             this.Label13.Name = "Label13";
-            this.Label13.Size = new System.Drawing.Size(88, 19);
+            this.Label13.Size = new System.Drawing.Size(103, 23);
             this.Label13.TabIndex = 105;
             this.Label13.Text = "Quantidade:";
             this.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // nudQuantidade
             // 
-            this.nudQuantidade.Location = new System.Drawing.Point(99, 63);
+            this.nudQuantidade.Location = new System.Drawing.Point(115, 78);
+            this.nudQuantidade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudQuantidade.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.nudQuantidade.Name = "nudQuantidade";
-            this.nudQuantidade.Size = new System.Drawing.Size(77, 21);
+            this.nudQuantidade.Size = new System.Drawing.Size(90, 23);
             this.nudQuantidade.TabIndex = 3;
             this.nudQuantidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudQuantidade.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
@@ -270,16 +275,18 @@
             // 
             // txtItem
             // 
-            this.txtItem.Location = new System.Drawing.Point(0, 41);
+            this.txtItem.Location = new System.Drawing.Point(0, 50);
+            this.txtItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtItem.Name = "txtItem";
-            this.txtItem.Size = new System.Drawing.Size(176, 21);
+            this.txtItem.Size = new System.Drawing.Size(205, 23);
             this.txtItem.TabIndex = 2;
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(0, 19);
+            this.txtDescricao.Location = new System.Drawing.Point(0, 23);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(176, 21);
+            this.txtDescricao.Size = new System.Drawing.Size(205, 23);
             this.txtDescricao.TabIndex = 1;
             // 
             // SchedulerStorage1
@@ -304,9 +311,10 @@
             this.MenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmSaida});
-            this.MenuStrip1.Location = new System.Drawing.Point(0, 40);
+            this.MenuStrip1.Location = new System.Drawing.Point(0, 49);
             this.MenuStrip1.Name = "MenuStrip1";
-            this.MenuStrip1.Size = new System.Drawing.Size(1022, 23);
+            this.MenuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.MenuStrip1.Size = new System.Drawing.Size(1192, 28);
             this.MenuStrip1.TabIndex = 109;
             this.MenuStrip1.Text = "Atalhos";
             this.MenuStrip1.Visible = false;
@@ -320,35 +328,35 @@
             this.mnuIndefinido});
             this.tsmSaida.Name = "tsmSaida";
             this.tsmSaida.ShortcutKeys = System.Windows.Forms.Keys.F12;
-            this.tsmSaida.Size = new System.Drawing.Size(64, 19);
+            this.tsmSaida.Size = new System.Drawing.Size(78, 24);
             this.tsmSaida.Text = "Situacao";
             // 
             // mnuEntrada
             // 
             this.mnuEntrada.Name = "mnuEntrada";
             this.mnuEntrada.ShortcutKeys = System.Windows.Forms.Keys.F9;
-            this.mnuEntrada.Size = new System.Drawing.Size(168, 22);
+            this.mnuEntrada.Size = new System.Drawing.Size(202, 26);
             this.mnuEntrada.Text = "Entregue";
             // 
             // mnuBordando
             // 
             this.mnuBordando.Name = "mnuBordando";
             this.mnuBordando.ShortcutKeys = System.Windows.Forms.Keys.F10;
-            this.mnuBordando.Size = new System.Drawing.Size(168, 22);
+            this.mnuBordando.Size = new System.Drawing.Size(202, 26);
             this.mnuBordando.Text = "Bordando";
             // 
             // mnuNaProducao
             // 
             this.mnuNaProducao.Name = "mnuNaProducao";
             this.mnuNaProducao.ShortcutKeys = System.Windows.Forms.Keys.F11;
-            this.mnuNaProducao.Size = new System.Drawing.Size(168, 22);
+            this.mnuNaProducao.Size = new System.Drawing.Size(202, 26);
             this.mnuNaProducao.Text = "Na Produção";
             // 
             // mnuIndefinido
             // 
             this.mnuIndefinido.Name = "mnuIndefinido";
             this.mnuIndefinido.ShortcutKeys = System.Windows.Forms.Keys.F12;
-            this.mnuIndefinido.Size = new System.Drawing.Size(168, 22);
+            this.mnuIndefinido.Size = new System.Drawing.Size(202, 26);
             this.mnuIndefinido.Text = "Indefinido";
             // 
             // Timer1
@@ -364,13 +372,14 @@
             this.dnVisao.DateTime = new System.DateTime(2017, 6, 10, 0, 0, 0, 0);
             this.dnVisao.EditValue = new System.DateTime(2017, 6, 10, 0, 0, 0, 0);
             this.dnVisao.FirstDayOfWeek = System.DayOfWeek.Sunday;
-            this.dnVisao.Location = new System.Drawing.Point(7, 5);
+            this.dnVisao.Location = new System.Drawing.Point(8, 6);
+            this.dnVisao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dnVisao.Name = "dnVisao";
             this.dnVisao.SchedulerControl = this.SchedulerControl;
             this.dnVisao.ShowMonthHeaders = false;
             this.dnVisao.ShowTodayButton = false;
             this.dnVisao.ShowWeekNumbers = false;
-            this.dnVisao.Size = new System.Drawing.Size(169, 156);
+            this.dnVisao.Size = new System.Drawing.Size(197, 192);
             this.dnVisao.TabIndex = 107;
             // 
             // SchedulerControl
@@ -382,6 +391,7 @@
             this.SchedulerControl.LimitInterval.Duration = System.TimeSpan.Parse("2918286.23:59:59.9999999");
             this.SchedulerControl.LimitInterval.Start = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this.SchedulerControl.Location = new System.Drawing.Point(0, 0);
+            this.SchedulerControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SchedulerControl.MenuManager = this.barManager1;
             this.SchedulerControl.Name = "SchedulerControl";
             this.SchedulerControl.OptionsBehavior.ClientTimeZoneId = "E. South America Standard Time";
@@ -404,7 +414,7 @@
             this.SchedulerControl.PrintStyles.Add(triFoldPrintStyle1);
             this.SchedulerControl.PrintStyles.Add(calendarDetailsPrintStyle1);
             this.SchedulerControl.PrintStyles.Add(memoPrintStyle1);
-            this.SchedulerControl.Size = new System.Drawing.Size(830, 553);
+            this.SchedulerControl.Size = new System.Drawing.Size(969, 682);
             this.SchedulerControl.Start = new System.DateTime(2016, 12, 26, 0, 0, 0, 0);
             this.SchedulerControl.Storage = this.SchedulerStorage1;
             this.SchedulerControl.TabIndex = 2;
@@ -615,28 +625,32 @@
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl1.Size = new System.Drawing.Size(1022, 40);
+            this.barDockControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControl1.Size = new System.Drawing.Size(1192, 50);
             // 
             // barDockControl2
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 601);
-            this.barDockControl2.Size = new System.Drawing.Size(1022, 0);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 740);
+            this.barDockControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControl2.Size = new System.Drawing.Size(1192, 0);
             // 
             // barDockControl3
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl3.Location = new System.Drawing.Point(0, 40);
-            this.barDockControl3.Size = new System.Drawing.Size(0, 561);
+            this.barDockControl3.Location = new System.Drawing.Point(0, 50);
+            this.barDockControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 690);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(1022, 40);
-            this.barDockControl4.Size = new System.Drawing.Size(0, 561);
+            this.barDockControl4.Location = new System.Drawing.Point(1192, 50);
+            this.barDockControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 690);
             // 
             // barButtonItem3
             // 
@@ -743,15 +757,17 @@
             // 
             this.barDockControl8.CausesValidation = false;
             this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl8.Location = new System.Drawing.Point(1022, 40);
-            this.barDockControl8.Size = new System.Drawing.Size(0, 561);
+            this.barDockControl8.Location = new System.Drawing.Point(1192, 50);
+            this.barDockControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControl8.Size = new System.Drawing.Size(0, 690);
             // 
             // scc1
             // 
             this.scc1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.scc1.CollapsePanel = DevExpress.XtraEditors.SplitCollapsePanel.Panel1;
             this.scc1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scc1.Location = new System.Drawing.Point(0, 40);
+            this.scc1.Location = new System.Drawing.Point(0, 50);
+            this.scc1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.scc1.Name = "scc1";
             this.scc1.Panel1.Controls.Add(this.pnlVisao);
             this.scc1.Panel1.Controls.Add(this.pnlEntrada);
@@ -759,7 +775,7 @@
             this.scc1.Panel2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.scc1.Panel2.Controls.Add(this.SchedulerControl);
             this.scc1.Panel2.Text = "direito";
-            this.scc1.Size = new System.Drawing.Size(1022, 561);
+            this.scc1.Size = new System.Drawing.Size(1192, 690);
             this.scc1.SplitterPosition = 179;
             this.scc1.TabIndex = 137;
             this.scc1.Text = "scc1";
@@ -768,16 +784,17 @@
             // 
             this.pnlVisao.Controls.Add(this.rgrpView);
             this.pnlVisao.Controls.Add(this.dnVisao);
-            this.pnlVisao.Location = new System.Drawing.Point(0, 292);
+            this.pnlVisao.Location = new System.Drawing.Point(0, 359);
+            this.pnlVisao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlVisao.Name = "pnlVisao";
-            this.pnlVisao.Size = new System.Drawing.Size(179, 265);
+            this.pnlVisao.Size = new System.Drawing.Size(209, 326);
             this.pnlVisao.TabIndex = 126;
             // 
             // frmAgendaPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 601);
+            this.ClientSize = new System.Drawing.Size(1192, 740);
             this.Controls.Add(this.scc1);
             this.Controls.Add(this.MenuStrip1);
             this.Controls.Add(this.barDockControl8);
@@ -785,6 +802,7 @@
             this.Controls.Add(this.barDockControl4);
             this.Controls.Add(this.barDockControl2);
             this.Controls.Add(this.barDockControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAgendaPedido";
             this.Text = "Agenda de Pedidos";
             this.Activated += new System.EventHandler(this.frmAgendaPedido_Activated);

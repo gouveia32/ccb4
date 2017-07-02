@@ -71,9 +71,28 @@ namespace DAL
                 p.Add(new MySqlParametro("@end", modelo.end));
                 p.Add(new MySqlParametro("@id", Convert.ToInt32(modelo.id)));
 
-                sql = "UPDATE agena_pedido SET pedido_id=@pedido_id,subject=@subject,description=@description,location=@location,"
+                sql = "UPDATE agenda_pedido SET pedido_id=@pedido_id,subject=@subject,description=@description,location=@location,"
                     + "label=@label,status=@status,start=@start,end=@end"
                     + " WHERE id=@id;";
+                bd.exeNonQuery(sql, p);
+            }
+            catch (Exception erro)
+            {
+                throw new Exception(erro.Message);
+            }
+        }
+
+        public void AlteraSituacao(int pedido_id, int situacao)
+        {
+            try
+            {
+                p = new List<MySqlParametro>();
+
+                p.Add(new MySqlParametro("@pedido_id", pedido_id));
+                p.Add(new MySqlParametro("@status", situacao));
+
+                sql = "UPDATE agenda_pedido SET status=@status"
+                    + " WHERE pedido_id=@pedido_id;";
                 bd.exeNonQuery(sql, p);
             }
             catch (Exception erro)

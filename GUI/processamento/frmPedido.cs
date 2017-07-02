@@ -66,8 +66,8 @@ namespace GUI
                 rg_local.SelectedIndex = -1;
                 ckbPAGO.Checked = false;
                 cbQuitado.Checked = false;
-                cbMensal.Checked = false;
-                cbExecutado.Checked = false;
+                chkMensal.Checked = false;
+                chkExecutado.Checked = false;
                 dgItens.Rows.Clear();
             }
 
@@ -102,9 +102,11 @@ namespace GUI
             var row = (DataRowView)cbCliente.SelectedItem;
             modelo.cliente_id = Convert.ToInt32(row[0]);
 
+            modelo.mensal = chkMensal.Checked;
+            modelo.pago_antecipado = ckbPAGO.Checked;
             modelo.desconto = txtDesconto.Value;
             modelo.pago = txtAmortizacao.Value;
-            modelo.executado = cbExecutado.Checked;
+            modelo.executado = chkExecutado.Checked;
 
             modelo.obs_pedido = txtObs_Pedido.Text;
         }
@@ -117,6 +119,8 @@ namespace GUI
             dePagamento.EditValue = modelo.data_pagamento;
             cbCliente.Text = modelo.Cliente.nome;
             lblTelefone.Text = modelo.Cliente.telefone1;
+            chkMensal.Checked = modelo.mensal;
+            ckbPAGO.Checked = modelo.pago_antecipado;
             txtAmortizacao.Value = modelo.pago;
             txtDesconto.Value = modelo.desconto;
             txtObs_Pedido.Text = modelo.obs_pedido;
@@ -184,14 +188,15 @@ namespace GUI
 
         private void ItensTelaParaModelo(ItemCollection modelo)
         {
-            Item item = new Item();
-
+       
             //Gruarda informações do ítem selecionado da tela para a grade
             ItemTelaParaGrade(dgItens.CurrentRow.Index);
             //Itens
-            modelo.Clear();  //limpa inicialmente
+            //modelo.Clear();  //limpa inicialmente
             foreach (DataGridViewRow r in dgItens.Rows)
             {
+                Item item = new Item();
+
                 item.pedido_id = Convert.ToInt32(txtId.Text);
                 item.bordado_id = Convert.ToInt32(r.Cells["bordado_id"].Value);
                 item.item = Convert.ToInt32(r.Cells["item"].Value);
@@ -233,6 +238,7 @@ namespace GUI
             txtTot_Pecas.Text = Convert.ToString(tot_pecas);
             txtQtde_Itens.Text = Convert.ToString(dgItens.RowCount);
             txtTotal_Pedido.Text = Convert.ToString(tot_valor);
+
             if (ckbPAGO.Checked)
             {
                 txtTot_a_pagar.Value = 0;
@@ -402,7 +408,7 @@ namespace GUI
 
             if (Posicionar_id > 0)
             {
-                loc.Localizar(gdRegistros, "id=" + Posicionar_id.ToString(), 0, true);
+                loc.Localizar(gdRegistros, "id=" + Posicionar_id.ToString(), 0, true, false);
                 CarregaPedidoAtual(Posicionar_id);
             }
             else
@@ -1016,10 +1022,10 @@ namespace GUI
             dt = bll.CarregaUltimaEntrada(dia);
             if (dt.Rows.Count == 0)
             {
-                return Convert.ToDateTime(string.Format("{0:dd/MM/yyyy 08:00}", dia));
+                return Convert.ToDateTime(string.Format("{0:dd/MM/yyyy 07:59}", dia));
             }
             else
-                return Convert.ToDateTime(dt.Rows[0].ItemArray[7]);
+                return Convert.ToDateTime(dt.Rows[0].ItemArray[8]);
         }
 
 
@@ -1046,8 +1052,8 @@ namespace GUI
 
             dtI = UltimoDoDia(dtpData_Entrega.Value, pedido_id);
 
-            modelo.start = dtI.AddMinutes(10);
-            modelo.end = dtI.AddMinutes(19);
+            modelo.start = dtI.AddMinutes(1); 
+            modelo.end = dtI.AddMinutes(10);
             bll.Incluir(modelo); 
         }
 
@@ -1083,7 +1089,7 @@ namespace GUI
                     idAtual = Convert.ToInt32(txtId.Text);
                     modelo.id = Convert.ToInt32(txtId.Text);
                     bll.Altera(modelo);
-                    if (!cbMensal.Checked)
+                    if (!chkMensal.Checked)
                     {
                         //Gravar agenda ...
                         GravaAgenda(idAtual);
@@ -1264,12 +1270,13 @@ namespace GUI
             string caixa;
             double mPago, mSaldo;
             int pedido_atual = Convert.ToInt32(txtId.Text);
+            int linha_atual = gdRegistros.FocusedRowHandle;
 
             if (MessageBox.Show("Confirma a baixa do pedido: " + txtId.Text + "?",
                                 "Baixa de Pedido",
                                 MessageBoxButtons.YesNo) != DialogResult.Yes)
                 return;
-            if (this.cbQuitado.Checked && cbExecutado.Checked)
+            if (this.cbQuitado.Checked && chkExecutado.Checked)
             {
                 MessageBox.Show("Pedido já finalizado!",
                                 "Alerta",
@@ -1287,14 +1294,16 @@ namespace GUI
             Saldo.Text = "0,00";
             ckbPAGO.Checked = true;
             cbQuitado.Checked = true;
-            cbExecutado.Checked = true;
+            chkExecutado.Checked = true;
 
             operacao = "Alterar";
             Gravar(); //Efetiva a baixa
 
-            //MySQL_cmd(MySQL_Conn, "UPDATE `agenda_pedido` SET status=0 WHERE pedido_id=" & pedido_atual)
+            //Baixa na agenda
+            BLLAgendaPedido bll = new BLLAgendaPedido();
+            bll.AlteraSituacao(pedido_atual, 0);
 
-            if (chkFiltroQuitado.Checked)
+            if (chkFiltroExecutado.Checked)
             {
                 MessageBox.Show("Pedido Finalizado.");
                 Filtrar(pedido_atual);
@@ -1302,6 +1311,7 @@ namespace GUI
             else
             {
                 MessageBox.Show("Pedido Finalizado. Após pressionar <Ok> este pedido não será mostrado!");
+                Filtrar(Convert.ToInt32(gdRegistros.GetDataRow(linha_atual).ItemArray[0])) ;
             }
         }
 
@@ -1343,6 +1353,93 @@ namespace GUI
         {
             CalculaTotais();
             btnImportar.Focus();
+        }
+
+        private void txtPC_Solicitadas_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter )
+            {
+                btnImportar.Focus();
+            }
+        }
+
+
+        private void chkFiltroMensal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkFiltroMensal.Checked && !chkFiltroDemais.Checked)
+            {
+                MessageBox.Show("Pelo menos uma das opções deve ser selecionada!");
+                chkFiltroMensal.Checked = !chkFiltroMensal.Checked;
+            }
+            else
+            {
+                Filtrar();
+            }
+        }
+
+        private void chkFiltroDemais_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkFiltroMensal.Checked && !chkFiltroDemais.Checked)
+            {
+                MessageBox.Show("Pelo menos uma das opções deve ser selecionada!");
+                chkFiltroDemais.Checked = !chkFiltroDemais.Checked;
+            }
+            else
+            {
+                Filtrar();
+            }
+        }
+
+        private void chkFiltroExecutado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkFiltroExecutado.Checked && !chkFiltroNaoExecutado.Checked)
+            {
+                MessageBox.Show("Pelo menos uma das opções deve ser selecionada!");
+                chkFiltroExecutado.Checked = !chkFiltroExecutado.Checked;
+            }
+            else
+            {
+                Filtrar();
+            }
+        }
+
+        private void chkFiltroNaoExecutado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkFiltroExecutado.Checked && !chkFiltroNaoExecutado.Checked)
+            {
+                MessageBox.Show("Pelo menos uma das opções deve ser selecionada!");
+                chkFiltroNaoExecutado.Checked = !chkFiltroNaoExecutado.Checked;
+            }
+            else
+            {
+                Filtrar();
+            }
+        }
+
+        private void chkFiltroQuitado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkFiltroQuitado.Checked && !chkFiltroNaoQuitado.Checked)
+            {
+                MessageBox.Show("Pelo menos uma das opções deve ser selecionada!");
+                chkFiltroQuitado.Checked = !chkFiltroQuitado.Checked;
+            }
+            else
+            {
+                Filtrar();
+            }
+        }
+
+        private void chkFiltroNaoQuitado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkFiltroQuitado.Checked && !chkFiltroNaoQuitado.Checked)
+            {
+                MessageBox.Show("Pelo menos uma das opções deve ser selecionada!");
+                chkFiltroNaoQuitado.Checked = !chkFiltroNaoQuitado.Checked;
+            }
+            else
+            {
+                Filtrar();
+            }
         }
     }
 }

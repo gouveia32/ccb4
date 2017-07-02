@@ -83,18 +83,18 @@ namespace DAL
                 p.Add(new MySqlParametro("@pontos_extras", modelo.pontos_extras));
                 p.Add(new MySqlParametro("@preco_por_peca", modelo.preco_por_peca));
                 p.Add(new MySqlParametro("@material_id", modelo.material_id));
+                p.Add(new MySqlParametro("@local_id", modelo.local_id));
                 p.Add(new MySqlParametro("@lado", modelo.lado));
-
-                p.Add(new MySqlParametro("@mensal", modelo.arte ? '1' : '0'));
-                p.Add(new MySqlParametro("@pago_antecipado", modelo.aplicacao ? '1' : '0'));
+                p.Add(new MySqlParametro("@arte", modelo.arte ? '1' : '0'));
+                p.Add(new MySqlParametro("@aplicacao", modelo.aplicacao ? '1' : '0'));
                 p.Add(new MySqlParametro("@bordado", modelo.bordado ? '1' : '0'));
                 p.Add(new MySqlParametro("@cores", modelo.cores ? '1' : '0'));
                 p.Add(new MySqlParametro("@troca_rapida", modelo.troca_rapida ? '1' : '0'));
 
                 p.Add(new MySqlParametro("@obs", modelo.obs));
 
-                sql = "INSERT INTO itens(pedido_id,item,bordado_id,descricao,data_entrega,pc_solicitadas,pc_entregues,pc_defeito,pc_nao_bordadas,pago,valor,quitado,mensal,pago_antecipado,executado,obs_pedido,obs_pagamento) " +
-                      " VALUES(@pedido_id,@item,@bordado_id,@descricao,@data_entrega,@pc_solicitadas,@pc_entregues,@pc_defeito,@pc_nao_bordadas,@pago,@valor,@quitado,@mensal,@pago_antecipado,@executado,@obs_pedido,@obs_pagamento)";
+                sql = "INSERT INTO itens(pedido_id,item,bordado_id,descricao,data_entrega,pc_solicitadas,pc_entregues,pc_defeito,pc_nao_bordadas,pontos_extras,preco_por_peca,material_id,local_id,lado,arte,aplicacao,bordado,cores,troca_rapida,obs) " +
+                      " VALUES(@pedido_id,@item,@bordado_id,@descricao,@data_entrega,@pc_solicitadas,@pc_entregues,@pc_defeito,@pc_nao_bordadas,@pontos_extras,@preco_por_peca,@material_id,@local_id,@lado,@arte,@aplicacao,@bordado,@cores,@troca_rapida,@obs)";
                 modelo.id = bd.exeNonQuery(sql, p);
             }
             catch (Exception erro)
@@ -120,9 +120,9 @@ namespace DAL
                 p.Add(new MySqlParametro("@pontos_extras", modelo.pontos_extras));
                 p.Add(new MySqlParametro("@preco_por_peca", modelo.preco_por_peca));
                 p.Add(new MySqlParametro("@material_id", modelo.material_id));
-                p.Add(new MySqlParametro("@lado", modelo.lado));
                 p.Add(new MySqlParametro("@local_id", modelo.local_id));
-
+                p.Add(new MySqlParametro("@lado", modelo.lado));
+                p.Add(new MySqlParametro("@arte", modelo.arte ? '1' : '0'));
                 p.Add(new MySqlParametro("@aplicacao", modelo.aplicacao ? '1' : '0'));
                 p.Add(new MySqlParametro("@bordado", modelo.bordado ? '1' : '0'));
                 p.Add(new MySqlParametro("@cores", modelo.cores ? '1' : '0'));
@@ -150,6 +150,39 @@ namespace DAL
                 {
                     Altera(item);
                 }
+            }
+            catch (Exception erro)
+            {
+                throw new Exception(erro.Message);
+            }
+        }
+
+        public void ExcluiItem(int pedido_id, int item)
+        {
+            try
+            {
+                p = new List<MySqlParametro>();
+                p.Add(new MySqlParametro("@pedido_id", pedido_id));
+                p.Add(new MySqlParametro("@item", item));
+
+                sql = "DELETE FROM itens WHERE pedido_id = @pedido_id AND item = @item ";
+                bd.exeNonQuery(sql, p);
+            }
+            catch (Exception erro)
+            {
+                throw new Exception(erro.Message);
+            }
+        }
+
+        public void ExcluiItensDoPedido (int pedido_id)
+        {
+            try
+            {
+                p = new List<MySqlParametro>();
+                p.Add(new MySqlParametro("@pedido_id", pedido_id));
+
+                sql = "DELETE FROM itens WHERE pedido_id = @pedido_id";
+                bd.exeNonQuery(sql, p);
             }
             catch (Exception erro)
             {

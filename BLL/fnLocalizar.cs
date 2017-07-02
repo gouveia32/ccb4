@@ -14,7 +14,7 @@ namespace BLL
     {
         fnRetiraAcento ra = new fnRetiraAcento();
 
-        public void Localizar(GridView dgRegistros, string filtroValor, int ri, bool PraFrente)
+        public void Localizar(GridView dgRegistros, string filtroValor, int ri, bool PraFrente, bool Msg = true)
         {
             string[] mValor = new string[1];
             bool opOu = false;
@@ -111,7 +111,7 @@ namespace BLL
                             }
                         }
                     }
-                    MessageBox.Show("Fim do arquivo!");
+                    if (Msg) MessageBox.Show("Fim do arquivo!");
                 }
                 else  //procura para trás
                 {
@@ -158,7 +158,7 @@ namespace BLL
                             }
                         }
                     }
-                    MessageBox.Show("Início do arquivo!");
+                    if (Msg) MessageBox.Show("Início do arquivo!");
                 }
             }
             catch (Exception erro)
