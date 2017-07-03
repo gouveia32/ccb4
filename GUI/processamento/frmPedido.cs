@@ -431,7 +431,7 @@ namespace GUI
 
         private void frmPedido_Load(object sender, EventArgs e)
         {
-            scc1.SplitterPosition = chkFiltroMensal.Location.X + chkFiltroMensal.Width + 50;
+            scc1.SplitterPosition = btnFiltrar.Location.X + btnFiltrar.Size.Width;
             scc1.Panel2.Enabled = true;
 
             //CarregaCombo cbCliente
