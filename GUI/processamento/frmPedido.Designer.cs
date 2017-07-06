@@ -971,7 +971,7 @@ namespace GUI
             this.btnExecutarItem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnExecutarItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExecutarItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnExecutarItem.Location = new System.Drawing.Point(18414, 25);
+            this.btnExecutarItem.Location = new System.Drawing.Point(19032, 25);
             this.btnExecutarItem.Name = "btnExecutarItem";
             this.btnExecutarItem.Size = new System.Drawing.Size(92, 32);
             this.btnExecutarItem.TabIndex = 100;
@@ -991,7 +991,7 @@ namespace GUI
             this.dtpData_Execucao.FocusHighlightEnabled = true;
             this.dtpData_Execucao.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Execucao.IsPopupCalendarOpen = false;
-            this.dtpData_Execucao.Location = new System.Drawing.Point(18304, 36);
+            this.dtpData_Execucao.Location = new System.Drawing.Point(18922, 36);
             // 
             // 
             // 
@@ -1022,7 +1022,7 @@ namespace GUI
             // 
             this.Label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label27.BackColor = System.Drawing.Color.Transparent;
-            this.Label27.Location = new System.Drawing.Point(18216, 41);
+            this.Label27.Location = new System.Drawing.Point(18834, 41);
             this.Label27.Name = "Label27";
             this.Label27.Size = new System.Drawing.Size(79, 13);
             this.Label27.TabIndex = 89;
@@ -1297,7 +1297,7 @@ namespace GUI
             this.txtObs_Pagamento.Multiline = true;
             this.txtObs_Pagamento.Name = "txtObs_Pagamento";
             this.txtObs_Pagamento.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Pagamento.Size = new System.Drawing.Size(18476, 0);
+            this.txtObs_Pagamento.Size = new System.Drawing.Size(19094, 0);
             this.txtObs_Pagamento.TabIndex = 3;
             // 
             // Label24
@@ -1559,6 +1559,7 @@ namespace GUI
             this.txtPreco_Por_Peca.Name = "txtPreco_Por_Peca";
             this.txtPreco_Por_Peca.Size = new System.Drawing.Size(68, 21);
             this.txtPreco_Por_Peca.TabIndex = 117;
+            this.txtPreco_Por_Peca.ValueChanged += new System.EventHandler(this.txtPreco_Por_Peca_ValueChanged);
             this.txtPreco_Por_Peca.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPreco_Por_Peca_KeyDown);
             // 
             // btnImportar
@@ -1612,8 +1613,8 @@ namespace GUI
             this.txtPC_Solicitadas.Name = "txtPC_Solicitadas";
             this.txtPC_Solicitadas.Size = new System.Drawing.Size(49, 21);
             this.txtPC_Solicitadas.TabIndex = 115;
-            this.txtPC_Solicitadas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPC_Solicitadas_KeyDown_1);
-            this.txtPC_Solicitadas.Leave += new System.EventHandler(this.txtPC_Solicitadas_Leave);
+            this.txtPC_Solicitadas.ValueChanged += new System.EventHandler(this.txtPC_Solicitadas_ValueChanged);
+            this.txtPC_Solicitadas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPC_Solicitadas_KeyDown);
             // 
             // lblPeca_solicitadas
             // 

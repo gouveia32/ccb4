@@ -269,7 +269,7 @@ namespace GUI
             Double tot_valor = 0;
 
             //primeiro guarda os dados da tela na grid
-            if (dgItens.CurrentRow != null) ItemTelaParaGrade(dgItens.CurrentRow.Index);
+            //ItemTelaParaGrade(dgItens.CurrentRow.Index);
             foreach (DataGridViewRow row in dgItens.Rows)
             {
                 tot_pecas += Convert.ToInt32(row.Cells[3].Value);
@@ -533,9 +533,9 @@ namespace GUI
 
         }
 
-        private void dgItens_RowEnter(object sender, DataGridViewCellEventArgs e)
+        private void Carrega_Item (int row)
         {
-            if (e.RowIndex >= 0)
+            if (row >= 0)
             {
                 BLLItem bll = new BLLItem();
                 Bordado bordado = new Bordado();
@@ -547,11 +547,17 @@ namespace GUI
                 else
                 {
                     item = bll.CarregaItemDoPedido(Convert.ToInt32(txtId.Text),
-                               Convert.ToInt32(dgItens.Rows[e.RowIndex].Cells[0].Value));
+                               Convert.ToInt32(dgItens.Rows[row].Cells[0].Value));
                     ItemModeloParaTela(item);
-
                 }
             }
+        }
+
+        private void dgItens_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (UltimoItem != e.RowIndex) Carrega_Item(e.RowIndex);
+            UltimoItem = e.RowIndex;
+
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
@@ -1315,30 +1321,6 @@ namespace GUI
             }
         }
 
-        private void txtPC_Solicitadas_ValueChanged(object sender, EventArgs e)
-        {
-            //txtPC_Bordadas.Value = txtPC_Solicitadas.Value;
-        }
-
-        private void txtPC_Solicitadas_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                //ItemTelaParaGrade(dgItens.CurrentRow.Index);
-                CalculaTotais();
-                btnImportar.Focus();
-            }
-        }
-
-        private void txtPreco_Por_Peca_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                CalculaTotais();
-                txtDescricao.Focus();
-            }
-        }
-
         private void btnImportar_Click(object sender, EventArgs e)
         {
             if (txtBordado_Descricao.Text != ".")
@@ -1348,21 +1330,6 @@ namespace GUI
              }
             txtPreco_Por_Peca.Focus();
         }
-
-        private void txtPC_Solicitadas_Leave(object sender, EventArgs e)
-        {
-            CalculaTotais();
-            btnImportar.Focus();
-        }
-
-        private void txtPC_Solicitadas_KeyDown_1(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter )
-            {
-                btnImportar.Focus();
-            }
-        }
-
 
         private void chkFiltroMensal_CheckedChanged(object sender, EventArgs e)
         {
@@ -1441,6 +1408,71 @@ namespace GUI
                 Filtrar();
             }
         }
+
+        private void txtPC_Solicitadas_ValueChanged(object sender, EventArgs e)
+        {
+            txtPC_Entregues.Text = txtPC_Solicitadas.Text;
+            _PcChanged();
+        }
+
+        private void txtPC_Solicitadas_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPC_Entregues.Text = txtPC_Solicitadas.Text;
+                if (txtBordado_Descricao.Text == ".")
+                    txtPreco_Por_Peca.Focus();
+                else
+                    btnImportar.Focus();
+            }
+        }
+
+        private void _PcChanged()
+        {
+            if (dgItens.RowCount < 1)
+            {
+                dgItens.Rows.Add();
+                UltimoItem = dgItens.Rows.Count - 1;
+            }
+
+            txtPC_Bordadas.Text = txtPC_Entregues.Text;
+
+            //txtTotal_Item.Text = String.Format("{0:N2}", Val(txtPC_Bordadas.Text) * Val(txtPreco_Por_Peca.Text.Replace(",", ".")))
+            _ItemChanged(UltimoItem);
+        }
+
+        private void _ItemChanged(int linha)
+        {
+            ItemTelaParaGrade(linha);
+            _TextChanged();
+        }
+
+        private void _TextChanged()
+        {
+            if (mPodeAlterar)
+                if (txtId.Text != "")
+                {
+                    btnGravar.Enabled = true;
+                    btnImprimir.Enabled = true;
+                }
+        }
+
+        private void txtPreco_Por_Peca_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtBordado_Descricao.Text == ".")
+                    txtDescricao.Focus();
+                else
+                    dtpData_Entrega.Focus();
+            }
+        }
+
+        private void txtPreco_Por_Peca_ValueChanged(object sender, EventArgs e)
+        {
+            _PcChanged();
+        }
+
     }
 }
 
