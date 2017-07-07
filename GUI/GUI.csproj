@@ -117,6 +117,12 @@
     <Compile Include="dialogo\dlgNota.Designer.cs">
       <DependentUpon>dlgNota.cs</DependentUpon>
     </Compile>
+    <Compile Include="dialogo\dlgSelecionaBordado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogo\dlgSelecionaBordado.Designer.cs">
+      <DependentUpon>dlgSelecionaBordado.cs</DependentUpon>
+    </Compile>
     <Compile Include="impressao\CoolPrintPreviewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dialogo\dlgNota.resx">
       <DependentUpon>dlgNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogo\dlgSelecionaBordado.resx">
+      <DependentUpon>dlgSelecionaBordado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="impressao\CoolPrintPreviewControl.resx">
       <DependentUpon>CoolPrintPreviewControl.cs</DependentUpon>

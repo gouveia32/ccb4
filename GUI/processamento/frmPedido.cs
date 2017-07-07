@@ -1481,6 +1481,13 @@ namespace GUI
             _PcChanged();
         }
 
+        private void cbCliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter )
+            {
+
+            }
+        }
     }
 }
 

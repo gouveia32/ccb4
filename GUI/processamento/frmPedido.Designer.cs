@@ -971,7 +971,7 @@ namespace GUI
             this.btnExecutarItem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnExecutarItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExecutarItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnExecutarItem.Location = new System.Drawing.Point(19032, 25);
+            this.btnExecutarItem.Location = new System.Drawing.Point(19238, 25);
             this.btnExecutarItem.Name = "btnExecutarItem";
             this.btnExecutarItem.Size = new System.Drawing.Size(92, 32);
             this.btnExecutarItem.TabIndex = 100;
@@ -991,7 +991,7 @@ namespace GUI
             this.dtpData_Execucao.FocusHighlightEnabled = true;
             this.dtpData_Execucao.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Execucao.IsPopupCalendarOpen = false;
-            this.dtpData_Execucao.Location = new System.Drawing.Point(18922, 36);
+            this.dtpData_Execucao.Location = new System.Drawing.Point(19128, 36);
             // 
             // 
             // 
@@ -1022,7 +1022,7 @@ namespace GUI
             // 
             this.Label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label27.BackColor = System.Drawing.Color.Transparent;
-            this.Label27.Location = new System.Drawing.Point(18834, 41);
+            this.Label27.Location = new System.Drawing.Point(19040, 41);
             this.Label27.Name = "Label27";
             this.Label27.Size = new System.Drawing.Size(79, 13);
             this.Label27.TabIndex = 89;
@@ -1297,7 +1297,7 @@ namespace GUI
             this.txtObs_Pagamento.Multiline = true;
             this.txtObs_Pagamento.Name = "txtObs_Pagamento";
             this.txtObs_Pagamento.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Pagamento.Size = new System.Drawing.Size(19094, 0);
+            this.txtObs_Pagamento.Size = new System.Drawing.Size(19300, 0);
             this.txtObs_Pagamento.TabIndex = 3;
             // 
             // Label24
@@ -1339,6 +1339,7 @@ namespace GUI
             this.cbCliente.Size = new System.Drawing.Size(397, 21);
             this.cbCliente.Sorted = true;
             this.cbCliente.TabIndex = 198;
+            this.cbCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbCliente_KeyDown);
             // 
             // Label2
             // 
