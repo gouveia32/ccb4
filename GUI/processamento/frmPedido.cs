@@ -130,6 +130,7 @@ namespace GUI
         private void ItemModeloParaTela(Item item)
         {
             if (item.Bordado == null) return;
+            mPodeAlterar = false;
             nudBordado_Id.Value = item.Bordado.id;
             txtBordado_Arquivo.Text = item.Bordado.arquivo;
             txtBordado_Descricao.Text = item.Bordado.descricao;
@@ -156,6 +157,7 @@ namespace GUI
                 picBordado.Image = Image.FromStream(ms);
                 ms.Dispose();
             }
+            mPodeAlterar = true;
         }
 
         private void ItemTelaParaModelo(Item item)
@@ -171,26 +173,29 @@ namespace GUI
 
         private void ItemTelaParaGrade(int row)
         {
-            //dgItens.Rows[row].Cells["pedido_id"].Value = Convert.ToInt32(txtId.Text);
-            dgItens.Rows[row].Cells["bordado_id"].Value = nudBordado_Id.Value;
-            dgItens.Rows[row].Cells["qtde"].Value = txtPC_Solicitadas.Value;
-            dgItens.Rows[row].Cells["preco"].Value = txtPreco_Por_Peca.Value;
-            dgItens.Rows[row].Cells["Tot_item"].Value =
-            txtTotal_Item.Value = 
+            if (dgItens.Rows.Count > row && mPodeAlterar)
+            { 
+                //dgItens.Rows[row].Cells["pedido_id"].Value = Convert.ToInt32(txtId.Text);
+                dgItens.Rows[row].Cells["bordado_id"].Value = nudBordado_Id.Value;
+                dgItens.Rows[row].Cells["qtde"].Value = txtPC_Solicitadas.Value;
+                dgItens.Rows[row].Cells["preco"].Value = txtPreco_Por_Peca.Value;
+                dgItens.Rows[row].Cells["Tot_item"].Value =
+                txtTotal_Item.Value = 
                        txtPC_Solicitadas.Value * txtPreco_Por_Peca.Value;
-            dgItens.Rows[row].Cells["data_entrega"].Value = dtpData_Entrega.Value;
-            dgItens.Rows[row].Cells["obs"].Value = txtObs_Item.Text;
-            dgItens.Rows[row].Cells["local_id"].Value = rg_local.SelectedIndex;
-            dgItens.Rows[row].Cells["lado"].Value = rg_lado.SelectedIndex;
-            dgItens.Rows[row].Cells["pc_solicitadas"].Value = Convert.ToInt32(txtPC_Solicitadas.Value);
-            dgItens.Rows[row].Cells["preco"].Value = Convert.ToDouble(txtPreco_Por_Peca.Value);
+                dgItens.Rows[row].Cells["data_entrega"].Value = dtpData_Entrega.Value;
+                dgItens.Rows[row].Cells["obs"].Value = txtObs_Item.Text;
+                dgItens.Rows[row].Cells["local_id"].Value = rg_local.SelectedIndex;
+                dgItens.Rows[row].Cells["lado"].Value = rg_lado.SelectedIndex;
+                dgItens.Rows[row].Cells["pc_solicitadas"].Value = Convert.ToInt32(txtPC_Solicitadas.Value);
+                dgItens.Rows[row].Cells["preco"].Value = Convert.ToDouble(txtPreco_Por_Peca.Value);
+            }
         }
 
         private void ItensTelaParaModelo(ItemCollection modelo)
         {
        
             //Gruarda informações do ítem selecionado da tela para a grade
-            ItemTelaParaGrade(dgItens.CurrentRow.Index);
+            //ItemTelaParaGrade(dgItens.CurrentRow.Index);
             //Itens
             //modelo.Clear();  //limpa inicialmente
             foreach (DataGridViewRow r in dgItens.Rows)
@@ -260,6 +265,7 @@ namespace GUI
                 ItemModeloParaTela(item1);
             }
 
+            mPodeAlterar = true;
             //rg_local.SelectedIndex = item1.local_id; 
         }
 
@@ -1437,8 +1443,10 @@ namespace GUI
 
             txtPC_Bordadas.Text = txtPC_Entregues.Text;
 
+            
             //txtTotal_Item.Text = String.Format("{0:N2}", Val(txtPC_Bordadas.Text) * Val(txtPreco_Por_Peca.Text.Replace(",", ".")))
             _ItemChanged(UltimoItem);
+            CalculaTotais();
         }
 
         private void _ItemChanged(int linha)
