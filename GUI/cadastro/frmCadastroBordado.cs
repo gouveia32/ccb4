@@ -114,7 +114,7 @@ namespace GUI
             modelo.bastidor = txtBastidor.Text;
             modelo.obs_publica = txtObs_Publica.Text;
             modelo.obs_restrita = txtObs_Restrita.Text;
-            modelo.preco = Convert.ToDecimal(txtPreco.Text);
+            modelo.preco = txtPreco.Value;
         }
 
         private void Filtrar(int Posicionar_id = 0)

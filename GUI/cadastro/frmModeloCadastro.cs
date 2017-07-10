@@ -27,7 +27,7 @@ namespace GUI
             //split1.Expanded  = false;
             scc1.Panel2.Enabled = false;
             scc1.Panel2.Visible = false;
-            btnInserir.Enabled = false;
+            //btnInserir.Enabled = false;
             //btnAlterar.Enabled = false;
             //btnAlterar.Down = true;
             btnLocalizar.Enabled = true;
@@ -44,7 +44,7 @@ namespace GUI
                 //scc1.Collapsed = false;
                 //scc1.SplitterPosition = 480;
                 scc1.Panel2.Visible = true;
-                btnInserir.Enabled = true;
+                //btnInserir.Enabled = true;
                 btnExcluir.Enabled = true;
                 //btnAlterar.Down = true;
                 btnLocalizar.Enabled = true;

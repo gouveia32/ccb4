@@ -156,22 +156,22 @@ namespace DAL
                 }
                 if (where != "")
                 {
-                    sql = "SELECT bordados.id, arquivo, descricao, obs_publica, obs_restrita FROM bordados LEFT JOIN catalogos ON catalogos.bordado_id = bordados.id " + sWhere + ") And " + where;
+                    sql = "SELECT bordados.id, arquivo, descricao, preco, obs_publica, obs_restrita FROM bordados LEFT JOIN catalogos ON catalogos.bordado_id = bordados.id " + sWhere + ") And " + where;
                 }
                 else
                 {
-                    sql = "SELECT bordados.id, arquivo, descricao, obs_publica, obs_restrita FROM bordados " + sWhere + ");";
+                    sql = "SELECT bordados.id, arquivo, descricao, preco, obs_publica, obs_restrita FROM bordados " + sWhere + ");";
                 }
             }
             else
             {
                 if (where != "")
                 {
-                    sql = "SELECT bordados.id, arquivo, descricao, obs_publica, obs_restrita FROM bordados LEFT JOIN catalogos ON catalogos.bordado_id = bordados.id " + "WHERE " + where;
+                    sql = "SELECT bordados.id, arquivo, descricao, preco, obs_publica, obs_restrita FROM bordados LEFT JOIN catalogos ON catalogos.bordado_id = bordados.id " + "WHERE " + where;
                 }
                 else
                 {
-                    sql = "SELECT bordados.id, arquivo, descricao, obs_publica, obs_restrita FROM bordados;";
+                    sql = "SELECT bordados.id, arquivo, descricao, preco, obs_publica, obs_restrita FROM bordados;";
                 }
             }
 
@@ -189,7 +189,7 @@ namespace DAL
             modelo.disquete = Convert.ToString(registro["disquete"]);
             modelo.bastidor = Convert.ToString(registro["bastidor"]);
             modelo.grupo_id = Convert.ToInt32(registro["grupo_id"]);
-            modelo.preco = Convert.ToDecimal(registro["preco"]);
+            modelo.preco = Convert.ToDouble(registro["preco"]);
             modelo.cores = Convert.ToInt32(registro["cores"]);
             modelo.pontos = Convert.ToInt32(registro["pontos"]);
             modelo.largura = Convert.ToInt32(registro["largura"]);

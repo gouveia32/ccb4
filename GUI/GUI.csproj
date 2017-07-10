@@ -111,6 +111,12 @@
     <Compile Include="cadastro\frmCadastroLinha.Designer.cs">
       <DependentUpon>frmCadastroLinha.cs</DependentUpon>
     </Compile>
+    <Compile Include="dialogo\dlgCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogo\dlgCadastroCliente.Designer.cs">
+      <DependentUpon>dlgCadastroCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="dialogo\dlgNota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,12 @@
     </Compile>
     <Compile Include="dialogo\dlgSelecionaBordado.Designer.cs">
       <DependentUpon>dlgSelecionaBordado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogo\dlgSelecionaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogo\dlgSelecionaCliente.Designer.cs">
+      <DependentUpon>dlgSelecionaCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="impressao\CoolPrintPreviewControl.cs">
       <SubType>UserControl</SubType>
@@ -240,11 +252,17 @@
     <EmbeddedResource Include="cadastro\frmCadastroLinha.resx">
       <DependentUpon>frmCadastroLinha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dialogo\dlgCadastroCliente.resx">
+      <DependentUpon>dlgCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dialogo\dlgNota.resx">
       <DependentUpon>dlgNota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dialogo\dlgSelecionaBordado.resx">
       <DependentUpon>dlgSelecionaBordado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogo\dlgSelecionaCliente.resx">
+      <DependentUpon>dlgSelecionaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="impressao\CoolPrintPreviewControl.resx">
       <DependentUpon>CoolPrintPreviewControl.cs</DependentUpon>

@@ -22,7 +22,7 @@ namespace DAL
             try
             {
                 p = new List<MySqlParametro>();
-                p.Add(new MySqlParametro("@id", modelo.id));
+
                 p.Add(new MySqlParametro("@cliente_id", modelo.cliente_id));
                 p.Add(new MySqlParametro("@empregado_id", modelo.empregado_id));
                 p.Add(new MySqlParametro("@data_abertura", modelo.data_abertura));
@@ -41,8 +41,8 @@ namespace DAL
                 p.Add(new MySqlParametro("@obs_pedido", modelo.obs_pedido));
                 p.Add(new MySqlParametro("@obs_pagamento", modelo.obs_pagamento));
 
-                sql = "INSERT INTO pedidos(id,cliente_id,empregado_id,data_abertura,data_fechamento,data_pagamento,adicional,desconto,pago,valor,quitado,mensal,pago_antecipado,executado,obs_pedido,obs_pagamento) " +
-                      " VALUES(@id,@cliente_id,@empregado_id,@data_abertura,@data_fechamento,@data_pagamento,@adicional,@desconto,@pago,@quitado,@mensal,@pago_antecipado,@executado,@obs_pedido,@obs_pagamento)";
+                sql = "INSERT INTO pedidos(cliente_id,empregado_id,data_abertura,data_fechamento,data_pagamento,adicional,desconto,pago,valor,quitado,mensal,pago_antecipado,executado,obs_pedido,obs_pagamento) " +
+                      " VALUES(@cliente_id,@empregado_id,@data_abertura,@data_fechamento,@data_pagamento,@adicional,@desconto,@pago,@valor,@quitado,@mensal,@pago_antecipado,@executado,@obs_pedido,@obs_pagamento)";
                 modelo.id = bd.exeNonQuery(sql, p);
             }
             catch (Exception erro)

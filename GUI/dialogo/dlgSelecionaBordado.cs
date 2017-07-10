@@ -9,11 +9,14 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BLL;
 using Modelo;
+using System.IO;
 
-namespace GUI.dialogo
+namespace GUI
 {
     public partial class dlgSelecionaBordado : DevExpress.XtraEditors.XtraForm
     {
+        public Bordado modeloBordado;
+
         public dlgSelecionaBordado()
         {
             InitializeComponent();
@@ -21,63 +24,86 @@ namespace GUI.dialogo
 
         private void atalhoDadosDoBordado_Click(object sender, EventArgs e)
         {
-            if (scBordado.Panel1Collapsed)
-            {
-                scBordado.Panel1Collapsed = false;
-                CarregaDetalhes();
-                this.Height = 500;
-                this.Top = 50;
-            }
-            else
-            {
-                scBordado.Panel1Collapsed = true;
-                this.Height = 260;
-                this.Top = 50;
-            }
+            txtObs_Restrita.Visible = !txtObs_Restrita.Visible;
+            gvBordados.Columns[3].Visible = txtObs_Restrita.Visible;
+            gvNotas.Columns[2].Visible = txtObs_Restrita.Visible;
+        }
+
+        public void FiltrarBordados (string filtro)
+        {
+            BLLBordado bll = new BLLBordado();
+
+            dgBordados.DataSource = bll.Filtrar(filtro);
         }
 
         private void CarregaDetalhes()
         {
-            DataTable dt, dtPreco;
             int bordado_id;
 
             if (gvBordados.SelectedRowsCount < 1) return;
             bordado_id = Convert.ToInt32(gvBordados.GetDataRow(gvBordados.FocusedRowHandle).ItemArray[0]);
 
             BLLBordado bll = new BLLBordado();
-            Bordado modelo = new Bordado();
+            
+            modeloBordado = bll.CarregaModeloBordado(bordado_id);
 
-            modelo = bll.CarregaModeloBordado(bordado_id);
-
-            if (modelo.id != null)
+            if (modeloBordado.id != null)
             {
-                txtId.Text = Convert.ToString (modelo.id);
-                txtArquivo.Text = modelo.arquivo;
-                txtDescricao.Text = modelo.descricao;
-                txtPreco.Value = (double)modelo.preco;
-                txtObs_publica.Text = modelo.obs_publica;
-                txtObs_Restrita.Text = modelo.obs_restrita;
+                txtObs_publica.Text = modeloBordado.obs_publica;
+                txtObs_Restrita.Text = modeloBordado.obs_restrita;
+                //Carrega a Imagem
+                byte[] img = (byte[])modeloBordado.imagem;
+
+                if (img != null)
+                {
+                    MemoryStream ms = new MemoryStream(img);
+                    pbBordado.Image = Image.FromStream(ms);
+                    ms.Dispose();
+                }
             }
 
+            //carrega Notas Específicas, se tiver
+            BLLNotaEspecifica bllNota = new BLLNotaEspecifica();
+            //DataTable tabelaNota = new DataTable();
+            dgNotas.DataSource = bllNota.NotasDoBordado(modeloBordado.id);
 
-            dtPreco = MySQL_Select(Conn, "Select clientes.id as id, " _
-                               & "clientes.nome as cliente, " _
-                               & "notas_especificas.valor as valor, " _
-                               & "notas_especificas.data_atualizacao as data_atualizacao, " _
-                               & "notas_especificas.obs as obs " _
-                               & "From notas_especificas left Join clientes On notas_especificas.cliente_id = clientes.id " _
-                               & "where notas_especificas.bordado_id=" & bordado_id)
-            Dim r As Integer
-            dgnotas.Rows.Clear()
-            For r = 0 To dtPreco.Rows.Count - 1
-                dgnotas.Rows.Add()
-                dgnotas.Item(0, r).Value = dtPreco.Rows(r).Item("id")
-                dgnotas.Item(1, r).Value = dtPreco.Rows(r).Item("cliente")
-                dgnotas.Item(2, r).Value = dtPreco.Rows(r).Item("valor")
-                dgnotas.Item(3, r).Value = dtPreco.Rows(r).Item("obs")
-            Next
+        }
 
-        End If
+        private void gvBordados_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Enter:
+                    break;
+                case Keys.Escape:
+                    break;
+
+            }
+        }
+
+        private void gvBordados_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            //CarregaBordado(Convert.ToInt32(gvBordados.GetDataRow(gvBordados.FocusedRowHandle).ItemArray[0]));
+            CarregaDetalhes();
+        }
+
+        private void dlgSelecionaBordado_Load(object sender, EventArgs e)
+        {
+            gvBordados.Columns[3].Visible = gvNotas.Columns[2].Visible = txtObs_Restrita.Visible = false;
+            dgBordados.Focus();
+            CarregaDetalhes();
+        }
+
+        private void OK_Button_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.Close();
+        }
+
+        private void Cancel_Button_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Close();
+        }
     }
-    }
-}
+ }

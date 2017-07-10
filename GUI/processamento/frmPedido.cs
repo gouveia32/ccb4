@@ -89,11 +89,12 @@ namespace GUI
 
             g.Clear(picBordado.BackColor); //limpa com a cor de fundo
             picBordado.Image = bit;
+            mPodeAlterar = true;
         }
 
         private void PedidoTelaParaModelo(Pedido modelo)
         {
-            modelo.id = Convert.ToInt32(txtId.Text);
+            if (txtId.Text != "") modelo.id = Convert.ToInt32(txtId.Text);
             modelo.data_abertura = Convert.ToDateTime(deAbertura.EditValue);
             modelo.data_fechamento = Convert.ToDateTime(deFechamento.EditValue);
             modelo.data_pagamento = Convert.ToDateTime(dePagamento.EditValue);
@@ -183,6 +184,7 @@ namespace GUI
                 txtTotal_Item.Value = 
                        txtPC_Solicitadas.Value * txtPreco_Por_Peca.Value;
                 dgItens.Rows[row].Cells["data_entrega"].Value = dtpData_Entrega.Value;
+                dgItens.Rows[row].Cells["descricao"].Value = txtDescricao.Text;
                 dgItens.Rows[row].Cells["obs"].Value = txtObs_Item.Text;
                 dgItens.Rows[row].Cells["local_id"].Value = rg_local.SelectedIndex;
                 dgItens.Rows[row].Cells["lado"].Value = rg_lado.SelectedIndex;
@@ -202,7 +204,7 @@ namespace GUI
             {
                 Item item = new Item();
 
-                item.pedido_id = Convert.ToInt32(txtId.Text);
+                if (txtId.Text != "") item.pedido_id = Convert.ToInt32(txtId.Text);
                 item.bordado_id = Convert.ToInt32(r.Cells["bordado_id"].Value);
                 item.item = Convert.ToInt32(r.Cells["item"].Value);
                 item.pc_entregues = 
@@ -1040,6 +1042,11 @@ namespace GUI
                 return Convert.ToDateTime(dt.Rows[0].ItemArray[8]);
         }
 
+        private void ApagaAgenda(int pedido_id)
+        {
+            BLLAgendaPedido bll = new BLLAgendaPedido();
+            bll.ExcluirPorPedido(pedido_id);
+        }
 
         private void GravaAgenda(int pedido_id)
         {
@@ -1087,7 +1094,7 @@ namespace GUI
                 //objeto para gravar os dados no bd
                 BLLPedido bll = new BLLPedido();
 
-                if (this.operacao == "inserir")
+                if (modelo.id == 0)
                 {
                     //cadastrar novo grupo
                     bll.Incluir(modelo);
@@ -1101,7 +1108,11 @@ namespace GUI
                     idAtual = Convert.ToInt32(txtId.Text);
                     modelo.id = Convert.ToInt32(txtId.Text);
                     bll.Altera(modelo);
-                    if (!chkMensal.Checked)
+                    if (chkMensal.Checked)
+                    {
+                        ApagaAgenda(idAtual);
+                    }
+                    else
                     {
                         //Gravar agenda ...
                         GravaAgenda(idAtual);
@@ -1121,19 +1132,6 @@ namespace GUI
             alterabotoes(2);
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            object o;
-
-            o = cbCliente.SelectedIndex;
-            if (o == null)
-                return;
-            o = cbCliente.SelectedValue;
-            var row = (DataRowView)cbCliente.SelectedItem;
-            string SelectedPort = row[0].ToString();
-            MessageBox.Show(SelectedPort);
-        }
-
         private void btnInserir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.operacao = "inserir";
@@ -1144,9 +1142,10 @@ namespace GUI
 
         private void dtpData_Entrega_TextChanged(object sender, EventArgs e)
         {
-            if (dgItens.RowCount > 0)
+            if (dgItens.RowCount > 0 && dgItens.CurrentRow != null)
             {
                 lblDiaSemana.Text = String.Format("({0:dddd})", dtpData_Entrega.Value);
+                _ItemChanged(dgItens.CurrentRow.Index);
             }
         }
 
@@ -1167,13 +1166,14 @@ namespace GUI
 
         private void AdicionaItem()
         {
+            mPodeAlterar = true;
             dgItens.Rows.Add();
             UltimoItem = dgItens.Rows.Count - 1;
             dgItens.Rows[UltimoItem].Selected = true;
             dgItens.CurrentCell = dgItens.Rows[dgItens.Rows.Count - 1].Cells[0];
             LimpaTela(false);
             dgItens.Rows[dgItens.RowCount - 1].Cells[0].Value = dgItens.Rows.Count;
-            dgItens.Rows[dgItens.RowCount - 1].Cells[0].Value = "";
+            //dgItens.Rows[dgItens.RowCount - 1].Cells[0].Value = "";
             txtDescricao.Text = "";
             txtBordado_Descricao.Focus();
             btnGravar.Enabled = true;
@@ -1254,7 +1254,41 @@ namespace GUI
 
         private void txtBordado_Descricao_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 13) dtpData_Entrega.Focus();
+            if (e.KeyChar == 13)
+            {
+                if (txtBordado_Descricao.Text == ".")
+                {
+                    //int id = 0;
+
+                    //CarregaBordado(id);
+
+                    //My.Settings.Pesquisa_Resultado = nudBordado_Id.Value
+                    txtPC_Solicitadas.Focus();
+                 }
+                else
+                {
+                    dlgSelecionaBordado f = new GUI.dlgSelecionaBordado();
+                    f.FiltrarBordados(txtBordado_Descricao.Text);
+                    if (f.ShowDialog() == DialogResult.OK)
+                    {
+                        nudBordado_Id.Value = f.modeloBordado.id;
+                        txtBordado_Pontos.Value = f.modeloBordado.pontos;
+                        txtBordado_Preco.Value = f.modeloBordado.preco;
+                        txtBordado_Arquivo.Text = f.modeloBordado.arquivo;
+                        txtBordado_Descricao.Text = f.modeloBordado.descricao;
+                        //Carrega a Imagem
+                        byte[] img = (byte[])f.modeloBordado.imagem;
+
+                        if (img != null)
+                        {
+                            MemoryStream ms = new MemoryStream(img);
+                            picBordado.Image = Image.FromStream(ms);
+                            ms.Dispose();
+                        }
+                        txtPC_Solicitadas.Focus();
+                    }
+                }
+            }
         }
 
         private void btnInserirItem_Click(object sender, EventArgs e)
@@ -1439,6 +1473,8 @@ namespace GUI
             {
                 dgItens.Rows.Add();
                 UltimoItem = dgItens.Rows.Count - 1;
+                dgItens.Rows[dgItens.RowCount - 1].Cells[0].Value = dgItens.Rows.Count;
+
             }
 
             txtPC_Bordadas.Text = txtPC_Entregues.Text;
@@ -1481,12 +1517,58 @@ namespace GUI
             _PcChanged();
         }
 
+        private void txtDescricao_TextChanged(object sender, EventArgs e)
+        {
+            _PcChanged();
+        }
+
+        private void MaisNomeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtDescricao.Text += " + Nome";
+        }
+
+        private void MaisFuncaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int i = txtDescricao.Text.Length + 3;
+            txtDescricao.Text += " + Função ";
+            txtDescricao.SelectionStart = i;
+            txtDescricao.SelectionLength = 6;
+            txtDescricao.Focus();
+        }
+
+        private void MaisNomeFuncaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtDescricao.Text += " + Nome + Função";
+        }
+
+        private void SelecionaCliente()
+        {
+            dlgSelecionaCliente f = new dlgSelecionaCliente();
+
+            f.FiltrarClientes(cbCliente.Text);
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                cbCliente.SelectedValue = f.modeloCliente.id;
+            }
+            txtPC_Solicitadas.Focus();
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            SelecionaCliente();
+        }
+
         private void cbCliente_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter )
+            if (e.KeyCode == Keys.F1)
             {
-
+                SelecionaCliente();
             }
+        }
+
+        private void cbCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           // if (e.KeyChar == '?') SelecionaCliente();
         }
     }
 }

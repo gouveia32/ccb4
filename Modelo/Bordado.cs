@@ -7,35 +7,20 @@ namespace Modelo
     public partial class Bordado : DbObject, IEquatable<Bordado>
     {
         public string arquivo { get; set; } = "";
-
         public string descricao { get; set; } = "";
-
         public string caminho { get; set; } = "";
-
         public string disquete { get; set; } = "";
-
         public string bastidor { get; set; } = "";
-
         public int grupo_id { get; set; } = 0;
-
-        public decimal preco { get; set; } = 0;
-
+        public double preco { get; set; } = 0;
         public int cores { get; set; } = 0;
-
         public int pontos { get; set; } = 0;
-
         public int largura { get; set; } = 0;
-
         public int altura { get; set; } = 0;
-
         public int metragem { get; set; } = 0;
-
         public bool aprovado { get; set; } = false;
-
         public byte[] imagem { get; set; } = null;
-
         public string obs_publica { get; set; } = "";
-
         public string obs_restrita { get; set; } = "";
 
         public bool Equals(Bordado other)
