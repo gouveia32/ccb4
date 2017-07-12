@@ -24,6 +24,7 @@ namespace GUI
         int UltimoItem;
         DateTime UltimaDataEntrega = Convert.ToDateTime("01/01/01");
         bool mPodeAlterar = false;
+        DataTable dtItens;
 
         frmPrincipal fp;
         private fnLocalizar loc = new fnLocalizar();
@@ -68,7 +69,7 @@ namespace GUI
                 cbQuitado.Checked = false;
                 chkMensal.Checked = false;
                 chkExecutado.Checked = false;
-                dgItens.Rows.Clear();
+                //dgItens.Rows.Clear();
             }
 
             nudBordado_Id.Text = "";
@@ -174,46 +175,51 @@ namespace GUI
 
         private void ItemTelaParaGrade(int row)
         {
-            if (dgItens.Rows.Count > row && mPodeAlterar)
-            { 
-                //dgItens.Rows[row].Cells["pedido_id"].Value = Convert.ToInt32(txtId.Text);
-                dgItens.Rows[row].Cells["bordado_id"].Value = nudBordado_Id.Value;
-                dgItens.Rows[row].Cells["qtde"].Value = txtPC_Solicitadas.Value;
-                dgItens.Rows[row].Cells["preco"].Value = txtPreco_Por_Peca.Value;
-                dgItens.Rows[row].Cells["Tot_item"].Value =
+            if (row < 0) return;
+
+            if (gvItens.RowCount > row && mPodeAlterar)
+            {
+                gvItens.SetRowCellValue(row,"bordado_id",nudBordado_Id.Value);
+                gvItens.SetRowCellValue(row, "qtde", txtPC_Solicitadas.Value);
+                gvItens.SetRowCellValue(row, "preco", txtPreco_Por_Peca.Value);
+
+                //dgItensO.Rows[row].Cells["qtde"].Value = txtPC_Solicitadas.Value;
+                //dgItensO.Rows[row].Cells["preco"].Value = txtPreco_Por_Peca.Value;
+                //dgItensO.Rows[row].Cells["Tot_item"].Value =
                 txtTotal_Item.Value = 
                        txtPC_Solicitadas.Value * txtPreco_Por_Peca.Value;
-                dgItens.Rows[row].Cells["data_entrega"].Value = dtpData_Entrega.Value;
-                dgItens.Rows[row].Cells["descricao"].Value = txtDescricao.Text;
-                dgItens.Rows[row].Cells["obs"].Value = txtObs_Item.Text;
-                dgItens.Rows[row].Cells["local_id"].Value = rg_local.SelectedIndex;
-                dgItens.Rows[row].Cells["lado"].Value = rg_lado.SelectedIndex;
-                dgItens.Rows[row].Cells["pc_solicitadas"].Value = Convert.ToInt32(txtPC_Solicitadas.Value);
-                dgItens.Rows[row].Cells["preco"].Value = Convert.ToDouble(txtPreco_Por_Peca.Value);
+                //dgItensO.Rows[row].Cells["data_entrega"].Value = dtpData_Entrega.Value;
+                //dgItensO.Rows[row].Cells["descricao"].Value = txtDescricao.Text;
+                //dgItensO.Rows[row].Cells["obs"].Value = txtObs_Item.Text;
+                //dgItensO.Rows[row].Cells["local_id"].Value = rg_local.SelectedIndex;
+                //dgItensO.Rows[row].Cells["lado"].Value = rg_lado.SelectedIndex;
+                //dgItensO.Rows[row].Cells["pc_solicitadas"].Value = Convert.ToInt32(txtPC_Solicitadas.Value);
+                //dgItensO.Rows[row].Cells["preco"].Value = Convert.ToDouble(txtPreco_Por_Peca.Value);
             }
         }
 
         private void ItensTelaParaModelo(ItemCollection modelo)
         {
-       
+
             //Gruarda informações do ítem selecionado da tela para a grade
             //ItemTelaParaGrade(dgItens.CurrentRow.Index);
             //Itens
             //modelo.Clear();  //limpa inicialmente
-            foreach (DataGridViewRow r in dgItens.Rows)
+            for (int i = 0; i < gvItens.DataRowCount; i++)
             {
+                DataRow row = gvItens.GetDataRow(i);
                 Item item = new Item();
 
                 if (txtId.Text != "") item.pedido_id = Convert.ToInt32(txtId.Text);
-                item.bordado_id = Convert.ToInt32(r.Cells["bordado_id"].Value);
-                item.item = Convert.ToInt32(r.Cells["item"].Value);
-                item.pc_entregues = 
-                item.pc_solicitadas = 
-                    Convert.ToInt32(r.Cells["qtde"].Value);
-                item.preco_por_peca = Convert.ToInt32(r.Cells["preco"].Value);
-                item.data_entrega = Convert.ToDateTime(r.Cells["data_entrega"].Value);
-                item.descricao = Convert.ToString(r.Cells["descricao"].Value);
-                item.obs = Convert.ToString(r.Cells["obs"].Value);
+                item.bordado_id = Convert.ToInt32 (row[21]); 
+                item.item = Convert.ToInt32(row[0]);
+                item.pc_entregues =
+                item.pc_solicitadas =
+                    Convert.ToInt32(row[3]);
+                item.preco_por_peca = Convert.ToDouble(row[4]);
+                item.data_entrega = Convert.ToDateTime(row[2]);
+                item.descricao = Convert.ToString(row[1]);
+                item.obs = Convert.ToString(row[20]);
 
                 modelo.Add(item);
             }
@@ -224,26 +230,27 @@ namespace GUI
             int tot_pecas = 0;
             Double tot_valor = 0;
 
-            dgItens.Rows.Clear();
+           
+           // dgItensO.Rows.Clear();
             foreach (Item item in modelo)
             {
-                dgItens.Rows.Add();
-                dgItens.Rows[dgItens.RowCount - 1].Cells["item"].Value = item.item;
-                dgItens.Rows[dgItens.RowCount - 1].Cells[1].Value = item.descricao;
-                dgItens.Rows[dgItens.RowCount - 1].Cells[2].Value = item.data_entrega;
-                dgItens.Rows[dgItens.RowCount - 1].Cells[3].Value = item.pc_entregues;
-                dgItens.Rows[dgItens.RowCount - 1].Cells[4].Value = item.preco_por_peca;
-                dgItens.Rows[dgItens.RowCount - 1].Cells[5].Value = item.Subtotal;
-                dgItens.Rows[dgItens.RowCount - 1].Cells[13].Value = item.local_id;
-                dgItens.Rows[dgItens.RowCount - 1].Cells[14].Value = item.lado;
-                dgItens.Rows[dgItens.RowCount - 1].Cells[20].Value = item.obs;
+                //dgItensO.Rows.Add();
+                //dgItensO.Rows[dgItensO.RowCount - 1].Cells["item"].Value = item.item;
+                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[1].Value = item.descricao;
+                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[2].Value = item.data_entrega;
+                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[3].Value = item.pc_entregues;
+                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[4].Value = item.preco_por_peca;
+                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[5].Value = item.Subtotal;
+                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[13].Value = item.local_id;
+                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[14].Value = item.lado;
+                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[20].Value = item.obs;
 
                 tot_pecas += item.pc_entregues;
                 tot_valor += item.Subtotal;
             }
 
             txtTot_Pecas.Text = Convert.ToString(tot_pecas);
-            txtQtde_Itens.Text = Convert.ToString(dgItens.RowCount);
+            //txtQtde_Itens.Text = Convert.ToString(dgItensO.RowCount);
             txtTotal_Pedido.Text = Convert.ToString(tot_valor);
 
             if (ckbPAGO.Checked)
@@ -260,14 +267,14 @@ namespace GUI
             // dados do primeiro item
             BLLItem bll = new BLLItem();
             Item item1 = new Item();
-            if (dgItens.RowCount > 0)
-            {
-                item1 = bll.CarregaItemDoPedido(Convert.ToInt32(txtId.Text),
-                                           Convert.ToInt32(dgItens.Rows[0].Cells[0].Value));
-                ItemModeloParaTela(item1);
-            }
+            //if (dgItensO.RowCount > 0)
+            //{
+                //item1 = bll.CarregaItemDoPedido(Convert.ToInt32(txtId.Text),
+                //                           Convert.ToInt32(dgItensO.Rows[0].Cells[0].Value));
+                //ItemModeloParaTela(item1);
+            //}
 
-            mPodeAlterar = true;
+            //mPodeAlterar = true;
             //rg_local.SelectedIndex = item1.local_id; 
         }
 
@@ -276,15 +283,20 @@ namespace GUI
             int tot_pecas = 0;
             Double tot_valor = 0;
 
+            if (dtItens == null) return;
             //primeiro guarda os dados da tela na grid
             //ItemTelaParaGrade(dgItens.CurrentRow.Index);
-            foreach (DataGridViewRow row in dgItens.Rows)
+            foreach (DataRow row in dtItens.Rows)
             {
-                tot_pecas += Convert.ToInt32(row.Cells[3].Value);
-                tot_valor += Convert.ToDouble(row.Cells[5].Value);
+                if (row.RowState != DataRowState.Added) // se não for nova
+                {
+                    tot_pecas += Convert.ToInt32(row.ItemArray[6].ToString());
+                    tot_valor += Convert.ToDouble(row.ItemArray[8]);
+                }
+
             }
             txtTot_Pecas.Value = tot_pecas;
-            txtQtde_Itens.Text = Convert.ToString(dgItens.RowCount);
+            txtQtde_Itens.Text = Convert.ToString(gvItens.RowCount);
             txtTotal_Pedido.Value = (tot_valor - txtDesconto.Value);
             txtPC_Bordadas.Value = txtPC_Solicitadas.Value;
             if (ckbPAGO.Checked)
@@ -294,8 +306,8 @@ namespace GUI
             else
             {
                 txtTot_a_pagar.Value = tot_valor -
-                    Convert.ToDouble(txtAmortizacao.Text) -
-                    txtDesconto.Value;
+                Convert.ToDouble(txtAmortizacao.Text) -
+                txtDesconto.Value;
             }
         }
 
@@ -416,21 +428,21 @@ namespace GUI
 
             if (Posicionar_id > 0)
             {
-                loc.Localizar(gdRegistros, "id=" + Posicionar_id.ToString(), 0, true, false);
+                loc.Localizar(gvRegistros, "id=" + Posicionar_id.ToString(), 0, true, false);
                 CarregaPedidoAtual(Posicionar_id);
             }
             else
             {
-                if (gdRegistros.RowCount > 0) ExibeItens(0);
+                if (gvRegistros.RowCount > 0) ExibeItens(0);
             }
             if (txtFiltrar.Text == "")
             {
-                fp.sbRegistros.Caption = String.Format("{0} registros", gdRegistros.RowCount);
+                fp.sbRegistros.Caption = String.Format("{0} registros", gvRegistros.RowCount);
                 btnX.Visible = false;
             }
             else
             {
-                fp.sbRegistros.Caption = String.Format("{0} registros (filtrado)", gdRegistros.RowCount);
+                fp.sbRegistros.Caption = String.Format("{0} registros (filtrado)", gvRegistros.RowCount);
                 btnX.Visible = true;
             }
 
@@ -468,11 +480,11 @@ namespace GUI
 
             Filtrar();
 
-            gdRegistros.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            gdRegistros.Columns[0].Width = 50;
-            gdRegistros.Columns[1].Width = 125;
-            gdRegistros.Columns[2].Width = 90;
-            gdRegistros.Columns[3].Visible = false;
+            gvRegistros.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            gvRegistros.Columns[0].Width = 50;
+            gvRegistros.Columns[1].Width = 125;
+            gvRegistros.Columns[2].Width = 90;
+            gvRegistros.Columns[3].Visible = false;
         }
 
         private void CarregaPedidoAtual(int pedido_id)
@@ -484,30 +496,10 @@ namespace GUI
             //Carrega itens
             BLLItem bllItem = new BLLItem();
             ItemCollection itemCollection = bllItem.CarregaItensDoPedido(modelo.id);
-            //dgItens.DataSource = itemCollection;
+            dgItens.DataSource = itemCollection;
             ItensModeloParaTela(itemCollection);
 
             //alterabotoes(1);
-        }
-
-        private void gdRegistros_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            if (e.FocusedRowHandle >= 0)
-            {
-                CarregaPedidoAtual(Convert.ToInt32(gdRegistros.GetDataRow(e.FocusedRowHandle).ItemArray[0]));
-            }
-            //{
-            //    BLLPedido bll = new BLLPedido();
-            //    Pedido modelo = bll.CarregaPedido(Convert.ToInt32(gdRegistros.GetDataRow(e.FocusedRowHandle).ItemArray[0]));
-            //    PedidoModeloParaTela(modelo);
-            //    //alterabotoes(1);
-            // }
-        }
-
-        private void gdRegistros_DoubleClick(object sender, EventArgs e)
-        {
-            this.operacao = "alterar";
-            this.alterabotoes(2);
         }
 
         private void btnAlterar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -521,27 +513,19 @@ namespace GUI
             if (row >= 0)
             {
                 BLLPedido bll = new BLLPedido();
-                Pedido modelo = bll.CarregaPedido(Convert.ToInt32(gdRegistros.GetDataRow(row).ItemArray[0]));
+                Pedido modelo = bll.CarregaPedido(Convert.ToInt32(gvRegistros.GetDataRow(row).ItemArray[0]));
                 PedidoModeloParaTela(modelo);
                 //alterabotoes(1);
 
                 //Carrega itens
                 BLLItem bllItem = new BLLItem();
-                ItemCollection itemCollection = bllItem.CarregaItensDoPedido(modelo.id);
-                //dgItens.DataSource = itemCollection;
-                ItensModeloParaTela(itemCollection);
-                //alterabotoes(1);
+
+                dtItens = bllItem.ItensDoPedido(modelo.id);
+                dgItens.DataSource = dtItens;
             }
         }
 
-        private void gdRegistros_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            if (gdRegistros.RowCount < 1) return;
-            ExibeItens(e.FocusedRowHandle);
-
-        }
-
-        private void Carrega_Item (int row)
+       private void Carrega_Item (int row)
         {
             if (row >= 0)
             {
@@ -555,7 +539,7 @@ namespace GUI
                 else
                 {
                     item = bll.CarregaItemDoPedido(Convert.ToInt32(txtId.Text),
-                               Convert.ToInt32(dgItens.Rows[row].Cells[0].Value));
+                               Convert.ToInt32(gvItens.GetDataRow(row).ItemArray[0]));
                     ItemModeloParaTela(item);
                 }
             }
@@ -608,7 +592,7 @@ namespace GUI
 
         private void btnLocalizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            loc.Localizar(gdRegistros, Convert.ToString(txtLocalizar.EditValue), 0, true);
+            loc.Localizar(gvRegistros, Convert.ToString(txtLocalizar.EditValue), 0, true);
         }
 
         private void btnAnterior_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -620,7 +604,7 @@ namespace GUI
                 //txtLocalizar.Focus();
                 return;
             }
-            loc.Localizar(gdRegistros, txtProcurar, gdRegistros.FocusedRowHandle - 1, false);
+            loc.Localizar(gvRegistros, txtProcurar, gvRegistros.FocusedRowHandle - 1, false);
         }
 
         private void btnProxima_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -632,13 +616,13 @@ namespace GUI
                 //txtLocalizar.Focus();
                 return;
             }
-            loc.Localizar(gdRegistros, txtProcurar, gdRegistros.FocusedRowHandle + 1, true);
+            loc.Localizar(gvRegistros, txtProcurar, gvRegistros.FocusedRowHandle + 1, true);
         }
 
         private void repositoryItemTextEdit1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                loc.Localizar(gdRegistros, (sender as TextEdit).Text, 0, true);
+                loc.Localizar(gvRegistros, (sender as TextEdit).Text, 0, true);
         }
 
         private void btnAtualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -789,7 +773,7 @@ namespace GUI
             ln += 15;
 
             RegAtual = 0;
-            foreach (DataGridViewRow row in dgItens.Rows)
+            foreach (DataGridViewRow row in dtItens.Rows)
             {
                 Data_Entrega = Convert.ToDateTime(row.Cells["data_entrega"].Value);
                 qtde = Convert.ToInt32(row.Cells["Qtde"].Value);
@@ -949,7 +933,7 @@ namespace GUI
             ln += 15;
 
             RegAtual = 0;
-            foreach (DataGridViewRow row in dgItens.Rows)
+            foreach (DataGridViewRow row in dtItens.Rows)
             {
                 Data_Entrega = Convert.ToDateTime(row.Cells["data_entrega"].Value);
                 qtde = Convert.ToInt32(row.Cells["Qtde"].Value);
@@ -1050,7 +1034,7 @@ namespace GUI
 
         private void GravaAgenda(int pedido_id)
         {
-            if (dgItens.CurrentRow.Index < 0) return;
+            if (gvItens.FocusedRowHandle < 0) return;
             DateTime dtI;
 
             BLLAgendaPedido bll = new BLLAgendaPedido();
@@ -1066,7 +1050,7 @@ namespace GUI
 
             }
             modelo.subject = string.Format("[{0:d}]{1:s}",txtTot_Pecas.Text,cbCliente.Text);
-            modelo.description = dgItens.Rows[0].Cells["descricao"].Value.ToString();
+            modelo.description = gvItens.GetDataRow(0).ItemArray[1].ToString();
             modelo.location = Convert.ToString (pedido_id);
 
             dtI = UltimoDoDia(dtpData_Entrega.Value, pedido_id);
@@ -1142,10 +1126,10 @@ namespace GUI
 
         private void dtpData_Entrega_TextChanged(object sender, EventArgs e)
         {
-            if (dgItens.RowCount > 0 && dgItens.CurrentRow != null)
+            if (gvItens.RowCount > 0 && gvItens.FocusedRowHandle > 0)
             {
                 lblDiaSemana.Text = String.Format("({0:dddd})", dtpData_Entrega.Value);
-                _ItemChanged(dgItens.CurrentRow.Index);
+                _ItemChanged(gvItens.FocusedRowHandle);
             }
         }
 
@@ -1167,13 +1151,14 @@ namespace GUI
         private void AdicionaItem()
         {
             mPodeAlterar = true;
-            dgItens.Rows.Add();
-            UltimoItem = dgItens.Rows.Count - 1;
-            dgItens.Rows[UltimoItem].Selected = true;
-            dgItens.CurrentCell = dgItens.Rows[dgItens.Rows.Count - 1].Cells[0];
+
+            DataRow row = dtItens.NewRow(); 
+            UltimoItem = dtItens.Rows.Count - 1;
+            gvItens.SelectRow(UltimoItem);
+            gvItens.FocusedRowHandle = UltimoItem;
             LimpaTela(false);
-            dgItens.Rows[dgItens.RowCount - 1].Cells[0].Value = dgItens.Rows.Count;
-            //dgItens.Rows[dgItens.RowCount - 1].Cells[0].Value = "";
+            row[0] = UltimoItem + 1;
+            dtItens.Rows.Add(row);
             txtDescricao.Text = "";
             txtBordado_Descricao.Focus();
             btnGravar.Enabled = true;
@@ -1186,68 +1171,68 @@ namespace GUI
 
         private void btnApagar_Click(object sender, EventArgs e)
         {
-            if (dgItens.CurrentRow.Index < 0) return;
+            //if (dgItensO.CurrentRow.Index < 0) return;
 
-            dgItens.Rows.Remove(dgItens.CurrentRow);
-            if (dgItens.CurrentRow.Index < 0) return;
+            //dgItensO.Rows.Remove(dgItensO.CurrentRow);
+            //if (dgItensO.CurrentRow.Index < 0) return;
 
-            int LinhaGrade;
+            //int LinhaGrade;
 
-            for (LinhaGrade = dgItens.CurrentRow.Index; LinhaGrade < dgItens.Rows.Count; LinhaGrade++)
-                dgItens.Rows[LinhaGrade].Cells[0].Value = LinhaGrade + 1;
-            btnGravar.Enabled = true;
+            //for (LinhaGrade = dgItensO.CurrentRow.Index; LinhaGrade < dgItensO.Rows.Count; LinhaGrade++)
+                //dgItensO.Rows[LinhaGrade].Cells[0].Value = LinhaGrade + 1;
+            //btnGravar.Enabled = true;
         }
 
         private void btnCima_Click(object sender, EventArgs e)
         {
             int LinhaAtualNr, LinhaNovaNr, Coluna;
             object Valor;
-            LinhaAtualNr = dgItens.CurrentRow.Index;
-            if (LinhaAtualNr > 0)
-            {
-                LinhaNovaNr = dgItens.CurrentRow.Index - 1;
-                for (Coluna = 1; Coluna < dgItens.ColumnCount; Coluna++)
-                {
-                    if (dgItens.Columns[Coluna].Name == "preco" ||
-                        dgItens.Columns[Coluna].Name == "Tot_Item")
-                        Valor = String.Format("{0:N2}", dgItens.Rows[LinhaNovaNr].Cells[Coluna].Value);
-                    else
-                        Valor = dgItens.Rows[LinhaNovaNr].Cells[Coluna].Value;
+            //LinhaAtualNr = dgItensO.CurrentRow.Index;
+            //if (LinhaAtualNr > 0)
+            //{
+                //LinhaNovaNr = dgItensO.CurrentRow.Index - 1;
+                //for (Coluna = 1; Coluna < dgItensO.ColumnCount; Coluna++)
+                //{
+                    //if (dgItensO.Columns[Coluna].Name == "preco" ||
+                        //dgItensO.Columns[Coluna].Name == "Tot_Item")
+                        //Valor = String.Format("{0:N2}", dgItensO.Rows[LinhaNovaNr].Cells[Coluna].Value);
+                    //else
+                        //Valor = dgItensO.Rows[LinhaNovaNr].Cells[Coluna].Value;
 
-                    dgItens.Rows[LinhaNovaNr].Cells[Coluna].Value = dgItens.Rows[LinhaAtualNr].Cells[Coluna].Value;
-                    dgItens.Rows[LinhaAtualNr].Cells[Coluna].Value = Valor;
-                }
-                dgItens.CurrentCell = dgItens.Rows[LinhaNovaNr].Cells[0];
-                dgItens.Focus();
+                    //dgItensO.Rows[LinhaNovaNr].Cells[Coluna].Value = dgItensO.Rows[LinhaAtualNr].Cells[Coluna].Value;
+                    //dgItensO.Rows[LinhaAtualNr].Cells[Coluna].Value = Valor;
+                //}
+                //dgItensO.CurrentCell = dgItensO.Rows[LinhaNovaNr].Cells[0];
+                //dgItensO.Focus();
 
-                LinhaAtualNr = dgItens.CurrentRow.Index;
+                //LinhaAtualNr = dgItensO.CurrentRow.Index;
                 btnGravar.Enabled = true;
-            }
+            //}
         }
 
         private void btnBaixo_Click(object sender, EventArgs e)
         {
             int LinhaAtualNr, LinhaNovaNr, Coluna;
             object Valor;
-            LinhaAtualNr = dgItens.CurrentRow.Index;
-            if (LinhaAtualNr < dgItens.RowCount - 1)
+            //LinhaAtualNr = dgItensO.CurrentRow.Index;
+            //if (LinhaAtualNr < dgItensO.RowCount - 1)
             {
-                LinhaNovaNr = dgItens.CurrentRow.Index + 1;
-                for (Coluna = 1; Coluna < dgItens.ColumnCount - 1; Coluna++)
-                {
-                    if (dgItens.Columns[Coluna].Name == "preco" ||
-                        dgItens.Columns[Coluna].Name == "Tot_Item")
-                        Valor = String.Format("{0:N2}", dgItens.Rows[LinhaNovaNr].Cells[Coluna].Value);
-                    else
-                        Valor = dgItens.Rows[LinhaNovaNr].Cells[Coluna].Value;
+                //LinhaNovaNr = dgItensO.CurrentRow.Index + 1;
+                //for (Coluna = 1; Coluna < dgItensO.ColumnCount - 1; Coluna++)
+                //{
+                    //if (dgItensO.Columns[Coluna].Name == "preco" ||
+                        //dgItensO.Columns[Coluna].Name == "Tot_Item")
+                        //Valor = String.Format("{0:N2}", dgItensO.Rows[LinhaNovaNr].Cells[Coluna].Value);
+                    //else
+                        //Valor = dgItensO.Rows[LinhaNovaNr].Cells[Coluna].Value;
 
-                    dgItens.Rows[LinhaNovaNr].Cells[Coluna].Value = dgItens.Rows[LinhaAtualNr].Cells[Coluna].Value;
-                    dgItens.Rows[LinhaAtualNr].Cells[Coluna].Value = Valor;
-                }
-                dgItens.CurrentCell = dgItens.Rows[LinhaNovaNr].Cells[0];
-                dgItens.Focus();
+                    //dgItensO.Rows[LinhaNovaNr].Cells[Coluna].Value = dgItensO.Rows[LinhaAtualNr].Cells[Coluna].Value;
+                    //dgItensO.Rows[LinhaAtualNr].Cells[Coluna].Value = Valor;
+                //}
+                //dgItensO.CurrentCell = dgItensO.Rows[LinhaNovaNr].Cells[0];
+                //dgItensO.Focus();
 
-                LinhaAtualNr = dgItens.CurrentRow.Index;
+                //LinhaAtualNr = dgItensO.CurrentRow.Index;
                 btnGravar.Enabled = true;
             }
         }
@@ -1295,16 +1280,16 @@ namespace GUI
         {
             int LinhaGrade, NovoItem;
 
-            if (dgItens.CurrentRow.Index < 0) return;
-            NovoItem = dgItens.CurrentRow.Index + 1;
-            dgItens.Rows.Insert(NovoItem);
+            if (gvItens.FocusedRowHandle < 0) return;
+            //NovoItem = dgItensO.CurrentRow.Index + 1;
+            //dgItensO.Rows.Insert(NovoItem);
 
-            for (LinhaGrade = NovoItem; LinhaGrade < dgItens.Rows.Count - 1; LinhaGrade++)
-                dgItens.Rows[LinhaGrade].Cells["Item"].Value = LinhaGrade + 1;
-            dgItens.CurrentCell = dgItens.Rows[NovoItem].Cells[0];
+            //for (LinhaGrade = NovoItem; LinhaGrade < dgItensO.Rows.Count - 1; LinhaGrade++)
+            //    dgItensO.Rows[LinhaGrade].Cells["Item"].Value = LinhaGrade + 1;
+            //dgItensO.CurrentCell = dgItensO.Rows[NovoItem].Cells[0];
 
             LimpaTela(false);
-            dgItens.Rows[NovoItem].Cells["Descricao"].Value = LinhaGrade + 1;
+            //dgItensO.Rows[NovoItem].Cells["Descricao"].Value = LinhaGrade + 1;
             txtDescricao.Text = "";
 
             txtBordado_Descricao.Focus();
@@ -1316,7 +1301,7 @@ namespace GUI
             string caixa;
             double mPago, mSaldo;
             int pedido_atual = Convert.ToInt32(txtId.Text);
-            int linha_atual = gdRegistros.FocusedRowHandle;
+            int linha_atual = gvRegistros.FocusedRowHandle;
 
             if (MessageBox.Show("Confirma a baixa do pedido: " + txtId.Text + "?",
                                 "Baixa de Pedido",
@@ -1357,7 +1342,7 @@ namespace GUI
             else
             {
                 MessageBox.Show("Pedido Finalizado. Após pressionar <Ok> este pedido não será mostrado!");
-                Filtrar(Convert.ToInt32(gdRegistros.GetDataRow(linha_atual).ItemArray[0])) ;
+                Filtrar(Convert.ToInt32(gvRegistros.GetDataRow(linha_atual).ItemArray[0])) ;
             }
         }
 
@@ -1469,12 +1454,11 @@ namespace GUI
 
         private void _PcChanged()
         {
-            if (dgItens.RowCount < 1)
+            if (gvItens.RowCount < 1)
             {
-                dgItens.Rows.Add();
-                UltimoItem = dgItens.Rows.Count - 1;
-                dgItens.Rows[dgItens.RowCount - 1].Cells[0].Value = dgItens.Rows.Count;
-
+                dtItens.Rows.Add();
+                UltimoItem = dtItens.Rows.Count - 1;
+                dtItens.Rows[dtItens.Rows.Count - 1].ItemArray[0] = dtItens.Rows.Count;
             }
 
             txtPC_Bordadas.Text = txtPC_Entregues.Text;
@@ -1569,6 +1553,19 @@ namespace GUI
         private void cbCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
            // if (e.KeyChar == '?') SelecionaCliente();
+        }
+
+        private void gvRegistros_DoubleClick(object sender, EventArgs e)
+        {
+            this.operacao = "alterar";
+            this.alterabotoes(2);
+        }
+
+        private void gvRegistros_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if (gvRegistros.RowCount < 1) return;
+            ExibeItens(e.FocusedRowHandle);
+            CalculaTotais(); 
         }
     }
 }

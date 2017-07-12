@@ -30,21 +30,16 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPedido));
             this.deFechamento = new DevExpress.XtraEditors.DateEdit();
             this.deAbertura = new DevExpress.XtraEditors.DateEdit();
@@ -54,48 +49,25 @@ namespace GUI
             this.chkMensal = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.chkExecutado = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.cbEmpregado = new System.Windows.Forms.ComboBox();
-            this.Label4 = new System.Windows.Forms.Label();
+            this.lblEmpregado = new System.Windows.Forms.Label();
             this.txtObs_Pedido = new System.Windows.Forms.TextBox();
-            this.dgItens = new System.Windows.Forms.DataGridView();
-            this.item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data_entrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Qtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tot_Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data_execucao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pc_solicitadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pc_entregues = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pc_defeito = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pc_nao_bordadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pontos_extras = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.material_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.local_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.arte = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.aplicacao = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.bordado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.cores = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.troca_rapida = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.obs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bordado_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnTotais = new System.Windows.Forms.Panel();
             this.txtTot_Pecas = new DevComponents.Editors.IntegerInput();
             this.txtAmortizacao = new DevComponents.Editors.DoubleInput();
             this.txtTotal_Pedido = new DevComponents.Editors.DoubleInput();
             this.txtDesconto = new DevComponents.Editors.DoubleInput();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblAmortizacao = new System.Windows.Forms.Label();
             this.lblDesconto = new System.Windows.Forms.Label();
             this.txtQtde_Itens = new System.Windows.Forms.TextBox();
             this.TabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
             this.txtPC_Entregues = new DevComponents.Editors.IntegerInput();
-            this.Label14 = new System.Windows.Forms.Label();
+            this.lblPc_Entregues = new System.Windows.Forms.Label();
             this.txtTotal_Pontos = new System.Windows.Forms.TextBox();
-            this.Label3 = new System.Windows.Forms.Label();
+            this.lblTotalPontos = new System.Windows.Forms.Label();
             this.txtPontos_Extras = new System.Windows.Forms.TextBox();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.Label12 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
+            this.lblPontosExtras = new System.Windows.Forms.Label();
+            this.lblDefeito = new System.Windows.Forms.Label();
+            this.lblNaoBordadas = new System.Windows.Forms.Label();
             this.txtPC_Defeito = new System.Windows.Forms.TextBox();
             this.txtPC_Nao_Bordadas = new System.Windows.Forms.TextBox();
             this.btnRestaura = new DevComponents.DotNetBar.ButtonX();
@@ -104,7 +76,7 @@ namespace GUI
             this.btnApagaLinha = new DevComponents.DotNetBar.ButtonX();
             this.btnExecutarItem = new DevComponents.DotNetBar.ButtonX();
             this.dtpData_Execucao = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.Label27 = new System.Windows.Forms.Label();
+            this.lblExecucao = new System.Windows.Forms.Label();
             this.dgLinhas_Item = new System.Windows.Forms.DataGridView();
             this.seq = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -115,23 +87,23 @@ namespace GUI
             this.Total_Pagamento2 = new DevComponents.Editors.DoubleInput();
             this.Pago = new DevComponents.Editors.DoubleInput();
             this.Adicional = new DevComponents.Editors.DoubleInput();
-            this.Label30 = new System.Windows.Forms.Label();
+            this.lblValoraAmortizar = new System.Windows.Forms.Label();
             this.ValorAmortizar = new DevComponents.Editors.DoubleInput();
             this.btnAmortizar = new DevComponents.DotNetBar.ButtonX();
             this.cbQuitado = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.Label29 = new System.Windows.Forms.Label();
-            this.Label28 = new System.Windows.Forms.Label();
-            this.Label23 = new System.Windows.Forms.Label();
-            this.Label26 = new System.Windows.Forms.Label();
-            this.Label18 = new System.Windows.Forms.Label();
+            this.lblSaldoaPagar = new System.Windows.Forms.Label();
+            this.lblTotalDoPedido = new System.Windows.Forms.Label();
+            this.lblObs = new System.Windows.Forms.Label();
+            this.lblValorAPagar = new System.Windows.Forms.Label();
+            this.lblDataPagamento = new System.Windows.Forms.Label();
             this.txtObs_Pagamento = new System.Windows.Forms.TextBox();
-            this.Label24 = new System.Windows.Forms.Label();
+            this.lblAdicional = new System.Windows.Forms.Label();
             this.LinhaIdLabel = new System.Windows.Forms.Label();
-            this.Label10 = new System.Windows.Forms.Label();
+            this.lblAbertura = new System.Windows.Forms.Label();
             this.cbCliente = new System.Windows.Forms.ComboBox();
-            this.Label2 = new System.Windows.Forms.Label();
+            this.lblFechamento = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.Label7 = new System.Windows.Forms.Label();
+            this.lblObs1 = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
             this.btnFiltrar = new DevExpress.XtraEditors.DropDownButton();
             this.btnX = new DevExpress.XtraEditors.DropDownButton();
@@ -148,39 +120,63 @@ namespace GUI
             this.txtPreco_Por_Peca = new DevComponents.Editors.DoubleInput();
             this.btnImportar = new System.Windows.Forms.Button();
             this.btnAdicionar = new DevComponents.DotNetBar.ButtonX();
-            this.Label20 = new System.Windows.Forms.Label();
+            this.lblIgual = new System.Windows.Forms.Label();
             this.txtPC_Solicitadas = new DevComponents.Editors.IntegerInput();
             this.lblPeca_solicitadas = new System.Windows.Forms.Label();
             this.lblArquivo = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblValorApagar1 = new System.Windows.Forms.Label();
             this.lblLado = new System.Windows.Forms.Label();
             this.dtpData_Entrega = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.btnBaixo = new DevComponents.DotNetBar.ButtonX();
             this.txtBordado_Arquivo = new System.Windows.Forms.TextBox();
             this.lblDiaSemana = new System.Windows.Forms.Label();
-            this.Label16 = new System.Windows.Forms.Label();
+            this.lblPecasBordadas = new System.Windows.Forms.Label();
             this.picBordado = new System.Windows.Forms.PictureBox();
-            this.Label5 = new System.Windows.Forms.Label();
+            this.lblPrecoSugerido = new System.Windows.Forms.Label();
             this.rg_lado = new DevExpress.XtraEditors.RadioGroup();
             this.lblDataEntrega = new System.Windows.Forms.Label();
             this.btnApagar = new DevComponents.DotNetBar.ButtonX();
             this.btnCima = new DevComponents.DotNetBar.ButtonX();
-            this.Label25 = new System.Windows.Forms.Label();
+            this.lblDescricao1 = new System.Windows.Forms.Label();
             this.txtObs_Item = new System.Windows.Forms.TextBox();
-            this.Label21 = new System.Windows.Forms.Label();
+            this.lblBoradado_id = new System.Windows.Forms.Label();
             this.lblObs_item = new System.Windows.Forms.Label();
             this.btnInserirItem = new DevComponents.DotNetBar.ButtonX();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.Label9 = new System.Windows.Forms.Label();
+            this.lblPontos = new System.Windows.Forms.Label();
             this.lblLocal = new System.Windows.Forms.Label();
             this.rg_local = new DevExpress.XtraEditors.RadioGroup();
             this.pnlItens = new DevExpress.XtraEditors.PanelControl();
-            this.Label19 = new System.Windows.Forms.Label();
+            this.dgItens = new DevExpress.XtraGrid.GridControl();
+            this.gvItens = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colItem = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coDescricao = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colData_entrega = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPc_solicitadas = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPreco = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colData_execucao = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPc_entregues = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPc_defeito = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPc_nao_bordadas = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPonto_extras = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMaterial_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLolal_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLocal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colArte = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAplicacao = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBordado = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCores = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTroca_rapida = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colObs = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBordado_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemColorPickEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit();
+            this.lblX = new System.Windows.Forms.Label();
             this.xtbpPagamento = new DevExpress.XtraTab.XtraTabPage();
             this.xtbpExecucao = new DevExpress.XtraTab.XtraTabPage();
             this.dgRegistros = new DevExpress.XtraGrid.GridControl();
-            this.gdRegistros = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvRegistros = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.chkFiltroDemais = new System.Windows.Forms.CheckBox();
             this.chkFiltroMensal = new System.Windows.Forms.CheckBox();
             this.chkFiltroNaoExecutado = new System.Windows.Forms.CheckBox();
@@ -215,7 +211,6 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.deFechamento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deAbertura.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deAbertura.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgItens)).BeginInit();
             this.pnTotais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTot_Pecas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAmortizacao)).BeginInit();
@@ -250,10 +245,13 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.rg_local.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlItens)).BeginInit();
             this.pnlItens.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgItens)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvItens)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit3)).BeginInit();
             this.xtbpPagamento.SuspendLayout();
             this.xtbpExecucao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRegistros)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdRegistros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvRegistros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlFitro)).BeginInit();
             this.pnlFitro.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
@@ -301,8 +299,8 @@ namespace GUI
             // 
             // scc1
             // 
-            this.scc1.Location = new System.Drawing.Point(0, 50);
-            this.scc1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.scc1.Location = new System.Drawing.Point(0, 40);
+            this.scc1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.scc1.Panel1.Controls.Add(this.pnlFitro);
             this.scc1.Panel2.Controls.Add(this.btnQuitar);
             this.scc1.Panel2.Controls.Add(this.ckbPAGO);
@@ -314,18 +312,18 @@ namespace GUI
             this.scc1.Panel2.Controls.Add(this.chkMensal);
             this.scc1.Panel2.Controls.Add(this.chkExecutado);
             this.scc1.Panel2.Controls.Add(this.cbEmpregado);
-            this.scc1.Panel2.Controls.Add(this.Label4);
+            this.scc1.Panel2.Controls.Add(this.lblEmpregado);
             this.scc1.Panel2.Controls.Add(this.txtObs_Pedido);
             this.scc1.Panel2.Controls.Add(this.LinhaIdLabel);
-            this.scc1.Panel2.Controls.Add(this.Label10);
+            this.scc1.Panel2.Controls.Add(this.lblAbertura);
             this.scc1.Panel2.Controls.Add(this.cbCliente);
-            this.scc1.Panel2.Controls.Add(this.Label2);
+            this.scc1.Panel2.Controls.Add(this.lblFechamento);
             this.scc1.Panel2.Controls.Add(this.txtId);
-            this.scc1.Panel2.Controls.Add(this.Label7);
+            this.scc1.Panel2.Controls.Add(this.lblObs1);
             this.scc1.Panel2.Controls.Add(this.lblTelefone);
             this.scc1.Panel2.Controls.Add(this.lblCliente);
             this.scc1.Panel2.Controls.Add(this.xtabItenPagamentoExecucao);
-            this.scc1.Size = new System.Drawing.Size(1388, 649);
+            this.scc1.Size = new System.Drawing.Size(1166, 528);
             this.scc1.SplitterPosition = 257;
             this.scc1.SplitterPositionChanged += new System.EventHandler(this.scc1_SplitterPositionChanged);
             // 
@@ -347,46 +345,42 @@ namespace GUI
             // deFechamento
             // 
             this.deFechamento.EditValue = null;
-            this.deFechamento.Location = new System.Drawing.Point(101, 68);
-            this.deFechamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deFechamento.Location = new System.Drawing.Point(87, 55);
             this.deFechamento.Name = "deFechamento";
             this.deFechamento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deFechamento.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deFechamento.Size = new System.Drawing.Size(117, 22);
+            this.deFechamento.Size = new System.Drawing.Size(100, 20);
             this.deFechamento.TabIndex = 214;
             // 
             // deAbertura
             // 
             this.deAbertura.EditValue = null;
-            this.deAbertura.Location = new System.Drawing.Point(101, 39);
-            this.deAbertura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deAbertura.Location = new System.Drawing.Point(87, 32);
             this.deAbertura.Name = "deAbertura";
             this.deAbertura.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deAbertura.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deAbertura.Size = new System.Drawing.Size(117, 22);
+            this.deAbertura.Size = new System.Drawing.Size(100, 20);
             this.deAbertura.TabIndex = 213;
             // 
             // btnAlterarCliente
             // 
             this.btnAlterarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAlterarCliente.Location = new System.Drawing.Point(761, 4);
-            this.btnAlterarCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAlterarCliente.Location = new System.Drawing.Point(627, 3);
             this.btnAlterarCliente.Name = "btnAlterarCliente";
-            this.btnAlterarCliente.Size = new System.Drawing.Size(37, 28);
+            this.btnAlterarCliente.Size = new System.Drawing.Size(32, 23);
             this.btnAlterarCliente.TabIndex = 212;
             this.btnAlterarCliente.Text = "M";
             // 
             // btncadastroCliente
             // 
             this.btncadastroCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btncadastroCliente.Location = new System.Drawing.Point(803, 4);
-            this.btncadastroCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btncadastroCliente.Location = new System.Drawing.Point(663, 3);
             this.btncadastroCliente.Name = "btncadastroCliente";
-            this.btncadastroCliente.Size = new System.Drawing.Size(37, 28);
+            this.btncadastroCliente.Size = new System.Drawing.Size(32, 23);
             this.btncadastroCliente.TabIndex = 210;
             this.btncadastroCliente.Text = "+";
             // 
@@ -395,10 +389,9 @@ namespace GUI
             this.btnPesquisar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPesquisar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnPesquisar.Location = new System.Drawing.Point(733, 2);
-            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPesquisar.Location = new System.Drawing.Point(603, 2);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(30, 28);
+            this.btnPesquisar.Size = new System.Drawing.Size(26, 23);
             this.btnPesquisar.TabIndex = 208;
             this.btnPesquisar.Text = "??";
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
@@ -409,10 +402,9 @@ namespace GUI
             // 
             // 
             this.chkMensal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.chkMensal.Location = new System.Drawing.Point(414, 37);
-            this.chkMensal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkMensal.Location = new System.Drawing.Point(355, 30);
             this.chkMensal.Name = "chkMensal";
-            this.chkMensal.Size = new System.Drawing.Size(68, 28);
+            this.chkMensal.Size = new System.Drawing.Size(58, 23);
             this.chkMensal.TabIndex = 207;
             this.chkMensal.Text = "Mensal";
             // 
@@ -423,10 +415,9 @@ namespace GUI
             // 
             // 
             this.chkExecutado.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.chkExecutado.Location = new System.Drawing.Point(985, 48);
-            this.chkExecutado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkExecutado.Location = new System.Drawing.Point(819, 39);
             this.chkExecutado.Name = "chkExecutado";
-            this.chkExecutado.Size = new System.Drawing.Size(87, 28);
+            this.chkExecutado.Size = new System.Drawing.Size(75, 23);
             this.chkExecutado.TabIndex = 206;
             this.chkExecutado.Text = "Executado";
             // 
@@ -437,279 +428,31 @@ namespace GUI
             this.cbEmpregado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbEmpregado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEmpregado.FormattingEnabled = true;
-            this.cbEmpregado.Location = new System.Drawing.Point(950, 6);
-            this.cbEmpregado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbEmpregado.Location = new System.Drawing.Point(789, 5);
             this.cbEmpregado.Name = "cbEmpregado";
-            this.cbEmpregado.Size = new System.Drawing.Size(122, 24);
+            this.cbEmpregado.Size = new System.Drawing.Size(105, 21);
             this.cbEmpregado.TabIndex = 196;
             // 
-            // Label4
+            // lblEmpregado
             // 
-            this.Label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(866, 10);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(84, 17);
-            this.Label4.TabIndex = 205;
-            this.Label4.Text = "Empregado:";
+            this.lblEmpregado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEmpregado.AutoSize = true;
+            this.lblEmpregado.Location = new System.Drawing.Point(717, 8);
+            this.lblEmpregado.Name = "lblEmpregado";
+            this.lblEmpregado.Size = new System.Drawing.Size(65, 13);
+            this.lblEmpregado.TabIndex = 205;
+            this.lblEmpregado.Text = "Empregado:";
             // 
             // txtObs_Pedido
             // 
             this.txtObs_Pedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtObs_Pedido.Location = new System.Drawing.Point(568, 37);
-            this.txtObs_Pedido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtObs_Pedido.Location = new System.Drawing.Point(487, 30);
             this.txtObs_Pedido.Multiline = true;
             this.txtObs_Pedido.Name = "txtObs_Pedido";
             this.txtObs_Pedido.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Pedido.Size = new System.Drawing.Size(408, 72);
+            this.txtObs_Pedido.Size = new System.Drawing.Size(325, 59);
             this.txtObs_Pedido.TabIndex = 197;
-            // 
-            // dgItens
-            // 
-            this.dgItens.AllowUserToAddRows = false;
-            this.dgItens.AllowUserToDeleteRows = false;
-            this.dgItens.AllowUserToResizeColumns = false;
-            this.dgItens.AllowUserToResizeRows = false;
-            this.dgItens.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgItens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.item,
-            this.descricao,
-            this.data_entrega,
-            this.Qtde,
-            this.preco,
-            this.Tot_Item,
-            this.data_execucao,
-            this.pc_solicitadas,
-            this.pc_entregues,
-            this.pc_defeito,
-            this.pc_nao_bordadas,
-            this.pontos_extras,
-            this.material_id,
-            this.local_id,
-            this.lado,
-            this.arte,
-            this.aplicacao,
-            this.bordado,
-            this.cores,
-            this.troca_rapida,
-            this.obs,
-            this.Bordado_Id});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgItens.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgItens.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgItens.EnableHeadersVisualStyles = false;
-            this.dgItens.Location = new System.Drawing.Point(2, 2);
-            this.dgItens.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgItens.MultiSelect = false;
-            this.dgItens.Name = "dgItens";
-            this.dgItens.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgItens.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgItens.RowHeadersVisible = false;
-            this.dgItens.RowHeadersWidth = 25;
-            this.dgItens.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgItens.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgItens.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgItens.ShowCellErrors = false;
-            this.dgItens.ShowCellToolTips = false;
-            this.dgItens.ShowEditingIcon = false;
-            this.dgItens.ShowRowErrors = false;
-            this.dgItens.Size = new System.Drawing.Size(621, 217);
-            this.dgItens.TabIndex = 0;
-            this.dgItens.TabStop = false;
-            this.dgItens.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgItens_RowEnter);
-            // 
-            // item
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Info;
-            this.item.DefaultCellStyle = dataGridViewCellStyle1;
-            this.item.HeaderText = "Ítem";
-            this.item.Name = "item";
-            this.item.ReadOnly = true;
-            this.item.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.item.Width = 32;
-            // 
-            // descricao
-            // 
-            this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
-            this.descricao.DefaultCellStyle = dataGridViewCellStyle2;
-            this.descricao.HeaderText = "Descricao";
-            this.descricao.Name = "descricao";
-            this.descricao.ReadOnly = true;
-            this.descricao.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // data_entrega
-            // 
-            dataGridViewCellStyle3.Format = "dd/MM/yy hh:mm";
-            this.data_entrega.DefaultCellStyle = dataGridViewCellStyle3;
-            this.data_entrega.HeaderText = "data_entrega";
-            this.data_entrega.Name = "data_entrega";
-            this.data_entrega.ReadOnly = true;
-            this.data_entrega.Width = 80;
-            // 
-            // Qtde
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Info;
-            this.Qtde.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Qtde.HeaderText = "Qtde";
-            this.Qtde.Name = "Qtde";
-            this.Qtde.ReadOnly = true;
-            this.Qtde.Width = 40;
-            // 
-            // preco
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.preco.DefaultCellStyle = dataGridViewCellStyle5;
-            this.preco.HeaderText = "Preço";
-            this.preco.Name = "preco";
-            this.preco.ReadOnly = true;
-            this.preco.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.preco.Width = 40;
-            // 
-            // Tot_Item
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle6.Format = "N2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.Tot_Item.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Tot_Item.HeaderText = "Tot.Ítem";
-            this.Tot_Item.Name = "Tot_Item";
-            this.Tot_Item.ReadOnly = true;
-            this.Tot_Item.Width = 60;
-            // 
-            // data_execucao
-            // 
-            this.data_execucao.HeaderText = "data";
-            this.data_execucao.Name = "data_execucao";
-            this.data_execucao.ReadOnly = true;
-            this.data_execucao.Visible = false;
-            // 
-            // pc_solicitadas
-            // 
-            this.pc_solicitadas.HeaderText = "Pc_Solicitadas";
-            this.pc_solicitadas.Name = "pc_solicitadas";
-            this.pc_solicitadas.ReadOnly = true;
-            this.pc_solicitadas.Visible = false;
-            // 
-            // pc_entregues
-            // 
-            this.pc_entregues.HeaderText = "Pc_Entregues";
-            this.pc_entregues.Name = "pc_entregues";
-            this.pc_entregues.ReadOnly = true;
-            this.pc_entregues.Visible = false;
-            // 
-            // pc_defeito
-            // 
-            this.pc_defeito.HeaderText = "Pc_Defeito";
-            this.pc_defeito.Name = "pc_defeito";
-            this.pc_defeito.ReadOnly = true;
-            this.pc_defeito.Visible = false;
-            // 
-            // pc_nao_bordadas
-            // 
-            this.pc_nao_bordadas.HeaderText = "Pc_Nao_Bordadas";
-            this.pc_nao_bordadas.Name = "pc_nao_bordadas";
-            this.pc_nao_bordadas.ReadOnly = true;
-            this.pc_nao_bordadas.Visible = false;
-            // 
-            // pontos_extras
-            // 
-            this.pontos_extras.HeaderText = "pontos_extras";
-            this.pontos_extras.Name = "pontos_extras";
-            this.pontos_extras.ReadOnly = true;
-            this.pontos_extras.Visible = false;
-            // 
-            // material_id
-            // 
-            this.material_id.HeaderText = "material_id";
-            this.material_id.Name = "material_id";
-            this.material_id.ReadOnly = true;
-            this.material_id.Visible = false;
-            // 
-            // local_id
-            // 
-            this.local_id.HeaderText = "local_id";
-            this.local_id.Name = "local_id";
-            this.local_id.ReadOnly = true;
-            this.local_id.Visible = false;
-            // 
-            // lado
-            // 
-            this.lado.HeaderText = "lado";
-            this.lado.Name = "lado";
-            this.lado.ReadOnly = true;
-            this.lado.Visible = false;
-            // 
-            // arte
-            // 
-            this.arte.HeaderText = "arte";
-            this.arte.Name = "arte";
-            this.arte.ReadOnly = true;
-            this.arte.Visible = false;
-            // 
-            // aplicacao
-            // 
-            this.aplicacao.HeaderText = "aplicacao";
-            this.aplicacao.Name = "aplicacao";
-            this.aplicacao.ReadOnly = true;
-            this.aplicacao.Visible = false;
-            // 
-            // bordado
-            // 
-            this.bordado.HeaderText = "bordado";
-            this.bordado.Name = "bordado";
-            this.bordado.ReadOnly = true;
-            this.bordado.Visible = false;
-            // 
-            // cores
-            // 
-            this.cores.HeaderText = "cores";
-            this.cores.Name = "cores";
-            this.cores.ReadOnly = true;
-            this.cores.Visible = false;
-            // 
-            // troca_rapida
-            // 
-            this.troca_rapida.HeaderText = "troca_rapida";
-            this.troca_rapida.Name = "troca_rapida";
-            this.troca_rapida.ReadOnly = true;
-            this.troca_rapida.Visible = false;
-            // 
-            // obs
-            // 
-            this.obs.HeaderText = "obs";
-            this.obs.Name = "obs";
-            this.obs.ReadOnly = true;
-            this.obs.Visible = false;
-            // 
-            // Bordado_Id
-            // 
-            this.Bordado_Id.HeaderText = "Bordado_Id";
-            this.Bordado_Id.Name = "Bordado_Id";
-            this.Bordado_Id.ReadOnly = true;
-            this.Bordado_Id.Visible = false;
             // 
             // pnTotais
             // 
@@ -718,14 +461,13 @@ namespace GUI
             this.pnTotais.Controls.Add(this.txtAmortizacao);
             this.pnTotais.Controls.Add(this.txtTotal_Pedido);
             this.pnTotais.Controls.Add(this.txtDesconto);
-            this.pnTotais.Controls.Add(this.label6);
+            this.pnTotais.Controls.Add(this.lblAmortizacao);
             this.pnTotais.Controls.Add(this.lblDesconto);
             this.pnTotais.Controls.Add(this.txtQtde_Itens);
             this.pnTotais.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnTotais.Location = new System.Drawing.Point(2, 219);
-            this.pnTotais.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnTotais.Location = new System.Drawing.Point(2, 182);
             this.pnTotais.Name = "pnTotais";
-            this.pnTotais.Size = new System.Drawing.Size(621, 28);
+            this.pnTotais.Size = new System.Drawing.Size(507, 23);
             this.pnTotais.TabIndex = 100;
             // 
             // txtTot_Pecas
@@ -739,10 +481,10 @@ namespace GUI
             this.txtTot_Pecas.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtTot_Pecas.FocusHighlightEnabled = true;
             this.txtTot_Pecas.IsInputReadOnly = true;
-            this.txtTot_Pecas.Location = new System.Drawing.Point(446, 1);
+            this.txtTot_Pecas.Location = new System.Drawing.Point(316, 2);
             this.txtTot_Pecas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTot_Pecas.Name = "txtTot_Pecas";
-            this.txtTot_Pecas.Size = new System.Drawing.Size(56, 23);
+            this.txtTot_Pecas.Size = new System.Drawing.Size(48, 21);
             this.txtTot_Pecas.TabIndex = 103;
             // 
             // txtAmortizacao
@@ -755,10 +497,9 @@ namespace GUI
             this.txtAmortizacao.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtAmortizacao.FocusHighlightEnabled = true;
             this.txtAmortizacao.Increment = 1D;
-            this.txtAmortizacao.Location = new System.Drawing.Point(150, 1);
-            this.txtAmortizacao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmortizacao.Location = new System.Drawing.Point(113, 3);
             this.txtAmortizacao.Name = "txtAmortizacao";
-            this.txtAmortizacao.Size = new System.Drawing.Size(82, 23);
+            this.txtAmortizacao.Size = new System.Drawing.Size(70, 21);
             this.txtAmortizacao.TabIndex = 101;
             this.txtAmortizacao.ValueChanged += new System.EventHandler(this.txtAmortizacao_ValueChanged);
             // 
@@ -773,10 +514,9 @@ namespace GUI
             this.txtTotal_Pedido.FocusHighlightEnabled = true;
             this.txtTotal_Pedido.Increment = 1D;
             this.txtTotal_Pedido.IsInputReadOnly = true;
-            this.txtTotal_Pedido.Location = new System.Drawing.Point(538, 1);
-            this.txtTotal_Pedido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTotal_Pedido.Location = new System.Drawing.Point(424, 1);
             this.txtTotal_Pedido.Name = "txtTotal_Pedido";
-            this.txtTotal_Pedido.Size = new System.Drawing.Size(82, 23);
+            this.txtTotal_Pedido.Size = new System.Drawing.Size(70, 21);
             this.txtTotal_Pedido.TabIndex = 101;
             // 
             // txtDesconto
@@ -789,31 +529,30 @@ namespace GUI
             this.txtDesconto.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtDesconto.FocusHighlightEnabled = true;
             this.txtDesconto.Increment = 1D;
-            this.txtDesconto.Location = new System.Drawing.Point(321, 1);
-            this.txtDesconto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDesconto.Location = new System.Drawing.Point(240, 3);
             this.txtDesconto.Name = "txtDesconto";
-            this.txtDesconto.Size = new System.Drawing.Size(82, 23);
+            this.txtDesconto.Size = new System.Drawing.Size(70, 21);
             this.txtDesconto.TabIndex = 101;
             this.txtDesconto.ValueChanged += new System.EventHandler(this.Desconto_ValueChanged);
             // 
-            // label6
+            // lblAmortizacao
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(66, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 16);
-            this.label6.TabIndex = 102;
-            this.label6.Text = "Amortização:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblAmortizacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAmortizacao.BackColor = System.Drawing.Color.Transparent;
+            this.lblAmortizacao.Location = new System.Drawing.Point(47, 5);
+            this.lblAmortizacao.Name = "lblAmortizacao";
+            this.lblAmortizacao.Size = new System.Drawing.Size(70, 13);
+            this.lblAmortizacao.TabIndex = 102;
+            this.lblAmortizacao.Text = "Amortização:";
+            this.lblAmortizacao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblDesconto
             // 
             this.lblDesconto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDesconto.BackColor = System.Drawing.Color.Transparent;
-            this.lblDesconto.Location = new System.Drawing.Point(235, 6);
+            this.lblDesconto.Location = new System.Drawing.Point(172, 5);
             this.lblDesconto.Name = "lblDesconto";
-            this.lblDesconto.Size = new System.Drawing.Size(82, 16);
+            this.lblDesconto.Size = new System.Drawing.Size(70, 13);
             this.lblDesconto.TabIndex = 102;
             this.lblDesconto.Text = "Desconto:";
             this.lblDesconto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -825,11 +564,10 @@ namespace GUI
             this.txtQtde_Itens.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQtde_Itens.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQtde_Itens.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtQtde_Itens.Location = new System.Drawing.Point(5, 6);
-            this.txtQtde_Itens.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtQtde_Itens.Location = new System.Drawing.Point(3, 3);
             this.txtQtde_Itens.Name = "txtQtde_Itens";
             this.txtQtde_Itens.ReadOnly = true;
-            this.txtQtde_Itens.Size = new System.Drawing.Size(47, 16);
+            this.txtQtde_Itens.Size = new System.Drawing.Size(40, 13);
             this.txtQtde_Itens.TabIndex = 93;
             this.txtQtde_Itens.TabStop = false;
             this.txtQtde_Itens.Text = "0";
@@ -860,102 +598,97 @@ namespace GUI
             this.txtPC_Entregues.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtPC_Entregues.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPC_Entregues.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtPC_Entregues.Location = new System.Drawing.Point(702, 103);
-            this.txtPC_Entregues.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPC_Entregues.Location = new System.Drawing.Point(602, 84);
             this.txtPC_Entregues.Name = "txtPC_Entregues";
-            this.txtPC_Entregues.Size = new System.Drawing.Size(57, 23);
+            this.txtPC_Entregues.Size = new System.Drawing.Size(49, 21);
             this.txtPC_Entregues.TabIndex = 113;
             this.txtPC_Entregues.TabStop = false;
             this.txtPC_Entregues.Visible = false;
             // 
-            // Label14
+            // lblPc_Entregues
             // 
-            this.Label14.BackColor = System.Drawing.Color.Transparent;
-            this.Label14.Location = new System.Drawing.Point(583, 103);
-            this.Label14.Name = "Label14";
-            this.Label14.Size = new System.Drawing.Size(117, 16);
-            this.Label14.TabIndex = 114;
-            this.Label14.Text = "Peças Entregues:";
-            this.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Label14.Visible = false;
+            this.lblPc_Entregues.BackColor = System.Drawing.Color.Transparent;
+            this.lblPc_Entregues.Location = new System.Drawing.Point(500, 84);
+            this.lblPc_Entregues.Name = "lblPc_Entregues";
+            this.lblPc_Entregues.Size = new System.Drawing.Size(100, 13);
+            this.lblPc_Entregues.TabIndex = 114;
+            this.lblPc_Entregues.Text = "Peças Entregues:";
+            this.lblPc_Entregues.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPc_Entregues.Visible = false;
             // 
             // txtTotal_Pontos
             // 
             this.txtTotal_Pontos.Enabled = false;
-            this.txtTotal_Pontos.Location = new System.Drawing.Point(698, 176);
-            this.txtTotal_Pontos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTotal_Pontos.Location = new System.Drawing.Point(598, 143);
             this.txtTotal_Pontos.Name = "txtTotal_Pontos";
-            this.txtTotal_Pontos.Size = new System.Drawing.Size(45, 23);
+            this.txtTotal_Pontos.Size = new System.Drawing.Size(39, 21);
             this.txtTotal_Pontos.TabIndex = 112;
             this.txtTotal_Pontos.TabStop = false;
             this.txtTotal_Pontos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Label3
+            // lblTotalPontos
             // 
-            this.Label3.BackColor = System.Drawing.Color.Transparent;
-            this.Label3.Location = new System.Drawing.Point(591, 180);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(101, 16);
-            this.Label3.TabIndex = 111;
-            this.Label3.Text = "Total de Pontos:";
-            this.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotalPontos.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalPontos.Location = new System.Drawing.Point(507, 146);
+            this.lblTotalPontos.Name = "lblTotalPontos";
+            this.lblTotalPontos.Size = new System.Drawing.Size(87, 13);
+            this.lblTotalPontos.TabIndex = 111;
+            this.lblTotalPontos.Text = "Total de Pontos:";
+            this.lblTotalPontos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtPontos_Extras
             // 
-            this.txtPontos_Extras.Location = new System.Drawing.Point(525, 172);
-            this.txtPontos_Extras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPontos_Extras.Location = new System.Drawing.Point(450, 140);
             this.txtPontos_Extras.Name = "txtPontos_Extras";
-            this.txtPontos_Extras.Size = new System.Drawing.Size(45, 23);
+            this.txtPontos_Extras.Size = new System.Drawing.Size(39, 21);
             this.txtPontos_Extras.TabIndex = 110;
             this.txtPontos_Extras.TabStop = false;
             this.txtPontos_Extras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Label1
+            // lblPontosExtras
             // 
-            this.Label1.BackColor = System.Drawing.Color.Transparent;
-            this.Label1.Location = new System.Drawing.Point(419, 176);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(101, 16);
-            this.Label1.TabIndex = 109;
-            this.Label1.Text = "Pontos Extras:";
-            this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPontosExtras.BackColor = System.Drawing.Color.Transparent;
+            this.lblPontosExtras.Location = new System.Drawing.Point(359, 143);
+            this.lblPontosExtras.Name = "lblPontosExtras";
+            this.lblPontosExtras.Size = new System.Drawing.Size(87, 13);
+            this.lblPontosExtras.TabIndex = 109;
+            this.lblPontosExtras.Text = "Pontos Extras:";
+            this.lblPontosExtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Label12
+            // lblDefeito
             // 
-            this.Label12.BackColor = System.Drawing.Color.Transparent;
-            this.Label12.Location = new System.Drawing.Point(408, 103);
-            this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(117, 16);
-            this.Label12.TabIndex = 105;
-            this.Label12.Text = "Defeito ao Bordar:";
-            this.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDefeito.BackColor = System.Drawing.Color.Transparent;
+            this.lblDefeito.Location = new System.Drawing.Point(350, 84);
+            this.lblDefeito.Name = "lblDefeito";
+            this.lblDefeito.Size = new System.Drawing.Size(100, 13);
+            this.lblDefeito.TabIndex = 105;
+            this.lblDefeito.Text = "Defeito ao Bordar:";
+            this.lblDefeito.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Label11
+            // lblNaoBordadas
             // 
-            this.Label11.BackColor = System.Drawing.Color.Transparent;
-            this.Label11.Location = new System.Drawing.Point(408, 135);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(117, 16);
-            this.Label11.TabIndex = 107;
-            this.Label11.Text = "Não Bordadas:";
-            this.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblNaoBordadas.BackColor = System.Drawing.Color.Transparent;
+            this.lblNaoBordadas.Location = new System.Drawing.Point(350, 110);
+            this.lblNaoBordadas.Name = "lblNaoBordadas";
+            this.lblNaoBordadas.Size = new System.Drawing.Size(100, 13);
+            this.lblNaoBordadas.TabIndex = 107;
+            this.lblNaoBordadas.Text = "Não Bordadas:";
+            this.lblNaoBordadas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtPC_Defeito
             // 
-            this.txtPC_Defeito.Location = new System.Drawing.Point(527, 100);
-            this.txtPC_Defeito.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPC_Defeito.Location = new System.Drawing.Point(452, 81);
             this.txtPC_Defeito.Name = "txtPC_Defeito";
-            this.txtPC_Defeito.Size = new System.Drawing.Size(42, 23);
+            this.txtPC_Defeito.Size = new System.Drawing.Size(37, 21);
             this.txtPC_Defeito.TabIndex = 106;
             this.txtPC_Defeito.TabStop = false;
             this.txtPC_Defeito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtPC_Nao_Bordadas
             // 
-            this.txtPC_Nao_Bordadas.Location = new System.Drawing.Point(527, 132);
-            this.txtPC_Nao_Bordadas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPC_Nao_Bordadas.Location = new System.Drawing.Point(452, 107);
             this.txtPC_Nao_Bordadas.Name = "txtPC_Nao_Bordadas";
-            this.txtPC_Nao_Bordadas.Size = new System.Drawing.Size(42, 23);
+            this.txtPC_Nao_Bordadas.Size = new System.Drawing.Size(37, 21);
             this.txtPC_Nao_Bordadas.TabIndex = 108;
             this.txtPC_Nao_Bordadas.TabStop = false;
             this.txtPC_Nao_Bordadas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -965,10 +698,9 @@ namespace GUI
             this.btnRestaura.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnRestaura.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnRestaura.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaura.Image")));
-            this.btnRestaura.Location = new System.Drawing.Point(138, 34);
-            this.btnRestaura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRestaura.Location = new System.Drawing.Point(118, 28);
             this.btnRestaura.Name = "btnRestaura";
-            this.btnRestaura.Size = new System.Drawing.Size(40, 42);
+            this.btnRestaura.Size = new System.Drawing.Size(34, 34);
             this.btnRestaura.TabIndex = 104;
             // 
             // btnGravaLinhas
@@ -976,30 +708,27 @@ namespace GUI
             this.btnGravaLinhas.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnGravaLinhas.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnGravaLinhas.Enabled = false;
-            this.btnGravaLinhas.Location = new System.Drawing.Point(19, 34);
-            this.btnGravaLinhas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnGravaLinhas.Location = new System.Drawing.Point(16, 28);
             this.btnGravaLinhas.Name = "btnGravaLinhas";
-            this.btnGravaLinhas.Size = new System.Drawing.Size(40, 42);
+            this.btnGravaLinhas.Size = new System.Drawing.Size(34, 34);
             this.btnGravaLinhas.TabIndex = 101;
             // 
             // btnInsereLinha
             // 
             this.btnInsereLinha.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnInsereLinha.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnInsereLinha.Location = new System.Drawing.Point(58, 34);
-            this.btnInsereLinha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnInsereLinha.Location = new System.Drawing.Point(50, 28);
             this.btnInsereLinha.Name = "btnInsereLinha";
-            this.btnInsereLinha.Size = new System.Drawing.Size(40, 42);
+            this.btnInsereLinha.Size = new System.Drawing.Size(34, 34);
             this.btnInsereLinha.TabIndex = 103;
             // 
             // btnApagaLinha
             // 
             this.btnApagaLinha.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnApagaLinha.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnApagaLinha.Location = new System.Drawing.Point(98, 34);
-            this.btnApagaLinha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnApagaLinha.Location = new System.Drawing.Point(84, 28);
             this.btnApagaLinha.Name = "btnApagaLinha";
-            this.btnApagaLinha.Size = new System.Drawing.Size(40, 42);
+            this.btnApagaLinha.Size = new System.Drawing.Size(34, 34);
             this.btnApagaLinha.TabIndex = 102;
             // 
             // btnExecutarItem
@@ -1007,10 +736,9 @@ namespace GUI
             this.btnExecutarItem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnExecutarItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExecutarItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnExecutarItem.Location = new System.Drawing.Point(23699, 31);
-            this.btnExecutarItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExecutarItem.Location = new System.Drawing.Point(23572, 25);
             this.btnExecutarItem.Name = "btnExecutarItem";
-            this.btnExecutarItem.Size = new System.Drawing.Size(107, 39);
+            this.btnExecutarItem.Size = new System.Drawing.Size(92, 32);
             this.btnExecutarItem.TabIndex = 100;
             this.btnExecutarItem.Text = "Executar o Ítem";
             // 
@@ -1028,8 +756,7 @@ namespace GUI
             this.dtpData_Execucao.FocusHighlightEnabled = true;
             this.dtpData_Execucao.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Execucao.IsPopupCalendarOpen = false;
-            this.dtpData_Execucao.Location = new System.Drawing.Point(23571, 44);
-            this.dtpData_Execucao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtpData_Execucao.Location = new System.Drawing.Point(23462, 36);
             // 
             // 
             // 
@@ -1053,19 +780,19 @@ namespace GUI
             this.dtpData_Execucao.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtpData_Execucao.MonthCalendar.TodayButtonVisible = true;
             this.dtpData_Execucao.Name = "dtpData_Execucao";
-            this.dtpData_Execucao.Size = new System.Drawing.Size(113, 23);
+            this.dtpData_Execucao.Size = new System.Drawing.Size(97, 21);
             this.dtpData_Execucao.TabIndex = 90;
             // 
-            // Label27
+            // lblExecucao
             // 
-            this.Label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label27.BackColor = System.Drawing.Color.Transparent;
-            this.Label27.Location = new System.Drawing.Point(23468, 50);
-            this.Label27.Name = "Label27";
-            this.Label27.Size = new System.Drawing.Size(92, 16);
-            this.Label27.TabIndex = 89;
-            this.Label27.Text = "Execução:";
-            this.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblExecucao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblExecucao.BackColor = System.Drawing.Color.Transparent;
+            this.lblExecucao.Location = new System.Drawing.Point(23374, 41);
+            this.lblExecucao.Name = "lblExecucao";
+            this.lblExecucao.Size = new System.Drawing.Size(79, 13);
+            this.lblExecucao.TabIndex = 89;
+            this.lblExecucao.Text = "Execução:";
+            this.lblExecucao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dgLinhas_Item
             // 
@@ -1081,27 +808,26 @@ namespace GUI
             this.codigo,
             this.nome,
             this.Cor});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgLinhas_Item.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgLinhas_Item.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgLinhas_Item.EnableHeadersVisualStyles = false;
-            this.dgLinhas_Item.Location = new System.Drawing.Point(19, 78);
-            this.dgLinhas_Item.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgLinhas_Item.Location = new System.Drawing.Point(16, 63);
             this.dgLinhas_Item.MultiSelect = false;
             this.dgLinhas_Item.Name = "dgLinhas_Item";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgLinhas_Item.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLinhas_Item.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgLinhas_Item.RowHeadersVisible = false;
             this.dgLinhas_Item.RowHeadersWidth = 25;
             this.dgLinhas_Item.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -1110,15 +836,15 @@ namespace GUI
             this.dgLinhas_Item.ShowCellErrors = false;
             this.dgLinhas_Item.ShowCellToolTips = false;
             this.dgLinhas_Item.ShowRowErrors = false;
-            this.dgLinhas_Item.Size = new System.Drawing.Size(296, 0);
+            this.dgLinhas_Item.Size = new System.Drawing.Size(254, 0);
             this.dgLinhas_Item.TabIndex = 8;
             this.dgLinhas_Item.TabStop = false;
             // 
             // seq
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Info;
-            this.seq.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Info;
+            this.seq.DefaultCellStyle = dataGridViewCellStyle7;
             this.seq.HeaderText = "Seq";
             this.seq.Name = "seq";
             this.seq.ReadOnly = true;
@@ -1127,8 +853,8 @@ namespace GUI
             // 
             // codigo
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.codigo.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.codigo.DefaultCellStyle = dataGridViewCellStyle8;
             this.codigo.HeaderText = "Codigo";
             this.codigo.Name = "codigo";
             this.codigo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1136,9 +862,9 @@ namespace GUI
             // 
             // nome
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Info;
-            this.nome.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Info;
+            this.nome.DefaultCellStyle = dataGridViewCellStyle9;
             this.nome.HeaderText = "Nome";
             this.nome.Name = "nome";
             this.nome.ReadOnly = true;
@@ -1146,8 +872,8 @@ namespace GUI
             // 
             // Cor
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Cor.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Cor.DefaultCellStyle = dataGridViewCellStyle10;
             this.Cor.HeaderText = "Cor";
             this.Cor.Name = "Cor";
             this.Cor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1156,14 +882,13 @@ namespace GUI
             // dePagamento
             // 
             this.dePagamento.EditValue = null;
-            this.dePagamento.Location = new System.Drawing.Point(175, 32);
-            this.dePagamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dePagamento.Location = new System.Drawing.Point(150, 26);
             this.dePagamento.Name = "dePagamento";
             this.dePagamento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dePagamento.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dePagamento.Size = new System.Drawing.Size(117, 22);
+            this.dePagamento.Size = new System.Drawing.Size(100, 20);
             this.dePagamento.TabIndex = 194;
             // 
             // Saldo
@@ -1175,11 +900,10 @@ namespace GUI
             this.Saldo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Saldo.Enabled = false;
             this.Saldo.Increment = 1D;
-            this.Saldo.Location = new System.Drawing.Point(175, 252);
-            this.Saldo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Saldo.Location = new System.Drawing.Point(150, 205);
             this.Saldo.Name = "Saldo";
             this.Saldo.ShowUpDown = true;
-            this.Saldo.Size = new System.Drawing.Size(117, 23);
+            this.Saldo.Size = new System.Drawing.Size(100, 21);
             this.Saldo.TabIndex = 0;
             this.Saldo.TabStop = false;
             // 
@@ -1192,11 +916,10 @@ namespace GUI
             this.Total_Pagamento2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Total_Pagamento2.Enabled = false;
             this.Total_Pagamento2.Increment = 1D;
-            this.Total_Pagamento2.Location = new System.Drawing.Point(175, 70);
-            this.Total_Pagamento2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Total_Pagamento2.Location = new System.Drawing.Point(150, 57);
             this.Total_Pagamento2.Name = "Total_Pagamento2";
             this.Total_Pagamento2.ShowUpDown = true;
-            this.Total_Pagamento2.Size = new System.Drawing.Size(117, 23);
+            this.Total_Pagamento2.Size = new System.Drawing.Size(100, 21);
             this.Total_Pagamento2.TabIndex = 0;
             this.Total_Pagamento2.TabStop = false;
             // 
@@ -1209,11 +932,10 @@ namespace GUI
             this.Pago.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Pago.Enabled = false;
             this.Pago.Increment = 1D;
-            this.Pago.Location = new System.Drawing.Point(175, 208);
-            this.Pago.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Pago.Location = new System.Drawing.Point(150, 169);
             this.Pago.Name = "Pago";
             this.Pago.ShowUpDown = true;
-            this.Pago.Size = new System.Drawing.Size(117, 23);
+            this.Pago.Size = new System.Drawing.Size(100, 21);
             this.Pago.TabIndex = 0;
             this.Pago.TabStop = false;
             // 
@@ -1225,22 +947,21 @@ namespace GUI
             this.Adicional.BackgroundStyle.Class = "DateTimeInputBackground";
             this.Adicional.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Adicional.Increment = 1D;
-            this.Adicional.Location = new System.Drawing.Point(175, 113);
-            this.Adicional.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Adicional.Location = new System.Drawing.Point(150, 92);
             this.Adicional.Name = "Adicional";
             this.Adicional.ShowUpDown = true;
-            this.Adicional.Size = new System.Drawing.Size(117, 23);
+            this.Adicional.Size = new System.Drawing.Size(100, 21);
             this.Adicional.TabIndex = 1;
             // 
-            // Label30
+            // lblValoraAmortizar
             // 
-            this.Label30.BackColor = System.Drawing.Color.Transparent;
-            this.Label30.Location = new System.Drawing.Point(450, 146);
-            this.Label30.Name = "Label30";
-            this.Label30.Size = new System.Drawing.Size(110, 16);
-            this.Label30.TabIndex = 103;
-            this.Label30.Text = "Valor à amortizar";
-            this.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValoraAmortizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblValoraAmortizar.Location = new System.Drawing.Point(386, 119);
+            this.lblValoraAmortizar.Name = "lblValoraAmortizar";
+            this.lblValoraAmortizar.Size = new System.Drawing.Size(94, 13);
+            this.lblValoraAmortizar.TabIndex = 103;
+            this.lblValoraAmortizar.Text = "Valor à amortizar";
+            this.lblValoraAmortizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ValorAmortizar
             // 
@@ -1250,22 +971,20 @@ namespace GUI
             this.ValorAmortizar.BackgroundStyle.Class = "DateTimeInputBackground";
             this.ValorAmortizar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ValorAmortizar.Increment = 1D;
-            this.ValorAmortizar.Location = new System.Drawing.Point(454, 166);
-            this.ValorAmortizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ValorAmortizar.Location = new System.Drawing.Point(389, 135);
             this.ValorAmortizar.MinValue = 0D;
             this.ValorAmortizar.Name = "ValorAmortizar";
             this.ValorAmortizar.ShowUpDown = true;
-            this.ValorAmortizar.Size = new System.Drawing.Size(107, 23);
+            this.ValorAmortizar.Size = new System.Drawing.Size(92, 21);
             this.ValorAmortizar.TabIndex = 0;
             // 
             // btnAmortizar
             // 
             this.btnAmortizar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnAmortizar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAmortizar.Location = new System.Drawing.Point(313, 162);
-            this.btnAmortizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAmortizar.Location = new System.Drawing.Point(268, 132);
             this.btnAmortizar.Name = "btnAmortizar";
-            this.btnAmortizar.Size = new System.Drawing.Size(107, 28);
+            this.btnAmortizar.Size = new System.Drawing.Size(92, 23);
             this.btnAmortizar.TabIndex = 101;
             this.btnAmortizar.Text = "Amortizar";
             // 
@@ -1276,105 +995,103 @@ namespace GUI
             // 
             this.cbQuitado.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.cbQuitado.Enabled = false;
-            this.cbQuitado.Location = new System.Drawing.Point(332, 27);
-            this.cbQuitado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbQuitado.Location = new System.Drawing.Point(285, 22);
             this.cbQuitado.Name = "cbQuitado";
-            this.cbQuitado.Size = new System.Drawing.Size(87, 28);
+            this.cbQuitado.Size = new System.Drawing.Size(75, 23);
             this.cbQuitado.TabIndex = 100;
             this.cbQuitado.Text = "Quitado";
             // 
-            // Label29
+            // lblSaldoaPagar
             // 
-            this.Label29.BackColor = System.Drawing.Color.Transparent;
-            this.Label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label29.Location = new System.Drawing.Point(9, 255);
-            this.Label29.Name = "Label29";
-            this.Label29.Size = new System.Drawing.Size(159, 22);
-            this.Label29.TabIndex = 97;
-            this.Label29.Text = "Saldo a Pagar:";
-            this.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblSaldoaPagar.BackColor = System.Drawing.Color.Transparent;
+            this.lblSaldoaPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldoaPagar.Location = new System.Drawing.Point(8, 207);
+            this.lblSaldoaPagar.Name = "lblSaldoaPagar";
+            this.lblSaldoaPagar.Size = new System.Drawing.Size(136, 18);
+            this.lblSaldoaPagar.TabIndex = 97;
+            this.lblSaldoaPagar.Text = "Saldo a Pagar:";
+            this.lblSaldoaPagar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Label28
+            // lblTotalDoPedido
             // 
-            this.Label28.BackColor = System.Drawing.Color.Transparent;
-            this.Label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label28.Location = new System.Drawing.Point(9, 73);
-            this.Label28.Name = "Label28";
-            this.Label28.Size = new System.Drawing.Size(159, 22);
-            this.Label28.TabIndex = 95;
-            this.Label28.Text = "Total do Pedido:";
-            this.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotalDoPedido.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalDoPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDoPedido.Location = new System.Drawing.Point(8, 59);
+            this.lblTotalDoPedido.Name = "lblTotalDoPedido";
+            this.lblTotalDoPedido.Size = new System.Drawing.Size(136, 18);
+            this.lblTotalDoPedido.TabIndex = 95;
+            this.lblTotalDoPedido.Text = "Total do Pedido:";
+            this.lblTotalDoPedido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Label23
+            // lblObs
             // 
-            this.Label23.BackColor = System.Drawing.Color.Transparent;
-            this.Label23.Location = new System.Drawing.Point(86, 308);
-            this.Label23.Name = "Label23";
-            this.Label23.Size = new System.Drawing.Size(82, 16);
-            this.Label23.TabIndex = 93;
-            this.Label23.Text = "Obsevação:";
-            this.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblObs.BackColor = System.Drawing.Color.Transparent;
+            this.lblObs.Location = new System.Drawing.Point(74, 250);
+            this.lblObs.Name = "lblObs";
+            this.lblObs.Size = new System.Drawing.Size(70, 13);
+            this.lblObs.TabIndex = 93;
+            this.lblObs.Text = "Obsevação:";
+            this.lblObs.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Label26
+            // lblValorAPagar
             // 
-            this.Label26.BackColor = System.Drawing.Color.Transparent;
-            this.Label26.Location = new System.Drawing.Point(83, 217);
-            this.Label26.Name = "Label26";
-            this.Label26.Size = new System.Drawing.Size(85, 16);
-            this.Label26.TabIndex = 89;
-            this.Label26.Text = "Valor já pago:";
-            this.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblValorAPagar.BackColor = System.Drawing.Color.Transparent;
+            this.lblValorAPagar.Location = new System.Drawing.Point(71, 176);
+            this.lblValorAPagar.Name = "lblValorAPagar";
+            this.lblValorAPagar.Size = new System.Drawing.Size(73, 13);
+            this.lblValorAPagar.TabIndex = 89;
+            this.lblValorAPagar.Text = "Valor já pago:";
+            this.lblValorAPagar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Label18
+            // lblDataPagamento
             // 
-            this.Label18.BackColor = System.Drawing.Color.Transparent;
-            this.Label18.Location = new System.Drawing.Point(37, 36);
-            this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(131, 16);
-            this.Label18.TabIndex = 83;
-            this.Label18.Text = "Data do Pagamento:";
-            this.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDataPagamento.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataPagamento.Location = new System.Drawing.Point(32, 29);
+            this.lblDataPagamento.Name = "lblDataPagamento";
+            this.lblDataPagamento.Size = new System.Drawing.Size(112, 13);
+            this.lblDataPagamento.TabIndex = 83;
+            this.lblDataPagamento.Text = "Data do Pagamento:";
+            this.lblDataPagamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtObs_Pagamento
             // 
             this.txtObs_Pagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtObs_Pagamento.Location = new System.Drawing.Point(175, 304);
-            this.txtObs_Pagamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtObs_Pagamento.Location = new System.Drawing.Point(150, 247);
             this.txtObs_Pagamento.Multiline = true;
             this.txtObs_Pagamento.Name = "txtObs_Pagamento";
             this.txtObs_Pagamento.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Pagamento.Size = new System.Drawing.Size(23771, 0);
+            this.txtObs_Pagamento.Size = new System.Drawing.Size(23634, 0);
             this.txtObs_Pagamento.TabIndex = 3;
             // 
-            // Label24
+            // lblAdicional
             // 
-            this.Label24.BackColor = System.Drawing.Color.Transparent;
-            this.Label24.Location = new System.Drawing.Point(90, 122);
-            this.Label24.Name = "Label24";
-            this.Label24.Size = new System.Drawing.Size(78, 16);
-            this.Label24.TabIndex = 85;
-            this.Label24.Text = "Adicional:";
-            this.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblAdicional.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdicional.Location = new System.Drawing.Point(77, 99);
+            this.lblAdicional.Name = "lblAdicional";
+            this.lblAdicional.Size = new System.Drawing.Size(67, 13);
+            this.lblAdicional.TabIndex = 85;
+            this.lblAdicional.Text = "Adicional:";
+            this.lblAdicional.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LinhaIdLabel
             // 
-            this.LinhaIdLabel.Location = new System.Drawing.Point(43, 10);
+            this.LinhaIdLabel.Location = new System.Drawing.Point(37, 8);
             this.LinhaIdLabel.Name = "LinhaIdLabel";
-            this.LinhaIdLabel.Size = new System.Drawing.Size(54, 16);
+            this.LinhaIdLabel.Size = new System.Drawing.Size(46, 13);
             this.LinhaIdLabel.TabIndex = 199;
             this.LinhaIdLabel.Text = "Pedido:";
             this.LinhaIdLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Label10
+            // lblAbertura
             // 
-            this.Label10.Location = new System.Drawing.Point(43, 47);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(61, 16);
-            this.Label10.TabIndex = 203;
-            this.Label10.Text = "Abertura:";
-            this.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblAbertura.Location = new System.Drawing.Point(37, 38);
+            this.lblAbertura.Name = "lblAbertura";
+            this.lblAbertura.Size = new System.Drawing.Size(52, 13);
+            this.lblAbertura.TabIndex = 203;
+            this.lblAbertura.Text = "Abertura:";
+            this.lblAbertura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cbCliente
             // 
@@ -1382,62 +1099,59 @@ namespace GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cbCliente.FormattingEnabled = true;
-            this.cbCliente.Location = new System.Drawing.Point(258, 5);
-            this.cbCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbCliente.Location = new System.Drawing.Point(221, 4);
             this.cbCliente.Name = "cbCliente";
-            this.cbCliente.Size = new System.Drawing.Size(464, 24);
+            this.cbCliente.Size = new System.Drawing.Size(373, 21);
             this.cbCliente.Sorted = true;
             this.cbCliente.TabIndex = 198;
             this.cbCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbCliente_KeyDown);
             this.cbCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbCliente_KeyPress);
             // 
-            // Label2
+            // lblFechamento
             // 
-            this.Label2.Location = new System.Drawing.Point(21, 76);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(84, 16);
-            this.Label2.TabIndex = 204;
-            this.Label2.Text = "Fechamento:";
-            this.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblFechamento.Location = new System.Drawing.Point(18, 62);
+            this.lblFechamento.Name = "lblFechamento";
+            this.lblFechamento.Size = new System.Drawing.Size(72, 13);
+            this.lblFechamento.TabIndex = 204;
+            this.lblFechamento.Text = "Fechamento:";
+            this.lblFechamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtId
             // 
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.ForeColor = System.Drawing.Color.Navy;
-            this.txtId.Location = new System.Drawing.Point(105, 0);
-            this.txtId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtId.Location = new System.Drawing.Point(90, 0);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(75, 34);
+            this.txtId.Size = new System.Drawing.Size(65, 29);
             this.txtId.TabIndex = 200;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Label7
+            // lblObs1
             // 
-            this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(532, 48);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(37, 17);
-            this.Label7.TabIndex = 202;
-            this.Label7.Text = "Obs:";
+            this.lblObs1.AutoSize = true;
+            this.lblObs1.Location = new System.Drawing.Point(456, 39);
+            this.lblObs1.Name = "lblObs1";
+            this.lblObs1.Size = new System.Drawing.Size(30, 13);
+            this.lblObs1.TabIndex = 202;
+            this.lblObs1.Text = "Obs:";
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(203, 9);
+            this.lblCliente.Location = new System.Drawing.Point(174, 7);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(53, 17);
+            this.lblCliente.Size = new System.Drawing.Size(44, 13);
             this.lblCliente.TabIndex = 201;
             this.lblCliente.Text = "Cliente:";
             // 
             // btnFiltrar
             // 
             this.btnFiltrar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnFiltrar.Location = new System.Drawing.Point(257, 2);
-            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnFiltrar.Location = new System.Drawing.Point(220, 2);
             this.btnFiltrar.MenuManager = this.barManager1;
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(42, 26);
+            this.btnFiltrar.Size = new System.Drawing.Size(36, 21);
             this.btnFiltrar.TabIndex = 58;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
@@ -1447,21 +1161,19 @@ namespace GUI
             this.btnX.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
             this.btnX.Image = ((System.Drawing.Image)(resources.GetObject("btnX.Image")));
             this.btnX.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnX.Location = new System.Drawing.Point(230, 4);
-            this.btnX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnX.Location = new System.Drawing.Point(197, 3);
             this.btnX.MenuManager = this.barManager1;
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(21, 22);
+            this.btnX.Size = new System.Drawing.Size(18, 18);
             this.btnX.TabIndex = 57;
             this.btnX.Text = "X";
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // txtFiltrar
             // 
-            this.txtFiltrar.Location = new System.Drawing.Point(1, 4);
-            this.txtFiltrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFiltrar.Location = new System.Drawing.Point(1, 3);
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(250, 22);
+            this.txtFiltrar.Size = new System.Drawing.Size(214, 20);
             this.txtFiltrar.TabIndex = 56;
             this.txtFiltrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltrar_KeyPress);
             // 
@@ -1470,11 +1182,10 @@ namespace GUI
             this.xtabItenPagamentoExecucao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xtabItenPagamentoExecucao.Location = new System.Drawing.Point(0, 100);
-            this.xtabItenPagamentoExecucao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.xtabItenPagamentoExecucao.Location = new System.Drawing.Point(0, 81);
             this.xtabItenPagamentoExecucao.Name = "xtabItenPagamentoExecucao";
             this.xtabItenPagamentoExecucao.SelectedTabPage = this.xtbpItem;
-            this.xtabItenPagamentoExecucao.Size = new System.Drawing.Size(1080, 546);
+            this.xtabItenPagamentoExecucao.Size = new System.Drawing.Size(900, 443);
             this.xtabItenPagamentoExecucao.TabIndex = 106;
             this.xtabItenPagamentoExecucao.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtbpItem,
@@ -1493,38 +1204,37 @@ namespace GUI
             this.xtbpItem.Controls.Add(this.txtPreco_Por_Peca);
             this.xtbpItem.Controls.Add(this.btnImportar);
             this.xtbpItem.Controls.Add(this.btnAdicionar);
-            this.xtbpItem.Controls.Add(this.Label20);
+            this.xtbpItem.Controls.Add(this.lblIgual);
             this.xtbpItem.Controls.Add(this.txtPC_Solicitadas);
             this.xtbpItem.Controls.Add(this.lblPeca_solicitadas);
             this.xtbpItem.Controls.Add(this.lblArquivo);
-            this.xtbpItem.Controls.Add(this.label8);
+            this.xtbpItem.Controls.Add(this.lblValorApagar1);
             this.xtbpItem.Controls.Add(this.lblLado);
             this.xtbpItem.Controls.Add(this.dtpData_Entrega);
             this.xtbpItem.Controls.Add(this.btnBaixo);
             this.xtbpItem.Controls.Add(this.txtBordado_Arquivo);
             this.xtbpItem.Controls.Add(this.lblDiaSemana);
-            this.xtbpItem.Controls.Add(this.Label16);
+            this.xtbpItem.Controls.Add(this.lblPecasBordadas);
             this.xtbpItem.Controls.Add(this.picBordado);
-            this.xtbpItem.Controls.Add(this.Label5);
+            this.xtbpItem.Controls.Add(this.lblPrecoSugerido);
             this.xtbpItem.Controls.Add(this.rg_lado);
             this.xtbpItem.Controls.Add(this.lblDataEntrega);
             this.xtbpItem.Controls.Add(this.btnApagar);
             this.xtbpItem.Controls.Add(this.btnCima);
-            this.xtbpItem.Controls.Add(this.Label25);
+            this.xtbpItem.Controls.Add(this.lblDescricao1);
             this.xtbpItem.Controls.Add(this.txtObs_Item);
-            this.xtbpItem.Controls.Add(this.Label21);
+            this.xtbpItem.Controls.Add(this.lblBoradado_id);
             this.xtbpItem.Controls.Add(this.lblObs_item);
             this.xtbpItem.Controls.Add(this.btnInserirItem);
             this.xtbpItem.Controls.Add(this.lblDescricao);
             this.xtbpItem.Controls.Add(this.txtDescricao);
-            this.xtbpItem.Controls.Add(this.Label9);
+            this.xtbpItem.Controls.Add(this.lblPontos);
             this.xtbpItem.Controls.Add(this.lblLocal);
             this.xtbpItem.Controls.Add(this.rg_local);
             this.xtbpItem.Controls.Add(this.pnlItens);
-            this.xtbpItem.Controls.Add(this.Label19);
-            this.xtbpItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.xtbpItem.Controls.Add(this.lblX);
             this.xtbpItem.Name = "xtbpItem";
-            this.xtbpItem.Size = new System.Drawing.Size(1073, 512);
+            this.xtbpItem.Size = new System.Drawing.Size(894, 415);
             this.xtbpItem.Text = "Ítem";
             // 
             // txtBordado_Preco
@@ -1537,10 +1247,9 @@ namespace GUI
             this.txtBordado_Preco.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtBordado_Preco.FocusHighlightEnabled = true;
             this.txtBordado_Preco.Increment = 1D;
-            this.txtBordado_Preco.Location = new System.Drawing.Point(767, 137);
-            this.txtBordado_Preco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBordado_Preco.Location = new System.Drawing.Point(633, 111);
             this.txtBordado_Preco.Name = "txtBordado_Preco";
-            this.txtBordado_Preco.Size = new System.Drawing.Size(59, 23);
+            this.txtBordado_Preco.Size = new System.Drawing.Size(51, 21);
             this.txtBordado_Preco.TabIndex = 155;
             // 
             // txtBordado_Pontos
@@ -1553,21 +1262,21 @@ namespace GUI
             this.txtBordado_Pontos.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtBordado_Pontos.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtBordado_Pontos.IsInputReadOnly = true;
-            this.txtBordado_Pontos.Location = new System.Drawing.Point(762, 90);
+            this.txtBordado_Pontos.Location = new System.Drawing.Point(629, 73);
             this.txtBordado_Pontos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBordado_Pontos.Name = "txtBordado_Pontos";
-            this.txtBordado_Pontos.Size = new System.Drawing.Size(65, 23);
+            this.txtBordado_Pontos.Size = new System.Drawing.Size(56, 21);
             this.txtBordado_Pontos.TabIndex = 154;
             // 
             // txtBordado_Descricao
             // 
             this.txtBordado_Descricao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBordado_Descricao.Location = new System.Drawing.Point(633, 252);
+            this.txtBordado_Descricao.Location = new System.Drawing.Point(518, 209);
             this.txtBordado_Descricao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBordado_Descricao.MenuManager = this.barManager1;
             this.txtBordado_Descricao.Name = "txtBordado_Descricao";
             this.txtBordado_Descricao.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.txtBordado_Descricao.Size = new System.Drawing.Size(389, 22);
+            this.txtBordado_Descricao.Size = new System.Drawing.Size(333, 20);
             this.txtBordado_Descricao.TabIndex = 153;
             this.txtBordado_Descricao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBordado_Descricao_KeyPress);
             // 
@@ -1581,10 +1290,9 @@ namespace GUI
             this.txtTotal_Item.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTotal_Item.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal_Item.Increment = 1D;
-            this.txtTotal_Item.Location = new System.Drawing.Point(988, 404);
-            this.txtTotal_Item.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTotal_Item.Location = new System.Drawing.Point(822, 333);
             this.txtTotal_Item.Name = "txtTotal_Item";
-            this.txtTotal_Item.Size = new System.Drawing.Size(79, 26);
+            this.txtTotal_Item.Size = new System.Drawing.Size(68, 22);
             this.txtTotal_Item.TabIndex = 152;
             // 
             // txtPC_Bordadas
@@ -1597,10 +1305,9 @@ namespace GUI
             this.txtPC_Bordadas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPC_Bordadas.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtPC_Bordadas.Enabled = false;
-            this.txtPC_Bordadas.Location = new System.Drawing.Point(988, 306);
-            this.txtPC_Bordadas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPC_Bordadas.Location = new System.Drawing.Point(822, 253);
             this.txtPC_Bordadas.Name = "txtPC_Bordadas";
-            this.txtPC_Bordadas.Size = new System.Drawing.Size(79, 23);
+            this.txtPC_Bordadas.Size = new System.Drawing.Size(68, 21);
             this.txtPC_Bordadas.TabIndex = 116;
             this.txtPC_Bordadas.TabStop = false;
             // 
@@ -1614,10 +1321,10 @@ namespace GUI
             this.nudBordado_Id.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.nudBordado_Id.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.nudBordado_Id.IsInputReadOnly = true;
-            this.nudBordado_Id.Location = new System.Drawing.Point(762, 36);
+            this.nudBordado_Id.Location = new System.Drawing.Point(629, 29);
             this.nudBordado_Id.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudBordado_Id.Name = "nudBordado_Id";
-            this.nudBordado_Id.Size = new System.Drawing.Size(65, 23);
+            this.nudBordado_Id.Size = new System.Drawing.Size(56, 21);
             this.nudBordado_Id.TabIndex = 103;
             // 
             // txtTot_a_pagar
@@ -1631,10 +1338,9 @@ namespace GUI
             this.txtTot_a_pagar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTot_a_pagar.Increment = 1D;
             this.txtTot_a_pagar.IsInputReadOnly = true;
-            this.txtTot_a_pagar.Location = new System.Drawing.Point(541, 255);
-            this.txtTot_a_pagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTot_a_pagar.Location = new System.Drawing.Point(439, 212);
             this.txtTot_a_pagar.Name = "txtTot_a_pagar";
-            this.txtTot_a_pagar.Size = new System.Drawing.Size(82, 27);
+            this.txtTot_a_pagar.Size = new System.Drawing.Size(70, 23);
             this.txtTot_a_pagar.TabIndex = 101;
             // 
             // txtPreco_Por_Peca
@@ -1647,10 +1353,9 @@ namespace GUI
             this.txtPreco_Por_Peca.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPreco_Por_Peca.FocusHighlightEnabled = true;
             this.txtPreco_Por_Peca.Increment = 1D;
-            this.txtPreco_Por_Peca.Location = new System.Drawing.Point(988, 354);
-            this.txtPreco_Por_Peca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPreco_Por_Peca.Location = new System.Drawing.Point(822, 292);
             this.txtPreco_Por_Peca.Name = "txtPreco_Por_Peca";
-            this.txtPreco_Por_Peca.Size = new System.Drawing.Size(79, 23);
+            this.txtPreco_Por_Peca.Size = new System.Drawing.Size(68, 21);
             this.txtPreco_Por_Peca.TabIndex = 117;
             this.txtPreco_Por_Peca.ValueChanged += new System.EventHandler(this.txtPreco_Por_Peca_ValueChanged);
             this.txtPreco_Por_Peca.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPreco_Por_Peca_KeyDown);
@@ -1658,10 +1363,9 @@ namespace GUI
             // btnImportar
             // 
             this.btnImportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImportar.Location = new System.Drawing.Point(645, 344);
-            this.btnImportar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnImportar.Location = new System.Drawing.Point(528, 284);
             this.btnImportar.Name = "btnImportar";
-            this.btnImportar.Size = new System.Drawing.Size(159, 55);
+            this.btnImportar.Size = new System.Drawing.Size(136, 45);
             this.btnImportar.TabIndex = 116;
             this.btnImportar.Text = "Carregar";
             this.btnImportar.UseVisualStyleBackColor = true;
@@ -1673,26 +1377,25 @@ namespace GUI
             this.btnAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdicionar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.Image")));
-            this.btnAdicionar.Location = new System.Drawing.Point(632, 4);
-            this.btnAdicionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAdicionar.Location = new System.Drawing.Point(517, 3);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F2);
-            this.btnAdicionar.Size = new System.Drawing.Size(27, 28);
+            this.btnAdicionar.Size = new System.Drawing.Size(23, 23);
             this.btnAdicionar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnAdicionar.TabIndex = 143;
             this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
-            // Label20
+            // lblIgual
             // 
-            this.Label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label20.BackColor = System.Drawing.Color.Transparent;
-            this.Label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label20.Location = new System.Drawing.Point(1044, 380);
-            this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(21, 31);
-            this.Label20.TabIndex = 139;
-            this.Label20.Text = "=";
-            this.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblIgual.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblIgual.BackColor = System.Drawing.Color.Transparent;
+            this.lblIgual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIgual.Location = new System.Drawing.Point(870, 313);
+            this.lblIgual.Name = "lblIgual";
+            this.lblIgual.Size = new System.Drawing.Size(18, 25);
+            this.lblIgual.TabIndex = 139;
+            this.lblIgual.Text = "=";
+            this.lblIgual.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtPC_Solicitadas
             // 
@@ -1704,10 +1407,9 @@ namespace GUI
             this.txtPC_Solicitadas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPC_Solicitadas.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtPC_Solicitadas.FocusHighlightEnabled = true;
-            this.txtPC_Solicitadas.Location = new System.Drawing.Point(747, 306);
-            this.txtPC_Solicitadas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPC_Solicitadas.Location = new System.Drawing.Point(616, 253);
             this.txtPC_Solicitadas.Name = "txtPC_Solicitadas";
-            this.txtPC_Solicitadas.Size = new System.Drawing.Size(57, 23);
+            this.txtPC_Solicitadas.Size = new System.Drawing.Size(49, 21);
             this.txtPC_Solicitadas.TabIndex = 115;
             this.txtPC_Solicitadas.ValueChanged += new System.EventHandler(this.txtPC_Solicitadas_ValueChanged);
             this.txtPC_Solicitadas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPC_Solicitadas_KeyDown);
@@ -1717,9 +1419,9 @@ namespace GUI
             this.lblPeca_solicitadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPeca_solicitadas.BackColor = System.Drawing.Color.Transparent;
             this.lblPeca_solicitadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeca_solicitadas.Location = new System.Drawing.Point(618, 311);
+            this.lblPeca_solicitadas.Location = new System.Drawing.Point(505, 257);
             this.lblPeca_solicitadas.Name = "lblPeca_solicitadas";
-            this.lblPeca_solicitadas.Size = new System.Drawing.Size(117, 16);
+            this.lblPeca_solicitadas.Size = new System.Drawing.Size(100, 13);
             this.lblPeca_solicitadas.TabIndex = 126;
             this.lblPeca_solicitadas.Text = "Peças Solicitadas:";
             this.lblPeca_solicitadas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1728,33 +1430,33 @@ namespace GUI
             // 
             this.lblArquivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblArquivo.BackColor = System.Drawing.Color.Transparent;
-            this.lblArquivo.Location = new System.Drawing.Point(632, 180);
+            this.lblArquivo.Location = new System.Drawing.Point(517, 151);
             this.lblArquivo.Name = "lblArquivo";
-            this.lblArquivo.Size = new System.Drawing.Size(56, 16);
+            this.lblArquivo.Size = new System.Drawing.Size(48, 13);
             this.lblArquivo.TabIndex = 141;
             this.lblArquivo.Text = "Arquivo:";
             this.lblArquivo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label8
+            // lblValorApagar1
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(412, 258);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 17);
-            this.label8.TabIndex = 127;
-            this.label8.Text = "Valor a Pagar:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblValorApagar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblValorApagar1.BackColor = System.Drawing.Color.Transparent;
+            this.lblValorApagar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorApagar1.Location = new System.Drawing.Point(329, 214);
+            this.lblValorApagar1.Name = "lblValorApagar1";
+            this.lblValorApagar1.Size = new System.Drawing.Size(104, 14);
+            this.lblValorApagar1.TabIndex = 127;
+            this.lblValorApagar1.Text = "Valor a Pagar:";
+            this.lblValorApagar1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblLado
             // 
             this.lblLado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblLado.BackColor = System.Drawing.Color.Transparent;
             this.lblLado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLado.Location = new System.Drawing.Point(401, 335);
+            this.lblLado.Location = new System.Drawing.Point(344, 277);
             this.lblLado.Name = "lblLado";
-            this.lblLado.Size = new System.Drawing.Size(57, 17);
+            this.lblLado.Size = new System.Drawing.Size(49, 14);
             this.lblLado.TabIndex = 127;
             this.lblLado.Text = "Lado:";
             this.lblLado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1773,8 +1475,7 @@ namespace GUI
             this.dtpData_Entrega.FocusHighlightEnabled = true;
             this.dtpData_Entrega.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Entrega.IsPopupCalendarOpen = false;
-            this.dtpData_Entrega.Location = new System.Drawing.Point(891, 471);
-            this.dtpData_Entrega.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtpData_Entrega.Location = new System.Drawing.Point(739, 387);
             // 
             // 
             // 
@@ -1804,7 +1505,7 @@ namespace GUI
             this.dtpData_Entrega.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtpData_Entrega.MonthCalendar.TodayButtonVisible = true;
             this.dtpData_Entrega.Name = "dtpData_Entrega";
-            this.dtpData_Entrega.Size = new System.Drawing.Size(174, 23);
+            this.dtpData_Entrega.Size = new System.Drawing.Size(149, 21);
             this.dtpData_Entrega.TabIndex = 122;
             this.dtpData_Entrega.TextChanged += new System.EventHandler(this.dtpData_Entrega_TextChanged);
             // 
@@ -1814,11 +1515,10 @@ namespace GUI
             this.btnBaixo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBaixo.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnBaixo.Image = ((System.Drawing.Image)(resources.GetObject("btnBaixo.Image")));
-            this.btnBaixo.Location = new System.Drawing.Point(633, 143);
-            this.btnBaixo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBaixo.Location = new System.Drawing.Point(518, 116);
             this.btnBaixo.Name = "btnBaixo";
             this.btnBaixo.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlDown);
-            this.btnBaixo.Size = new System.Drawing.Size(27, 28);
+            this.btnBaixo.Size = new System.Drawing.Size(23, 23);
             this.btnBaixo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnBaixo.TabIndex = 147;
             this.btnBaixo.Click += new System.EventHandler(this.btnBaixo_Click);
@@ -1826,10 +1526,9 @@ namespace GUI
             // txtBordado_Arquivo
             // 
             this.txtBordado_Arquivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBordado_Arquivo.Location = new System.Drawing.Point(632, 200);
-            this.txtBordado_Arquivo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBordado_Arquivo.Location = new System.Drawing.Point(517, 167);
             this.txtBordado_Arquivo.Name = "txtBordado_Arquivo";
-            this.txtBordado_Arquivo.Size = new System.Drawing.Size(195, 23);
+            this.txtBordado_Arquivo.Size = new System.Drawing.Size(168, 21);
             this.txtBordado_Arquivo.TabIndex = 117;
             this.txtBordado_Arquivo.TabStop = false;
             // 
@@ -1838,59 +1537,57 @@ namespace GUI
             this.lblDiaSemana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDiaSemana.BackColor = System.Drawing.Color.Transparent;
             this.lblDiaSemana.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaSemana.Location = new System.Drawing.Point(887, 446);
+            this.lblDiaSemana.Location = new System.Drawing.Point(736, 367);
             this.lblDiaSemana.Name = "lblDiaSemana";
-            this.lblDiaSemana.Size = new System.Drawing.Size(140, 21);
+            this.lblDiaSemana.Size = new System.Drawing.Size(120, 17);
             this.lblDiaSemana.TabIndex = 134;
             this.lblDiaSemana.Text = "...";
             this.lblDiaSemana.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Label16
+            // lblPecasBordadas
             // 
-            this.Label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label16.BackColor = System.Drawing.Color.Transparent;
-            this.Label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label16.Location = new System.Drawing.Point(866, 308);
-            this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(122, 20);
-            this.Label16.TabIndex = 135;
-            this.Label16.Text = "Peças Bordadas:";
-            this.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPecasBordadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPecasBordadas.BackColor = System.Drawing.Color.Transparent;
+            this.lblPecasBordadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPecasBordadas.Location = new System.Drawing.Point(718, 255);
+            this.lblPecasBordadas.Name = "lblPecasBordadas";
+            this.lblPecasBordadas.Size = new System.Drawing.Size(105, 16);
+            this.lblPecasBordadas.TabIndex = 135;
+            this.lblPecasBordadas.Text = "Peças Bordadas:";
+            this.lblPecasBordadas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // picBordado
             // 
             this.picBordado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBordado.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.picBordado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picBordado.Location = new System.Drawing.Point(835, 2);
-            this.picBordado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picBordado.Location = new System.Drawing.Point(691, 2);
             this.picBordado.Name = "picBordado";
-            this.picBordado.Size = new System.Drawing.Size(233, 246);
+            this.picBordado.Size = new System.Drawing.Size(200, 200);
             this.picBordado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBordado.TabIndex = 123;
             this.picBordado.TabStop = false;
             // 
-            // Label5
+            // lblPrecoSugerido
             // 
-            this.Label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label5.BackColor = System.Drawing.Color.Transparent;
-            this.Label5.Location = new System.Drawing.Point(652, 144);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(110, 16);
-            this.Label5.TabIndex = 130;
-            this.Label5.Text = "Preço Sugerido:";
-            this.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPrecoSugerido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPrecoSugerido.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrecoSugerido.Location = new System.Drawing.Point(534, 117);
+            this.lblPrecoSugerido.Name = "lblPrecoSugerido";
+            this.lblPrecoSugerido.Size = new System.Drawing.Size(94, 13);
+            this.lblPrecoSugerido.TabIndex = 130;
+            this.lblPrecoSugerido.Text = "Preço Sugerido:";
+            this.lblPrecoSugerido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // rg_lado
             // 
             this.rg_lado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.rg_lado.Location = new System.Drawing.Point(465, 324);
-            this.rg_lado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rg_lado.Location = new System.Drawing.Point(399, 268);
             this.rg_lado.Name = "rg_lado";
             this.rg_lado.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(0)), "Esquerdo"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Direito")});
-            this.rg_lado.Size = new System.Drawing.Size(139, 75);
+            this.rg_lado.Size = new System.Drawing.Size(119, 61);
             this.rg_lado.TabIndex = 149;
             // 
             // lblDataEntrega
@@ -1898,9 +1595,9 @@ namespace GUI
             this.lblDataEntrega.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDataEntrega.BackColor = System.Drawing.Color.Transparent;
             this.lblDataEntrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblDataEntrega.Location = new System.Drawing.Point(774, 481);
+            this.lblDataEntrega.Location = new System.Drawing.Point(639, 395);
             this.lblDataEntrega.Name = "lblDataEntrega";
-            this.lblDataEntrega.Size = new System.Drawing.Size(110, 16);
+            this.lblDataEntrega.Size = new System.Drawing.Size(94, 13);
             this.lblDataEntrega.TabIndex = 136;
             this.lblDataEntrega.Text = "Data Entrega:";
             this.lblDataEntrega.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1911,11 +1608,10 @@ namespace GUI
             this.btnApagar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnApagar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnApagar.Image = ((System.Drawing.Image)(resources.GetObject("btnApagar.Image")));
-            this.btnApagar.Location = new System.Drawing.Point(632, 39);
-            this.btnApagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnApagar.Location = new System.Drawing.Point(517, 32);
             this.btnApagar.Name = "btnApagar";
             this.btnApagar.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlDel);
-            this.btnApagar.Size = new System.Drawing.Size(27, 28);
+            this.btnApagar.Size = new System.Drawing.Size(23, 23);
             this.btnApagar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnApagar.TabIndex = 144;
             this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
@@ -1926,58 +1622,56 @@ namespace GUI
             this.btnCima.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCima.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnCima.Image = ((System.Drawing.Image)(resources.GetObject("btnCima.Image")));
-            this.btnCima.Location = new System.Drawing.Point(632, 75);
-            this.btnCima.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCima.Location = new System.Drawing.Point(517, 61);
             this.btnCima.Name = "btnCima";
             this.btnCima.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlUp);
-            this.btnCima.Size = new System.Drawing.Size(27, 28);
+            this.btnCima.Size = new System.Drawing.Size(23, 23);
             this.btnCima.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCima.TabIndex = 145;
             this.btnCima.Click += new System.EventHandler(this.btnCima_Click);
             // 
-            // Label25
+            // lblDescricao1
             // 
-            this.Label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label25.BackColor = System.Drawing.Color.Transparent;
-            this.Label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label25.Location = new System.Drawing.Point(629, 230);
-            this.Label25.Name = "Label25";
-            this.Label25.Size = new System.Drawing.Size(87, 23);
-            this.Label25.TabIndex = 142;
-            this.Label25.Text = "Descrição:";
-            this.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDescricao1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDescricao1.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescricao1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao1.Location = new System.Drawing.Point(515, 191);
+            this.lblDescricao1.Name = "lblDescricao1";
+            this.lblDescricao1.Size = new System.Drawing.Size(75, 19);
+            this.lblDescricao1.TabIndex = 142;
+            this.lblDescricao1.Text = "Descrição:";
+            this.lblDescricao1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtObs_Item
             // 
             this.txtObs_Item.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtObs_Item.Location = new System.Drawing.Point(84, 418);
-            this.txtObs_Item.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtObs_Item.Location = new System.Drawing.Point(72, 344);
             this.txtObs_Item.Multiline = true;
             this.txtObs_Item.Name = "txtObs_Item";
             this.txtObs_Item.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Item.Size = new System.Drawing.Size(308, 84);
+            this.txtObs_Item.Size = new System.Drawing.Size(265, 69);
             this.txtObs_Item.TabIndex = 121;
             this.txtObs_Item.TabStop = false;
             // 
-            // Label21
+            // lblBoradado_id
             // 
-            this.Label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label21.BackColor = System.Drawing.Color.Transparent;
-            this.Label21.Location = new System.Drawing.Point(665, 37);
-            this.Label21.Name = "Label21";
-            this.Label21.Size = new System.Drawing.Size(92, 22);
-            this.Label21.TabIndex = 140;
-            this.Label21.Text = "Bordado_Id:";
-            this.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblBoradado_id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBoradado_id.BackColor = System.Drawing.Color.Transparent;
+            this.lblBoradado_id.Location = new System.Drawing.Point(546, 30);
+            this.lblBoradado_id.Name = "lblBoradado_id";
+            this.lblBoradado_id.Size = new System.Drawing.Size(79, 18);
+            this.lblBoradado_id.TabIndex = 140;
+            this.lblBoradado_id.Text = "Bordado_Id:";
+            this.lblBoradado_id.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblObs_item
             // 
             this.lblObs_item.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblObs_item.BackColor = System.Drawing.Color.Transparent;
             this.lblObs_item.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblObs_item.Location = new System.Drawing.Point(30, 422);
+            this.lblObs_item.Location = new System.Drawing.Point(26, 347);
             this.lblObs_item.Name = "lblObs_item";
-            this.lblObs_item.Size = new System.Drawing.Size(48, 20);
+            this.lblObs_item.Size = new System.Drawing.Size(41, 16);
             this.lblObs_item.TabIndex = 133;
             this.lblObs_item.Text = "Obs.:";
             this.lblObs_item.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1988,11 +1682,10 @@ namespace GUI
             this.btnInserirItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInserirItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnInserirItem.Image = ((System.Drawing.Image)(resources.GetObject("btnInserirItem.Image")));
-            this.btnInserirItem.Location = new System.Drawing.Point(633, 111);
-            this.btnInserirItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnInserirItem.Location = new System.Drawing.Point(518, 90);
             this.btnInserirItem.Name = "btnInserirItem";
             this.btnInserirItem.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlIns);
-            this.btnInserirItem.Size = new System.Drawing.Size(27, 28);
+            this.btnInserirItem.Size = new System.Drawing.Size(23, 23);
             this.btnInserirItem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnInserirItem.TabIndex = 146;
             this.btnInserirItem.Tooltip = "Insere novo ítem abaixo do ítem selecionado.";
@@ -2003,9 +1696,9 @@ namespace GUI
             this.lblDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDescricao.BackColor = System.Drawing.Color.Transparent;
             this.lblDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblDescricao.Location = new System.Drawing.Point(-3, 290);
+            this.lblDescricao.Location = new System.Drawing.Point(-3, 240);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(87, 22);
+            this.lblDescricao.Size = new System.Drawing.Size(75, 18);
             this.lblDescricao.TabIndex = 132;
             this.lblDescricao.Text = "Descrição:";
             this.lblDescricao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2013,32 +1706,31 @@ namespace GUI
             // txtDescricao
             // 
             this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtDescricao.Location = new System.Drawing.Point(84, 291);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDescricao.Location = new System.Drawing.Point(72, 241);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(520, 23);
+            this.txtDescricao.Size = new System.Drawing.Size(446, 21);
             this.txtDescricao.TabIndex = 120;
             this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
             // 
-            // Label9
+            // lblPontos
             // 
-            this.Label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label9.BackColor = System.Drawing.Color.Transparent;
-            this.Label9.Location = new System.Drawing.Point(693, 90);
-            this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(69, 25);
-            this.Label9.TabIndex = 124;
-            this.Label9.Text = "Pontos:";
-            this.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPontos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPontos.BackColor = System.Drawing.Color.Transparent;
+            this.lblPontos.Location = new System.Drawing.Point(570, 73);
+            this.lblPontos.Name = "lblPontos";
+            this.lblPontos.Size = new System.Drawing.Size(59, 20);
+            this.lblPontos.TabIndex = 124;
+            this.lblPontos.Text = "Pontos:";
+            this.lblPontos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblLocal
             // 
             this.lblLocal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblLocal.BackColor = System.Drawing.Color.Transparent;
             this.lblLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocal.Location = new System.Drawing.Point(20, 333);
+            this.lblLocal.Location = new System.Drawing.Point(17, 275);
             this.lblLocal.Name = "lblLocal";
-            this.lblLocal.Size = new System.Drawing.Size(57, 17);
+            this.lblLocal.Size = new System.Drawing.Size(49, 14);
             this.lblLocal.TabIndex = 128;
             this.lblLocal.Text = "Local:";
             this.lblLocal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2046,10 +1738,9 @@ namespace GUI
             // rg_local
             // 
             this.rg_local.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.rg_local.Location = new System.Drawing.Point(84, 327);
-            this.rg_local.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rg_local.Location = new System.Drawing.Point(72, 270);
             this.rg_local.Name = "rg_local";
-            this.rg_local.Size = new System.Drawing.Size(309, 73);
+            this.rg_local.Size = new System.Drawing.Size(265, 59);
             this.rg_local.TabIndex = 148;
             // 
             // pnlItens
@@ -2060,69 +1751,324 @@ namespace GUI
             this.pnlItens.Controls.Add(this.dgItens);
             this.pnlItens.Controls.Add(this.pnTotais);
             this.pnlItens.Location = new System.Drawing.Point(0, 0);
-            this.pnlItens.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlItens.Name = "pnlItens";
-            this.pnlItens.Size = new System.Drawing.Size(625, 249);
+            this.pnlItens.Size = new System.Drawing.Size(511, 207);
             this.pnlItens.TabIndex = 0;
             // 
-            // Label19
+            // dgItens
             // 
-            this.Label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label19.BackColor = System.Drawing.Color.Transparent;
-            this.Label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label19.Location = new System.Drawing.Point(1031, 327);
-            this.Label19.Name = "Label19";
-            this.Label19.Size = new System.Drawing.Size(34, 31);
-            this.Label19.TabIndex = 138;
-            this.Label19.Text = "x";
-            this.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dgItens.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgItens.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
+            gridLevelNode3.RelationName = "Level1";
+            this.dgItens.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode3});
+            this.dgItens.Location = new System.Drawing.Point(2, 2);
+            this.dgItens.MainView = this.gvItens;
+            this.dgItens.Margin = new System.Windows.Forms.Padding(2);
+            this.dgItens.Name = "dgItens";
+            this.dgItens.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemColorPickEdit3});
+            this.dgItens.Size = new System.Drawing.Size(507, 173);
+            this.dgItens.TabIndex = 101;
+            this.dgItens.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvItens});
+            // 
+            // gvItens
+            // 
+            this.gvItens.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gvItens.Appearance.ColumnFilterButton.Options.UseFont = true;
+            this.gvItens.Appearance.EvenRow.Options.UseFont = true;
+            this.gvItens.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 10.2F);
+            this.gvItens.Appearance.FocusedRow.Options.UseFont = true;
+            this.gvItens.Appearance.GroupFooter.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gvItens.Appearance.GroupFooter.Options.UseFont = true;
+            this.gvItens.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvItens.Appearance.OddRow.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.gvItens.Appearance.OddRow.Options.UseFont = true;
+            this.gvItens.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gvItens.Appearance.Row.Options.UseFont = true;
+            this.gvItens.Appearance.Row.Options.UseTextOptions = true;
+            this.gvItens.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gvItens.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colItem,
+            this.coDescricao,
+            this.colData_entrega,
+            this.colPc_solicitadas,
+            this.colPreco,
+            this.colTotal,
+            this.colData_execucao,
+            this.colPc_entregues,
+            this.colPc_defeito,
+            this.colPc_nao_bordadas,
+            this.colPonto_extras,
+            this.colMaterial_id,
+            this.colLolal_id,
+            this.colLocal,
+            this.colArte,
+            this.colAplicacao,
+            this.colBordado,
+            this.colCores,
+            this.colTroca_rapida,
+            this.colObs,
+            this.colBordado_id});
+            this.gvItens.FixedLineWidth = 1;
+            this.gvItens.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gvItens.FooterPanelHeight = 10;
+            gridFormatRule2.Name = "Format0";
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue2.Expression = "Sim";
+            formatConditionRuleValue2.PredefinedName = "Red Fill, Red Text";
+            formatConditionRuleValue2.Value1 = "Sim";
+            gridFormatRule2.Rule = formatConditionRuleValue2;
+            this.gvItens.FormatRules.Add(gridFormatRule2);
+            this.gvItens.GridControl = this.dgItens;
+            this.gvItens.GroupFormat = "{0}: [#imagem]{1} {2}";
+            this.gvItens.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.gvItens.Name = "gvItens";
+            this.gvItens.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvItens.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvItens.OptionsBehavior.AllowIncrementalSearch = true;
+            this.gvItens.OptionsBehavior.AutoPopulateColumns = false;
+            this.gvItens.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gvItens.OptionsBehavior.Editable = false;
+            this.gvItens.OptionsBehavior.ReadOnly = true;
+            this.gvItens.OptionsCustomization.AllowColumnMoving = false;
+            this.gvItens.OptionsCustomization.AllowColumnResizing = false;
+            this.gvItens.OptionsCustomization.AllowFilter = false;
+            this.gvItens.OptionsCustomization.AllowGroup = false;
+            this.gvItens.OptionsCustomization.AllowSort = false;
+            this.gvItens.OptionsDetail.SmartDetailHeight = true;
+            this.gvItens.OptionsMenu.EnableColumnMenu = false;
+            this.gvItens.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gvItens.OptionsSelection.EnableAppearanceFocusedRow = false;
+            this.gvItens.OptionsSelection.MultiSelect = true;
+            this.gvItens.OptionsSelection.UseIndicatorForSelection = false;
+            this.gvItens.OptionsView.ColumnAutoWidth = false;
+            this.gvItens.OptionsView.ShowGroupPanel = false;
+            this.gvItens.RowHeight = 18;
+            // 
+            // colItem
+            // 
+            this.colItem.Caption = "Ítem";
+            this.colItem.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colItem.FieldName = "item";
+            this.colItem.Name = "colItem";
+            this.colItem.OptionsColumn.FixedWidth = true;
+            this.colItem.Visible = true;
+            this.colItem.VisibleIndex = 0;
+            this.colItem.Width = 32;
+            // 
+            // coDescricao
+            // 
+            this.coDescricao.Caption = "descrição";
+            this.coDescricao.FieldName = "descricao";
+            this.coDescricao.Name = "coDescricao";
+            this.coDescricao.Visible = true;
+            this.coDescricao.VisibleIndex = 1;
+            this.coDescricao.Width = 375;
+            // 
+            // colData_entrega
+            // 
+            this.colData_entrega.Caption = "data entrega";
+            this.colData_entrega.FieldName = "data_entrega";
+            this.colData_entrega.Name = "colData_entrega";
+            this.colData_entrega.OptionsColumn.FixedWidth = true;
+            this.colData_entrega.Visible = true;
+            this.colData_entrega.VisibleIndex = 2;
+            this.colData_entrega.Width = 74;
+            // 
+            // colPc_solicitadas
+            // 
+            this.colPc_solicitadas.AppearanceCell.Options.UseTextOptions = true;
+            this.colPc_solicitadas.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.colPc_solicitadas.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPc_solicitadas.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.colPc_solicitadas.Caption = "qtde";
+            this.colPc_solicitadas.FieldName = "pc_solicitadas";
+            this.colPc_solicitadas.Name = "colPc_solicitadas";
+            this.colPc_solicitadas.OptionsColumn.FixedWidth = true;
+            this.colPc_solicitadas.Visible = true;
+            this.colPc_solicitadas.VisibleIndex = 3;
+            this.colPc_solicitadas.Width = 54;
+            // 
+            // colPreco
+            // 
+            this.colPreco.AppearanceCell.Options.UseTextOptions = true;
+            this.colPreco.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.colPreco.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPreco.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.colPreco.Caption = "preco";
+            this.colPreco.FieldName = "preco_por_peca";
+            this.colPreco.Name = "colPreco";
+            this.colPreco.OptionsColumn.FixedWidth = true;
+            this.colPreco.Visible = true;
+            this.colPreco.VisibleIndex = 4;
+            this.colPreco.Width = 59;
+            // 
+            // colTotal
+            // 
+            this.colTotal.Caption = "Tot.ítem";
+            this.colTotal.FieldName = "total";
+            this.colTotal.Name = "colTotal";
+            this.colTotal.OptionsColumn.FixedWidth = true;
+            this.colTotal.Visible = true;
+            this.colTotal.VisibleIndex = 5;
+            // 
+            // colData_execucao
+            // 
+            this.colData_execucao.Caption = "gridColumn1";
+            this.colData_execucao.Name = "colData_execucao";
+            this.colData_execucao.OptionsColumn.FixedWidth = true;
+            // 
+            // colPc_entregues
+            // 
+            this.colPc_entregues.Caption = "gridColumn2";
+            this.colPc_entregues.Name = "colPc_entregues";
+            this.colPc_entregues.OptionsColumn.FixedWidth = true;
+            // 
+            // colPc_defeito
+            // 
+            this.colPc_defeito.Caption = "gridColumn3";
+            this.colPc_defeito.Name = "colPc_defeito";
+            this.colPc_defeito.OptionsColumn.FixedWidth = true;
+            // 
+            // colPc_nao_bordadas
+            // 
+            this.colPc_nao_bordadas.Caption = "gridColumn4";
+            this.colPc_nao_bordadas.Name = "colPc_nao_bordadas";
+            this.colPc_nao_bordadas.OptionsColumn.FixedWidth = true;
+            // 
+            // colPonto_extras
+            // 
+            this.colPonto_extras.Caption = "gridColumn1";
+            this.colPonto_extras.Name = "colPonto_extras";
+            this.colPonto_extras.OptionsColumn.FixedWidth = true;
+            // 
+            // colMaterial_id
+            // 
+            this.colMaterial_id.Caption = "gridColumn2";
+            this.colMaterial_id.Name = "colMaterial_id";
+            this.colMaterial_id.OptionsColumn.FixedWidth = true;
+            // 
+            // colLolal_id
+            // 
+            this.colLolal_id.Caption = "gridColumn3";
+            this.colLolal_id.Name = "colLolal_id";
+            this.colLolal_id.OptionsColumn.FixedWidth = true;
+            // 
+            // colLocal
+            // 
+            this.colLocal.Caption = "gridColumn1";
+            this.colLocal.Name = "colLocal";
+            this.colLocal.OptionsColumn.FixedWidth = true;
+            // 
+            // colArte
+            // 
+            this.colArte.Caption = "gridColumn2";
+            this.colArte.Name = "colArte";
+            this.colArte.OptionsColumn.FixedWidth = true;
+            // 
+            // colAplicacao
+            // 
+            this.colAplicacao.Caption = "gridColumn3";
+            this.colAplicacao.Name = "colAplicacao";
+            this.colAplicacao.OptionsColumn.FixedWidth = true;
+            // 
+            // colBordado
+            // 
+            this.colBordado.Caption = "gridColumn4";
+            this.colBordado.Name = "colBordado";
+            this.colBordado.OptionsColumn.FixedWidth = true;
+            // 
+            // colCores
+            // 
+            this.colCores.Caption = "gridColumn5";
+            this.colCores.Name = "colCores";
+            this.colCores.OptionsColumn.FixedWidth = true;
+            // 
+            // colTroca_rapida
+            // 
+            this.colTroca_rapida.Caption = "gridColumn6";
+            this.colTroca_rapida.Name = "colTroca_rapida";
+            this.colTroca_rapida.OptionsColumn.FixedWidth = true;
+            // 
+            // colObs
+            // 
+            this.colObs.Caption = "gridColumn1";
+            this.colObs.Name = "colObs";
+            this.colObs.OptionsColumn.FixedWidth = true;
+            // 
+            // colBordado_id
+            // 
+            this.colBordado_id.Caption = "gridColumn1";
+            this.colBordado_id.Name = "colBordado_id";
+            this.colBordado_id.OptionsColumn.FixedWidth = true;
+            // 
+            // repositoryItemColorPickEdit3
+            // 
+            this.repositoryItemColorPickEdit3.AutoHeight = false;
+            this.repositoryItemColorPickEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemColorPickEdit3.Name = "repositoryItemColorPickEdit3";
+            // 
+            // lblX
+            // 
+            this.lblX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblX.BackColor = System.Drawing.Color.Transparent;
+            this.lblX.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblX.Location = new System.Drawing.Point(859, 270);
+            this.lblX.Name = "lblX";
+            this.lblX.Size = new System.Drawing.Size(29, 25);
+            this.lblX.TabIndex = 138;
+            this.lblX.Text = "x";
+            this.lblX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // xtbpPagamento
             // 
             this.xtbpPagamento.Controls.Add(this.dePagamento);
-            this.xtbpPagamento.Controls.Add(this.Label18);
+            this.xtbpPagamento.Controls.Add(this.lblDataPagamento);
             this.xtbpPagamento.Controls.Add(this.Saldo);
-            this.xtbpPagamento.Controls.Add(this.Label24);
+            this.xtbpPagamento.Controls.Add(this.lblAdicional);
             this.xtbpPagamento.Controls.Add(this.Total_Pagamento2);
             this.xtbpPagamento.Controls.Add(this.txtObs_Pagamento);
             this.xtbpPagamento.Controls.Add(this.Pago);
-            this.xtbpPagamento.Controls.Add(this.Label26);
+            this.xtbpPagamento.Controls.Add(this.lblValorAPagar);
             this.xtbpPagamento.Controls.Add(this.Adicional);
-            this.xtbpPagamento.Controls.Add(this.Label23);
-            this.xtbpPagamento.Controls.Add(this.Label30);
-            this.xtbpPagamento.Controls.Add(this.Label28);
+            this.xtbpPagamento.Controls.Add(this.lblObs);
+            this.xtbpPagamento.Controls.Add(this.lblValoraAmortizar);
+            this.xtbpPagamento.Controls.Add(this.lblTotalDoPedido);
             this.xtbpPagamento.Controls.Add(this.ValorAmortizar);
-            this.xtbpPagamento.Controls.Add(this.Label29);
+            this.xtbpPagamento.Controls.Add(this.lblSaldoaPagar);
             this.xtbpPagamento.Controls.Add(this.btnAmortizar);
             this.xtbpPagamento.Controls.Add(this.cbQuitado);
-            this.xtbpPagamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtbpPagamento.Name = "xtbpPagamento";
-            this.xtbpPagamento.Size = new System.Drawing.Size(832, 587);
+            this.xtbpPagamento.Size = new System.Drawing.Size(712, 476);
             this.xtbpPagamento.Text = "Pagamento";
             // 
             // xtbpExecucao
             // 
             this.xtbpExecucao.Controls.Add(this.txtPC_Entregues);
             this.xtbpExecucao.Controls.Add(this.dgLinhas_Item);
-            this.xtbpExecucao.Controls.Add(this.Label14);
-            this.xtbpExecucao.Controls.Add(this.Label27);
+            this.xtbpExecucao.Controls.Add(this.lblPc_Entregues);
+            this.xtbpExecucao.Controls.Add(this.lblExecucao);
             this.xtbpExecucao.Controls.Add(this.txtTotal_Pontos);
             this.xtbpExecucao.Controls.Add(this.dtpData_Execucao);
-            this.xtbpExecucao.Controls.Add(this.Label3);
+            this.xtbpExecucao.Controls.Add(this.lblTotalPontos);
             this.xtbpExecucao.Controls.Add(this.btnExecutarItem);
             this.xtbpExecucao.Controls.Add(this.txtPontos_Extras);
             this.xtbpExecucao.Controls.Add(this.btnApagaLinha);
-            this.xtbpExecucao.Controls.Add(this.Label1);
+            this.xtbpExecucao.Controls.Add(this.lblPontosExtras);
             this.xtbpExecucao.Controls.Add(this.btnInsereLinha);
-            this.xtbpExecucao.Controls.Add(this.Label12);
+            this.xtbpExecucao.Controls.Add(this.lblDefeito);
             this.xtbpExecucao.Controls.Add(this.btnGravaLinhas);
-            this.xtbpExecucao.Controls.Add(this.Label11);
+            this.xtbpExecucao.Controls.Add(this.lblNaoBordadas);
             this.xtbpExecucao.Controls.Add(this.btnRestaura);
             this.xtbpExecucao.Controls.Add(this.txtPC_Defeito);
             this.xtbpExecucao.Controls.Add(this.txtPC_Nao_Bordadas);
-            this.xtbpExecucao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtbpExecucao.Name = "xtbpExecucao";
-            this.xtbpExecucao.Size = new System.Drawing.Size(832, 587);
+            this.xtbpExecucao.Size = new System.Drawing.Size(712, 476);
             this.xtbpExecucao.Text = "Execução";
             // 
             // dgRegistros
@@ -2130,48 +2076,46 @@ namespace GUI
             this.dgRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgRegistros.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.dgRegistros.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.dgRegistros.Location = new System.Drawing.Point(-2, 116);
-            this.dgRegistros.MainView = this.gdRegistros;
-            this.dgRegistros.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            gridLevelNode2});
+            this.dgRegistros.Location = new System.Drawing.Point(-2, 94);
+            this.dgRegistros.MainView = this.gvRegistros;
             this.dgRegistros.Name = "dgRegistros";
-            this.dgRegistros.Size = new System.Drawing.Size(301, 525);
+            this.dgRegistros.Size = new System.Drawing.Size(258, 426);
             this.dgRegistros.TabIndex = 59;
             this.dgRegistros.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gdRegistros});
+            this.gvRegistros});
             // 
-            // gdRegistros
+            // gvRegistros
             // 
-            this.gdRegistros.DetailHeight = 100;
-            this.gdRegistros.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gdRegistros.GridControl = this.dgRegistros;
-            this.gdRegistros.Name = "gdRegistros";
-            this.gdRegistros.OptionsBehavior.Editable = false;
-            this.gdRegistros.OptionsBehavior.SmartVertScrollBar = false;
-            this.gdRegistros.OptionsCustomization.AllowColumnMoving = false;
-            this.gdRegistros.OptionsCustomization.AllowColumnResizing = false;
-            this.gdRegistros.OptionsCustomization.AllowFilter = false;
-            this.gdRegistros.OptionsCustomization.AllowGroup = false;
-            this.gdRegistros.OptionsCustomization.AllowQuickHideColumns = false;
-            this.gdRegistros.OptionsCustomization.AllowSort = false;
-            this.gdRegistros.OptionsEditForm.ActionOnModifiedRowChange = DevExpress.XtraGrid.Views.Grid.EditFormModifiedAction.Nothing;
-            this.gdRegistros.OptionsFilter.AllowColumnMRUFilterList = false;
-            this.gdRegistros.OptionsFilter.AllowFilterEditor = false;
-            this.gdRegistros.OptionsFilter.AllowFilterIncrementalSearch = false;
-            this.gdRegistros.OptionsFilter.AllowMRUFilterList = false;
-            this.gdRegistros.OptionsFilter.FilterEditorUseMenuForOperandsAndOperators = false;
-            this.gdRegistros.OptionsFilter.ShowAllTableValuesInCheckedFilterPopup = false;
-            this.gdRegistros.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gdRegistros.OptionsSelection.EnableAppearanceFocusedRow = false;
-            this.gdRegistros.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
-            this.gdRegistros.OptionsView.AllowHtmlDrawGroups = false;
-            this.gdRegistros.OptionsView.ShowGroupExpandCollapseButtons = false;
-            this.gdRegistros.OptionsView.ShowGroupPanel = false;
-            this.gdRegistros.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gdRegistros_FocusedRowChanged_1);
-            this.gdRegistros.DoubleClick += new System.EventHandler(this.gdRegistros_DoubleClick);
+            this.gvRegistros.DetailHeight = 100;
+            this.gvRegistros.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gvRegistros.GridControl = this.dgRegistros;
+            this.gvRegistros.Name = "gvRegistros";
+            this.gvRegistros.OptionsBehavior.Editable = false;
+            this.gvRegistros.OptionsBehavior.SmartVertScrollBar = false;
+            this.gvRegistros.OptionsCustomization.AllowColumnMoving = false;
+            this.gvRegistros.OptionsCustomization.AllowColumnResizing = false;
+            this.gvRegistros.OptionsCustomization.AllowFilter = false;
+            this.gvRegistros.OptionsCustomization.AllowGroup = false;
+            this.gvRegistros.OptionsCustomization.AllowQuickHideColumns = false;
+            this.gvRegistros.OptionsCustomization.AllowSort = false;
+            this.gvRegistros.OptionsEditForm.ActionOnModifiedRowChange = DevExpress.XtraGrid.Views.Grid.EditFormModifiedAction.Nothing;
+            this.gvRegistros.OptionsFilter.AllowColumnMRUFilterList = false;
+            this.gvRegistros.OptionsFilter.AllowFilterEditor = false;
+            this.gvRegistros.OptionsFilter.AllowFilterIncrementalSearch = false;
+            this.gvRegistros.OptionsFilter.AllowMRUFilterList = false;
+            this.gvRegistros.OptionsFilter.FilterEditorUseMenuForOperandsAndOperators = false;
+            this.gvRegistros.OptionsFilter.ShowAllTableValuesInCheckedFilterPopup = false;
+            this.gvRegistros.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gvRegistros.OptionsSelection.EnableAppearanceFocusedRow = false;
+            this.gvRegistros.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gvRegistros.OptionsView.AllowHtmlDrawGroups = false;
+            this.gvRegistros.OptionsView.ShowGroupExpandCollapseButtons = false;
+            this.gvRegistros.OptionsView.ShowGroupPanel = false;
+            this.gvRegistros.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvRegistros_FocusedRowChanged);
+            this.gvRegistros.DoubleClick += new System.EventHandler(this.gvRegistros_DoubleClick);
             // 
             // chkFiltroDemais
             // 
@@ -2179,10 +2123,9 @@ namespace GUI
             this.chkFiltroDemais.Checked = true;
             this.chkFiltroDemais.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroDemais.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroDemais.Location = new System.Drawing.Point(236, 90);
-            this.chkFiltroDemais.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroDemais.Location = new System.Drawing.Point(202, 73);
             this.chkFiltroDemais.Name = "chkFiltroDemais";
-            this.chkFiltroDemais.Size = new System.Drawing.Size(67, 18);
+            this.chkFiltroDemais.Size = new System.Drawing.Size(55, 16);
             this.chkFiltroDemais.TabIndex = 104;
             this.chkFiltroDemais.Text = "Demais";
             this.chkFiltroDemais.UseVisualStyleBackColor = true;
@@ -2192,10 +2135,9 @@ namespace GUI
             // 
             this.chkFiltroMensal.AutoSize = true;
             this.chkFiltroMensal.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroMensal.Location = new System.Drawing.Point(236, 70);
-            this.chkFiltroMensal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroMensal.Location = new System.Drawing.Point(202, 57);
             this.chkFiltroMensal.Name = "chkFiltroMensal";
-            this.chkFiltroMensal.Size = new System.Drawing.Size(65, 18);
+            this.chkFiltroMensal.Size = new System.Drawing.Size(54, 16);
             this.chkFiltroMensal.TabIndex = 103;
             this.chkFiltroMensal.Text = "Mensal";
             this.chkFiltroMensal.UseVisualStyleBackColor = true;
@@ -2207,10 +2149,9 @@ namespace GUI
             this.chkFiltroNaoExecutado.Checked = true;
             this.chkFiltroNaoExecutado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroNaoExecutado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroNaoExecutado.Location = new System.Drawing.Point(104, 92);
-            this.chkFiltroNaoExecutado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroNaoExecutado.Location = new System.Drawing.Point(89, 75);
             this.chkFiltroNaoExecutado.Name = "chkFiltroNaoExecutado";
-            this.chkFiltroNaoExecutado.Size = new System.Drawing.Size(112, 18);
+            this.chkFiltroNaoExecutado.Size = new System.Drawing.Size(92, 16);
             this.chkFiltroNaoExecutado.TabIndex = 102;
             this.chkFiltroNaoExecutado.Text = "Não Executado";
             this.chkFiltroNaoExecutado.UseVisualStyleBackColor = true;
@@ -2222,10 +2163,9 @@ namespace GUI
             this.chkFiltroNaoQuitado.Checked = true;
             this.chkFiltroNaoQuitado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroNaoQuitado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroNaoQuitado.Location = new System.Drawing.Point(7, 90);
-            this.chkFiltroNaoQuitado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroNaoQuitado.Location = new System.Drawing.Point(6, 73);
             this.chkFiltroNaoQuitado.Name = "chkFiltroNaoQuitado";
-            this.chkFiltroNaoQuitado.Size = new System.Drawing.Size(81, 18);
+            this.chkFiltroNaoQuitado.Size = new System.Drawing.Size(68, 16);
             this.chkFiltroNaoQuitado.TabIndex = 101;
             this.chkFiltroNaoQuitado.Text = "Não Pago";
             this.chkFiltroNaoQuitado.UseVisualStyleBackColor = true;
@@ -2235,10 +2175,9 @@ namespace GUI
             // 
             this.chkFiltroExecutado.AutoSize = true;
             this.chkFiltroExecutado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroExecutado.Location = new System.Drawing.Point(104, 73);
-            this.chkFiltroExecutado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroExecutado.Location = new System.Drawing.Point(89, 59);
             this.chkFiltroExecutado.Name = "chkFiltroExecutado";
-            this.chkFiltroExecutado.Size = new System.Drawing.Size(87, 18);
+            this.chkFiltroExecutado.Size = new System.Drawing.Size(71, 16);
             this.chkFiltroExecutado.TabIndex = 100;
             this.chkFiltroExecutado.Text = "Executado";
             this.chkFiltroExecutado.UseVisualStyleBackColor = true;
@@ -2250,10 +2189,9 @@ namespace GUI
             this.chkFiltroQuitado.Checked = true;
             this.chkFiltroQuitado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroQuitado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroQuitado.Location = new System.Drawing.Point(7, 70);
-            this.chkFiltroQuitado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroQuitado.Location = new System.Drawing.Point(6, 57);
             this.chkFiltroQuitado.Name = "chkFiltroQuitado";
-            this.chkFiltroQuitado.Size = new System.Drawing.Size(56, 18);
+            this.chkFiltroQuitado.Size = new System.Drawing.Size(47, 16);
             this.chkFiltroQuitado.TabIndex = 99;
             this.chkFiltroQuitado.Text = "Pago";
             this.chkFiltroQuitado.UseVisualStyleBackColor = true;
@@ -2264,10 +2202,9 @@ namespace GUI
             this.cbFiltroCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbFiltroCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbFiltroCliente.FormattingEnabled = true;
-            this.cbFiltroCliente.Location = new System.Drawing.Point(62, 37);
-            this.cbFiltroCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbFiltroCliente.Location = new System.Drawing.Point(53, 30);
             this.cbFiltroCliente.Name = "cbFiltroCliente";
-            this.cbFiltroCliente.Size = new System.Drawing.Size(237, 24);
+            this.cbFiltroCliente.Size = new System.Drawing.Size(204, 21);
             this.cbFiltroCliente.TabIndex = 98;
             this.cbFiltroCliente.SelectedIndexChanged += new System.EventHandler(this.btnFiltrar_Click);
             // 
@@ -2275,10 +2212,9 @@ namespace GUI
             // 
             this.chkFiltroCliente.AutoSize = true;
             this.chkFiltroCliente.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroCliente.Location = new System.Drawing.Point(2, 41);
-            this.chkFiltroCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroCliente.Location = new System.Drawing.Point(2, 33);
             this.chkFiltroCliente.Name = "chkFiltroCliente";
-            this.chkFiltroCliente.Size = new System.Drawing.Size(66, 18);
+            this.chkFiltroCliente.Size = new System.Drawing.Size(54, 16);
             this.chkFiltroCliente.TabIndex = 105;
             this.chkFiltroCliente.Text = "Cliente";
             this.chkFiltroCliente.UseVisualStyleBackColor = true;
@@ -2287,10 +2223,9 @@ namespace GUI
             // ckbPAGO
             // 
             this.ckbPAGO.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.ckbPAGO.Location = new System.Drawing.Point(414, 64);
-            this.ckbPAGO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ckbPAGO.Location = new System.Drawing.Point(355, 52);
             this.ckbPAGO.Name = "ckbPAGO";
-            this.ckbPAGO.Size = new System.Drawing.Size(111, 41);
+            this.ckbPAGO.Size = new System.Drawing.Size(95, 33);
             this.ckbPAGO.TabIndex = 216;
             this.ckbPAGO.Text = "PAGO";
             // 
@@ -2325,9 +2260,9 @@ namespace GUI
             // 
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefone.Location = new System.Drawing.Point(262, 34);
+            this.lblTelefone.Location = new System.Drawing.Point(225, 28);
             this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(25, 21);
+            this.lblTelefone.Size = new System.Drawing.Size(20, 16);
             this.lblTelefone.TabIndex = 201;
             this.lblTelefone.Text = "...";
             // 
@@ -2355,19 +2290,17 @@ namespace GUI
             this.pnlFitro.Controls.Add(this.chkFiltroQuitado);
             this.pnlFitro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFitro.Location = new System.Drawing.Point(0, 0);
-            this.pnlFitro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlFitro.Name = "pnlFitro";
-            this.pnlFitro.Size = new System.Drawing.Size(300, 645);
+            this.pnlFitro.Size = new System.Drawing.Size(257, 524);
             this.pnlFitro.TabIndex = 106;
             // 
             // btnQuitar
             // 
             this.btnQuitar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnQuitar.Location = new System.Drawing.Point(258, 62);
-            this.btnQuitar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnQuitar.Location = new System.Drawing.Point(221, 50);
             this.btnQuitar.MenuManager = this.barManager1;
             this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(145, 46);
+            this.btnQuitar.Size = new System.Drawing.Size(124, 37);
             this.btnQuitar.TabIndex = 217;
             this.btnQuitar.Text = "Baixar o Pedido";
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
@@ -2377,10 +2310,10 @@ namespace GUI
             this.MenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CimaToolStripMenuItem});
-            this.MenuStrip1.Location = new System.Drawing.Point(0, 50);
+            this.MenuStrip1.Location = new System.Drawing.Point(0, 41);
             this.MenuStrip1.Name = "MenuStrip1";
-            this.MenuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.MenuStrip1.Size = new System.Drawing.Size(1388, 28);
+            this.MenuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.MenuStrip1.Size = new System.Drawing.Size(1190, 23);
             this.MenuStrip1.TabIndex = 94;
             this.MenuStrip1.Text = "MenuStrip1";
             this.MenuStrip1.Visible = false;
@@ -2397,7 +2330,7 @@ namespace GUI
             this.GravarToolStripMenuItem});
             this.CimaToolStripMenuItem.Name = "CimaToolStripMenuItem";
             this.CimaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.CimaToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.CimaToolStripMenuItem.Size = new System.Drawing.Size(59, 19);
             this.CimaToolStripMenuItem.Text = "Atalhos";
             this.CimaToolStripMenuItem.Visible = false;
             // 
@@ -2405,21 +2338,21 @@ namespace GUI
             // 
             this.AdicionarToolStripMenuItem.Name = "AdicionarToolStripMenuItem";
             this.AdicionarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Insert)));
-            this.AdicionarToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.AdicionarToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.AdicionarToolStripMenuItem.Text = "Adicionar";
             // 
             // ExcluirToolStripMenuItem
             // 
             this.ExcluirToolStripMenuItem.Name = "ExcluirToolStripMenuItem";
             this.ExcluirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Delete)));
-            this.ExcluirToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.ExcluirToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.ExcluirToolStripMenuItem.Text = "Excluir";
             // 
             // MaisNomeToolStripMenuItem
             // 
             this.MaisNomeToolStripMenuItem.Name = "MaisNomeToolStripMenuItem";
             this.MaisNomeToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.MaisNomeToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.MaisNomeToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.MaisNomeToolStripMenuItem.Text = "Mais_Nome";
             this.MaisNomeToolStripMenuItem.Click += new System.EventHandler(this.MaisNomeToolStripMenuItem_Click);
             // 
@@ -2427,7 +2360,7 @@ namespace GUI
             // 
             this.MaisFuncaoToolStripMenuItem.Name = "MaisFuncaoToolStripMenuItem";
             this.MaisFuncaoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.MaisFuncaoToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.MaisFuncaoToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.MaisFuncaoToolStripMenuItem.Text = "Mais_Funcao";
             this.MaisFuncaoToolStripMenuItem.Click += new System.EventHandler(this.MaisFuncaoToolStripMenuItem_Click);
             // 
@@ -2435,7 +2368,7 @@ namespace GUI
             // 
             this.MaisNomeFuncaoToolStripMenuItem.Name = "MaisNomeFuncaoToolStripMenuItem";
             this.MaisNomeFuncaoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.MaisNomeFuncaoToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.MaisNomeFuncaoToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.MaisNomeFuncaoToolStripMenuItem.Text = "Mais_Nome_Funcao";
             this.MaisNomeFuncaoToolStripMenuItem.Click += new System.EventHandler(this.MaisNomeFuncaoToolStripMenuItem_Click);
             // 
@@ -2443,23 +2376,23 @@ namespace GUI
             // 
             this.MaisNomeMesmaTelaToolStripMenuItem.Name = "MaisNomeMesmaTelaToolStripMenuItem";
             this.MaisNomeMesmaTelaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6;
-            this.MaisNomeMesmaTelaToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.MaisNomeMesmaTelaToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.MaisNomeMesmaTelaToolStripMenuItem.Text = "Mais_Nome_Mesma_Tela";
             // 
             // GravarToolStripMenuItem
             // 
             this.GravarToolStripMenuItem.Name = "GravarToolStripMenuItem";
             this.GravarToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F10;
-            this.GravarToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.GravarToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.GravarToolStripMenuItem.Text = "Gravar";
             // 
             // frmPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
-            this.ClientSize = new System.Drawing.Size(1388, 699);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(1166, 568);
             this.Controls.Add(this.MenuStrip1);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmPedido";
             this.Text = "Pedido";
             this.Load += new System.EventHandler(this.frmPedido_Load);
@@ -2473,7 +2406,6 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.deFechamento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deAbertura.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deAbertura.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgItens)).EndInit();
             this.pnTotais.ResumeLayout(false);
             this.pnTotais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTot_Pecas)).EndInit();
@@ -2510,12 +2442,15 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.rg_local.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlItens)).EndInit();
             this.pnlItens.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgItens)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvItens)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit3)).EndInit();
             this.xtbpPagamento.ResumeLayout(false);
             this.xtbpPagamento.PerformLayout();
             this.xtbpExecucao.ResumeLayout(false);
             this.xtbpExecucao.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRegistros)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdRegistros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvRegistros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlFitro)).EndInit();
             this.pnlFitro.ResumeLayout(false);
             this.pnlFitro.PerformLayout();
@@ -2536,44 +2471,21 @@ namespace GUI
         private DevComponents.DotNetBar.Controls.CheckBoxX chkMensal;
         private DevComponents.DotNetBar.Controls.CheckBoxX chkExecutado;
         internal System.Windows.Forms.ComboBox cbEmpregado;
-        internal System.Windows.Forms.Label Label4;
+        internal System.Windows.Forms.Label lblEmpregado;
         internal System.Windows.Forms.TextBox txtObs_Pedido;
-        internal System.Windows.Forms.DataGridView dgItens;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn item;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn descricao;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn data_entrega;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn Qtde;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn preco;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn Tot_Item;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn data_execucao;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn pc_solicitadas;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn pc_entregues;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn pc_defeito;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn pc_nao_bordadas;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn pontos_extras;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn material_id;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn local_id;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn lado;
-        internal System.Windows.Forms.DataGridViewCheckBoxColumn arte;
-        internal System.Windows.Forms.DataGridViewCheckBoxColumn aplicacao;
-        internal System.Windows.Forms.DataGridViewCheckBoxColumn bordado;
-        internal System.Windows.Forms.DataGridViewCheckBoxColumn cores;
-        internal System.Windows.Forms.DataGridViewCheckBoxColumn troca_rapida;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn obs;
-        internal System.Windows.Forms.DataGridViewTextBoxColumn Bordado_Id;
         internal System.Windows.Forms.Panel pnTotais;
         private DevComponents.Editors.DoubleInput txtDesconto;
         internal System.Windows.Forms.Label lblDesconto;
         internal System.Windows.Forms.TextBox txtQtde_Itens;
         private DevComponents.DotNetBar.TabControlPanel TabControlPanel3;
         internal DevComponents.Editors.IntegerInput txtPC_Entregues;
-        internal System.Windows.Forms.Label Label14;
+        internal System.Windows.Forms.Label lblPc_Entregues;
         internal System.Windows.Forms.TextBox txtTotal_Pontos;
-        internal System.Windows.Forms.Label Label3;
+        internal System.Windows.Forms.Label lblTotalPontos;
         internal System.Windows.Forms.TextBox txtPontos_Extras;
-        internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.Label Label12;
-        internal System.Windows.Forms.Label Label11;
+        internal System.Windows.Forms.Label lblPontosExtras;
+        internal System.Windows.Forms.Label lblDefeito;
+        internal System.Windows.Forms.Label lblNaoBordadas;
         internal System.Windows.Forms.TextBox txtPC_Defeito;
         internal System.Windows.Forms.TextBox txtPC_Nao_Bordadas;
         private DevComponents.DotNetBar.ButtonX btnRestaura;
@@ -2582,7 +2494,7 @@ namespace GUI
         private DevComponents.DotNetBar.ButtonX btnApagaLinha;
         private DevComponents.DotNetBar.ButtonX btnExecutarItem;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dtpData_Execucao;
-        internal System.Windows.Forms.Label Label27;
+        internal System.Windows.Forms.Label lblExecucao;
         internal System.Windows.Forms.DataGridView dgLinhas_Item;
         internal System.Windows.Forms.DataGridViewTextBoxColumn seq;
         internal System.Windows.Forms.DataGridViewTextBoxColumn codigo;
@@ -2593,23 +2505,23 @@ namespace GUI
         private DevComponents.Editors.DoubleInput Total_Pagamento2;
         private DevComponents.Editors.DoubleInput Pago;
         private DevComponents.Editors.DoubleInput Adicional;
-        internal System.Windows.Forms.Label Label30;
+        internal System.Windows.Forms.Label lblValoraAmortizar;
         private DevComponents.Editors.DoubleInput ValorAmortizar;
         private DevComponents.DotNetBar.ButtonX btnAmortizar;
         private DevComponents.DotNetBar.Controls.CheckBoxX cbQuitado;
-        internal System.Windows.Forms.Label Label29;
-        internal System.Windows.Forms.Label Label28;
-        internal System.Windows.Forms.Label Label23;
-        internal System.Windows.Forms.Label Label26;
-        internal System.Windows.Forms.Label Label18;
+        internal System.Windows.Forms.Label lblSaldoaPagar;
+        internal System.Windows.Forms.Label lblTotalDoPedido;
+        internal System.Windows.Forms.Label lblObs;
+        internal System.Windows.Forms.Label lblValorAPagar;
+        internal System.Windows.Forms.Label lblDataPagamento;
         internal System.Windows.Forms.TextBox txtObs_Pagamento;
-        internal System.Windows.Forms.Label Label24;
+        internal System.Windows.Forms.Label lblAdicional;
         internal System.Windows.Forms.Label LinhaIdLabel;
-        internal System.Windows.Forms.Label Label10;
+        internal System.Windows.Forms.Label lblAbertura;
         public System.Windows.Forms.ComboBox cbCliente;
-        internal System.Windows.Forms.Label Label2;
+        internal System.Windows.Forms.Label lblFechamento;
         internal System.Windows.Forms.TextBox txtId;
-        internal System.Windows.Forms.Label Label7;
+        internal System.Windows.Forms.Label lblObs1;
         internal System.Windows.Forms.Label lblCliente;
         private DevExpress.XtraEditors.DropDownButton btnFiltrar;
         private DevExpress.XtraEditors.DropDownButton btnX;
@@ -2620,35 +2532,35 @@ namespace GUI
         private DevExpress.XtraTab.XtraTabPage xtbpPagamento;
         private DevExpress.XtraTab.XtraTabPage xtbpExecucao;
         private DevExpress.XtraGrid.GridControl dgRegistros;
-        private DevExpress.XtraGrid.Views.Grid.GridView gdRegistros;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvRegistros;
         private DevComponents.Editors.DoubleInput txtPreco_Por_Peca;
         internal System.Windows.Forms.Button btnImportar;
         internal DevComponents.DotNetBar.ButtonX btnAdicionar;
-        internal System.Windows.Forms.Label Label20;
+        internal System.Windows.Forms.Label lblIgual;
         internal DevComponents.Editors.IntegerInput txtPC_Solicitadas;
         internal System.Windows.Forms.Label lblPeca_solicitadas;
         internal System.Windows.Forms.Label lblArquivo;
         internal System.Windows.Forms.Label lblLado;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dtpData_Entrega;
         internal DevComponents.DotNetBar.ButtonX btnBaixo;
-        internal System.Windows.Forms.Label Label19;
+        internal System.Windows.Forms.Label lblX;
         internal System.Windows.Forms.TextBox txtBordado_Arquivo;
         internal System.Windows.Forms.Label lblDiaSemana;
-        internal System.Windows.Forms.Label Label16;
+        internal System.Windows.Forms.Label lblPecasBordadas;
         public System.Windows.Forms.PictureBox picBordado;
-        internal System.Windows.Forms.Label Label5;
+        internal System.Windows.Forms.Label lblPrecoSugerido;
         internal DevExpress.XtraEditors.RadioGroup rg_lado;
         internal System.Windows.Forms.Label lblDataEntrega;
         internal DevComponents.DotNetBar.ButtonX btnApagar;
         internal DevComponents.DotNetBar.ButtonX btnCima;
-        internal System.Windows.Forms.Label Label25;
+        internal System.Windows.Forms.Label lblDescricao1;
         internal System.Windows.Forms.TextBox txtObs_Item;
-        internal System.Windows.Forms.Label Label21;
+        internal System.Windows.Forms.Label lblBoradado_id;
         internal System.Windows.Forms.Label lblObs_item;
         internal DevComponents.DotNetBar.ButtonX btnInserirItem;
         internal System.Windows.Forms.Label lblDescricao;
         internal System.Windows.Forms.TextBox txtDescricao;
-        internal System.Windows.Forms.Label Label9;
+        internal System.Windows.Forms.Label lblPontos;
         internal System.Windows.Forms.Label lblLocal;
         internal DevExpress.XtraEditors.RadioGroup rg_local;
         internal System.Windows.Forms.CheckBox chkFiltroDemais;
@@ -2661,7 +2573,7 @@ namespace GUI
         internal System.Windows.Forms.CheckBox chkFiltroCliente;
         internal DevExpress.XtraEditors.CheckButton ckbPAGO;
         private DevComponents.Editors.DoubleInput txtAmortizacao;
-        internal System.Windows.Forms.Label label6;
+        internal System.Windows.Forms.Label lblAmortizacao;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
@@ -2670,7 +2582,7 @@ namespace GUI
         internal System.Windows.Forms.Label lblTelefone;
         private DevExpress.XtraBars.BarButtonItem btnProtocolo;
         private DevComponents.Editors.DoubleInput txtTot_a_pagar;
-        internal System.Windows.Forms.Label label8;
+        internal System.Windows.Forms.Label lblValorApagar1;
         private DevComponents.Editors.DoubleInput txtTotal_Pedido;
         private DevComponents.Editors.IntegerInput txtTot_Pecas;
         private DevComponents.Editors.IntegerInput nudBordado_Id;
@@ -2690,5 +2602,29 @@ namespace GUI
         internal System.Windows.Forms.ToolStripMenuItem MaisNomeFuncaoToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem MaisNomeMesmaTelaToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem GravarToolStripMenuItem;
+        internal DevExpress.XtraGrid.GridControl dgItens;
+        internal DevExpress.XtraGrid.Views.Grid.GridView gvItens;
+        internal DevExpress.XtraGrid.Columns.GridColumn colItem;
+        private DevExpress.XtraGrid.Columns.GridColumn coDescricao;
+        private DevExpress.XtraGrid.Columns.GridColumn colData_entrega;
+        private DevExpress.XtraGrid.Columns.GridColumn colPreco;
+        private DevExpress.XtraGrid.Columns.GridColumn colTotal;
+        private DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit repositoryItemColorPickEdit3;
+        private DevExpress.XtraGrid.Columns.GridColumn colData_execucao;
+        private DevExpress.XtraGrid.Columns.GridColumn colPc_solicitadas;
+        private DevExpress.XtraGrid.Columns.GridColumn colPc_entregues;
+        private DevExpress.XtraGrid.Columns.GridColumn colPc_defeito;
+        private DevExpress.XtraGrid.Columns.GridColumn colPc_nao_bordadas;
+        private DevExpress.XtraGrid.Columns.GridColumn colPonto_extras;
+        private DevExpress.XtraGrid.Columns.GridColumn colMaterial_id;
+        private DevExpress.XtraGrid.Columns.GridColumn colLolal_id;
+        private DevExpress.XtraGrid.Columns.GridColumn colLocal;
+        private DevExpress.XtraGrid.Columns.GridColumn colArte;
+        private DevExpress.XtraGrid.Columns.GridColumn colAplicacao;
+        private DevExpress.XtraGrid.Columns.GridColumn colBordado;
+        private DevExpress.XtraGrid.Columns.GridColumn colCores;
+        private DevExpress.XtraGrid.Columns.GridColumn colTroca_rapida;
+        private DevExpress.XtraGrid.Columns.GridColumn colObs;
+        private DevExpress.XtraGrid.Columns.GridColumn colBordado_id;
     }
 }
