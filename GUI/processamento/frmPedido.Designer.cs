@@ -299,8 +299,8 @@ namespace GUI
             // 
             // scc1
             // 
-            this.scc1.Location = new System.Drawing.Point(0, 50);
-            this.scc1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.scc1.Location = new System.Drawing.Point(0, 40);
+            this.scc1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.scc1.Panel1.Controls.Add(this.pnlFitro);
             this.scc1.Panel2.Controls.Add(this.btnQuitar);
             this.scc1.Panel2.Controls.Add(this.ckbPAGO);
@@ -323,7 +323,7 @@ namespace GUI
             this.scc1.Panel2.Controls.Add(this.lblTelefone);
             this.scc1.Panel2.Controls.Add(this.lblCliente);
             this.scc1.Panel2.Controls.Add(this.xtabItenPagamentoExecucao);
-            this.scc1.Size = new System.Drawing.Size(1360, 649);
+            this.scc1.Size = new System.Drawing.Size(1166, 528);
             this.scc1.SplitterPosition = 257;
             this.scc1.SplitterPositionChanged += new System.EventHandler(this.scc1_SplitterPositionChanged);
             // 
@@ -345,46 +345,42 @@ namespace GUI
             // deFechamento
             // 
             this.deFechamento.EditValue = null;
-            this.deFechamento.Location = new System.Drawing.Point(101, 68);
-            this.deFechamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deFechamento.Location = new System.Drawing.Point(87, 55);
             this.deFechamento.Name = "deFechamento";
             this.deFechamento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deFechamento.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deFechamento.Size = new System.Drawing.Size(117, 22);
+            this.deFechamento.Size = new System.Drawing.Size(100, 20);
             this.deFechamento.TabIndex = 214;
             // 
             // deAbertura
             // 
             this.deAbertura.EditValue = null;
-            this.deAbertura.Location = new System.Drawing.Point(101, 39);
-            this.deAbertura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deAbertura.Location = new System.Drawing.Point(87, 32);
             this.deAbertura.Name = "deAbertura";
             this.deAbertura.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deAbertura.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deAbertura.Size = new System.Drawing.Size(117, 22);
+            this.deAbertura.Size = new System.Drawing.Size(100, 20);
             this.deAbertura.TabIndex = 213;
             // 
             // btnAlterarCliente
             // 
             this.btnAlterarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAlterarCliente.Location = new System.Drawing.Point(733, 4);
-            this.btnAlterarCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAlterarCliente.Location = new System.Drawing.Point(627, 3);
             this.btnAlterarCliente.Name = "btnAlterarCliente";
-            this.btnAlterarCliente.Size = new System.Drawing.Size(37, 28);
+            this.btnAlterarCliente.Size = new System.Drawing.Size(32, 23);
             this.btnAlterarCliente.TabIndex = 212;
             this.btnAlterarCliente.Text = "M";
             // 
             // btncadastroCliente
             // 
             this.btncadastroCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btncadastroCliente.Location = new System.Drawing.Point(775, 4);
-            this.btncadastroCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btncadastroCliente.Location = new System.Drawing.Point(663, 3);
             this.btncadastroCliente.Name = "btncadastroCliente";
-            this.btncadastroCliente.Size = new System.Drawing.Size(37, 28);
+            this.btncadastroCliente.Size = new System.Drawing.Size(32, 23);
             this.btncadastroCliente.TabIndex = 210;
             this.btncadastroCliente.Text = "+";
             // 
@@ -393,10 +389,9 @@ namespace GUI
             this.btnPesquisar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPesquisar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnPesquisar.Location = new System.Drawing.Point(705, 2);
-            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPesquisar.Location = new System.Drawing.Point(603, 2);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(30, 28);
+            this.btnPesquisar.Size = new System.Drawing.Size(26, 23);
             this.btnPesquisar.TabIndex = 208;
             this.btnPesquisar.Text = "??";
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
@@ -407,10 +402,9 @@ namespace GUI
             // 
             // 
             this.chkMensal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.chkMensal.Location = new System.Drawing.Point(414, 37);
-            this.chkMensal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkMensal.Location = new System.Drawing.Point(355, 30);
             this.chkMensal.Name = "chkMensal";
-            this.chkMensal.Size = new System.Drawing.Size(68, 28);
+            this.chkMensal.Size = new System.Drawing.Size(58, 23);
             this.chkMensal.TabIndex = 207;
             this.chkMensal.Text = "Mensal";
             // 
@@ -421,10 +415,9 @@ namespace GUI
             // 
             // 
             this.chkExecutado.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.chkExecutado.Location = new System.Drawing.Point(957, 48);
-            this.chkExecutado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkExecutado.Location = new System.Drawing.Point(819, 39);
             this.chkExecutado.Name = "chkExecutado";
-            this.chkExecutado.Size = new System.Drawing.Size(87, 28);
+            this.chkExecutado.Size = new System.Drawing.Size(75, 23);
             this.chkExecutado.TabIndex = 206;
             this.chkExecutado.Text = "Executado";
             // 
@@ -435,19 +428,18 @@ namespace GUI
             this.cbEmpregado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbEmpregado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEmpregado.FormattingEnabled = true;
-            this.cbEmpregado.Location = new System.Drawing.Point(922, 6);
-            this.cbEmpregado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbEmpregado.Location = new System.Drawing.Point(789, 5);
             this.cbEmpregado.Name = "cbEmpregado";
-            this.cbEmpregado.Size = new System.Drawing.Size(122, 24);
+            this.cbEmpregado.Size = new System.Drawing.Size(105, 21);
             this.cbEmpregado.TabIndex = 196;
             // 
             // lblEmpregado
             // 
             this.lblEmpregado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmpregado.AutoSize = true;
-            this.lblEmpregado.Location = new System.Drawing.Point(838, 10);
+            this.lblEmpregado.Location = new System.Drawing.Point(717, 8);
             this.lblEmpregado.Name = "lblEmpregado";
-            this.lblEmpregado.Size = new System.Drawing.Size(84, 17);
+            this.lblEmpregado.Size = new System.Drawing.Size(65, 13);
             this.lblEmpregado.TabIndex = 205;
             this.lblEmpregado.Text = "Empregado:";
             // 
@@ -455,12 +447,11 @@ namespace GUI
             // 
             this.txtObs_Pedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtObs_Pedido.Location = new System.Drawing.Point(568, 37);
-            this.txtObs_Pedido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtObs_Pedido.Location = new System.Drawing.Point(487, 30);
             this.txtObs_Pedido.Multiline = true;
             this.txtObs_Pedido.Name = "txtObs_Pedido";
             this.txtObs_Pedido.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Pedido.Size = new System.Drawing.Size(380, 72);
+            this.txtObs_Pedido.Size = new System.Drawing.Size(325, 59);
             this.txtObs_Pedido.TabIndex = 197;
             // 
             // pnTotais
@@ -474,10 +465,9 @@ namespace GUI
             this.pnTotais.Controls.Add(this.lblDesconto);
             this.pnTotais.Controls.Add(this.txtQtde_Itens);
             this.pnTotais.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnTotais.Location = new System.Drawing.Point(2, 218);
-            this.pnTotais.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnTotais.Location = new System.Drawing.Point(2, 181);
             this.pnTotais.Name = "pnTotais";
-            this.pnTotais.Size = new System.Drawing.Size(593, 28);
+            this.pnTotais.Size = new System.Drawing.Size(507, 23);
             this.pnTotais.TabIndex = 100;
             // 
             // txtTot_Pecas
@@ -491,10 +481,10 @@ namespace GUI
             this.txtTot_Pecas.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtTot_Pecas.FocusHighlightEnabled = true;
             this.txtTot_Pecas.IsInputReadOnly = true;
-            this.txtTot_Pecas.Location = new System.Drawing.Point(370, 2);
+            this.txtTot_Pecas.Location = new System.Drawing.Point(316, 2);
             this.txtTot_Pecas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTot_Pecas.Name = "txtTot_Pecas";
-            this.txtTot_Pecas.Size = new System.Drawing.Size(56, 23);
+            this.txtTot_Pecas.Size = new System.Drawing.Size(48, 21);
             this.txtTot_Pecas.TabIndex = 103;
             // 
             // txtAmortizacao
@@ -507,10 +497,9 @@ namespace GUI
             this.txtAmortizacao.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtAmortizacao.FocusHighlightEnabled = true;
             this.txtAmortizacao.Increment = 1D;
-            this.txtAmortizacao.Location = new System.Drawing.Point(133, 4);
-            this.txtAmortizacao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmortizacao.Location = new System.Drawing.Point(113, 3);
             this.txtAmortizacao.Name = "txtAmortizacao";
-            this.txtAmortizacao.Size = new System.Drawing.Size(82, 23);
+            this.txtAmortizacao.Size = new System.Drawing.Size(70, 21);
             this.txtAmortizacao.TabIndex = 101;
             this.txtAmortizacao.ValueChanged += new System.EventHandler(this.txtAmortizacao_ValueChanged);
             // 
@@ -525,10 +514,9 @@ namespace GUI
             this.txtTotal_Pedido.FocusHighlightEnabled = true;
             this.txtTotal_Pedido.Increment = 1D;
             this.txtTotal_Pedido.IsInputReadOnly = true;
-            this.txtTotal_Pedido.Location = new System.Drawing.Point(496, 1);
-            this.txtTotal_Pedido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTotal_Pedido.Location = new System.Drawing.Point(424, 1);
             this.txtTotal_Pedido.Name = "txtTotal_Pedido";
-            this.txtTotal_Pedido.Size = new System.Drawing.Size(82, 23);
+            this.txtTotal_Pedido.Size = new System.Drawing.Size(70, 21);
             this.txtTotal_Pedido.TabIndex = 101;
             // 
             // txtDesconto
@@ -541,10 +529,9 @@ namespace GUI
             this.txtDesconto.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtDesconto.FocusHighlightEnabled = true;
             this.txtDesconto.Increment = 1D;
-            this.txtDesconto.Location = new System.Drawing.Point(282, 4);
-            this.txtDesconto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDesconto.Location = new System.Drawing.Point(240, 3);
             this.txtDesconto.Name = "txtDesconto";
-            this.txtDesconto.Size = new System.Drawing.Size(82, 23);
+            this.txtDesconto.Size = new System.Drawing.Size(70, 21);
             this.txtDesconto.TabIndex = 101;
             this.txtDesconto.ValueChanged += new System.EventHandler(this.Desconto_ValueChanged);
             // 
@@ -552,9 +539,9 @@ namespace GUI
             // 
             this.lblAmortizacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAmortizacao.BackColor = System.Drawing.Color.Transparent;
-            this.lblAmortizacao.Location = new System.Drawing.Point(56, 6);
+            this.lblAmortizacao.Location = new System.Drawing.Point(47, 5);
             this.lblAmortizacao.Name = "lblAmortizacao";
-            this.lblAmortizacao.Size = new System.Drawing.Size(82, 16);
+            this.lblAmortizacao.Size = new System.Drawing.Size(70, 13);
             this.lblAmortizacao.TabIndex = 102;
             this.lblAmortizacao.Text = "Amortização:";
             this.lblAmortizacao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -563,9 +550,9 @@ namespace GUI
             // 
             this.lblDesconto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDesconto.BackColor = System.Drawing.Color.Transparent;
-            this.lblDesconto.Location = new System.Drawing.Point(202, 6);
+            this.lblDesconto.Location = new System.Drawing.Point(172, 5);
             this.lblDesconto.Name = "lblDesconto";
-            this.lblDesconto.Size = new System.Drawing.Size(82, 16);
+            this.lblDesconto.Size = new System.Drawing.Size(70, 13);
             this.lblDesconto.TabIndex = 102;
             this.lblDesconto.Text = "Desconto:";
             this.lblDesconto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -577,11 +564,10 @@ namespace GUI
             this.txtQtde_Itens.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQtde_Itens.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQtde_Itens.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtQtde_Itens.Location = new System.Drawing.Point(3, 4);
-            this.txtQtde_Itens.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtQtde_Itens.Location = new System.Drawing.Point(3, 3);
             this.txtQtde_Itens.Name = "txtQtde_Itens";
             this.txtQtde_Itens.ReadOnly = true;
-            this.txtQtde_Itens.Size = new System.Drawing.Size(47, 16);
+            this.txtQtde_Itens.Size = new System.Drawing.Size(40, 13);
             this.txtQtde_Itens.TabIndex = 93;
             this.txtQtde_Itens.TabStop = false;
             this.txtQtde_Itens.Text = "0";
@@ -612,10 +598,9 @@ namespace GUI
             this.txtPC_Entregues.BackgroundStyle.Class = "DateTimeInputBackground";
             this.txtPC_Entregues.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPC_Entregues.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtPC_Entregues.Location = new System.Drawing.Point(702, 103);
-            this.txtPC_Entregues.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPC_Entregues.Location = new System.Drawing.Point(602, 84);
             this.txtPC_Entregues.Name = "txtPC_Entregues";
-            this.txtPC_Entregues.Size = new System.Drawing.Size(57, 23);
+            this.txtPC_Entregues.Size = new System.Drawing.Size(49, 21);
             this.txtPC_Entregues.TabIndex = 113;
             this.txtPC_Entregues.TabStop = false;
             this.txtPC_Entregues.Visible = false;
@@ -623,9 +608,9 @@ namespace GUI
             // lblPc_Entregues
             // 
             this.lblPc_Entregues.BackColor = System.Drawing.Color.Transparent;
-            this.lblPc_Entregues.Location = new System.Drawing.Point(583, 103);
+            this.lblPc_Entregues.Location = new System.Drawing.Point(500, 84);
             this.lblPc_Entregues.Name = "lblPc_Entregues";
-            this.lblPc_Entregues.Size = new System.Drawing.Size(117, 16);
+            this.lblPc_Entregues.Size = new System.Drawing.Size(100, 13);
             this.lblPc_Entregues.TabIndex = 114;
             this.lblPc_Entregues.Text = "Peças Entregues:";
             this.lblPc_Entregues.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -634,10 +619,9 @@ namespace GUI
             // txtTotal_Pontos
             // 
             this.txtTotal_Pontos.Enabled = false;
-            this.txtTotal_Pontos.Location = new System.Drawing.Point(698, 176);
-            this.txtTotal_Pontos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTotal_Pontos.Location = new System.Drawing.Point(598, 143);
             this.txtTotal_Pontos.Name = "txtTotal_Pontos";
-            this.txtTotal_Pontos.Size = new System.Drawing.Size(45, 23);
+            this.txtTotal_Pontos.Size = new System.Drawing.Size(39, 21);
             this.txtTotal_Pontos.TabIndex = 112;
             this.txtTotal_Pontos.TabStop = false;
             this.txtTotal_Pontos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -645,19 +629,18 @@ namespace GUI
             // lblTotalPontos
             // 
             this.lblTotalPontos.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalPontos.Location = new System.Drawing.Point(591, 180);
+            this.lblTotalPontos.Location = new System.Drawing.Point(507, 146);
             this.lblTotalPontos.Name = "lblTotalPontos";
-            this.lblTotalPontos.Size = new System.Drawing.Size(101, 16);
+            this.lblTotalPontos.Size = new System.Drawing.Size(87, 13);
             this.lblTotalPontos.TabIndex = 111;
             this.lblTotalPontos.Text = "Total de Pontos:";
             this.lblTotalPontos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtPontos_Extras
             // 
-            this.txtPontos_Extras.Location = new System.Drawing.Point(525, 172);
-            this.txtPontos_Extras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPontos_Extras.Location = new System.Drawing.Point(450, 140);
             this.txtPontos_Extras.Name = "txtPontos_Extras";
-            this.txtPontos_Extras.Size = new System.Drawing.Size(45, 23);
+            this.txtPontos_Extras.Size = new System.Drawing.Size(39, 21);
             this.txtPontos_Extras.TabIndex = 110;
             this.txtPontos_Extras.TabStop = false;
             this.txtPontos_Extras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -665,9 +648,9 @@ namespace GUI
             // lblPontosExtras
             // 
             this.lblPontosExtras.BackColor = System.Drawing.Color.Transparent;
-            this.lblPontosExtras.Location = new System.Drawing.Point(419, 176);
+            this.lblPontosExtras.Location = new System.Drawing.Point(359, 143);
             this.lblPontosExtras.Name = "lblPontosExtras";
-            this.lblPontosExtras.Size = new System.Drawing.Size(101, 16);
+            this.lblPontosExtras.Size = new System.Drawing.Size(87, 13);
             this.lblPontosExtras.TabIndex = 109;
             this.lblPontosExtras.Text = "Pontos Extras:";
             this.lblPontosExtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -675,9 +658,9 @@ namespace GUI
             // lblDefeito
             // 
             this.lblDefeito.BackColor = System.Drawing.Color.Transparent;
-            this.lblDefeito.Location = new System.Drawing.Point(408, 103);
+            this.lblDefeito.Location = new System.Drawing.Point(350, 84);
             this.lblDefeito.Name = "lblDefeito";
-            this.lblDefeito.Size = new System.Drawing.Size(117, 16);
+            this.lblDefeito.Size = new System.Drawing.Size(100, 13);
             this.lblDefeito.TabIndex = 105;
             this.lblDefeito.Text = "Defeito ao Bordar:";
             this.lblDefeito.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -685,29 +668,27 @@ namespace GUI
             // lblNaoBordadas
             // 
             this.lblNaoBordadas.BackColor = System.Drawing.Color.Transparent;
-            this.lblNaoBordadas.Location = new System.Drawing.Point(408, 135);
+            this.lblNaoBordadas.Location = new System.Drawing.Point(350, 110);
             this.lblNaoBordadas.Name = "lblNaoBordadas";
-            this.lblNaoBordadas.Size = new System.Drawing.Size(117, 16);
+            this.lblNaoBordadas.Size = new System.Drawing.Size(100, 13);
             this.lblNaoBordadas.TabIndex = 107;
             this.lblNaoBordadas.Text = "Não Bordadas:";
             this.lblNaoBordadas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtPC_Defeito
             // 
-            this.txtPC_Defeito.Location = new System.Drawing.Point(527, 100);
-            this.txtPC_Defeito.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPC_Defeito.Location = new System.Drawing.Point(452, 81);
             this.txtPC_Defeito.Name = "txtPC_Defeito";
-            this.txtPC_Defeito.Size = new System.Drawing.Size(42, 23);
+            this.txtPC_Defeito.Size = new System.Drawing.Size(37, 21);
             this.txtPC_Defeito.TabIndex = 106;
             this.txtPC_Defeito.TabStop = false;
             this.txtPC_Defeito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtPC_Nao_Bordadas
             // 
-            this.txtPC_Nao_Bordadas.Location = new System.Drawing.Point(527, 132);
-            this.txtPC_Nao_Bordadas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPC_Nao_Bordadas.Location = new System.Drawing.Point(452, 107);
             this.txtPC_Nao_Bordadas.Name = "txtPC_Nao_Bordadas";
-            this.txtPC_Nao_Bordadas.Size = new System.Drawing.Size(42, 23);
+            this.txtPC_Nao_Bordadas.Size = new System.Drawing.Size(37, 21);
             this.txtPC_Nao_Bordadas.TabIndex = 108;
             this.txtPC_Nao_Bordadas.TabStop = false;
             this.txtPC_Nao_Bordadas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -717,10 +698,9 @@ namespace GUI
             this.btnRestaura.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnRestaura.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnRestaura.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaura.Image")));
-            this.btnRestaura.Location = new System.Drawing.Point(138, 34);
-            this.btnRestaura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRestaura.Location = new System.Drawing.Point(118, 28);
             this.btnRestaura.Name = "btnRestaura";
-            this.btnRestaura.Size = new System.Drawing.Size(40, 42);
+            this.btnRestaura.Size = new System.Drawing.Size(34, 34);
             this.btnRestaura.TabIndex = 104;
             // 
             // btnGravaLinhas
@@ -728,30 +708,27 @@ namespace GUI
             this.btnGravaLinhas.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnGravaLinhas.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnGravaLinhas.Enabled = false;
-            this.btnGravaLinhas.Location = new System.Drawing.Point(19, 34);
-            this.btnGravaLinhas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnGravaLinhas.Location = new System.Drawing.Point(16, 28);
             this.btnGravaLinhas.Name = "btnGravaLinhas";
-            this.btnGravaLinhas.Size = new System.Drawing.Size(40, 42);
+            this.btnGravaLinhas.Size = new System.Drawing.Size(34, 34);
             this.btnGravaLinhas.TabIndex = 101;
             // 
             // btnInsereLinha
             // 
             this.btnInsereLinha.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnInsereLinha.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnInsereLinha.Location = new System.Drawing.Point(58, 34);
-            this.btnInsereLinha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnInsereLinha.Location = new System.Drawing.Point(50, 28);
             this.btnInsereLinha.Name = "btnInsereLinha";
-            this.btnInsereLinha.Size = new System.Drawing.Size(40, 42);
+            this.btnInsereLinha.Size = new System.Drawing.Size(34, 34);
             this.btnInsereLinha.TabIndex = 103;
             // 
             // btnApagaLinha
             // 
             this.btnApagaLinha.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnApagaLinha.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnApagaLinha.Location = new System.Drawing.Point(98, 34);
-            this.btnApagaLinha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnApagaLinha.Location = new System.Drawing.Point(84, 28);
             this.btnApagaLinha.Name = "btnApagaLinha";
-            this.btnApagaLinha.Size = new System.Drawing.Size(40, 42);
+            this.btnApagaLinha.Size = new System.Drawing.Size(34, 34);
             this.btnApagaLinha.TabIndex = 102;
             // 
             // btnExecutarItem
@@ -759,10 +736,9 @@ namespace GUI
             this.btnExecutarItem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnExecutarItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExecutarItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnExecutarItem.Location = new System.Drawing.Point(27736, 31);
-            this.btnExecutarItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExecutarItem.Location = new System.Drawing.Point(25006, 25);
             this.btnExecutarItem.Name = "btnExecutarItem";
-            this.btnExecutarItem.Size = new System.Drawing.Size(107, 39);
+            this.btnExecutarItem.Size = new System.Drawing.Size(92, 32);
             this.btnExecutarItem.TabIndex = 100;
             this.btnExecutarItem.Text = "Executar o Ítem";
             // 
@@ -780,8 +756,7 @@ namespace GUI
             this.dtpData_Execucao.FocusHighlightEnabled = true;
             this.dtpData_Execucao.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Execucao.IsPopupCalendarOpen = false;
-            this.dtpData_Execucao.Location = new System.Drawing.Point(27607, 44);
-            this.dtpData_Execucao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtpData_Execucao.Location = new System.Drawing.Point(24896, 36);
             // 
             // 
             // 
@@ -805,16 +780,16 @@ namespace GUI
             this.dtpData_Execucao.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtpData_Execucao.MonthCalendar.TodayButtonVisible = true;
             this.dtpData_Execucao.Name = "dtpData_Execucao";
-            this.dtpData_Execucao.Size = new System.Drawing.Size(113, 23);
+            this.dtpData_Execucao.Size = new System.Drawing.Size(97, 21);
             this.dtpData_Execucao.TabIndex = 90;
             // 
             // lblExecucao
             // 
             this.lblExecucao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExecucao.BackColor = System.Drawing.Color.Transparent;
-            this.lblExecucao.Location = new System.Drawing.Point(27505, 50);
+            this.lblExecucao.Location = new System.Drawing.Point(24808, 41);
             this.lblExecucao.Name = "lblExecucao";
-            this.lblExecucao.Size = new System.Drawing.Size(92, 16);
+            this.lblExecucao.Size = new System.Drawing.Size(79, 13);
             this.lblExecucao.TabIndex = 89;
             this.lblExecucao.Text = "Execução:";
             this.lblExecucao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -835,20 +810,19 @@ namespace GUI
             this.Cor});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 8.25F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgLinhas_Item.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgLinhas_Item.EnableHeadersVisualStyles = false;
-            this.dgLinhas_Item.Location = new System.Drawing.Point(19, 78);
-            this.dgLinhas_Item.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgLinhas_Item.Location = new System.Drawing.Point(16, 63);
             this.dgLinhas_Item.MultiSelect = false;
             this.dgLinhas_Item.Name = "dgLinhas_Item";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8.25F);
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -862,7 +836,7 @@ namespace GUI
             this.dgLinhas_Item.ShowCellErrors = false;
             this.dgLinhas_Item.ShowCellToolTips = false;
             this.dgLinhas_Item.ShowRowErrors = false;
-            this.dgLinhas_Item.Size = new System.Drawing.Size(296, 0);
+            this.dgLinhas_Item.Size = new System.Drawing.Size(254, 0);
             this.dgLinhas_Item.TabIndex = 8;
             this.dgLinhas_Item.TabStop = false;
             // 
@@ -908,14 +882,13 @@ namespace GUI
             // dePagamento
             // 
             this.dePagamento.EditValue = null;
-            this.dePagamento.Location = new System.Drawing.Point(175, 32);
-            this.dePagamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dePagamento.Location = new System.Drawing.Point(150, 26);
             this.dePagamento.Name = "dePagamento";
             this.dePagamento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dePagamento.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dePagamento.Size = new System.Drawing.Size(117, 22);
+            this.dePagamento.Size = new System.Drawing.Size(100, 20);
             this.dePagamento.TabIndex = 194;
             // 
             // Saldo
@@ -927,11 +900,10 @@ namespace GUI
             this.Saldo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Saldo.Enabled = false;
             this.Saldo.Increment = 1D;
-            this.Saldo.Location = new System.Drawing.Point(175, 252);
-            this.Saldo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Saldo.Location = new System.Drawing.Point(150, 205);
             this.Saldo.Name = "Saldo";
             this.Saldo.ShowUpDown = true;
-            this.Saldo.Size = new System.Drawing.Size(117, 23);
+            this.Saldo.Size = new System.Drawing.Size(100, 21);
             this.Saldo.TabIndex = 0;
             this.Saldo.TabStop = false;
             // 
@@ -944,11 +916,10 @@ namespace GUI
             this.Total_Pagamento2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Total_Pagamento2.Enabled = false;
             this.Total_Pagamento2.Increment = 1D;
-            this.Total_Pagamento2.Location = new System.Drawing.Point(175, 70);
-            this.Total_Pagamento2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Total_Pagamento2.Location = new System.Drawing.Point(150, 57);
             this.Total_Pagamento2.Name = "Total_Pagamento2";
             this.Total_Pagamento2.ShowUpDown = true;
-            this.Total_Pagamento2.Size = new System.Drawing.Size(117, 23);
+            this.Total_Pagamento2.Size = new System.Drawing.Size(100, 21);
             this.Total_Pagamento2.TabIndex = 0;
             this.Total_Pagamento2.TabStop = false;
             // 
@@ -961,11 +932,10 @@ namespace GUI
             this.Pago.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Pago.Enabled = false;
             this.Pago.Increment = 1D;
-            this.Pago.Location = new System.Drawing.Point(175, 208);
-            this.Pago.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Pago.Location = new System.Drawing.Point(150, 169);
             this.Pago.Name = "Pago";
             this.Pago.ShowUpDown = true;
-            this.Pago.Size = new System.Drawing.Size(117, 23);
+            this.Pago.Size = new System.Drawing.Size(100, 21);
             this.Pago.TabIndex = 0;
             this.Pago.TabStop = false;
             // 
@@ -977,19 +947,18 @@ namespace GUI
             this.Adicional.BackgroundStyle.Class = "DateTimeInputBackground";
             this.Adicional.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Adicional.Increment = 1D;
-            this.Adicional.Location = new System.Drawing.Point(175, 113);
-            this.Adicional.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Adicional.Location = new System.Drawing.Point(150, 92);
             this.Adicional.Name = "Adicional";
             this.Adicional.ShowUpDown = true;
-            this.Adicional.Size = new System.Drawing.Size(117, 23);
+            this.Adicional.Size = new System.Drawing.Size(100, 21);
             this.Adicional.TabIndex = 1;
             // 
             // lblValoraAmortizar
             // 
             this.lblValoraAmortizar.BackColor = System.Drawing.Color.Transparent;
-            this.lblValoraAmortizar.Location = new System.Drawing.Point(450, 146);
+            this.lblValoraAmortizar.Location = new System.Drawing.Point(386, 119);
             this.lblValoraAmortizar.Name = "lblValoraAmortizar";
-            this.lblValoraAmortizar.Size = new System.Drawing.Size(110, 16);
+            this.lblValoraAmortizar.Size = new System.Drawing.Size(94, 13);
             this.lblValoraAmortizar.TabIndex = 103;
             this.lblValoraAmortizar.Text = "Valor à amortizar";
             this.lblValoraAmortizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1002,22 +971,20 @@ namespace GUI
             this.ValorAmortizar.BackgroundStyle.Class = "DateTimeInputBackground";
             this.ValorAmortizar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ValorAmortizar.Increment = 1D;
-            this.ValorAmortizar.Location = new System.Drawing.Point(454, 166);
-            this.ValorAmortizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ValorAmortizar.Location = new System.Drawing.Point(389, 135);
             this.ValorAmortizar.MinValue = 0D;
             this.ValorAmortizar.Name = "ValorAmortizar";
             this.ValorAmortizar.ShowUpDown = true;
-            this.ValorAmortizar.Size = new System.Drawing.Size(107, 23);
+            this.ValorAmortizar.Size = new System.Drawing.Size(92, 21);
             this.ValorAmortizar.TabIndex = 0;
             // 
             // btnAmortizar
             // 
             this.btnAmortizar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnAmortizar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAmortizar.Location = new System.Drawing.Point(313, 162);
-            this.btnAmortizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAmortizar.Location = new System.Drawing.Point(268, 132);
             this.btnAmortizar.Name = "btnAmortizar";
-            this.btnAmortizar.Size = new System.Drawing.Size(107, 28);
+            this.btnAmortizar.Size = new System.Drawing.Size(92, 23);
             this.btnAmortizar.TabIndex = 101;
             this.btnAmortizar.Text = "Amortizar";
             // 
@@ -1028,10 +995,9 @@ namespace GUI
             // 
             this.cbQuitado.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.cbQuitado.Enabled = false;
-            this.cbQuitado.Location = new System.Drawing.Point(332, 27);
-            this.cbQuitado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbQuitado.Location = new System.Drawing.Point(285, 22);
             this.cbQuitado.Name = "cbQuitado";
-            this.cbQuitado.Size = new System.Drawing.Size(87, 28);
+            this.cbQuitado.Size = new System.Drawing.Size(75, 23);
             this.cbQuitado.TabIndex = 100;
             this.cbQuitado.Text = "Quitado";
             // 
@@ -1039,9 +1005,9 @@ namespace GUI
             // 
             this.lblSaldoaPagar.BackColor = System.Drawing.Color.Transparent;
             this.lblSaldoaPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaldoaPagar.Location = new System.Drawing.Point(9, 255);
+            this.lblSaldoaPagar.Location = new System.Drawing.Point(8, 207);
             this.lblSaldoaPagar.Name = "lblSaldoaPagar";
-            this.lblSaldoaPagar.Size = new System.Drawing.Size(159, 22);
+            this.lblSaldoaPagar.Size = new System.Drawing.Size(136, 18);
             this.lblSaldoaPagar.TabIndex = 97;
             this.lblSaldoaPagar.Text = "Saldo a Pagar:";
             this.lblSaldoaPagar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1050,9 +1016,9 @@ namespace GUI
             // 
             this.lblTotalDoPedido.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalDoPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDoPedido.Location = new System.Drawing.Point(9, 73);
+            this.lblTotalDoPedido.Location = new System.Drawing.Point(8, 59);
             this.lblTotalDoPedido.Name = "lblTotalDoPedido";
-            this.lblTotalDoPedido.Size = new System.Drawing.Size(159, 22);
+            this.lblTotalDoPedido.Size = new System.Drawing.Size(136, 18);
             this.lblTotalDoPedido.TabIndex = 95;
             this.lblTotalDoPedido.Text = "Total do Pedido:";
             this.lblTotalDoPedido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1060,9 +1026,9 @@ namespace GUI
             // lblObs
             // 
             this.lblObs.BackColor = System.Drawing.Color.Transparent;
-            this.lblObs.Location = new System.Drawing.Point(86, 308);
+            this.lblObs.Location = new System.Drawing.Point(74, 250);
             this.lblObs.Name = "lblObs";
-            this.lblObs.Size = new System.Drawing.Size(82, 16);
+            this.lblObs.Size = new System.Drawing.Size(70, 13);
             this.lblObs.TabIndex = 93;
             this.lblObs.Text = "Obsevação:";
             this.lblObs.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1070,9 +1036,9 @@ namespace GUI
             // lblValorAPagar
             // 
             this.lblValorAPagar.BackColor = System.Drawing.Color.Transparent;
-            this.lblValorAPagar.Location = new System.Drawing.Point(83, 217);
+            this.lblValorAPagar.Location = new System.Drawing.Point(71, 176);
             this.lblValorAPagar.Name = "lblValorAPagar";
-            this.lblValorAPagar.Size = new System.Drawing.Size(85, 16);
+            this.lblValorAPagar.Size = new System.Drawing.Size(73, 13);
             this.lblValorAPagar.TabIndex = 89;
             this.lblValorAPagar.Text = "Valor já pago:";
             this.lblValorAPagar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1080,9 +1046,9 @@ namespace GUI
             // lblDataPagamento
             // 
             this.lblDataPagamento.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataPagamento.Location = new System.Drawing.Point(37, 36);
+            this.lblDataPagamento.Location = new System.Drawing.Point(32, 29);
             this.lblDataPagamento.Name = "lblDataPagamento";
-            this.lblDataPagamento.Size = new System.Drawing.Size(131, 16);
+            this.lblDataPagamento.Size = new System.Drawing.Size(112, 13);
             this.lblDataPagamento.TabIndex = 83;
             this.lblDataPagamento.Text = "Data do Pagamento:";
             this.lblDataPagamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1092,38 +1058,37 @@ namespace GUI
             this.txtObs_Pagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtObs_Pagamento.Location = new System.Drawing.Point(175, 304);
-            this.txtObs_Pagamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtObs_Pagamento.Location = new System.Drawing.Point(150, 247);
             this.txtObs_Pagamento.Multiline = true;
             this.txtObs_Pagamento.Name = "txtObs_Pagamento";
             this.txtObs_Pagamento.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Pagamento.Size = new System.Drawing.Size(27807, 0);
+            this.txtObs_Pagamento.Size = new System.Drawing.Size(25068, 0);
             this.txtObs_Pagamento.TabIndex = 3;
             // 
             // lblAdicional
             // 
             this.lblAdicional.BackColor = System.Drawing.Color.Transparent;
-            this.lblAdicional.Location = new System.Drawing.Point(90, 122);
+            this.lblAdicional.Location = new System.Drawing.Point(77, 99);
             this.lblAdicional.Name = "lblAdicional";
-            this.lblAdicional.Size = new System.Drawing.Size(78, 16);
+            this.lblAdicional.Size = new System.Drawing.Size(67, 13);
             this.lblAdicional.TabIndex = 85;
             this.lblAdicional.Text = "Adicional:";
             this.lblAdicional.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LinhaIdLabel
             // 
-            this.LinhaIdLabel.Location = new System.Drawing.Point(43, 10);
+            this.LinhaIdLabel.Location = new System.Drawing.Point(37, 8);
             this.LinhaIdLabel.Name = "LinhaIdLabel";
-            this.LinhaIdLabel.Size = new System.Drawing.Size(54, 16);
+            this.LinhaIdLabel.Size = new System.Drawing.Size(46, 13);
             this.LinhaIdLabel.TabIndex = 199;
             this.LinhaIdLabel.Text = "Pedido:";
             this.LinhaIdLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblAbertura
             // 
-            this.lblAbertura.Location = new System.Drawing.Point(43, 47);
+            this.lblAbertura.Location = new System.Drawing.Point(37, 38);
             this.lblAbertura.Name = "lblAbertura";
-            this.lblAbertura.Size = new System.Drawing.Size(61, 16);
+            this.lblAbertura.Size = new System.Drawing.Size(52, 13);
             this.lblAbertura.TabIndex = 203;
             this.lblAbertura.Text = "Abertura:";
             this.lblAbertura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1134,10 +1099,9 @@ namespace GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cbCliente.FormattingEnabled = true;
-            this.cbCliente.Location = new System.Drawing.Point(258, 5);
-            this.cbCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbCliente.Location = new System.Drawing.Point(221, 4);
             this.cbCliente.Name = "cbCliente";
-            this.cbCliente.Size = new System.Drawing.Size(436, 24);
+            this.cbCliente.Size = new System.Drawing.Size(373, 21);
             this.cbCliente.Sorted = true;
             this.cbCliente.TabIndex = 198;
             this.cbCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbCliente_KeyDown);
@@ -1145,9 +1109,9 @@ namespace GUI
             // 
             // lblFechamento
             // 
-            this.lblFechamento.Location = new System.Drawing.Point(21, 76);
+            this.lblFechamento.Location = new System.Drawing.Point(18, 62);
             this.lblFechamento.Name = "lblFechamento";
-            this.lblFechamento.Size = new System.Drawing.Size(84, 16);
+            this.lblFechamento.Size = new System.Drawing.Size(72, 13);
             this.lblFechamento.TabIndex = 204;
             this.lblFechamento.Text = "Fechamento:";
             this.lblFechamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1157,39 +1121,37 @@ namespace GUI
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.ForeColor = System.Drawing.Color.Navy;
-            this.txtId.Location = new System.Drawing.Point(105, 0);
-            this.txtId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtId.Location = new System.Drawing.Point(90, 0);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(75, 34);
+            this.txtId.Size = new System.Drawing.Size(65, 29);
             this.txtId.TabIndex = 200;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblObs1
             // 
             this.lblObs1.AutoSize = true;
-            this.lblObs1.Location = new System.Drawing.Point(532, 48);
+            this.lblObs1.Location = new System.Drawing.Point(456, 39);
             this.lblObs1.Name = "lblObs1";
-            this.lblObs1.Size = new System.Drawing.Size(37, 17);
+            this.lblObs1.Size = new System.Drawing.Size(30, 13);
             this.lblObs1.TabIndex = 202;
             this.lblObs1.Text = "Obs:";
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(203, 9);
+            this.lblCliente.Location = new System.Drawing.Point(174, 7);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(53, 17);
+            this.lblCliente.Size = new System.Drawing.Size(44, 13);
             this.lblCliente.TabIndex = 201;
             this.lblCliente.Text = "Cliente:";
             // 
             // btnFiltrar
             // 
             this.btnFiltrar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnFiltrar.Location = new System.Drawing.Point(257, 2);
-            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnFiltrar.Location = new System.Drawing.Point(220, 2);
             this.btnFiltrar.MenuManager = this.barManager1;
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(42, 26);
+            this.btnFiltrar.Size = new System.Drawing.Size(36, 21);
             this.btnFiltrar.TabIndex = 58;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
@@ -1199,21 +1161,19 @@ namespace GUI
             this.btnX.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
             this.btnX.Image = ((System.Drawing.Image)(resources.GetObject("btnX.Image")));
             this.btnX.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnX.Location = new System.Drawing.Point(230, 4);
-            this.btnX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnX.Location = new System.Drawing.Point(197, 3);
             this.btnX.MenuManager = this.barManager1;
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(21, 22);
+            this.btnX.Size = new System.Drawing.Size(18, 18);
             this.btnX.TabIndex = 57;
             this.btnX.Text = "X";
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // txtFiltrar
             // 
-            this.txtFiltrar.Location = new System.Drawing.Point(1, 4);
-            this.txtFiltrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFiltrar.Location = new System.Drawing.Point(1, 3);
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(250, 22);
+            this.txtFiltrar.Size = new System.Drawing.Size(214, 20);
             this.txtFiltrar.TabIndex = 56;
             this.txtFiltrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltrar_KeyPress);
             // 
@@ -1222,11 +1182,10 @@ namespace GUI
             this.xtabItenPagamentoExecucao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xtabItenPagamentoExecucao.Location = new System.Drawing.Point(0, 100);
-            this.xtabItenPagamentoExecucao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.xtabItenPagamentoExecucao.Location = new System.Drawing.Point(0, 81);
             this.xtabItenPagamentoExecucao.Name = "xtabItenPagamentoExecucao";
             this.xtabItenPagamentoExecucao.SelectedTabPage = this.xtbpItem;
-            this.xtabItenPagamentoExecucao.Size = new System.Drawing.Size(1052, 546);
+            this.xtabItenPagamentoExecucao.Size = new System.Drawing.Size(900, 443);
             this.xtabItenPagamentoExecucao.TabIndex = 106;
             this.xtabItenPagamentoExecucao.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtbpItem,
@@ -1274,9 +1233,8 @@ namespace GUI
             this.xtbpItem.Controls.Add(this.rg_local);
             this.xtbpItem.Controls.Add(this.pnlItens);
             this.xtbpItem.Controls.Add(this.lblX);
-            this.xtbpItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtbpItem.Name = "xtbpItem";
-            this.xtbpItem.Size = new System.Drawing.Size(1045, 512);
+            this.xtbpItem.Size = new System.Drawing.Size(894, 415);
             this.xtbpItem.Text = "Ítem";
             // 
             // txtBordado_Preco
@@ -1289,10 +1247,9 @@ namespace GUI
             this.txtBordado_Preco.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtBordado_Preco.FocusHighlightEnabled = true;
             this.txtBordado_Preco.Increment = 1D;
-            this.txtBordado_Preco.Location = new System.Drawing.Point(739, 137);
-            this.txtBordado_Preco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBordado_Preco.Location = new System.Drawing.Point(633, 111);
             this.txtBordado_Preco.Name = "txtBordado_Preco";
-            this.txtBordado_Preco.Size = new System.Drawing.Size(59, 23);
+            this.txtBordado_Preco.Size = new System.Drawing.Size(51, 21);
             this.txtBordado_Preco.TabIndex = 155;
             // 
             // txtBordado_Pontos
@@ -1305,21 +1262,21 @@ namespace GUI
             this.txtBordado_Pontos.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtBordado_Pontos.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtBordado_Pontos.IsInputReadOnly = true;
-            this.txtBordado_Pontos.Location = new System.Drawing.Point(734, 90);
+            this.txtBordado_Pontos.Location = new System.Drawing.Point(629, 73);
             this.txtBordado_Pontos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBordado_Pontos.Name = "txtBordado_Pontos";
-            this.txtBordado_Pontos.Size = new System.Drawing.Size(65, 23);
+            this.txtBordado_Pontos.Size = new System.Drawing.Size(56, 21);
             this.txtBordado_Pontos.TabIndex = 154;
             // 
             // txtBordado_Descricao
             // 
             this.txtBordado_Descricao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBordado_Descricao.Location = new System.Drawing.Point(605, 250);
+            this.txtBordado_Descricao.Location = new System.Drawing.Point(518, 207);
             this.txtBordado_Descricao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBordado_Descricao.MenuManager = this.barManager1;
             this.txtBordado_Descricao.Name = "txtBordado_Descricao";
             this.txtBordado_Descricao.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.txtBordado_Descricao.Size = new System.Drawing.Size(388, 22);
+            this.txtBordado_Descricao.Size = new System.Drawing.Size(333, 20);
             this.txtBordado_Descricao.TabIndex = 153;
             this.txtBordado_Descricao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBordado_Descricao_KeyPress);
             // 
@@ -1333,10 +1290,9 @@ namespace GUI
             this.txtTotal_Item.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTotal_Item.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal_Item.Increment = 1D;
-            this.txtTotal_Item.Location = new System.Drawing.Point(960, 403);
-            this.txtTotal_Item.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTotal_Item.Location = new System.Drawing.Point(822, 332);
             this.txtTotal_Item.Name = "txtTotal_Item";
-            this.txtTotal_Item.Size = new System.Drawing.Size(79, 26);
+            this.txtTotal_Item.Size = new System.Drawing.Size(68, 22);
             this.txtTotal_Item.TabIndex = 152;
             // 
             // txtPC_Bordadas
@@ -1349,10 +1305,9 @@ namespace GUI
             this.txtPC_Bordadas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPC_Bordadas.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtPC_Bordadas.Enabled = false;
-            this.txtPC_Bordadas.Location = new System.Drawing.Point(960, 305);
-            this.txtPC_Bordadas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPC_Bordadas.Location = new System.Drawing.Point(822, 252);
             this.txtPC_Bordadas.Name = "txtPC_Bordadas";
-            this.txtPC_Bordadas.Size = new System.Drawing.Size(79, 23);
+            this.txtPC_Bordadas.Size = new System.Drawing.Size(68, 21);
             this.txtPC_Bordadas.TabIndex = 116;
             this.txtPC_Bordadas.TabStop = false;
             // 
@@ -1366,10 +1321,10 @@ namespace GUI
             this.nudBordado_Id.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.nudBordado_Id.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.nudBordado_Id.IsInputReadOnly = true;
-            this.nudBordado_Id.Location = new System.Drawing.Point(734, 36);
+            this.nudBordado_Id.Location = new System.Drawing.Point(629, 29);
             this.nudBordado_Id.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudBordado_Id.Name = "nudBordado_Id";
-            this.nudBordado_Id.Size = new System.Drawing.Size(65, 23);
+            this.nudBordado_Id.Size = new System.Drawing.Size(56, 21);
             this.nudBordado_Id.TabIndex = 103;
             // 
             // txtTot_a_pagar
@@ -1383,10 +1338,9 @@ namespace GUI
             this.txtTot_a_pagar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTot_a_pagar.Increment = 1D;
             this.txtTot_a_pagar.IsInputReadOnly = true;
-            this.txtTot_a_pagar.Location = new System.Drawing.Point(513, 254);
-            this.txtTot_a_pagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTot_a_pagar.Location = new System.Drawing.Point(439, 210);
             this.txtTot_a_pagar.Name = "txtTot_a_pagar";
-            this.txtTot_a_pagar.Size = new System.Drawing.Size(82, 27);
+            this.txtTot_a_pagar.Size = new System.Drawing.Size(70, 23);
             this.txtTot_a_pagar.TabIndex = 101;
             // 
             // txtPreco_Por_Peca
@@ -1399,10 +1353,9 @@ namespace GUI
             this.txtPreco_Por_Peca.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPreco_Por_Peca.FocusHighlightEnabled = true;
             this.txtPreco_Por_Peca.Increment = 1D;
-            this.txtPreco_Por_Peca.Location = new System.Drawing.Point(960, 353);
-            this.txtPreco_Por_Peca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPreco_Por_Peca.Location = new System.Drawing.Point(822, 291);
             this.txtPreco_Por_Peca.Name = "txtPreco_Por_Peca";
-            this.txtPreco_Por_Peca.Size = new System.Drawing.Size(79, 23);
+            this.txtPreco_Por_Peca.Size = new System.Drawing.Size(68, 21);
             this.txtPreco_Por_Peca.TabIndex = 117;
             this.txtPreco_Por_Peca.ValueChanged += new System.EventHandler(this.txtPreco_Por_Peca_ValueChanged);
             this.txtPreco_Por_Peca.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPreco_Por_Peca_KeyDown);
@@ -1410,10 +1363,9 @@ namespace GUI
             // btnImportar
             // 
             this.btnImportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImportar.Location = new System.Drawing.Point(617, 343);
-            this.btnImportar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnImportar.Location = new System.Drawing.Point(548, 283);
             this.btnImportar.Name = "btnImportar";
-            this.btnImportar.Size = new System.Drawing.Size(159, 55);
+            this.btnImportar.Size = new System.Drawing.Size(136, 45);
             this.btnImportar.TabIndex = 116;
             this.btnImportar.Text = "Carregar";
             this.btnImportar.UseVisualStyleBackColor = true;
@@ -1425,11 +1377,10 @@ namespace GUI
             this.btnAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdicionar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.Image")));
-            this.btnAdicionar.Location = new System.Drawing.Point(604, 4);
-            this.btnAdicionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAdicionar.Location = new System.Drawing.Point(517, 3);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F2);
-            this.btnAdicionar.Size = new System.Drawing.Size(27, 28);
+            this.btnAdicionar.Size = new System.Drawing.Size(23, 23);
             this.btnAdicionar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnAdicionar.TabIndex = 143;
             this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
@@ -1439,9 +1390,9 @@ namespace GUI
             this.lblIgual.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIgual.BackColor = System.Drawing.Color.Transparent;
             this.lblIgual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIgual.Location = new System.Drawing.Point(1016, 378);
+            this.lblIgual.Location = new System.Drawing.Point(870, 311);
             this.lblIgual.Name = "lblIgual";
-            this.lblIgual.Size = new System.Drawing.Size(21, 31);
+            this.lblIgual.Size = new System.Drawing.Size(18, 25);
             this.lblIgual.TabIndex = 139;
             this.lblIgual.Text = "=";
             this.lblIgual.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1456,10 +1407,9 @@ namespace GUI
             this.txtPC_Solicitadas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPC_Solicitadas.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.txtPC_Solicitadas.FocusHighlightEnabled = true;
-            this.txtPC_Solicitadas.Location = new System.Drawing.Point(719, 305);
-            this.txtPC_Solicitadas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPC_Solicitadas.Location = new System.Drawing.Point(636, 252);
             this.txtPC_Solicitadas.Name = "txtPC_Solicitadas";
-            this.txtPC_Solicitadas.Size = new System.Drawing.Size(57, 23);
+            this.txtPC_Solicitadas.Size = new System.Drawing.Size(49, 21);
             this.txtPC_Solicitadas.TabIndex = 115;
             this.txtPC_Solicitadas.ValueChanged += new System.EventHandler(this.txtPC_Solicitadas_ValueChanged);
             this.txtPC_Solicitadas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPC_Solicitadas_KeyDown);
@@ -1469,9 +1419,9 @@ namespace GUI
             this.lblPeca_solicitadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPeca_solicitadas.BackColor = System.Drawing.Color.Transparent;
             this.lblPeca_solicitadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeca_solicitadas.Location = new System.Drawing.Point(590, 310);
+            this.lblPeca_solicitadas.Location = new System.Drawing.Point(525, 256);
             this.lblPeca_solicitadas.Name = "lblPeca_solicitadas";
-            this.lblPeca_solicitadas.Size = new System.Drawing.Size(117, 16);
+            this.lblPeca_solicitadas.Size = new System.Drawing.Size(100, 13);
             this.lblPeca_solicitadas.TabIndex = 126;
             this.lblPeca_solicitadas.Text = "Peças Solicitadas:";
             this.lblPeca_solicitadas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1480,9 +1430,9 @@ namespace GUI
             // 
             this.lblArquivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblArquivo.BackColor = System.Drawing.Color.Transparent;
-            this.lblArquivo.Location = new System.Drawing.Point(604, 179);
+            this.lblArquivo.Location = new System.Drawing.Point(517, 150);
             this.lblArquivo.Name = "lblArquivo";
-            this.lblArquivo.Size = new System.Drawing.Size(56, 16);
+            this.lblArquivo.Size = new System.Drawing.Size(48, 13);
             this.lblArquivo.TabIndex = 141;
             this.lblArquivo.Text = "Arquivo:";
             this.lblArquivo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1492,9 +1442,9 @@ namespace GUI
             this.lblValorApagar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblValorApagar1.BackColor = System.Drawing.Color.Transparent;
             this.lblValorApagar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorApagar1.Location = new System.Drawing.Point(384, 257);
+            this.lblValorApagar1.Location = new System.Drawing.Point(329, 213);
             this.lblValorApagar1.Name = "lblValorApagar1";
-            this.lblValorApagar1.Size = new System.Drawing.Size(121, 17);
+            this.lblValorApagar1.Size = new System.Drawing.Size(104, 14);
             this.lblValorApagar1.TabIndex = 127;
             this.lblValorApagar1.Text = "Valor a Pagar:";
             this.lblValorApagar1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1504,9 +1454,9 @@ namespace GUI
             this.lblLado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblLado.BackColor = System.Drawing.Color.Transparent;
             this.lblLado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLado.Location = new System.Drawing.Point(401, 334);
+            this.lblLado.Location = new System.Drawing.Point(344, 276);
             this.lblLado.Name = "lblLado";
-            this.lblLado.Size = new System.Drawing.Size(57, 17);
+            this.lblLado.Size = new System.Drawing.Size(49, 14);
             this.lblLado.TabIndex = 127;
             this.lblLado.Text = "Lado:";
             this.lblLado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1525,8 +1475,7 @@ namespace GUI
             this.dtpData_Entrega.FocusHighlightEnabled = true;
             this.dtpData_Entrega.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Entrega.IsPopupCalendarOpen = false;
-            this.dtpData_Entrega.Location = new System.Drawing.Point(863, 470);
-            this.dtpData_Entrega.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtpData_Entrega.Location = new System.Drawing.Point(739, 386);
             // 
             // 
             // 
@@ -1556,7 +1505,7 @@ namespace GUI
             this.dtpData_Entrega.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtpData_Entrega.MonthCalendar.TodayButtonVisible = true;
             this.dtpData_Entrega.Name = "dtpData_Entrega";
-            this.dtpData_Entrega.Size = new System.Drawing.Size(174, 23);
+            this.dtpData_Entrega.Size = new System.Drawing.Size(149, 21);
             this.dtpData_Entrega.TabIndex = 122;
             this.dtpData_Entrega.TextChanged += new System.EventHandler(this.dtpData_Entrega_TextChanged);
             // 
@@ -1566,11 +1515,10 @@ namespace GUI
             this.btnBaixo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBaixo.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnBaixo.Image = ((System.Drawing.Image)(resources.GetObject("btnBaixo.Image")));
-            this.btnBaixo.Location = new System.Drawing.Point(605, 143);
-            this.btnBaixo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBaixo.Location = new System.Drawing.Point(518, 116);
             this.btnBaixo.Name = "btnBaixo";
             this.btnBaixo.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlDown);
-            this.btnBaixo.Size = new System.Drawing.Size(27, 28);
+            this.btnBaixo.Size = new System.Drawing.Size(23, 23);
             this.btnBaixo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnBaixo.TabIndex = 147;
             this.btnBaixo.Click += new System.EventHandler(this.btnBaixo_Click);
@@ -1578,10 +1526,9 @@ namespace GUI
             // txtBordado_Arquivo
             // 
             this.txtBordado_Arquivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBordado_Arquivo.Location = new System.Drawing.Point(604, 199);
-            this.txtBordado_Arquivo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBordado_Arquivo.Location = new System.Drawing.Point(517, 166);
             this.txtBordado_Arquivo.Name = "txtBordado_Arquivo";
-            this.txtBordado_Arquivo.Size = new System.Drawing.Size(195, 23);
+            this.txtBordado_Arquivo.Size = new System.Drawing.Size(168, 21);
             this.txtBordado_Arquivo.TabIndex = 117;
             this.txtBordado_Arquivo.TabStop = false;
             // 
@@ -1590,9 +1537,9 @@ namespace GUI
             this.lblDiaSemana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDiaSemana.BackColor = System.Drawing.Color.Transparent;
             this.lblDiaSemana.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaSemana.Location = new System.Drawing.Point(859, 445);
+            this.lblDiaSemana.Location = new System.Drawing.Point(736, 366);
             this.lblDiaSemana.Name = "lblDiaSemana";
-            this.lblDiaSemana.Size = new System.Drawing.Size(140, 21);
+            this.lblDiaSemana.Size = new System.Drawing.Size(120, 17);
             this.lblDiaSemana.TabIndex = 134;
             this.lblDiaSemana.Text = "...";
             this.lblDiaSemana.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1602,9 +1549,9 @@ namespace GUI
             this.lblPecasBordadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPecasBordadas.BackColor = System.Drawing.Color.Transparent;
             this.lblPecasBordadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPecasBordadas.Location = new System.Drawing.Point(838, 307);
+            this.lblPecasBordadas.Location = new System.Drawing.Point(718, 254);
             this.lblPecasBordadas.Name = "lblPecasBordadas";
-            this.lblPecasBordadas.Size = new System.Drawing.Size(122, 20);
+            this.lblPecasBordadas.Size = new System.Drawing.Size(105, 16);
             this.lblPecasBordadas.TabIndex = 135;
             this.lblPecasBordadas.Text = "Peças Bordadas:";
             this.lblPecasBordadas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1614,10 +1561,9 @@ namespace GUI
             this.picBordado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBordado.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.picBordado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picBordado.Location = new System.Drawing.Point(807, 2);
-            this.picBordado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picBordado.Location = new System.Drawing.Point(691, 2);
             this.picBordado.Name = "picBordado";
-            this.picBordado.Size = new System.Drawing.Size(233, 246);
+            this.picBordado.Size = new System.Drawing.Size(200, 200);
             this.picBordado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBordado.TabIndex = 123;
             this.picBordado.TabStop = false;
@@ -1626,9 +1572,9 @@ namespace GUI
             // 
             this.lblPrecoSugerido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrecoSugerido.BackColor = System.Drawing.Color.Transparent;
-            this.lblPrecoSugerido.Location = new System.Drawing.Point(624, 144);
+            this.lblPrecoSugerido.Location = new System.Drawing.Point(534, 117);
             this.lblPrecoSugerido.Name = "lblPrecoSugerido";
-            this.lblPrecoSugerido.Size = new System.Drawing.Size(110, 16);
+            this.lblPrecoSugerido.Size = new System.Drawing.Size(94, 13);
             this.lblPrecoSugerido.TabIndex = 130;
             this.lblPrecoSugerido.Text = "Preço Sugerido:";
             this.lblPrecoSugerido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1636,13 +1582,12 @@ namespace GUI
             // rg_lado
             // 
             this.rg_lado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.rg_lado.Location = new System.Drawing.Point(465, 323);
-            this.rg_lado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rg_lado.Location = new System.Drawing.Point(399, 267);
             this.rg_lado.Name = "rg_lado";
             this.rg_lado.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(0)), "Esquerdo"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Direito")});
-            this.rg_lado.Size = new System.Drawing.Size(139, 75);
+            this.rg_lado.Size = new System.Drawing.Size(119, 61);
             this.rg_lado.TabIndex = 149;
             // 
             // lblDataEntrega
@@ -1650,9 +1595,9 @@ namespace GUI
             this.lblDataEntrega.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDataEntrega.BackColor = System.Drawing.Color.Transparent;
             this.lblDataEntrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblDataEntrega.Location = new System.Drawing.Point(746, 479);
+            this.lblDataEntrega.Location = new System.Drawing.Point(639, 393);
             this.lblDataEntrega.Name = "lblDataEntrega";
-            this.lblDataEntrega.Size = new System.Drawing.Size(110, 16);
+            this.lblDataEntrega.Size = new System.Drawing.Size(94, 13);
             this.lblDataEntrega.TabIndex = 136;
             this.lblDataEntrega.Text = "Data Entrega:";
             this.lblDataEntrega.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1663,11 +1608,10 @@ namespace GUI
             this.btnApagar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnApagar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnApagar.Image = ((System.Drawing.Image)(resources.GetObject("btnApagar.Image")));
-            this.btnApagar.Location = new System.Drawing.Point(604, 39);
-            this.btnApagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnApagar.Location = new System.Drawing.Point(517, 32);
             this.btnApagar.Name = "btnApagar";
             this.btnApagar.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlDel);
-            this.btnApagar.Size = new System.Drawing.Size(27, 28);
+            this.btnApagar.Size = new System.Drawing.Size(23, 23);
             this.btnApagar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnApagar.TabIndex = 144;
             this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
@@ -1678,11 +1622,10 @@ namespace GUI
             this.btnCima.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCima.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnCima.Image = ((System.Drawing.Image)(resources.GetObject("btnCima.Image")));
-            this.btnCima.Location = new System.Drawing.Point(604, 75);
-            this.btnCima.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCima.Location = new System.Drawing.Point(517, 61);
             this.btnCima.Name = "btnCima";
             this.btnCima.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlUp);
-            this.btnCima.Size = new System.Drawing.Size(27, 28);
+            this.btnCima.Size = new System.Drawing.Size(23, 23);
             this.btnCima.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCima.TabIndex = 145;
             this.btnCima.Click += new System.EventHandler(this.btnCima_Click);
@@ -1692,9 +1635,9 @@ namespace GUI
             this.lblDescricao1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDescricao1.BackColor = System.Drawing.Color.Transparent;
             this.lblDescricao1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricao1.Location = new System.Drawing.Point(601, 228);
+            this.lblDescricao1.Location = new System.Drawing.Point(515, 189);
             this.lblDescricao1.Name = "lblDescricao1";
-            this.lblDescricao1.Size = new System.Drawing.Size(87, 23);
+            this.lblDescricao1.Size = new System.Drawing.Size(75, 19);
             this.lblDescricao1.TabIndex = 142;
             this.lblDescricao1.Text = "Descrição:";
             this.lblDescricao1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1702,12 +1645,11 @@ namespace GUI
             // txtObs_Item
             // 
             this.txtObs_Item.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtObs_Item.Location = new System.Drawing.Point(84, 417);
-            this.txtObs_Item.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtObs_Item.Location = new System.Drawing.Point(72, 343);
             this.txtObs_Item.Multiline = true;
             this.txtObs_Item.Name = "txtObs_Item";
             this.txtObs_Item.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Item.Size = new System.Drawing.Size(308, 84);
+            this.txtObs_Item.Size = new System.Drawing.Size(265, 69);
             this.txtObs_Item.TabIndex = 121;
             this.txtObs_Item.TabStop = false;
             // 
@@ -1715,9 +1657,9 @@ namespace GUI
             // 
             this.lblBoradado_id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBoradado_id.BackColor = System.Drawing.Color.Transparent;
-            this.lblBoradado_id.Location = new System.Drawing.Point(638, 37);
+            this.lblBoradado_id.Location = new System.Drawing.Point(546, 30);
             this.lblBoradado_id.Name = "lblBoradado_id";
-            this.lblBoradado_id.Size = new System.Drawing.Size(92, 22);
+            this.lblBoradado_id.Size = new System.Drawing.Size(79, 18);
             this.lblBoradado_id.TabIndex = 140;
             this.lblBoradado_id.Text = "Bordado_Id:";
             this.lblBoradado_id.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1727,9 +1669,9 @@ namespace GUI
             this.lblObs_item.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblObs_item.BackColor = System.Drawing.Color.Transparent;
             this.lblObs_item.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblObs_item.Location = new System.Drawing.Point(30, 420);
+            this.lblObs_item.Location = new System.Drawing.Point(26, 345);
             this.lblObs_item.Name = "lblObs_item";
-            this.lblObs_item.Size = new System.Drawing.Size(48, 20);
+            this.lblObs_item.Size = new System.Drawing.Size(41, 16);
             this.lblObs_item.TabIndex = 133;
             this.lblObs_item.Text = "Obs.:";
             this.lblObs_item.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1740,11 +1682,10 @@ namespace GUI
             this.btnInserirItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInserirItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnInserirItem.Image = ((System.Drawing.Image)(resources.GetObject("btnInserirItem.Image")));
-            this.btnInserirItem.Location = new System.Drawing.Point(605, 111);
-            this.btnInserirItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnInserirItem.Location = new System.Drawing.Point(518, 90);
             this.btnInserirItem.Name = "btnInserirItem";
             this.btnInserirItem.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlIns);
-            this.btnInserirItem.Size = new System.Drawing.Size(27, 28);
+            this.btnInserirItem.Size = new System.Drawing.Size(23, 23);
             this.btnInserirItem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnInserirItem.TabIndex = 146;
             this.btnInserirItem.Tooltip = "Insere novo ítem abaixo do ítem selecionado.";
@@ -1755,9 +1696,9 @@ namespace GUI
             this.lblDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDescricao.BackColor = System.Drawing.Color.Transparent;
             this.lblDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblDescricao.Location = new System.Drawing.Point(-3, 289);
+            this.lblDescricao.Location = new System.Drawing.Point(-3, 239);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(87, 22);
+            this.lblDescricao.Size = new System.Drawing.Size(75, 18);
             this.lblDescricao.TabIndex = 132;
             this.lblDescricao.Text = "Descrição:";
             this.lblDescricao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1765,10 +1706,9 @@ namespace GUI
             // txtDescricao
             // 
             this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtDescricao.Location = new System.Drawing.Point(84, 290);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDescricao.Location = new System.Drawing.Point(72, 240);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(520, 23);
+            this.txtDescricao.Size = new System.Drawing.Size(446, 21);
             this.txtDescricao.TabIndex = 120;
             this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
             // 
@@ -1776,9 +1716,9 @@ namespace GUI
             // 
             this.lblPontos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPontos.BackColor = System.Drawing.Color.Transparent;
-            this.lblPontos.Location = new System.Drawing.Point(666, 90);
+            this.lblPontos.Location = new System.Drawing.Point(570, 73);
             this.lblPontos.Name = "lblPontos";
-            this.lblPontos.Size = new System.Drawing.Size(69, 25);
+            this.lblPontos.Size = new System.Drawing.Size(59, 20);
             this.lblPontos.TabIndex = 124;
             this.lblPontos.Text = "Pontos:";
             this.lblPontos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1788,9 +1728,9 @@ namespace GUI
             this.lblLocal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblLocal.BackColor = System.Drawing.Color.Transparent;
             this.lblLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocal.Location = new System.Drawing.Point(20, 332);
+            this.lblLocal.Location = new System.Drawing.Point(17, 274);
             this.lblLocal.Name = "lblLocal";
-            this.lblLocal.Size = new System.Drawing.Size(57, 17);
+            this.lblLocal.Size = new System.Drawing.Size(49, 14);
             this.lblLocal.TabIndex = 128;
             this.lblLocal.Text = "Local:";
             this.lblLocal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1798,10 +1738,9 @@ namespace GUI
             // rg_local
             // 
             this.rg_local.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.rg_local.Location = new System.Drawing.Point(84, 326);
-            this.rg_local.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rg_local.Location = new System.Drawing.Point(72, 269);
             this.rg_local.Name = "rg_local";
-            this.rg_local.Size = new System.Drawing.Size(309, 73);
+            this.rg_local.Size = new System.Drawing.Size(265, 59);
             this.rg_local.TabIndex = 148;
             // 
             // pnlItens
@@ -1812,9 +1751,8 @@ namespace GUI
             this.pnlItens.Controls.Add(this.dgItens);
             this.pnlItens.Controls.Add(this.pnTotais);
             this.pnlItens.Location = new System.Drawing.Point(0, 0);
-            this.pnlItens.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlItens.Name = "pnlItens";
-            this.pnlItens.Size = new System.Drawing.Size(597, 248);
+            this.pnlItens.Size = new System.Drawing.Size(511, 206);
             this.pnlItens.TabIndex = 0;
             // 
             // dgItens
@@ -1832,7 +1770,7 @@ namespace GUI
             this.dgItens.Name = "dgItens";
             this.dgItens.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemColorPickEdit3});
-            this.dgItens.Size = new System.Drawing.Size(592, 206);
+            this.dgItens.Size = new System.Drawing.Size(507, 172);
             this.dgItens.TabIndex = 101;
             this.dgItens.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvItens});
@@ -1894,8 +1832,6 @@ namespace GUI
             this.gvItens.OptionsBehavior.AllowIncrementalSearch = true;
             this.gvItens.OptionsBehavior.AutoPopulateColumns = false;
             this.gvItens.OptionsBehavior.AutoSelectAllInEditor = false;
-            this.gvItens.OptionsBehavior.Editable = false;
-            this.gvItens.OptionsBehavior.ReadOnly = true;
             this.gvItens.OptionsCustomization.AllowColumnMoving = false;
             this.gvItens.OptionsCustomization.AllowColumnResizing = false;
             this.gvItens.OptionsCustomization.AllowFilter = false;
@@ -1904,8 +1840,6 @@ namespace GUI
             this.gvItens.OptionsDetail.SmartDetailHeight = true;
             this.gvItens.OptionsMenu.EnableColumnMenu = false;
             this.gvItens.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gvItens.OptionsSelection.EnableAppearanceFocusedRow = false;
-            this.gvItens.OptionsSelection.MultiSelect = true;
             this.gvItens.OptionsSelection.UseIndicatorForSelection = false;
             this.gvItens.OptionsView.ColumnAutoWidth = false;
             this.gvItens.OptionsView.ShowGroupPanel = false;
@@ -1963,6 +1897,8 @@ namespace GUI
             this.colPreco.AppearanceHeader.Options.UseTextOptions = true;
             this.colPreco.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.colPreco.Caption = "preco";
+            this.colPreco.DisplayFormat.FormatString = "n2";
+            this.colPreco.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.colPreco.FieldName = "preco_por_peca";
             this.colPreco.Name = "colPreco";
             this.colPreco.OptionsColumn.FixedWidth = true;
@@ -1973,6 +1909,8 @@ namespace GUI
             // colTotal
             // 
             this.colTotal.Caption = "Tot.ítem";
+            this.colTotal.DisplayFormat.FormatString = "n2";
+            this.colTotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.colTotal.FieldName = "total";
             this.colTotal.Name = "colTotal";
             this.colTotal.OptionsColumn.FixedWidth = true;
@@ -2081,9 +2019,9 @@ namespace GUI
             this.lblX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblX.BackColor = System.Drawing.Color.Transparent;
             this.lblX.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblX.Location = new System.Drawing.Point(1003, 326);
+            this.lblX.Location = new System.Drawing.Point(859, 269);
             this.lblX.Name = "lblX";
-            this.lblX.Size = new System.Drawing.Size(34, 31);
+            this.lblX.Size = new System.Drawing.Size(29, 25);
             this.lblX.TabIndex = 138;
             this.lblX.Text = "x";
             this.lblX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2106,9 +2044,8 @@ namespace GUI
             this.xtbpPagamento.Controls.Add(this.lblSaldoaPagar);
             this.xtbpPagamento.Controls.Add(this.btnAmortizar);
             this.xtbpPagamento.Controls.Add(this.cbQuitado);
-            this.xtbpPagamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtbpPagamento.Name = "xtbpPagamento";
-            this.xtbpPagamento.Size = new System.Drawing.Size(832, 587);
+            this.xtbpPagamento.Size = new System.Drawing.Size(712, 476);
             this.xtbpPagamento.Text = "Pagamento";
             // 
             // xtbpExecucao
@@ -2131,9 +2068,8 @@ namespace GUI
             this.xtbpExecucao.Controls.Add(this.btnRestaura);
             this.xtbpExecucao.Controls.Add(this.txtPC_Defeito);
             this.xtbpExecucao.Controls.Add(this.txtPC_Nao_Bordadas);
-            this.xtbpExecucao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtbpExecucao.Name = "xtbpExecucao";
-            this.xtbpExecucao.Size = new System.Drawing.Size(832, 587);
+            this.xtbpExecucao.Size = new System.Drawing.Size(712, 476);
             this.xtbpExecucao.Text = "Execução";
             // 
             // dgRegistros
@@ -2141,15 +2077,13 @@ namespace GUI
             this.dgRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgRegistros.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             gridLevelNode1.RelationName = "Level1";
             this.dgRegistros.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.dgRegistros.Location = new System.Drawing.Point(-2, 116);
+            this.dgRegistros.Location = new System.Drawing.Point(-2, 94);
             this.dgRegistros.MainView = this.gvRegistros;
-            this.dgRegistros.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgRegistros.Name = "dgRegistros";
-            this.dgRegistros.Size = new System.Drawing.Size(301, 524);
+            this.dgRegistros.Size = new System.Drawing.Size(258, 426);
             this.dgRegistros.TabIndex = 59;
             this.dgRegistros.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvRegistros});
@@ -2176,7 +2110,6 @@ namespace GUI
             this.gvRegistros.OptionsFilter.FilterEditorUseMenuForOperandsAndOperators = false;
             this.gvRegistros.OptionsFilter.ShowAllTableValuesInCheckedFilterPopup = false;
             this.gvRegistros.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gvRegistros.OptionsSelection.EnableAppearanceFocusedRow = false;
             this.gvRegistros.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.gvRegistros.OptionsView.AllowHtmlDrawGroups = false;
             this.gvRegistros.OptionsView.ShowGroupExpandCollapseButtons = false;
@@ -2190,10 +2123,9 @@ namespace GUI
             this.chkFiltroDemais.Checked = true;
             this.chkFiltroDemais.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroDemais.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroDemais.Location = new System.Drawing.Point(236, 90);
-            this.chkFiltroDemais.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroDemais.Location = new System.Drawing.Point(202, 73);
             this.chkFiltroDemais.Name = "chkFiltroDemais";
-            this.chkFiltroDemais.Size = new System.Drawing.Size(67, 18);
+            this.chkFiltroDemais.Size = new System.Drawing.Size(55, 16);
             this.chkFiltroDemais.TabIndex = 104;
             this.chkFiltroDemais.Text = "Demais";
             this.chkFiltroDemais.UseVisualStyleBackColor = true;
@@ -2203,10 +2135,9 @@ namespace GUI
             // 
             this.chkFiltroMensal.AutoSize = true;
             this.chkFiltroMensal.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroMensal.Location = new System.Drawing.Point(236, 70);
-            this.chkFiltroMensal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroMensal.Location = new System.Drawing.Point(202, 57);
             this.chkFiltroMensal.Name = "chkFiltroMensal";
-            this.chkFiltroMensal.Size = new System.Drawing.Size(65, 18);
+            this.chkFiltroMensal.Size = new System.Drawing.Size(54, 16);
             this.chkFiltroMensal.TabIndex = 103;
             this.chkFiltroMensal.Text = "Mensal";
             this.chkFiltroMensal.UseVisualStyleBackColor = true;
@@ -2218,10 +2149,9 @@ namespace GUI
             this.chkFiltroNaoExecutado.Checked = true;
             this.chkFiltroNaoExecutado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroNaoExecutado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroNaoExecutado.Location = new System.Drawing.Point(104, 92);
-            this.chkFiltroNaoExecutado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroNaoExecutado.Location = new System.Drawing.Point(89, 75);
             this.chkFiltroNaoExecutado.Name = "chkFiltroNaoExecutado";
-            this.chkFiltroNaoExecutado.Size = new System.Drawing.Size(112, 18);
+            this.chkFiltroNaoExecutado.Size = new System.Drawing.Size(92, 16);
             this.chkFiltroNaoExecutado.TabIndex = 102;
             this.chkFiltroNaoExecutado.Text = "Não Executado";
             this.chkFiltroNaoExecutado.UseVisualStyleBackColor = true;
@@ -2233,10 +2163,9 @@ namespace GUI
             this.chkFiltroNaoQuitado.Checked = true;
             this.chkFiltroNaoQuitado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroNaoQuitado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroNaoQuitado.Location = new System.Drawing.Point(7, 90);
-            this.chkFiltroNaoQuitado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroNaoQuitado.Location = new System.Drawing.Point(6, 73);
             this.chkFiltroNaoQuitado.Name = "chkFiltroNaoQuitado";
-            this.chkFiltroNaoQuitado.Size = new System.Drawing.Size(81, 18);
+            this.chkFiltroNaoQuitado.Size = new System.Drawing.Size(68, 16);
             this.chkFiltroNaoQuitado.TabIndex = 101;
             this.chkFiltroNaoQuitado.Text = "Não Pago";
             this.chkFiltroNaoQuitado.UseVisualStyleBackColor = true;
@@ -2246,10 +2175,9 @@ namespace GUI
             // 
             this.chkFiltroExecutado.AutoSize = true;
             this.chkFiltroExecutado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroExecutado.Location = new System.Drawing.Point(104, 73);
-            this.chkFiltroExecutado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroExecutado.Location = new System.Drawing.Point(89, 59);
             this.chkFiltroExecutado.Name = "chkFiltroExecutado";
-            this.chkFiltroExecutado.Size = new System.Drawing.Size(87, 18);
+            this.chkFiltroExecutado.Size = new System.Drawing.Size(71, 16);
             this.chkFiltroExecutado.TabIndex = 100;
             this.chkFiltroExecutado.Text = "Executado";
             this.chkFiltroExecutado.UseVisualStyleBackColor = true;
@@ -2261,10 +2189,9 @@ namespace GUI
             this.chkFiltroQuitado.Checked = true;
             this.chkFiltroQuitado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroQuitado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroQuitado.Location = new System.Drawing.Point(7, 70);
-            this.chkFiltroQuitado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroQuitado.Location = new System.Drawing.Point(6, 57);
             this.chkFiltroQuitado.Name = "chkFiltroQuitado";
-            this.chkFiltroQuitado.Size = new System.Drawing.Size(56, 18);
+            this.chkFiltroQuitado.Size = new System.Drawing.Size(47, 16);
             this.chkFiltroQuitado.TabIndex = 99;
             this.chkFiltroQuitado.Text = "Pago";
             this.chkFiltroQuitado.UseVisualStyleBackColor = true;
@@ -2275,10 +2202,9 @@ namespace GUI
             this.cbFiltroCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbFiltroCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbFiltroCliente.FormattingEnabled = true;
-            this.cbFiltroCliente.Location = new System.Drawing.Point(62, 37);
-            this.cbFiltroCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbFiltroCliente.Location = new System.Drawing.Point(53, 30);
             this.cbFiltroCliente.Name = "cbFiltroCliente";
-            this.cbFiltroCliente.Size = new System.Drawing.Size(237, 24);
+            this.cbFiltroCliente.Size = new System.Drawing.Size(204, 21);
             this.cbFiltroCliente.TabIndex = 98;
             this.cbFiltroCliente.SelectedIndexChanged += new System.EventHandler(this.btnFiltrar_Click);
             // 
@@ -2286,10 +2212,9 @@ namespace GUI
             // 
             this.chkFiltroCliente.AutoSize = true;
             this.chkFiltroCliente.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroCliente.Location = new System.Drawing.Point(2, 41);
-            this.chkFiltroCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chkFiltroCliente.Location = new System.Drawing.Point(2, 33);
             this.chkFiltroCliente.Name = "chkFiltroCliente";
-            this.chkFiltroCliente.Size = new System.Drawing.Size(66, 18);
+            this.chkFiltroCliente.Size = new System.Drawing.Size(54, 16);
             this.chkFiltroCliente.TabIndex = 105;
             this.chkFiltroCliente.Text = "Cliente";
             this.chkFiltroCliente.UseVisualStyleBackColor = true;
@@ -2298,10 +2223,9 @@ namespace GUI
             // ckbPAGO
             // 
             this.ckbPAGO.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.ckbPAGO.Location = new System.Drawing.Point(414, 64);
-            this.ckbPAGO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ckbPAGO.Location = new System.Drawing.Point(355, 52);
             this.ckbPAGO.Name = "ckbPAGO";
-            this.ckbPAGO.Size = new System.Drawing.Size(111, 41);
+            this.ckbPAGO.Size = new System.Drawing.Size(95, 33);
             this.ckbPAGO.TabIndex = 216;
             this.ckbPAGO.Text = "PAGO";
             // 
@@ -2336,9 +2260,9 @@ namespace GUI
             // 
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefone.Location = new System.Drawing.Point(262, 34);
+            this.lblTelefone.Location = new System.Drawing.Point(225, 28);
             this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(25, 21);
+            this.lblTelefone.Size = new System.Drawing.Size(20, 16);
             this.lblTelefone.TabIndex = 201;
             this.lblTelefone.Text = "...";
             // 
@@ -2366,19 +2290,17 @@ namespace GUI
             this.pnlFitro.Controls.Add(this.chkFiltroQuitado);
             this.pnlFitro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFitro.Location = new System.Drawing.Point(0, 0);
-            this.pnlFitro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlFitro.Name = "pnlFitro";
-            this.pnlFitro.Size = new System.Drawing.Size(300, 645);
+            this.pnlFitro.Size = new System.Drawing.Size(257, 524);
             this.pnlFitro.TabIndex = 106;
             // 
             // btnQuitar
             // 
             this.btnQuitar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnQuitar.Location = new System.Drawing.Point(258, 62);
-            this.btnQuitar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnQuitar.Location = new System.Drawing.Point(221, 50);
             this.btnQuitar.MenuManager = this.barManager1;
             this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(145, 46);
+            this.btnQuitar.Size = new System.Drawing.Size(124, 37);
             this.btnQuitar.TabIndex = 217;
             this.btnQuitar.Text = "Baixar o Pedido";
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
@@ -2388,10 +2310,10 @@ namespace GUI
             this.MenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CimaToolStripMenuItem});
-            this.MenuStrip1.Location = new System.Drawing.Point(0, 50);
+            this.MenuStrip1.Location = new System.Drawing.Point(0, 41);
             this.MenuStrip1.Name = "MenuStrip1";
-            this.MenuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.MenuStrip1.Size = new System.Drawing.Size(1388, 28);
+            this.MenuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.MenuStrip1.Size = new System.Drawing.Size(1190, 23);
             this.MenuStrip1.TabIndex = 94;
             this.MenuStrip1.Text = "MenuStrip1";
             this.MenuStrip1.Visible = false;
@@ -2408,7 +2330,7 @@ namespace GUI
             this.GravarToolStripMenuItem});
             this.CimaToolStripMenuItem.Name = "CimaToolStripMenuItem";
             this.CimaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.CimaToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.CimaToolStripMenuItem.Size = new System.Drawing.Size(59, 19);
             this.CimaToolStripMenuItem.Text = "Atalhos";
             this.CimaToolStripMenuItem.Visible = false;
             // 
@@ -2416,21 +2338,21 @@ namespace GUI
             // 
             this.AdicionarToolStripMenuItem.Name = "AdicionarToolStripMenuItem";
             this.AdicionarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Insert)));
-            this.AdicionarToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.AdicionarToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.AdicionarToolStripMenuItem.Text = "Adicionar";
             // 
             // ExcluirToolStripMenuItem
             // 
             this.ExcluirToolStripMenuItem.Name = "ExcluirToolStripMenuItem";
             this.ExcluirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Delete)));
-            this.ExcluirToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.ExcluirToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.ExcluirToolStripMenuItem.Text = "Excluir";
             // 
             // MaisNomeToolStripMenuItem
             // 
             this.MaisNomeToolStripMenuItem.Name = "MaisNomeToolStripMenuItem";
             this.MaisNomeToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.MaisNomeToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.MaisNomeToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.MaisNomeToolStripMenuItem.Text = "Mais_Nome";
             this.MaisNomeToolStripMenuItem.Click += new System.EventHandler(this.MaisNomeToolStripMenuItem_Click);
             // 
@@ -2438,7 +2360,7 @@ namespace GUI
             // 
             this.MaisFuncaoToolStripMenuItem.Name = "MaisFuncaoToolStripMenuItem";
             this.MaisFuncaoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.MaisFuncaoToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.MaisFuncaoToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.MaisFuncaoToolStripMenuItem.Text = "Mais_Funcao";
             this.MaisFuncaoToolStripMenuItem.Click += new System.EventHandler(this.MaisFuncaoToolStripMenuItem_Click);
             // 
@@ -2446,7 +2368,7 @@ namespace GUI
             // 
             this.MaisNomeFuncaoToolStripMenuItem.Name = "MaisNomeFuncaoToolStripMenuItem";
             this.MaisNomeFuncaoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.MaisNomeFuncaoToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.MaisNomeFuncaoToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.MaisNomeFuncaoToolStripMenuItem.Text = "Mais_Nome_Funcao";
             this.MaisNomeFuncaoToolStripMenuItem.Click += new System.EventHandler(this.MaisNomeFuncaoToolStripMenuItem_Click);
             // 
@@ -2454,23 +2376,23 @@ namespace GUI
             // 
             this.MaisNomeMesmaTelaToolStripMenuItem.Name = "MaisNomeMesmaTelaToolStripMenuItem";
             this.MaisNomeMesmaTelaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6;
-            this.MaisNomeMesmaTelaToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.MaisNomeMesmaTelaToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.MaisNomeMesmaTelaToolStripMenuItem.Text = "Mais_Nome_Mesma_Tela";
             // 
             // GravarToolStripMenuItem
             // 
             this.GravarToolStripMenuItem.Name = "GravarToolStripMenuItem";
             this.GravarToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F10;
-            this.GravarToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.GravarToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.GravarToolStripMenuItem.Text = "Gravar";
             // 
             // frmPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
-            this.ClientSize = new System.Drawing.Size(1360, 699);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(1166, 568);
             this.Controls.Add(this.MenuStrip1);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmPedido";
             this.Text = "Pedido";
             this.Load += new System.EventHandler(this.frmPedido_Load);

@@ -179,22 +179,15 @@ namespace GUI
 
             if (gvItens.RowCount > row && mPodeAlterar)
             {
-                gvItens.SetRowCellValue(row,"bordado_id",nudBordado_Id.Value);
-                gvItens.SetRowCellValue(row, "colPc_solicitadas", txtPC_Solicitadas.Value);
-                gvItens.SetRowCellValue(row, "preco", txtPreco_Por_Peca.Value);
-
-                //dgItensO.Rows[row].Cells["qtde"].Value = txtPC_Solicitadas.Value;
-                //dgItensO.Rows[row].Cells["preco"].Value = txtPreco_Por_Peca.Value;
-                //dgItensO.Rows[row].Cells["Tot_item"].Value =
-                txtTotal_Item.Value = 
+                txtTotal_Item.Value =
                        txtPC_Solicitadas.Value * txtPreco_Por_Peca.Value;
-                //dgItensO.Rows[row].Cells["data_entrega"].Value = dtpData_Entrega.Value;
-                //dgItensO.Rows[row].Cells["descricao"].Value = txtDescricao.Text;
-                //dgItensO.Rows[row].Cells["obs"].Value = txtObs_Item.Text;
-                //dgItensO.Rows[row].Cells["local_id"].Value = rg_local.SelectedIndex;
-                //dgItensO.Rows[row].Cells["lado"].Value = rg_lado.SelectedIndex;
-                //dgItensO.Rows[row].Cells["pc_solicitadas"].Value = Convert.ToInt32(txtPC_Solicitadas.Value);
-                //dgItensO.Rows[row].Cells["preco"].Value = Convert.ToDouble(txtPreco_Por_Peca.Value);
+
+                gvItens.BeginDataUpdate(); 
+                gvItens.SetRowCellValue(row,"bordado_id",nudBordado_Id.Value);
+                gvItens.SetRowCellValue(row, "pc_solicitadas", txtPC_Solicitadas.Value);
+                gvItens.SetRowCellValue(row, "preco", txtPreco_Por_Peca.Value);
+                gvItens.SetRowCellValue(row, "total", txtTotal_Item.Value);
+                gvItens.EndDataUpdate(); 
             }
         }
 
@@ -1572,8 +1565,8 @@ namespace GUI
         private void gvRegistros_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (gvRegistros.RowCount < 1) return;
-            if (gvItens.RowCount > 0) Carrega_Item(0); // mostra 1o item
             ExibeItens(e.FocusedRowHandle);
+            if (gvItens.RowCount > 0) Carrega_Item(0); // mostra 1o item
             CalculaTotais(); 
         }
 

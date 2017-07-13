@@ -165,8 +165,6 @@
             this.gvBordados.OptionsDetail.SmartDetailHeight = true;
             this.gvBordados.OptionsMenu.EnableColumnMenu = false;
             this.gvBordados.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gvBordados.OptionsSelection.EnableAppearanceFocusedRow = false;
-            this.gvBordados.OptionsSelection.MultiSelect = true;
             this.gvBordados.OptionsSelection.UseIndicatorForSelection = false;
             this.gvBordados.OptionsView.ColumnAutoWidth = false;
             this.gvBordados.OptionsView.ShowGroupPanel = false;
