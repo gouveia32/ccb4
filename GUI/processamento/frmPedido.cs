@@ -132,7 +132,7 @@ namespace GUI
         private void ItemModeloParaTela(Item item)
         {
             if (item.Bordado == null) return;
-            mPodeAlterar = false;
+            mPodeAlterar = true;
             nudBordado_Id.Value = item.Bordado.id;
             txtBordado_Arquivo.Text = item.Bordado.arquivo;
             txtBordado_Descricao.Text = item.Bordado.descricao;
@@ -180,7 +180,7 @@ namespace GUI
             if (gvItens.RowCount > row && mPodeAlterar)
             {
                 gvItens.SetRowCellValue(row,"bordado_id",nudBordado_Id.Value);
-                gvItens.SetRowCellValue(row, "qtde", txtPC_Solicitadas.Value);
+                gvItens.SetRowCellValue(row, "colPc_solicitadas", txtPC_Solicitadas.Value);
                 gvItens.SetRowCellValue(row, "preco", txtPreco_Por_Peca.Value);
 
                 //dgItensO.Rows[row].Cells["qtde"].Value = txtPC_Solicitadas.Value;
@@ -485,6 +485,7 @@ namespace GUI
             gvRegistros.Columns[1].Width = 125;
             gvRegistros.Columns[2].Width = 90;
             gvRegistros.Columns[3].Visible = false;
+            if (gvItens.RowCount > 0) Carrega_Item(0); // mostra 1o item
         }
 
         private void CarregaPedidoAtual(int pedido_id)
@@ -539,7 +540,7 @@ namespace GUI
                 else
                 {
                     item = bll.CarregaItemDoPedido(Convert.ToInt32(txtId.Text),
-                               Convert.ToInt32(gvItens.GetDataRow(row).ItemArray[0]));
+                               Convert.ToInt32(gvItens.GetDataRow(row).ItemArray[3]));
                     ItemModeloParaTela(item);
                 }
             }
@@ -773,26 +774,28 @@ namespace GUI
             ln += 15;
 
             RegAtual = 0;
-            foreach (DataGridViewRow row in dtItens.Rows)
+            foreach (DataRow row in dtItens.Rows)
             {
-                Data_Entrega = Convert.ToDateTime(row.Cells["data_entrega"].Value);
-                qtde = Convert.ToInt32(row.Cells["Qtde"].Value);
+                Data_Entrega = Convert.ToDateTime(row.ItemArray[5]);
+                qtde = Convert.ToInt32(row.ItemArray[6]);
                 totItens += qtde;
-                Valor = Convert.ToDecimal(row.Cells["Tot_item"].Value);
+                Valor = Convert.ToDecimal(row.ItemArray[8]);
                 totValor += Valor;
                 g.DrawString(string.Format("{0,3:D}  {1,-22:s} {2,3:D} {3,5:0.00} {4,10:0.00}",
-                    Convert.ToInt32(row.Cells["item"].Value),
-                    Truncate(Convert.ToString(row.Cells["descricao"].Value), 22),
+                    Convert.ToInt32(row.ItemArray[3]),
+                    Truncate(Convert.ToString(row.ItemArray[4]), 22),
                     qtde,
-                    Convert.ToDecimal(row.Cells["preco"].Value),
-                    Convert.ToDecimal(row.Cells["Tot_item"].Value)), fonteTiket, Brushes.Black, col, ln);
+                    Convert.ToDecimal(row.ItemArray[7]),
+                    Convert.ToDecimal(row.ItemArray[8])), fonteTiket, Brushes.Black, col, ln);
 
                 int lo, ld;
                 string linha;
                 string[] mLado = { "Esq", "Dir" };
 
-                lo = Convert.ToInt32(row.Cells["local_id"].Value);
-                ld = Convert.ToInt32(row.Cells["lado"].Value);
+                object o = row.ItemArray[9];
+                lo = Convert.ToInt32(o == null ? "" : row.ItemArray[9]);
+                o = row.ItemArray[10];
+                ld = Convert.ToInt32(o == null ? "" : row.ItemArray[10]);
 
                 linha = "";
                 if (lo != -1)
@@ -808,7 +811,7 @@ namespace GUI
                     ln += 15;
                     g.DrawString(linha, fonteTiket, Brushes.Black, col, ln);
                 }
-                linha = Convert.ToString(row.Cells["obs"].Value);
+                linha = Convert.ToString(row.ItemArray[11]);
                 string[] aLinhas = linha.Split(new[] { '\n', '\t' });
                 int i, j;
                 for (i = 0; i < aLinhas.Length; i++)
@@ -933,24 +936,24 @@ namespace GUI
             ln += 15;
 
             RegAtual = 0;
-            foreach (DataGridViewRow row in dtItens.Rows)
+            foreach (DataRow row in dtItens.Rows)
             {
-                Data_Entrega = Convert.ToDateTime(row.Cells["data_entrega"].Value);
-                qtde = Convert.ToInt32(row.Cells["Qtde"].Value);
+                Data_Entrega = Convert.ToDateTime(row.ItemArray[5]);
+                qtde = Convert.ToInt32(row.ItemArray[6]);
                 totItens += qtde;
-                Valor = Convert.ToDecimal(row.Cells["Tot_item"].Value);
+                Valor = Convert.ToDecimal(row.ItemArray[8]);
                 totValor += Valor;
                 g.DrawString(string.Format("{0,3:D}  {1,-22:s} {2,3:D}",
-                    Convert.ToInt32(row.Cells["item"].Value),
-                    Truncate(Convert.ToString(row.Cells["descricao"].Value), 22),
+                    Convert.ToInt32(row.ItemArray[3]),
+                    Truncate(Convert.ToString(row.ItemArray[4]), 22),
                     qtde), fonteTiket, Brushes.Black, col, ln);
 
                 int lo, ld;
                 string linha;
                 string[] mLado = { "Esq", "Dir" };
 
-                lo = Convert.ToInt32(row.Cells["local_id"].Value);
-                ld = Convert.ToInt32(row.Cells["lado"].Value);
+                lo = Convert.ToInt32(row.ItemArray[9]);
+                ld = Convert.ToInt32(row.ItemArray[10]);
 
                 linha = "";
                 if (lo != -1)
@@ -966,7 +969,7 @@ namespace GUI
                     ln += 12;
                     g.DrawString(linha, fonteTiket, Brushes.Black, col, ln);
                 }
-                linha = Convert.ToString(row.Cells["obs"].Value);
+                linha = Convert.ToString(row.ItemArray[11]);
                 string[] aLinhas = linha.Split(new[] { '\n', '\t' });
                 int i, j;
                 for (i = 0; i < aLinhas.Length; i++)
@@ -1158,10 +1161,15 @@ namespace GUI
             gvItens.FocusedRowHandle = UltimoItem;
             LimpaTela(false);
             row[0] = UltimoItem + 1;
+            row[1] = "TESTE";
             dtItens.Rows.Add(row);
             txtDescricao.Text = "";
             txtBordado_Descricao.Focus();
             btnGravar.Enabled = true;
+            dtItens.Rows[0].BeginEdit();
+            dtItens.Rows[0].ItemArray[1] = "TESTE NOVO";
+            dtItens.Rows[0].EndEdit();
+            gvItens.RefreshData();
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -1564,8 +1572,15 @@ namespace GUI
         private void gvRegistros_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (gvRegistros.RowCount < 1) return;
+            if (gvItens.RowCount > 0) Carrega_Item(0); // mostra 1o item
             ExibeItens(e.FocusedRowHandle);
             CalculaTotais(); 
+        }
+
+        private void gvItens_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if (UltimoItem != e.FocusedRowHandle) Carrega_Item(e.FocusedRowHandle);
+            UltimoItem = e.FocusedRowHandle;
         }
     }
 }

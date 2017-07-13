@@ -234,7 +234,7 @@ namespace DAL
             DataTable tabela = new DataTable();
             p = new List<MySqlParametro>();
             p.Add(new MySqlParametro("@pedido_id", pedido_id));
-            sql = "SELECT pedido_id, clientes.nome, clientes.endereco,item, itens.descricao, data_entrega, pc_solicitadas, preco_por_peca,  pc_solicitadas * preco_por_peca AS total FROM itens LEFT JOIN pedidos ON pedidos.id=itens.pedido_id JOIN clientes ON pedidos.cliente_id=clientes.id WHERE pedido_id = @pedido_id;";
+            sql = "SELECT pedido_id, clientes.nome, clientes.endereco,item, itens.descricao, data_entrega, pc_solicitadas, preco_por_peca,  pc_solicitadas * preco_por_peca AS total, local_id,lado,itens.obs FROM itens LEFT JOIN pedidos ON pedidos.id=itens.pedido_id JOIN clientes ON pedidos.cliente_id=clientes.id WHERE pedido_id = @pedido_id;";
             return bd.exePesquisa(sql, p);
         }
 
