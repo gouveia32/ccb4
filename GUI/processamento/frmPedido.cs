@@ -204,15 +204,15 @@ namespace GUI
                 Item item = new Item();
 
                 if (txtId.Text != "") item.pedido_id = Convert.ToInt32(txtId.Text);
-                item.bordado_id = Convert.ToInt32 (row[21]); 
-                item.item = Convert.ToInt32(row[0]);
+                item.bordado_id = Convert.ToInt32 (row[0]); 
+                item.item = Convert.ToInt32(row[3]);
                 item.pc_entregues =
                 item.pc_solicitadas =
-                    Convert.ToInt32(row[3]);
-                item.preco_por_peca = Convert.ToDouble(row[4]);
-                item.data_entrega = Convert.ToDateTime(row[2]);
-                item.descricao = Convert.ToString(row[1]);
-                item.obs = Convert.ToString(row[20]);
+                    Convert.ToInt32(row[6]);
+                item.preco_por_peca = Convert.ToDouble(row[7]);
+                item.data_entrega = Convert.ToDateTime(row[5]);
+                item.descricao = Convert.ToString(row[4]);
+                item.obs = Convert.ToString(row[11]);
 
                 modelo.Add(item);
             }
@@ -1148,21 +1148,17 @@ namespace GUI
         {
             mPodeAlterar = true;
 
-            DataRow row = dtItens.NewRow(); 
+            dtItens.Rows.Add();
             UltimoItem = dtItens.Rows.Count - 1;
             gvItens.SelectRow(UltimoItem);
             gvItens.FocusedRowHandle = UltimoItem;
             LimpaTela(false);
-            row[0] = UltimoItem + 1;
-            row[1] = "TESTE";
-            dtItens.Rows.Add(row);
+            gvItens.BeginDataUpdate();
+            gvItens.SetRowCellValue(UltimoItem, "item", UltimoItem + 1);
+            gvItens.EndDataUpdate();
             txtDescricao.Text = "";
             txtBordado_Descricao.Focus();
             btnGravar.Enabled = true;
-            dtItens.Rows[0].BeginEdit();
-            dtItens.Rows[0].ItemArray[1] = "TESTE NOVO";
-            dtItens.Rows[0].EndEdit();
-            gvItens.RefreshData();
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)

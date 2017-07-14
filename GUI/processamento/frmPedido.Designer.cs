@@ -736,7 +736,7 @@ namespace GUI
             this.btnExecutarItem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnExecutarItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExecutarItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnExecutarItem.Location = new System.Drawing.Point(25006, 25);
+            this.btnExecutarItem.Location = new System.Drawing.Point(25188, 25);
             this.btnExecutarItem.Name = "btnExecutarItem";
             this.btnExecutarItem.Size = new System.Drawing.Size(92, 32);
             this.btnExecutarItem.TabIndex = 100;
@@ -756,7 +756,7 @@ namespace GUI
             this.dtpData_Execucao.FocusHighlightEnabled = true;
             this.dtpData_Execucao.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Execucao.IsPopupCalendarOpen = false;
-            this.dtpData_Execucao.Location = new System.Drawing.Point(24896, 36);
+            this.dtpData_Execucao.Location = new System.Drawing.Point(25078, 36);
             // 
             // 
             // 
@@ -787,7 +787,7 @@ namespace GUI
             // 
             this.lblExecucao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExecucao.BackColor = System.Drawing.Color.Transparent;
-            this.lblExecucao.Location = new System.Drawing.Point(24808, 41);
+            this.lblExecucao.Location = new System.Drawing.Point(24990, 41);
             this.lblExecucao.Name = "lblExecucao";
             this.lblExecucao.Size = new System.Drawing.Size(79, 13);
             this.lblExecucao.TabIndex = 89;
@@ -1062,7 +1062,7 @@ namespace GUI
             this.txtObs_Pagamento.Multiline = true;
             this.txtObs_Pagamento.Name = "txtObs_Pagamento";
             this.txtObs_Pagamento.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Pagamento.Size = new System.Drawing.Size(25068, 0);
+            this.txtObs_Pagamento.Size = new System.Drawing.Size(25250, 0);
             this.txtObs_Pagamento.TabIndex = 3;
             // 
             // lblAdicional
@@ -2045,7 +2045,7 @@ namespace GUI
             this.xtbpPagamento.Controls.Add(this.btnAmortizar);
             this.xtbpPagamento.Controls.Add(this.cbQuitado);
             this.xtbpPagamento.Name = "xtbpPagamento";
-            this.xtbpPagamento.Size = new System.Drawing.Size(712, 476);
+            this.xtbpPagamento.Size = new System.Drawing.Size(712, 480);
             this.xtbpPagamento.Text = "Pagamento";
             // 
             // xtbpExecucao
@@ -2069,7 +2069,7 @@ namespace GUI
             this.xtbpExecucao.Controls.Add(this.txtPC_Defeito);
             this.xtbpExecucao.Controls.Add(this.txtPC_Nao_Bordadas);
             this.xtbpExecucao.Name = "xtbpExecucao";
-            this.xtbpExecucao.Size = new System.Drawing.Size(712, 476);
+            this.xtbpExecucao.Size = new System.Drawing.Size(712, 480);
             this.xtbpExecucao.Text = "Execução";
             // 
             // dgRegistros
