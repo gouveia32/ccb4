@@ -5,6 +5,7 @@ using DevExpress.XtraReports.UI;
 using DevExpress.XtraSplashScreen;
 using Modelo;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -137,7 +138,7 @@ namespace GUI
             txtBordado_Arquivo.Text = item.Bordado.arquivo;
             txtBordado_Descricao.Text = item.Bordado.descricao;
             txtDescricao.Text = item.descricao;
-            txtBordado_Pontos.Text = item.Bordado.pontos.ToString();
+            txtBordado_Pontos.Text = Convert.ToString(item.Bordado.pontos);
             txtBordado_Preco.Text = item.Bordado.preco.ToString();
             rg_local.SelectedIndex = item.local_id;
             rg_lado.SelectedIndex = item.lado;
@@ -164,13 +165,15 @@ namespace GUI
 
         private void ItemTelaParaModelo(Item item)
         {
+            item.descricao = txtDescricao.Text;
+            item.data_entrega = dtpData_Entrega.Value;
             item.pedido_id = Convert.ToInt32(txtId.Text);
             item.bordado_id = nudBordado_Id.Value;
             item.obs = txtObs_Item.Text;
             item.local_id = rg_local.SelectedIndex;
             item.lado = rg_lado.SelectedIndex;
-            item.pc_solicitadas = Convert.ToInt32(txtPC_Solicitadas.Text);
-            item.preco_por_peca = Convert.ToDouble(txtPreco_Por_Peca.Text);
+            item.pc_solicitadas = txtPC_Solicitadas.Value;
+            item.preco_por_peca = txtPreco_Por_Peca.Value;
         }
 
         private void ItemTelaParaGrade(int row)
@@ -184,9 +187,14 @@ namespace GUI
 
                 gvItens.BeginDataUpdate(); 
                 gvItens.SetRowCellValue(row,"bordado_id",nudBordado_Id.Value);
+                if(rg_local.SelectedIndex != -1) gvItens.SetRowCellValue(row, "local_id", rg_local.SelectedIndex);
+                if (rg_lado.SelectedIndex != -1) gvItens.SetRowCellValue(row, "lado", rg_lado.SelectedIndex);
+                gvItens.SetRowCellValue(row, "descricao", txtDescricao.Text);
+                gvItens.SetRowCellValue(row, "data_entrega", dtpData_Entrega.Value);
                 gvItens.SetRowCellValue(row, "pc_solicitadas", txtPC_Solicitadas.Value);
-                gvItens.SetRowCellValue(row, "preco", txtPreco_Por_Peca.Value);
+                gvItens.SetRowCellValue(row, "preco_por_peca", txtPreco_Por_Peca.Value);
                 gvItens.SetRowCellValue(row, "total", txtTotal_Item.Value);
+                gvItens.SetRowCellValue(row, "obs", txtObs_Item.Text);
                 gvItens.EndDataUpdate(); 
             }
         }
@@ -198,24 +206,37 @@ namespace GUI
             //ItemTelaParaGrade(dgItens.CurrentRow.Index);
             //Itens
             //modelo.Clear();  //limpa inicialmente
-            for (int i = 0; i < gvItens.DataRowCount; i++)
-            {
-                DataRow row = gvItens.GetDataRow(i);
-                Item item = new Item();
 
-                if (txtId.Text != "") item.pedido_id = Convert.ToInt32(txtId.Text);
-                item.bordado_id = Convert.ToInt32 (row[0]); 
-                item.item = Convert.ToInt32(row[3]);
-                item.pc_entregues =
-                item.pc_solicitadas =
-                    Convert.ToInt32(row[6]);
-                item.preco_por_peca = Convert.ToDouble(row[7]);
-                item.data_entrega = Convert.ToDateTime(row[5]);
-                item.descricao = Convert.ToString(row[4]);
-                item.obs = Convert.ToString(row[11]);
+            // Create an empty list.
+            //ArrayList rows = new ArrayList();
+            
+            try
+                {
+                    gvItens.BeginUpdate();
+                    for (int i = 0; i < gvItens.RowCount; i++)
+                    {
+                    DataRow row = this.gvItens.GetDataRow(i);
+                    Item item = new Item();
 
-                modelo.Add(item);
-            }
+                        if (txtId.Text != "") item.pedido_id = Convert.ToInt32(txtId.Text);
+                        item.bordado_id = Convert.ToInt32(row[0]);
+                        item.item = Convert.ToInt32(row[3]);
+                        item.pc_entregues =
+                        item.pc_solicitadas =
+                            Convert.ToInt32(row[6]);
+                        item.preco_por_peca = Convert.ToDouble(row[7]);
+                        item.data_entrega = Convert.ToDateTime(row[5]);
+                        item.descricao = Convert.ToString(row[4]);
+                        item.obs = Convert.ToString(row[11]);
+
+                        modelo.Add(item);
+                    }
+                }
+                finally
+                {
+                    gvItens.EndUpdate();
+                }
+
         }
 
         private void ItensModeloParaTela(ItemCollection modelo)
@@ -227,24 +248,12 @@ namespace GUI
            // dgItensO.Rows.Clear();
             foreach (Item item in modelo)
             {
-                //dgItensO.Rows.Add();
-                //dgItensO.Rows[dgItensO.RowCount - 1].Cells["item"].Value = item.item;
-                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[1].Value = item.descricao;
-                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[2].Value = item.data_entrega;
-                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[3].Value = item.pc_entregues;
-                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[4].Value = item.preco_por_peca;
-                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[5].Value = item.Subtotal;
-                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[13].Value = item.local_id;
-                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[14].Value = item.lado;
-                //dgItensO.Rows[dgItensO.RowCount - 1].Cells[20].Value = item.obs;
-
                 tot_pecas += item.pc_entregues;
                 tot_valor += item.Subtotal;
             }
 
-            txtTot_Pecas.Text = Convert.ToString(tot_pecas);
-            //txtQtde_Itens.Text = Convert.ToString(dgItensO.RowCount);
-            txtTotal_Pedido.Text = Convert.ToString(tot_valor);
+            txtTot_Pecas.Value = tot_pecas;
+            txtTotal_Pedido.Value = tot_valor;
 
             if (ckbPAGO.Checked)
             {
@@ -253,22 +262,23 @@ namespace GUI
             else
             {
                 txtTot_a_pagar.Value = tot_valor -
-                    Convert.ToDouble(txtAmortizacao.Text) -
+                    txtAmortizacao.Value -
                     txtDesconto.Value;
             }
 
             // dados do primeiro item
             BLLItem bll = new BLLItem();
             Item item1 = new Item();
-            //if (dgItensO.RowCount > 0)
-            //{
-                //item1 = bll.CarregaItemDoPedido(Convert.ToInt32(txtId.Text),
-                //                           Convert.ToInt32(dgItensO.Rows[0].Cells[0].Value));
-                //ItemModeloParaTela(item1);
-            //}
+            if (gvItens.RowCount > 0)
+            {
+                item1 = bll.CarregaItemDoPedido(Convert.ToInt32(txtId.Text), 
+                    Convert.ToInt32(gvItens.GetRowCellValue(0, "item")));
 
-            //mPodeAlterar = true;
-            //rg_local.SelectedIndex = item1.local_id; 
+                ItemModeloParaTela(item1);
+            }
+
+            mPodeAlterar = true;
+            rg_local.SelectedIndex = item1.local_id; 
         }
 
         private void CalculaTotais()
@@ -286,7 +296,6 @@ namespace GUI
                     tot_pecas += Convert.ToInt32(row.ItemArray[6].ToString());
                     tot_valor += Convert.ToDouble(row.ItemArray[8]);
                 }
-
             }
             txtTot_Pecas.Value = tot_pecas;
             txtQtde_Itens.Text = Convert.ToString(gvItens.RowCount);
@@ -1156,6 +1165,7 @@ namespace GUI
             gvItens.BeginDataUpdate();
             gvItens.SetRowCellValue(UltimoItem, "item", UltimoItem + 1);
             gvItens.EndDataUpdate();
+            dtpData_Entrega.Value = DateTime.Now;
             txtDescricao.Text = "";
             txtBordado_Descricao.Focus();
             btnGravar.Enabled = true;
