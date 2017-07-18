@@ -133,7 +133,7 @@ namespace GUI
         private void ItemModeloParaTela(Item item)
         {
             if (item.Bordado == null) return;
-            mPodeAlterar = true;
+            mPodeAlterar = false;
             nudBordado_Id.Value = item.Bordado.id;
             txtBordado_Arquivo.Text = item.Bordado.arquivo;
             txtBordado_Descricao.Text = item.Bordado.descricao;
@@ -174,69 +174,6 @@ namespace GUI
             item.lado = rg_lado.SelectedIndex;
             item.pc_solicitadas = txtPC_Solicitadas.Value;
             item.preco_por_peca = txtPreco_Por_Peca.Value;
-        }
-
-        private void ItemTelaParaGrade(int row)
-        {
-            if (row < 0) return;
-
-            if (gvItens.RowCount > row && mPodeAlterar)
-            {
-                txtTotal_Item.Value =
-                       txtPC_Solicitadas.Value * txtPreco_Por_Peca.Value;
-
-                gvItens.BeginDataUpdate(); 
-                gvItens.SetRowCellValue(row,"bordado_id",nudBordado_Id.Value);
-                if(rg_local.SelectedIndex != -1) gvItens.SetRowCellValue(row, "local_id", rg_local.SelectedIndex);
-                if (rg_lado.SelectedIndex != -1) gvItens.SetRowCellValue(row, "lado", rg_lado.SelectedIndex);
-                gvItens.SetRowCellValue(row, "descricao", txtDescricao.Text);
-                gvItens.SetRowCellValue(row, "data_entrega", dtpData_Entrega.Value);
-                gvItens.SetRowCellValue(row, "pc_solicitadas", txtPC_Solicitadas.Value);
-                gvItens.SetRowCellValue(row, "preco_por_peca", txtPreco_Por_Peca.Value);
-                gvItens.SetRowCellValue(row, "total", txtTotal_Item.Value);
-                gvItens.SetRowCellValue(row, "obs", txtObs_Item.Text);
-                gvItens.EndDataUpdate(); 
-            }
-        }
-
-        private void ItensTelaParaModelo(ItemCollection modelo)
-        {
-
-            //Gruarda informações do ítem selecionado da tela para a grade
-            //ItemTelaParaGrade(dgItens.CurrentRow.Index);
-            //Itens
-            //modelo.Clear();  //limpa inicialmente
-
-            // Create an empty list.
-            //ArrayList rows = new ArrayList();
-            
-            try
-                {
-                    gvItens.BeginUpdate();
-                    for (int i = 0; i < gvItens.RowCount; i++)
-                    {
-                    DataRow row = this.gvItens.GetDataRow(i);
-                    Item item = new Item();
-
-                        if (txtId.Text != "") item.pedido_id = Convert.ToInt32(txtId.Text);
-                        item.bordado_id = Convert.ToInt32(row[0]);
-                        item.item = Convert.ToInt32(row[3]);
-                        item.pc_entregues =
-                        item.pc_solicitadas =
-                            Convert.ToInt32(row[6]);
-                        item.preco_por_peca = Convert.ToDouble(row[7]);
-                        item.data_entrega = Convert.ToDateTime(row[5]);
-                        item.descricao = Convert.ToString(row[4]);
-                        item.obs = Convert.ToString(row[11]);
-
-                        modelo.Add(item);
-                    }
-                }
-                finally
-                {
-                    gvItens.EndUpdate();
-                }
-
         }
 
         private void ItensModeloParaTela(ItemCollection modelo)
@@ -530,8 +467,7 @@ namespace GUI
 
        private void Carrega_Item (int row)
         {
-            if (row >= 0)
-            {
+            if (gvItens.RowCount < row ) return;
                 BLLItem bll = new BLLItem();
                 Bordado bordado = new Bordado();
                 Item item = new Item(bordado);
@@ -541,11 +477,12 @@ namespace GUI
                 }
                 else
                 {
+                    DataRow Newrow = this.gvItens.GetDataRow(row);
+
                     item = bll.CarregaItemDoPedido(Convert.ToInt32(txtId.Text),
                                Convert.ToInt32(gvItens.GetDataRow(row).ItemArray[3]));
                     ItemModeloParaTela(item);
                 }
-            }
         }
 
         private void dgItens_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -795,9 +732,9 @@ namespace GUI
                 string[] mLado = { "Esq", "Dir" };
 
                 object o = row.ItemArray[9];
-                lo = Convert.ToInt32(o == null ? "" : row.ItemArray[9]);
+                lo = Convert.ToInt32(o == null ? "" : row.ItemArray[10]);
                 o = row.ItemArray[10];
-                ld = Convert.ToInt32(o == null ? "" : row.ItemArray[10]);
+                ld = Convert.ToInt32(o == null ? "" : row.ItemArray[11]);
 
                 linha = "";
                 if (lo != -1)
@@ -1581,6 +1518,65 @@ namespace GUI
             if (UltimoItem != e.FocusedRowHandle) Carrega_Item(e.FocusedRowHandle);
             UltimoItem = e.FocusedRowHandle;
         }
+
+        private void ItemTelaParaGrade(int row)
+        {
+            if (row < 0) return;
+
+            if (gvItens.RowCount > row && mPodeAlterar)
+            {
+                txtTotal_Item.Value =
+                       txtPC_Solicitadas.Value * txtPreco_Por_Peca.Value;
+
+                gvItens.BeginDataUpdate();
+                gvItens.SetRowCellValue(row, "bordado_id", nudBordado_Id.Value);
+                if (rg_local.SelectedIndex != -1) gvItens.SetRowCellValue(row, "local_id", rg_local.SelectedIndex);
+                if (rg_lado.SelectedIndex != -1) gvItens.SetRowCellValue(row, "lado", rg_lado.SelectedIndex);
+                gvItens.SetRowCellValue(row, "descricao", txtDescricao.Text);
+                gvItens.SetRowCellValue(row, "data_entrega", dtpData_Entrega.Value);
+                gvItens.SetRowCellValue(row, "pc_solicitadas", txtPC_Solicitadas.Value);
+                gvItens.SetRowCellValue(row, "preco_por_peca", txtPreco_Por_Peca.Value);
+                gvItens.SetRowCellValue(row, "total", txtTotal_Item.Value);
+                gvItens.SetRowCellValue(row, "obs", txtObs_Item.Text);
+                gvItens.EndDataUpdate();
+
+                DataRow Newrow = this.gvItens.GetDataRow(row);
+
+            }
+        }
+
+        private void ItensTelaParaModelo(ItemCollection modelo)
+        {
+            try
+            {
+                gvItens.BeginUpdate();
+                for (int i = 0; i < gvItens.RowCount; i++)
+                {
+                    DataRow row = this.gvItens.GetDataRow(i);
+                    Item item = new Item();
+
+                    if (txtId.Text != "") item.pedido_id = Convert.ToInt32(txtId.Text);
+                    item.bordado_id = Convert.ToInt32(row.ItemArray[9]);
+                    item.item = Convert.ToInt32(row[3]);
+                    item.pc_entregues =
+                    item.pc_solicitadas =
+                        Convert.ToInt32(row[6]);
+                    item.preco_por_peca = Convert.ToDouble(row[7]);
+                    item.data_entrega = Convert.ToDateTime(row[5]);
+                    item.descricao = Convert.ToString(row[4]);
+                    item.obs = Convert.ToString(row[11]);
+
+                    modelo.Add(item);
+                }
+            }
+            finally
+            {
+                gvItens.EndUpdate();
+            }
+
+        }
+
+
     }
 }
 
