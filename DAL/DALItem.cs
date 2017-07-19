@@ -30,7 +30,7 @@ namespace DAL
             {
                 item.Bordado.id = Convert.ToInt32(registro["bordado_id"]);
                 item.Bordado.pontos = Convert.ToInt32(registro["pontos"]);
-                item.Bordado.preco = Convert.ToInt32(registro["preco"]);
+                item.Bordado.preco = Convert.ToInt32(registro["preco_por_peca"]);
                 item.Bordado.arquivo = Convert.ToString(registro["arquivo"]);
                 item.Bordado.descricao = Convert.ToString(registro["bordado_descricao"]);
             }
@@ -205,7 +205,7 @@ namespace DAL
                 p = new List<MySqlParametro>();
                 p.Add(new MySqlParametro("@pedido_id", pedido_id));
                 p.Add(new MySqlParametro("@seq", seq));
-                sql = "SELECT pedido_id, clientes.nome, clientes.endereco,item, itens.descricao, data_entrega, pc_solicitadas, preco_por_peca,  pc_solicitadas * preco_por_peca AS total, bordado_id, local_id,lado,itens.obs FROM itens LEFT JOIN pedidos ON pedidos.id=itens.pedido_id LEFT JOIN clientes ON pedidos.cliente_id=clientes.id WHERE pedido_id = @pedido_id AND item = @seq;";
+                sql = "SELECT *,pedido_id, clientes.nome, clientes.endereco, pc_solicitadas * preco_por_peca AS total, bordado_id, bordados.pontos, bordados.arquivo, bordados.descricao AS bordado_descricao FROM itens LEFT JOIN pedidos ON pedidos.id=itens.pedido_id LEFT JOIN clientes ON clientes.id=pedidos.cliente_id LEFT JOIN bordados ON bordados.id=itens.bordado_id WHERE pedido_id = @pedido_id AND item = @seq;";
                 registro = bd.Reader(sql, p);
                 if (registro.HasRows)
                 {
