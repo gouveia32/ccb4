@@ -477,7 +477,7 @@ namespace GUI
                 }
                 else
                 {
-                    DataRow Newrow = this.gvItens.GetDataRow(row);
+                if (gvItens.GetDataRow(row) == null) return; //linha da grade não é válida
 
                     item = bll.CarregaItemDoPedido(Convert.ToInt32(txtId.Text),
                                Convert.ToInt32(gvItens.GetDataRow(row).ItemArray[3]));
@@ -1564,7 +1564,10 @@ namespace GUI
                     item.preco_por_peca = Convert.ToDouble(row[7]);
                     item.data_entrega = Convert.ToDateTime(row[5]);
                     item.descricao = Convert.ToString(row[4]);
-                    item.obs = Convert.ToString(row[11]);
+                    item.obs = Convert.ToString(row[12]);
+
+                    item.local_id = rg_local.SelectedIndex;
+                    item.lado = rg_lado.SelectedIndex; 
 
                     modelo.Add(item);
                 }
