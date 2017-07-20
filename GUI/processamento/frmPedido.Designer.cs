@@ -30,15 +30,15 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPedido));
             this.deFechamento = new DevExpress.XtraEditors.DateEdit();
@@ -759,7 +759,7 @@ namespace GUI
             this.btnExecutarItem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnExecutarItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExecutarItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnExecutarItem.Location = new System.Drawing.Point(30845, 31);
+            this.btnExecutarItem.Location = new System.Drawing.Point(30869, 31);
             this.btnExecutarItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExecutarItem.Name = "btnExecutarItem";
             this.btnExecutarItem.Size = new System.Drawing.Size(107, 39);
@@ -780,7 +780,7 @@ namespace GUI
             this.dtpData_Execucao.FocusHighlightEnabled = true;
             this.dtpData_Execucao.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Execucao.IsPopupCalendarOpen = false;
-            this.dtpData_Execucao.Location = new System.Drawing.Point(30718, 44);
+            this.dtpData_Execucao.Location = new System.Drawing.Point(30742, 44);
             this.dtpData_Execucao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             // 
             // 
@@ -812,7 +812,7 @@ namespace GUI
             // 
             this.lblExecucao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExecucao.BackColor = System.Drawing.Color.Transparent;
-            this.lblExecucao.Location = new System.Drawing.Point(30614, 50);
+            this.lblExecucao.Location = new System.Drawing.Point(30638, 50);
             this.lblExecucao.Name = "lblExecucao";
             this.lblExecucao.Size = new System.Drawing.Size(92, 16);
             this.lblExecucao.TabIndex = 89;
@@ -833,27 +833,27 @@ namespace GUI
             this.codigo,
             this.nome,
             this.Cor});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgLinhas_Item.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgLinhas_Item.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgLinhas_Item.EnableHeadersVisualStyles = false;
             this.dgLinhas_Item.Location = new System.Drawing.Point(19, 78);
             this.dgLinhas_Item.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgLinhas_Item.MultiSelect = false;
             this.dgLinhas_Item.Name = "dgLinhas_Item";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgLinhas_Item.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLinhas_Item.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dgLinhas_Item.RowHeadersVisible = false;
             this.dgLinhas_Item.RowHeadersWidth = 25;
             this.dgLinhas_Item.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -868,9 +868,9 @@ namespace GUI
             // 
             // seq
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Info;
-            this.seq.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Info;
+            this.seq.DefaultCellStyle = dataGridViewCellStyle19;
             this.seq.HeaderText = "Seq";
             this.seq.Name = "seq";
             this.seq.ReadOnly = true;
@@ -879,8 +879,8 @@ namespace GUI
             // 
             // codigo
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.codigo.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.codigo.DefaultCellStyle = dataGridViewCellStyle20;
             this.codigo.HeaderText = "Codigo";
             this.codigo.Name = "codigo";
             this.codigo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -888,9 +888,9 @@ namespace GUI
             // 
             // nome
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Info;
-            this.nome.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Info;
+            this.nome.DefaultCellStyle = dataGridViewCellStyle21;
             this.nome.HeaderText = "Nome";
             this.nome.Name = "nome";
             this.nome.ReadOnly = true;
@@ -898,8 +898,8 @@ namespace GUI
             // 
             // Cor
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Cor.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Cor.DefaultCellStyle = dataGridViewCellStyle22;
             this.Cor.HeaderText = "Cor";
             this.Cor.Name = "Cor";
             this.Cor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1097,7 +1097,7 @@ namespace GUI
             this.txtObs_Pagamento.Multiline = true;
             this.txtObs_Pagamento.Name = "txtObs_Pagamento";
             this.txtObs_Pagamento.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Pagamento.Size = new System.Drawing.Size(30918, 0);
+            this.txtObs_Pagamento.Size = new System.Drawing.Size(30942, 0);
             this.txtObs_Pagamento.TabIndex = 3;
             // 
             // lblAdicional
@@ -1644,6 +1644,7 @@ namespace GUI
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Direito")});
             this.rg_lado.Size = new System.Drawing.Size(139, 75);
             this.rg_lado.TabIndex = 149;
+            this.rg_lado.SelectedIndexChanged += new System.EventHandler(this.rg_lado_SelectedIndexChanged);
             // 
             // lblDataEntrega
             // 
@@ -1710,6 +1711,7 @@ namespace GUI
             this.txtObs_Item.Size = new System.Drawing.Size(308, 84);
             this.txtObs_Item.TabIndex = 121;
             this.txtObs_Item.TabStop = false;
+            this.txtObs_Item.TextChanged += new System.EventHandler(this.txtObs_Item_TextChanged);
             // 
             // lblBoradado_id
             // 
@@ -1803,6 +1805,8 @@ namespace GUI
             this.rg_local.Name = "rg_local";
             this.rg_local.Size = new System.Drawing.Size(309, 73);
             this.rg_local.TabIndex = 148;
+            this.rg_local.SelectedIndexChanged += new System.EventHandler(this.rg_local_SelectedIndexChanged);
+            this.rg_local.TextChanged += new System.EventHandler(this.rg_local_TextChanged);
             // 
             // pnlItens
             // 
@@ -1878,13 +1882,13 @@ namespace GUI
             this.gvItens.FixedLineWidth = 1;
             this.gvItens.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gvItens.FooterPanelHeight = 10;
-            gridFormatRule1.Name = "Format0";
-            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
-            formatConditionRuleValue1.Expression = "Sim";
-            formatConditionRuleValue1.PredefinedName = "Red Fill, Red Text";
-            formatConditionRuleValue1.Value1 = "Sim";
-            gridFormatRule1.Rule = formatConditionRuleValue1;
-            this.gvItens.FormatRules.Add(gridFormatRule1);
+            gridFormatRule2.Name = "Format0";
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue2.Expression = "Sim";
+            formatConditionRuleValue2.PredefinedName = "Red Fill, Red Text";
+            formatConditionRuleValue2.Value1 = "Sim";
+            gridFormatRule2.Rule = formatConditionRuleValue2;
+            this.gvItens.FormatRules.Add(gridFormatRule2);
             this.gvItens.GridControl = this.dgItens;
             this.gvItens.GroupFormat = "{0}: [#imagem]{1} {2}";
             this.gvItens.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -2123,7 +2127,7 @@ namespace GUI
             this.xtbpPagamento.Controls.Add(this.cbQuitado);
             this.xtbpPagamento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtbpPagamento.Name = "xtbpPagamento";
-            this.xtbpPagamento.Size = new System.Drawing.Size(1021, 752);
+            this.xtbpPagamento.Size = new System.Drawing.Size(832, 593);
             this.xtbpPagamento.Text = "Pagamento";
             // 
             // xtbpExecucao
@@ -2148,7 +2152,7 @@ namespace GUI
             this.xtbpExecucao.Controls.Add(this.txtPC_Nao_Bordadas);
             this.xtbpExecucao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtbpExecucao.Name = "xtbpExecucao";
-            this.xtbpExecucao.Size = new System.Drawing.Size(1021, 752);
+            this.xtbpExecucao.Size = new System.Drawing.Size(832, 593);
             this.xtbpExecucao.Text = "Execução";
             // 
             // dgRegistros
@@ -2164,7 +2168,7 @@ namespace GUI
             this.dgRegistros.MainView = this.gvRegistros;
             this.dgRegistros.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgRegistros.Name = "dgRegistros";
-            this.dgRegistros.Size = new System.Drawing.Size(351, 523);
+            this.dgRegistros.Size = new System.Drawing.Size(301, 523);
             this.dgRegistros.TabIndex = 59;
             this.dgRegistros.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvRegistros});
@@ -2382,7 +2386,7 @@ namespace GUI
             this.pnlFitro.Location = new System.Drawing.Point(0, 0);
             this.pnlFitro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlFitro.Name = "pnlFitro";
-            this.pnlFitro.Size = new System.Drawing.Size(350, 645);
+            this.pnlFitro.Size = new System.Drawing.Size(300, 645);
             this.pnlFitro.TabIndex = 106;
             // 
             // btnQuitar

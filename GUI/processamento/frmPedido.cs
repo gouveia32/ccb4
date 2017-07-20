@@ -1416,6 +1416,19 @@ namespace GUI
         private void _ItemChanged(int linha)
         {
             ItemTelaParaGrade(linha);
+            Item item = new Item();
+            ItemTelaParaModelo(item);
+            BLLItem bll = new BLLItem();
+            if (bll.ItemExiste(item))
+            {
+                bll.Altera(item);
+            }
+            else
+            {
+                bll.Incluir(item);
+            }
+              
+            //bll.// gravar item
             _TextChanged();
         }
 
@@ -1540,7 +1553,7 @@ namespace GUI
                 gvItens.SetRowCellValue(row, "obs", txtObs_Item.Text);
                 gvItens.EndDataUpdate();
 
-                DataRow Newrow = this.gvItens.GetDataRow(row);
+                //DataRow Newrow = this.gvItens.GetDataRow(row);
 
             }
         }
@@ -1579,7 +1592,25 @@ namespace GUI
 
         }
 
+        private void txtObs_Item_TextChanged(object sender, EventArgs e)
+        {
+            _PcChanged();
+        }
 
+        private void rg_local_TextChanged(object sender, EventArgs e)
+        {
+            _PcChanged();
+        }
+
+        private void rg_lado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _PcChanged();
+        }
+
+        private void rg_local_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _PcChanged();
+        }
     }
 }
 

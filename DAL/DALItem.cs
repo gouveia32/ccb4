@@ -36,6 +36,7 @@ namespace DAL
             }
             item.descricao = Convert.ToString(registro["descricao"]);
             int i;
+
             if (int.TryParse(registro["local_id"].ToString(), out i))
                 item.local_id = i;
             else
@@ -100,6 +101,28 @@ namespace DAL
             catch (Exception erro)
             {
                 throw new Exception(erro.Message);
+            }
+        }
+
+        public bool ItemExiste(Item item)
+        {
+            MySqlDataReader registro = null;
+
+            try
+            {
+                p = new List<MySqlParametro>();
+                p.Add(new MySqlParametro("@pedido_id", item.pedido_id));
+                p.Add(new MySqlParametro("@item", item.item));
+                sql = "SELECT count(*) FROM itens WHERE pedido_id=@pedido_id AND item=@item;";
+                registro = bd.Reader(sql, p);
+                if (registro.HasRows)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao consultar item do pedido! Detalhes: " + ex.Message);
             }
         }
 

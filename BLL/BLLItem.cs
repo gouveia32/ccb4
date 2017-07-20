@@ -17,6 +17,25 @@ namespace BLL
             DALobj = new DALItem();
         }
 
+        public void Incluir(Item modelo)
+        {
+            if (modelo.pedido_id == 0)
+            {
+                throw new Exception("O pedido é obrigatório!");
+            }
+            DALobj.Insere(modelo);
+        }
+
+        public void Altera(Item modelo)
+        {
+            if (modelo.pedido_id <= 0)
+            {
+                throw new Exception("O id do pedido é obrigatório!");
+            }
+
+            DALobj.Altera(modelo);
+        }
+
         public void ExcluiItensDoPedido(int pedido_id)
         {
             if (pedido_id == 0)
@@ -37,6 +56,11 @@ namespace BLL
                 throw new Exception("O item  é obrigatório!");
             }
             DALobj.ExcluiItem(pedido_id, item);
+        }
+
+        public bool ItemExiste(Item item)
+        {
+            return DALobj.ItemExiste(item);
         }
 
         public Item CarregaItemDoPedido(int pedido_id, int item)
