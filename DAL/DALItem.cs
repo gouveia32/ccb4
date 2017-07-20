@@ -43,9 +43,7 @@ namespace DAL
                 item.local_id = -1;
 
             if (int.TryParse(registro["lado"].ToString(), out i))
-                item.lado = i == 2
-                    ? 1 
-                    : 0;   // altera dir=2 para dir=1
+                item.lado = i;
             else
                 item.lado = -1;
 

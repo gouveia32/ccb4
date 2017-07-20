@@ -64,8 +64,8 @@ namespace GUI
                 txtObs_Pedido.Text = "";
                 txtObs_Pagamento.Text = "";
                 dtpData_Execucao.Text = "";
-                rg_lado.SelectedIndex = -1;
-                rg_local.SelectedIndex = -1;
+                rg_lado.SelectedIndex = 0;  //Não definido
+                rg_local.SelectedIndex = 0;  //Não definido
                 ckbPAGO.Checked = false;
                 cbQuitado.Checked = false;
                 chkMensal.Checked = false;
@@ -174,6 +174,7 @@ namespace GUI
             item.lado = rg_lado.SelectedIndex;
             item.pc_solicitadas = txtPC_Solicitadas.Value;
             item.preco_por_peca = txtPreco_Por_Peca.Value;
+            item.item = gvItens.FocusedRowHandle+1;
         }
 
         private void ItensModeloParaTela(ItemCollection modelo)
@@ -412,7 +413,7 @@ namespace GUI
             DataTable dt = l.Filtrar("");
             if (dt.Rows.Count > 0)
             {
-                for (int r = 0; r < dt.Rows.Count - 1; r++)
+                for (int r = 0; r < dt.Rows.Count; r++)
                     rg_local.Properties.Items.Add(new RadioGroupItem(dt.Rows[r].ItemArray[0],
                         Convert.ToString(dt.Rows[r].ItemArray[1])));
             }
@@ -729,7 +730,7 @@ namespace GUI
 
                 int lo, ld;
                 string linha;
-                string[] mLado = { "Esq", "Dir" };
+                string[] mLado = { "N/D", "Esq", "Dir" };
 
                 object o = row.ItemArray[9];
                 lo = Convert.ToInt32(o == null ? "" : row.ItemArray[10]);
@@ -889,7 +890,7 @@ namespace GUI
 
                 int lo, ld;
                 string linha;
-                string[] mLado = { "Esq", "Dir" };
+                string[] mLado = { "N/D", "Esq", "Dir" };
 
                 lo = Convert.ToInt32(row.ItemArray[9]);
                 ld = Convert.ToInt32(row.ItemArray[10]);
@@ -1415,17 +1416,20 @@ namespace GUI
 
         private void _ItemChanged(int linha)
         {
-            ItemTelaParaGrade(linha);
-            Item item = new Item();
-            ItemTelaParaModelo(item);
-            BLLItem bll = new BLLItem();
-            if (bll.ItemExiste(item))
+            if (mPodeAlterar)
             {
-                bll.Altera(item);
-            }
-            else
-            {
-                bll.Incluir(item);
+                ItemTelaParaGrade(linha);
+                Item item = new Item();
+                ItemTelaParaModelo(item);
+                BLLItem bll = new BLLItem();
+                if (bll.ItemExiste(item))
+                {
+                    bll.Altera(item);
+                }
+                else
+                {
+                    bll.Incluir(item);
+                }
             }
               
             //bll.// gravar item

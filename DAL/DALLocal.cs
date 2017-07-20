@@ -116,7 +116,7 @@ namespace DAL
                 sWhere = string.Format("WHERE local LIKE '%{0:s}%'", valor);
             }
 
-            sql = "SELECT id, local FROM locais " + sWhere;
+            sql = "SELECT id, local FROM locais " + sWhere + " ORDER BY id;";
             return bd.exePesquisa(sql, p);
         }
 
