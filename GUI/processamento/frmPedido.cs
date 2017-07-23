@@ -42,7 +42,8 @@ namespace GUI
             Graphics g = Graphics.FromImage(bit);
 
             mPodeAlterar = false;
-
+            //limpar itens
+            dtItens.Rows.Clear();
             if (Limpa_Pedido)
             {
                 deFechamento.EditValue = null;
@@ -91,6 +92,7 @@ namespace GUI
 
             g.Clear(picBordado.BackColor); //limpa com a cor de fundo
             picBordado.Image = bit;
+
             mPodeAlterar = true;
         }
 
@@ -469,21 +471,30 @@ namespace GUI
        private void Carrega_Item (int row)
         {
             if (gvItens.RowCount < row ) return;
-                BLLItem bll = new BLLItem();
-                Bordado bordado = new Bordado();
-                Item item = new Item(bordado);
-                if (txtId.Text == "")
+
+            BLLItem bll = new BLLItem();
+            Bordado bordado = new Bordado();
+            Item item = new Item(bordado);
+            if (txtId.Text == "")
+            {
+                LimpaTela(false);  
+            }
+            else
+            {
+                DataRow dr = gvItens.GetDataRow(row);
+                if (dr == null) return; //linha da grade não é válida
+                string s = dr.ItemArray[3].ToString();
+                if (s != "")
                 {
-                    LimpaTela(false);
+                    item = bll.CarregaItemDoPedido(Convert.ToInt32(txtId.Text), Convert.ToInt32(dr.ItemArray[3]));
+
                 }
                 else
                 {
-                if (gvItens.GetDataRow(row) == null) return; //linha da grade não é válida
-
-                    item = bll.CarregaItemDoPedido(Convert.ToInt32(txtId.Text),
-                               Convert.ToInt32(gvItens.GetDataRow(row).ItemArray[3]));
-                    ItemModeloParaTela(item);
+                    item = bll.CarregaItemDoPedido(Convert.ToInt32(txtId.Text), 1);
                 }
+                ItemModeloParaTela(item);
+            }
         }
 
         private void dgItens_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -1132,27 +1143,30 @@ namespace GUI
         {
             int LinhaAtualNr, LinhaNovaNr, Coluna;
             object Valor;
-            //LinhaAtualNr = dgItensO.CurrentRow.Index;
-            //if (LinhaAtualNr > 0)
-            //{
-                //LinhaNovaNr = dgItensO.CurrentRow.Index - 1;
-                //for (Coluna = 1; Coluna < dgItensO.ColumnCount; Coluna++)
-                //{
-                    //if (dgItensO.Columns[Coluna].Name == "preco" ||
-                        //dgItensO.Columns[Coluna].Name == "Tot_Item")
-                        //Valor = String.Format("{0:N2}", dgItensO.Rows[LinhaNovaNr].Cells[Coluna].Value);
-                    //else
-                        //Valor = dgItensO.Rows[LinhaNovaNr].Cells[Coluna].Value;
+            LinhaAtualNr = gvItens.FocusedRowHandle;
+            if (LinhaAtualNr > 0)
+            {
+                LinhaNovaNr = gvItens.FocusedRowHandle - 1;
+                for (Coluna = 1; Coluna < gvItens.Columns.Count; Coluna++)
+                {
+                    if (gvItens.Columns[Coluna].FieldName == "preco" ||
+                        gvItens.Columns[Coluna].FieldName == "Tot_Item")
+                        Valor = String.Format("{0:N2}", gvItens.GetRowCellValue(LinhaNovaNr, gvItens.Columns[Coluna].FieldName));
+                    else
+                        Valor = gvItens.GetRowCellValue(LinhaNovaNr, gvItens.Columns[Coluna].FieldName);
 
-                    //dgItensO.Rows[LinhaNovaNr].Cells[Coluna].Value = dgItensO.Rows[LinhaAtualNr].Cells[Coluna].Value;
-                    //dgItensO.Rows[LinhaAtualNr].Cells[Coluna].Value = Valor;
-                //}
-                //dgItensO.CurrentCell = dgItensO.Rows[LinhaNovaNr].Cells[0];
-                //dgItensO.Focus();
+                    gvItens.SetRowCellValue(LinhaNovaNr, gvItens.Columns[Coluna].FieldName, gvItens.GetRowCellValue(LinhaAtualNr, gvItens.Columns[Coluna].FieldName));
+                    gvItens.SetRowCellValue(LinhaAtualNr, gvItens.Columns[Coluna].FieldName, Valor);
+                }
 
-                //LinhaAtualNr = dgItensO.CurrentRow.Index;
+                //Atualizar no bd
+
+                gvItens.FocusedRowHandle = LinhaNovaNr;
+                gvItens.Focus();
+
+                LinhaAtualNr = gvItens.FocusedRowHandle;
                 btnGravar.Enabled = true;
-            //}
+            }
         }
 
         private void btnBaixo_Click(object sender, EventArgs e)
@@ -1401,9 +1415,7 @@ namespace GUI
         {
             if (gvItens.RowCount < 1)
             {
-                dtItens.Rows.Add();
-                UltimoItem = dtItens.Rows.Count - 1;
-                dtItens.Rows[dtItens.Rows.Count - 1].ItemArray[0] = dtItens.Rows.Count;
+                AdicionaItem();
             }
 
             txtPC_Bordadas.Text = txtPC_Entregues.Text;
