@@ -40,7 +40,7 @@ namespace GUI
         {
             Bitmap bit = new Bitmap(picBordado.Width, picBordado.Height);
             Graphics g = Graphics.FromImage(bit);
-
+            bool mPodeAlterarAtual = mPodeAlterar;
             mPodeAlterar = false;
             //limpar itens
             dtItens.Rows.Clear();
@@ -81,19 +81,19 @@ namespace GUI
             txtBordado_Pontos.Text = "0";
             txtPontos_Extras.Text = "0";
             txtTotal_Pontos.Text = "0";
-            txtBordado_Preco.Text = "0.00";
-            txtPC_Solicitadas.Text = "0";
-            txtPC_Entregues.Text = "0";
+            txtBordado_Preco.Value = 0.00;
+            txtPC_Solicitadas.Value = 0;
+            txtPC_Entregues.Value = 0;
             txtPC_Defeito.Text = "0";
             txtPC_Nao_Bordadas.Text = "0";
-            txtPreco_Por_Peca.Text = "0.00";
-            txtTotal_Item.Text = "0.00";
+            txtPreco_Por_Peca.Value = 0.00;
+            txtTotal_Item.Value = 0.00;
             //dtpData_Entrega.Value = dtpAbertura.Value;
 
             g.Clear(picBordado.BackColor); //limpa com a cor de fundo
             picBordado.Image = bit;
 
-            mPodeAlterar = true;
+            mPodeAlterar = mPodeAlterarAtual;
         }
 
         private void PedidoTelaParaModelo(Pedido modelo)
@@ -141,7 +141,7 @@ namespace GUI
             txtBordado_Descricao.Text = item.Bordado.descricao;
             txtDescricao.Text = item.descricao;
             txtBordado_Pontos.Text = Convert.ToString(item.Bordado.pontos);
-            txtBordado_Preco.Text = item.Bordado.preco.ToString();
+            txtBordado_Preco.Value = item.Bordado.preco;
             rg_local.SelectedIndex = item.local_id;
             rg_lado.SelectedIndex = item.lado;
 
@@ -163,6 +163,20 @@ namespace GUI
                 ms.Dispose();
             }
             mPodeAlterar = true;
+        }
+
+        private void ItemGradeParaModelo(int linha, Item item)
+        {
+            item.descricao = Convert.ToString (gvItens.GetRowCellValue(linha, "descricao"));
+            item.data_entrega = Convert.ToDateTime(gvItens.GetRowCellValue(linha, "data_entrega"));
+            item.pedido_id = Convert.ToInt32(gvItens.GetRowCellValue(linha, "pedido_id"));
+            item.bordado_id = Convert.ToInt32(gvItens.GetRowCellValue(linha, "bordado_id"));
+            item.obs = Convert.ToString(gvItens.GetRowCellValue(linha, "obs"));
+            item.local_id = Convert.ToInt32(gvItens.GetRowCellValue(linha, "local_id"));
+            item.lado = Convert.ToInt32(gvItens.GetRowCellValue(linha, "lado"));
+            item.pc_solicitadas = Convert.ToInt32(gvItens.GetRowCellValue(linha, "pc_solicitadas"));
+            item.preco_por_peca = Convert.ToInt32(gvItens.GetRowCellValue(linha, "valor"));
+            item.item = linha + 1;
         }
 
         private void ItemTelaParaModelo(Item item)
@@ -1104,16 +1118,18 @@ namespace GUI
 
         private void AdicionaItem()
         {
-            mPodeAlterar = true;
+            mPodeAlterar = false;
 
             dtItens.Rows.Add();
             UltimoItem = dtItens.Rows.Count - 1;
             gvItens.SelectRow(UltimoItem);
             gvItens.FocusedRowHandle = UltimoItem;
-            LimpaTela(false);
+            //LimpaTela(false);
             gvItens.BeginDataUpdate();
             gvItens.SetRowCellValue(UltimoItem, "item", UltimoItem + 1);
             gvItens.EndDataUpdate();
+            Carrega_Item(UltimoItem);
+            mPodeAlterar = true;
             dtpData_Entrega.Value = DateTime.Now;
             txtDescricao.Text = "";
             txtBordado_Descricao.Focus();
@@ -1146,7 +1162,7 @@ namespace GUI
             LinhaAtualNr = gvItens.FocusedRowHandle;
             if (LinhaAtualNr > 0)
             {
-                LinhaNovaNr = gvItens.FocusedRowHandle - 1;
+                LinhaNovaNr = LinhaAtualNr - 1;
                 for (Coluna = 1; Coluna < gvItens.Columns.Count; Coluna++)
                 {
                     if (gvItens.Columns[Coluna].FieldName == "preco" ||
@@ -1160,6 +1176,8 @@ namespace GUI
                 }
 
                 //Atualizar no bd
+                GravaItem(LinhaNovaNr);
+                GravaItem(LinhaAtualNr);
 
                 gvItens.FocusedRowHandle = LinhaNovaNr;
                 gvItens.Focus();
@@ -1309,7 +1327,7 @@ namespace GUI
         {
             if (txtBordado_Descricao.Text != ".")
             {
-                txtPreco_Por_Peca.Text = txtBordado_Preco.Text;
+                txtPreco_Por_Peca.Value = txtBordado_Preco.Value;
                 txtDescricao.Text = txtBordado_Descricao.Text;
              }
             txtPreco_Por_Peca.Focus();
@@ -1413,7 +1431,9 @@ namespace GUI
 
         private void _PcChanged()
         {
-            if (gvItens.RowCount < 1)
+            if (!mPodeAlterar) return;
+
+                if (gvItens.RowCount < 1)
             {
                 AdicionaItem();
             }
@@ -1426,23 +1446,26 @@ namespace GUI
             CalculaTotais();
         }
 
+        private void GravaItem (int linha)
+        {
+            ItemTelaParaGrade(linha);
+            Item item = new Item();
+            ItemGradeParaModelo(linha, item);
+            BLLItem bll = new BLLItem();
+            if (bll.ItemExiste(item))
+            {
+                bll.Altera(item);
+            }
+            else
+            {
+                bll.Incluir(item);
+            }
+        }
+
         private void _ItemChanged(int linha)
         {
-            if (mPodeAlterar)
-            {
-                ItemTelaParaGrade(linha);
-                Item item = new Item();
-                ItemTelaParaModelo(item);
-                BLLItem bll = new BLLItem();
-                if (bll.ItemExiste(item))
-                {
-                    bll.Altera(item);
-                }
-                else
-                {
-                    bll.Incluir(item);
-                }
-            }
+            if (!mPodeAlterar) return;
+            GravaItem(linha);
               
             //bll.// gravar item
             _TextChanged();
@@ -1450,8 +1473,7 @@ namespace GUI
 
         private void _TextChanged()
         {
-            if (mPodeAlterar)
-                if (txtId.Text != "")
+             if (txtId.Text != "")
                 {
                     btnGravar.Enabled = true;
                     btnImprimir.Enabled = true;

@@ -111,7 +111,7 @@ namespace DAL
                 p = new List<MySqlParametro>();
                 p.Add(new MySqlParametro("@pedido_id", item.pedido_id));
                 p.Add(new MySqlParametro("@item", item.item));
-                sql = "SELECT count(*) FROM itens WHERE pedido_id=@pedido_id AND item=@item;";
+                sql = "SELECT * FROM itens WHERE pedido_id=@pedido_id AND item=@item;";
                 registro = bd.Reader(sql, p);
                 if (registro.HasRows)
                     return true;
