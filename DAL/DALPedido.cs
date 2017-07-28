@@ -185,58 +185,84 @@ namespace DAL
             return modelo;
         }
 
-        /// <Carrega todos registros>
-        /// 
-        /// </summary>
-        /// <param name=""></param>
-        /// <returns></returns>
         public DataTable CarregaTodosPedidos()
         {
             sql = "SELECT pedidos.id, clientes.nome, data_abertura FROM pedidos JOIN clientes ON pedidos.cliente_id = clientes.id ORDER BY id DESC;" ;
             return bd.exePesquisa(sql, null);
         }
 
-        /// <Carrega registros que atendem ao filtro valor>
-        /// 
-        /// </summary>
-        /// <param name="valor"></param>
-        /// <returns></returns>
+        private string ProcessaOR(string valor)
+        {
+            string[] mValor = valor.Split('&');
+            string sWhere = "(clientes.nome LIKE '%";
+
+            foreach (string s in mValor)
+            {
+                sWhere += s + "%' OR obs LIKE '%" + s + "%' OR data_abertura LIKE '%" + s + "%' OR clientes.nome LIKE '%";
+            }
+            sWhere = sWhere.Substring(0, sWhere.Length - 15);  //retura o último o´perador
+
+            return sWhere;
+        }
+
+        private string ProcessaAND(string valor)
+        {
+            string[] mValor = valor.Split('&');
+            string sWhere = "";
+
+            sWhere = "(clientes.nome LIKE '%";
+            foreach (string s in mValor)
+            {
+                sWhere += s + "%' OR obs LIKE '%" + s + "%' OR data_abertura LIKE '%" + s + "%') AND (clientes.nome LIKE '%";
+            }
+            sWhere = sWhere.Substring(0, sWhere.Length - 17);  //retura o último operador
+
+            return sWhere;
+        }
+
         public DataTable Filtrar(String valor, String where = "")
         {
             DataTable tabela = new DataTable();
             string[] mValor;
             string sWhere = "";
 
-            if (valor.Contains("|"))
+            if (valor.Contains("/"))
             {
-                mValor = valor.Split('|');
-                sWhere = "WHERE (clientes.nome LIKE '%";
+                //contém filtro em data
+                mValor = valor.Split('/');
+                string aValor = "";
                 foreach (string s in mValor)
                 {
-                    sWhere += s + "%' OR obs LIKE '%" + s + "%' OR clientes.nome LIKE '%";
+                    if (s.Contains("|"))
+                    {
+                        aValor += ProcessaOR(s); 
+                    }
+                    if (s.Contains("&"))
+                    {
+                        aValor += ProcessaAND(s);
+                    }
+                    aValor = s + '-' + aValor;
                 }
-                sWhere = sWhere.Substring(0, sWhere.Length - 15);  //retura o último o´perador
+                valor = aValor.Substring(0, aValor.Length - 1);  //retura o último caracter
+            }
+            else if (valor.Contains("|"))
+            {
+                sWhere = ProcessaOR(valor);
             }
             else if (valor.Contains("&"))
             {
-                mValor = valor.Split('&');
-                sWhere = "WHERE (clientes.nome LIKE '%";
-                foreach (string s in mValor)
-                {
-                    sWhere += s + "%' OR obs LIKE '%" + s + "%') AND (clientes.nome LIKE '%";
-                }
-                sWhere = sWhere.Substring(0, sWhere.Length - 17);  //retura o último o´perador
+                sWhere = ProcessaAND(valor);
             }
             else
             {
-                sWhere = string.Format("WHERE (clientes.nome LIKE '%{0:s}%' OR obs LIKE '%{0:s}%'", valor);
+                sWhere = string.Format("(clientes.nome LIKE '%{0:s}%' OR obs LIKE '%{0:s}%' OR data_abertura LIKE '%{0:s}%'", valor);
             }
 
             if (where != "")
                 sWhere += ") And " + where;
             else
                 sWhere += ")";
-            sql = "select pedidos.id AS id, clientes.nome AS cliente, data_abertura AS data, obs from pedidos JOIN clientes ON clientes.id=pedidos.cliente_id  " + sWhere + " ORDER BY pedidos.id DESC"; 
+            sql = "select pedidos.id AS id, clientes.nome AS cliente, data_abertura AS data, obs, valor from pedidos JOIN clientes ON clientes.id=pedidos.cliente_id WHERE " + sWhere + " ORDER BY pedidos.id DESC"; 
             return bd.exePesquisa(sql, null);
         }
 

@@ -202,6 +202,7 @@ namespace GUI
             this.MaisFuncaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MaisNomeFuncaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MaisNomeMesmaTelaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.totalDosPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GravarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scc1)).BeginInit();
@@ -736,7 +737,7 @@ namespace GUI
             this.btnExecutarItem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnExecutarItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExecutarItem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnExecutarItem.Location = new System.Drawing.Point(26964, 25);
+            this.btnExecutarItem.Location = new System.Drawing.Point(27510, 25);
             this.btnExecutarItem.Name = "btnExecutarItem";
             this.btnExecutarItem.Size = new System.Drawing.Size(92, 32);
             this.btnExecutarItem.TabIndex = 100;
@@ -756,7 +757,7 @@ namespace GUI
             this.dtpData_Execucao.FocusHighlightEnabled = true;
             this.dtpData_Execucao.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpData_Execucao.IsPopupCalendarOpen = false;
-            this.dtpData_Execucao.Location = new System.Drawing.Point(26855, 36);
+            this.dtpData_Execucao.Location = new System.Drawing.Point(27401, 36);
             // 
             // 
             // 
@@ -787,7 +788,7 @@ namespace GUI
             // 
             this.lblExecucao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExecucao.BackColor = System.Drawing.Color.Transparent;
-            this.lblExecucao.Location = new System.Drawing.Point(26766, 41);
+            this.lblExecucao.Location = new System.Drawing.Point(27312, 41);
             this.lblExecucao.Name = "lblExecucao";
             this.lblExecucao.Size = new System.Drawing.Size(79, 13);
             this.lblExecucao.TabIndex = 89;
@@ -836,7 +837,7 @@ namespace GUI
             this.dgLinhas_Item.ShowCellErrors = false;
             this.dgLinhas_Item.ShowCellToolTips = false;
             this.dgLinhas_Item.ShowRowErrors = false;
-            this.dgLinhas_Item.Size = new System.Drawing.Size(254, 45);
+            this.dgLinhas_Item.Size = new System.Drawing.Size(254, 0);
             this.dgLinhas_Item.TabIndex = 8;
             this.dgLinhas_Item.TabStop = false;
             // 
@@ -1062,7 +1063,7 @@ namespace GUI
             this.txtObs_Pagamento.Multiline = true;
             this.txtObs_Pagamento.Name = "txtObs_Pagamento";
             this.txtObs_Pagamento.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObs_Pagamento.Size = new System.Drawing.Size(27027, 46);
+            this.txtObs_Pagamento.Size = new System.Drawing.Size(27573, 0);
             this.txtObs_Pagamento.TabIndex = 3;
             // 
             // lblAdicional
@@ -2330,10 +2331,10 @@ namespace GUI
             this.MenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CimaToolStripMenuItem});
-            this.MenuStrip1.Location = new System.Drawing.Point(0, 41);
+            this.MenuStrip1.Location = new System.Drawing.Point(0, 40);
             this.MenuStrip1.Name = "MenuStrip1";
             this.MenuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.MenuStrip1.Size = new System.Drawing.Size(1190, 23);
+            this.MenuStrip1.Size = new System.Drawing.Size(1166, 24);
             this.MenuStrip1.TabIndex = 94;
             this.MenuStrip1.Text = "MenuStrip1";
             this.MenuStrip1.Visible = false;
@@ -2347,10 +2348,11 @@ namespace GUI
             this.MaisFuncaoToolStripMenuItem,
             this.MaisNomeFuncaoToolStripMenuItem,
             this.MaisNomeMesmaTelaToolStripMenuItem,
+            this.totalDosPedidosToolStripMenuItem,
             this.GravarToolStripMenuItem});
             this.CimaToolStripMenuItem.Name = "CimaToolStripMenuItem";
             this.CimaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.CimaToolStripMenuItem.Size = new System.Drawing.Size(59, 19);
+            this.CimaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.CimaToolStripMenuItem.Text = "Atalhos";
             this.CimaToolStripMenuItem.Visible = false;
             // 
@@ -2398,6 +2400,14 @@ namespace GUI
             this.MaisNomeMesmaTelaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6;
             this.MaisNomeMesmaTelaToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.MaisNomeMesmaTelaToolStripMenuItem.Text = "Mais_Nome_Mesma_Tela";
+            // 
+            // totalDosPedidosToolStripMenuItem
+            // 
+            this.totalDosPedidosToolStripMenuItem.Name = "totalDosPedidosToolStripMenuItem";
+            this.totalDosPedidosToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F7;
+            this.totalDosPedidosToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.totalDosPedidosToolStripMenuItem.Text = "Total dos Pedidos";
+            this.totalDosPedidosToolStripMenuItem.Click += new System.EventHandler(this.totalDosPedidosToolStripMenuItem_Click);
             // 
             // GravarToolStripMenuItem
             // 
@@ -2646,5 +2656,6 @@ namespace GUI
         private DevExpress.XtraGrid.Columns.GridColumn colTroca_rapida;
         private DevExpress.XtraGrid.Columns.GridColumn colObs;
         private DevExpress.XtraGrid.Columns.GridColumn bordado_id;
+        private System.Windows.Forms.ToolStripMenuItem totalDosPedidosToolStripMenuItem;
     }
 }

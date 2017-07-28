@@ -441,7 +441,9 @@ namespace GUI
             gvRegistros.Columns[1].Width = 125;
             gvRegistros.Columns[2].Width = 90;
             gvRegistros.Columns[3].Visible = false;
+            gvRegistros.Columns[4].Visible = false;
             if (gvItens.RowCount > 0) Carrega_Item(0); // mostra 1o item
+
         }
 
         private void CarregaPedidoAtual(int pedido_id)
@@ -1648,6 +1650,18 @@ namespace GUI
         private void rg_local_SelectedIndexChanged(object sender, EventArgs e)
         {
             _PcChanged();
+        }
+
+        private void totalDosPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            double total;
+
+            total = 0;
+            for ( int i = 0; i < gvRegistros.RowCount; i++ )
+            {
+                total += Convert.ToDouble(gvRegistros.GetDataRow(i).ItemArray[4]);
+            }
+            MessageBox.Show(String.Format("O Valor Total dos pedidos é : R$ {0:n2}.", total));
         }
     }
 }
