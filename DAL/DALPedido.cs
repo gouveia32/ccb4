@@ -209,15 +209,77 @@ namespace DAL
         {
             string[] mValor = valor.Split('&');
             string sWhere = "";
+            string s1;
+
 
             sWhere = "(clientes.nome LIKE '%";
             foreach (string s in mValor)
             {
-                sWhere += s + "%' OR obs LIKE '%" + s + "%' OR data_abertura LIKE '%" + s + "%') AND (clientes.nome LIKE '%";
+                if (s.Contains("/"))
+                {
+                    //contém filtro em data
+                    s1 = InverteData(s);
+                }
+                else
+                    s1 = s;
+
+                sWhere += s1 + "%' OR obs LIKE '%" + s1 + "%' OR data_abertura LIKE '%" + s1 + "%') AND (clientes.nome LIKE '%";
             }
-            sWhere = sWhere.Substring(0, sWhere.Length - 17);  //retura o último operador
+            sWhere = sWhere.Substring(0, sWhere.Length - 26);  //retura o último operador
 
             return sWhere;
+        }
+
+        private int NumerosFrente(string s, int pos)
+        {
+            for (int i = pos; i<s.Length; i++ )
+            {
+                if (s[i] < '0' || s[i] > '9') return i - 1;
+            }
+            return s.Length;
+        }
+
+        private int NumerosTras(string s, int pos)
+        {
+            for (int i = pos; i >= 0; i--)
+            {
+                if (s[i] < '0' || s[i] > '9') return i + 1;
+            }
+            return 0;
+        }
+
+        private string InverteData(string valor)
+        {
+            int i, i1, i2;
+            string s = "";
+            char c;
+
+            for (i=0; i<valor.Length;i++)
+            {
+                c = Convert.ToChar(valor.Substring(i, 1));
+                string s1;
+                string s2;
+
+                if (c == '/')
+                {
+                    if ((valor.Length - i) > 2)
+                    {
+                        i1 = NumerosFrente(valor, i + 1);
+                        i2 = NumerosTras(valor, i - 1);
+                        s1 = valor.Substring(i + 1, i1 - i - 1 ); //pega os 2 ultimos digitos
+                        s2 = valor.Substring(i2, i);    //pega os 2 proximos digitos
+                        //s = s.Substring(1, s.Length - 2);  //retira os 2 ultimos digitos
+                        s = s1 + '-' + s2;
+                        i += (i1 - i - 1); 
+                    }
+                }
+                else
+                {
+                    s += c;
+                }
+            }
+
+            return s;
         }
 
         public DataTable Filtrar(String valor, String where = "")
@@ -226,26 +288,10 @@ namespace DAL
             string[] mValor;
             string sWhere = "";
 
-            if (valor.Contains("/"))
-            {
-                //contém filtro em data
-                mValor = valor.Split('/');
-                string aValor = "";
-                foreach (string s in mValor)
-                {
-                    if (s.Contains("|"))
-                    {
-                        aValor += ProcessaOR(s); 
-                    }
-                    if (s.Contains("&"))
-                    {
-                        aValor += ProcessaAND(s);
-                    }
-                    aValor = s + '-' + aValor;
-                }
-                valor = aValor.Substring(0, aValor.Length - 1);  //retura o último caracter
-            }
-            else if (valor.Contains("|"))
+            
+
+
+            if (valor.Contains("|"))
             {
                 sWhere = ProcessaOR(valor);
             }
@@ -259,9 +305,11 @@ namespace DAL
             }
 
             if (where != "")
-                sWhere += ") And " + where;
+                sWhere += " And " + where;
             else
                 sWhere += ")";
+
+            
             sql = "select pedidos.id AS id, clientes.nome AS cliente, data_abertura AS data, obs, valor from pedidos JOIN clientes ON clientes.id=pedidos.cliente_id WHERE " + sWhere + " ORDER BY pedidos.id DESC"; 
             return bd.exePesquisa(sql, null);
         }
