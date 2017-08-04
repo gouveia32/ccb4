@@ -464,6 +464,21 @@ namespace GUI
             frmCalculaTotalPedido f = new frmCalculaTotalPedido();
             f.ShowDialog(); 
         }
-    }
 
-}
+        private void btnEstatisticaPedido_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            MostraAgaurde("Aguarde", "Abrindo o formulário...");
+            if (Application.OpenForms.OfType<frmEstatisticaPedido>().Count() > 0)
+            {
+                SelecionaTab("Estatística de Pedidos");
+            }
+            else
+            {
+                frmEstatisticaPedido f = new frmEstatisticaPedido(this);
+                f.MdiParent = this;
+                f.Show();
+            }
+            OcultaAguarde();
+        }
+    }
+    }

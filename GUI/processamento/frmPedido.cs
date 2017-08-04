@@ -436,14 +436,16 @@ namespace GUI
 
             Filtrar();
 
-            gvRegistros.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            gvRegistros.Columns[0].Width = 50;
-            gvRegistros.Columns[1].Width = 125;
-            gvRegistros.Columns[2].Width = 90;
-            gvRegistros.Columns[3].Visible = false;
-            gvRegistros.Columns[4].Visible = false;
-            if (gvItens.RowCount > 0) Carrega_Item(0); // mostra 1o item
-
+            if (gvItens.RowCount > 0)
+            {
+                gvRegistros.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+                gvRegistros.Columns[0].Width = 50;
+                gvRegistros.Columns[1].Width = 125;
+                gvRegistros.Columns[2].Width = 90;
+                gvRegistros.Columns[3].Visible = false;
+                gvRegistros.Columns[4].Visible = false;
+                Carrega_Item(0); // mostra 1o item
+            }
         }
 
         private void CarregaPedidoAtual(int pedido_id)

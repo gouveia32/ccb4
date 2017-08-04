@@ -234,6 +234,12 @@
     <Compile Include="utilitario\frmCalculaTotalPedido.Designer.cs">
       <DependentUpon>frmCalculaTotalPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="utilitario\frmEstatisticaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="utilitario\frmEstatisticaPedido.Designer.cs">
+      <DependentUpon>frmEstatisticaPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="utilitario\frmPreferencias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="utilitario\frmCalculaTotalPedido.resx">
       <DependentUpon>frmCalculaTotalPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="utilitario\frmEstatisticaPedido.resx">
+      <DependentUpon>frmEstatisticaPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="utilitario\frmPreferencias.resx">
       <DependentUpon>frmPreferencias.cs</DependentUpon>

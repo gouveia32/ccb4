@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
@@ -37,7 +38,7 @@ namespace GUI
             DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.imageCollection2 = new DevExpress.Utils.ImageCollection();
+            this.imageCollection2 = new DevExpress.Utils.ImageCollection(this.components);
             this.iOpen = new DevExpress.XtraBars.BarButtonItem();
             this.iSave = new DevExpress.XtraBars.BarButtonItem();
             this.iUndo = new DevExpress.XtraBars.BarButtonItem();
@@ -106,7 +107,7 @@ namespace GUI
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.btnPreferencias = new DevExpress.XtraBars.BarButtonItem();
             this.btnCalculaTotalPedido = new DevExpress.XtraBars.BarButtonItem();
-            this.imageCollection1 = new DevExpress.Utils.ImageCollection();
+            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.rbpProc = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpgAtendimento = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpCadastro = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -118,15 +119,16 @@ namespace GUI
             this.rbpgUtiliario = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.pmMain = new DevExpress.XtraBars.PopupMenu();
+            this.pmMain = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
             this.barEditItem3 = new DevExpress.XtraBars.BarEditItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.imageCollection3 = new DevExpress.Utils.ImageCollection();
-            this.pmAppMain = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.imageCollection3 = new DevExpress.Utils.ImageCollection(this.components);
+            this.pmAppMain = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.btnEstatisticaPedido = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riicStyle)).BeginInit();
@@ -222,11 +224,12 @@ namespace GUI
             this.barButtonItem1,
             this.barButtonItem2,
             this.btnPreferencias,
-            this.btnCalculaTotalPedido});
+            this.btnCalculaTotalPedido,
+            this.btnEstatisticaPedido});
             this.ribbon.LargeImages = this.imageCollection1;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbon.MaxItemId = 438;
+            this.ribbon.MaxItemId = 439;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.ShowTouchUISelectorInQAT = true;
             this.ribbon.OptionsTouch.ShowTouchUISelectorVisibilityItemInQATMenu = true;
@@ -1039,6 +1042,7 @@ namespace GUI
             // rbpgUtiliario
             // 
             this.rbpgUtiliario.ItemLinks.Add(this.btnCalculaTotalPedido);
+            this.rbpgUtiliario.ItemLinks.Add(this.btnEstatisticaPedido);
             this.rbpgUtiliario.Name = "rbpgUtiliario";
             this.rbpgUtiliario.Text = "Utilitários";
             // 
@@ -1123,6 +1127,13 @@ namespace GUI
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // btnEstatisticaPedido
+            // 
+            this.btnEstatisticaPedido.Caption = "Estatíst.Pedido";
+            this.btnEstatisticaPedido.Id = 438;
+            this.btnEstatisticaPedido.Name = "btnEstatisticaPedido";
+            this.btnEstatisticaPedido.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEstatisticaPedido_ItemClick);
             // 
             // frmPrincipal
             // 
@@ -1248,5 +1259,6 @@ namespace GUI
         private RibbonPageGroup rbpgConfiguracao;
         private DevExpress.XtraBars.BarButtonItem btnCalculaTotalPedido;
         private RibbonPageGroup rbpgUtiliario;
+        private DevExpress.XtraBars.BarButtonItem btnEstatisticaPedido;
     }
 }
