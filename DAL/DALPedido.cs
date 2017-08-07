@@ -297,13 +297,18 @@ namespace DAL
             }
             else
             {
-                sWhere = string.Format("(clientes.nome LIKE '%{0:s}%' OR obs LIKE '%{0:s}%' OR data_abertura LIKE '%{0:s}%')", valor);
+                if (valor.Contains("/"))
+                {
+                    valor = InverteData(valor);
+                }
+
+                    sWhere = string.Format("(clientes.nome LIKE '%{0:s}%' OR obs LIKE '%{0:s}%' OR data_abertura LIKE '%{0:s}%')", valor);
             }
 
             if (where != "")
                 sWhere += " And " + where;
             
-            sql = "select pedidos.id AS id, clientes.nome AS cliente, data_abertura AS data, obs, valor from pedidos JOIN clientes ON clientes.id=pedidos.cliente_id WHERE " + sWhere + " ORDER BY pedidos.id DESC"; 
+            sql = "SELECT pedidos.id AS id, clientes.nome AS cliente, data_abertura AS data, obs, valor FROM pedidos JOIN clientes ON clientes.id=pedidos.cliente_id WHERE " + sWhere + " ORDER BY pedidos.id DESC"; 
             return bd.exePesquisa(sql, null);
         }
 

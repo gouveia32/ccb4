@@ -31,9 +31,9 @@
             DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstatisticaPedido));
-            this.executado = new DevExpress.XtraGrid.Columns.GridColumn();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             this.gvPedidos = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.seq = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pedido = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cliente = new DevExpress.XtraGrid.Columns.GridColumn();
             this.data = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -60,23 +60,14 @@
             this.chkFiltroExecutado = new System.Windows.Forms.CheckBox();
             this.txtFiltrar = new DevExpress.XtraEditors.TextEdit();
             this.chkFiltroQuitado = new System.Windows.Forms.CheckBox();
+            this.chartLinhaHistorico = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.gvPedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFiltrar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLinhaHistorico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // executado
-            // 
-            this.executado.AppearanceCell.Options.UseTextOptions = true;
-            this.executado.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.executado.AppearanceHeader.Options.UseTextOptions = true;
-            this.executado.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.executado.Caption = "exe";
-            this.executado.FieldName = "executado";
-            this.executado.Name = "executado";
-            this.executado.Visible = true;
-            this.executado.VisibleIndex = 4;
-            this.executado.Width = 60;
             // 
             // gvPedidos
             // 
@@ -90,15 +81,12 @@
             this.gvPedidos.Appearance.Row.Options.UseTextOptions = true;
             this.gvPedidos.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gvPedidos.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.seq,
             this.pedido,
             this.cliente,
             this.data,
-            this.executado,
             this.valor});
             this.gvPedidos.FixedLineWidth = 1;
             this.gvPedidos.FooterPanelHeight = 20;
-            gridFormatRule1.Column = this.executado;
             gridFormatRule1.Name = "Format0";
             formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
             formatConditionRuleValue1.Expression = "Sim";
@@ -133,19 +121,6 @@
             this.gvPedidos.OptionsView.ShowGroupPanel = false;
             this.gvPedidos.RowHeight = 23;
             // 
-            // seq
-            // 
-            this.seq.AppearanceCell.Options.UseTextOptions = true;
-            this.seq.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.seq.AppearanceHeader.Options.UseTextOptions = true;
-            this.seq.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.seq.Caption = "seq";
-            this.seq.FieldName = "seq";
-            this.seq.Name = "seq";
-            this.seq.Visible = true;
-            this.seq.VisibleIndex = 0;
-            this.seq.Width = 45;
-            // 
             // pedido
             // 
             this.pedido.AppearanceCell.Options.UseTextOptions = true;
@@ -156,7 +131,7 @@
             this.pedido.FieldName = "id";
             this.pedido.Name = "pedido";
             this.pedido.Visible = true;
-            this.pedido.VisibleIndex = 1;
+            this.pedido.VisibleIndex = 0;
             this.pedido.Width = 65;
             // 
             // cliente
@@ -165,8 +140,8 @@
             this.cliente.FieldName = "cliente";
             this.cliente.Name = "cliente";
             this.cliente.Visible = true;
-            this.cliente.VisibleIndex = 2;
-            this.cliente.Width = 150;
+            this.cliente.VisibleIndex = 1;
+            this.cliente.Width = 200;
             // 
             // data
             // 
@@ -180,7 +155,7 @@
             this.data.FieldName = "data";
             this.data.Name = "data";
             this.data.Visible = true;
-            this.data.VisibleIndex = 3;
+            this.data.VisibleIndex = 2;
             this.data.Width = 80;
             // 
             // valor
@@ -197,7 +172,7 @@
             this.valor.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "valor", "{0:n2}")});
             this.valor.Visible = true;
-            this.valor.VisibleIndex = 5;
+            this.valor.VisibleIndex = 3;
             this.valor.Width = 90;
             // 
             // gcPedidos
@@ -205,11 +180,11 @@
             this.gcPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.gcPedidos.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.gcPedidos.Location = new System.Drawing.Point(3, 51);
+            this.gcPedidos.Location = new System.Drawing.Point(3, 63);
             this.gcPedidos.MainView = this.gvPedidos;
             this.gcPedidos.Margin = new System.Windows.Forms.Padding(2);
             this.gcPedidos.Name = "gcPedidos";
-            this.gcPedidos.Size = new System.Drawing.Size(535, 349);
+            this.gcPedidos.Size = new System.Drawing.Size(624, 430);
             this.gcPedidos.TabIndex = 114;
             this.gcPedidos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPedidos});
@@ -265,9 +240,10 @@
             // btnFiltrar
             // 
             this.btnFiltrar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnFiltrar.Location = new System.Drawing.Point(230, 12);
+            this.btnFiltrar.Location = new System.Drawing.Point(268, 15);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(36, 21);
+            this.btnFiltrar.Size = new System.Drawing.Size(42, 26);
             this.btnFiltrar.TabIndex = 223;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
@@ -278,9 +254,10 @@
             this.chkFiltroDemais.Checked = true;
             this.chkFiltroDemais.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroDemais.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroDemais.Location = new System.Drawing.Point(467, 28);
+            this.chkFiltroDemais.Location = new System.Drawing.Point(545, 34);
+            this.chkFiltroDemais.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkFiltroDemais.Name = "chkFiltroDemais";
-            this.chkFiltroDemais.Size = new System.Drawing.Size(55, 16);
+            this.chkFiltroDemais.Size = new System.Drawing.Size(67, 18);
             this.chkFiltroDemais.TabIndex = 230;
             this.chkFiltroDemais.Text = "Demais";
             this.chkFiltroDemais.UseVisualStyleBackColor = true;
@@ -290,9 +267,10 @@
             // 
             this.chkFiltroMensal.AutoSize = true;
             this.chkFiltroMensal.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroMensal.Location = new System.Drawing.Point(467, 12);
+            this.chkFiltroMensal.Location = new System.Drawing.Point(545, 15);
+            this.chkFiltroMensal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkFiltroMensal.Name = "chkFiltroMensal";
-            this.chkFiltroMensal.Size = new System.Drawing.Size(54, 16);
+            this.chkFiltroMensal.Size = new System.Drawing.Size(65, 18);
             this.chkFiltroMensal.TabIndex = 229;
             this.chkFiltroMensal.Text = "Mensal";
             this.chkFiltroMensal.UseVisualStyleBackColor = true;
@@ -304,9 +282,10 @@
             this.chkFiltroNaoExecutado.Checked = true;
             this.chkFiltroNaoExecutado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroNaoExecutado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroNaoExecutado.Location = new System.Drawing.Point(354, 30);
+            this.chkFiltroNaoExecutado.Location = new System.Drawing.Point(413, 37);
+            this.chkFiltroNaoExecutado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkFiltroNaoExecutado.Name = "chkFiltroNaoExecutado";
-            this.chkFiltroNaoExecutado.Size = new System.Drawing.Size(92, 16);
+            this.chkFiltroNaoExecutado.Size = new System.Drawing.Size(112, 18);
             this.chkFiltroNaoExecutado.TabIndex = 228;
             this.chkFiltroNaoExecutado.Text = "Não Executado";
             this.chkFiltroNaoExecutado.UseVisualStyleBackColor = true;
@@ -318,9 +297,10 @@
             this.chkFiltroNaoQuitado.Checked = true;
             this.chkFiltroNaoQuitado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroNaoQuitado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroNaoQuitado.Location = new System.Drawing.Point(271, 28);
+            this.chkFiltroNaoQuitado.Location = new System.Drawing.Point(316, 34);
+            this.chkFiltroNaoQuitado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkFiltroNaoQuitado.Name = "chkFiltroNaoQuitado";
-            this.chkFiltroNaoQuitado.Size = new System.Drawing.Size(68, 16);
+            this.chkFiltroNaoQuitado.Size = new System.Drawing.Size(81, 18);
             this.chkFiltroNaoQuitado.TabIndex = 227;
             this.chkFiltroNaoQuitado.Text = "Não Pago";
             this.chkFiltroNaoQuitado.UseVisualStyleBackColor = true;
@@ -331,9 +311,10 @@
             this.btnX.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
             this.btnX.Image = ((System.Drawing.Image)(resources.GetObject("btnX.Image")));
             this.btnX.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnX.Location = new System.Drawing.Point(207, 13);
+            this.btnX.Location = new System.Drawing.Point(241, 16);
+            this.btnX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(18, 18);
+            this.btnX.Size = new System.Drawing.Size(21, 22);
             this.btnX.TabIndex = 222;
             this.btnX.Text = "X";
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
@@ -342,9 +323,10 @@
             // 
             this.chkFiltroExecutado.AutoSize = true;
             this.chkFiltroExecutado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroExecutado.Location = new System.Drawing.Point(354, 14);
+            this.chkFiltroExecutado.Location = new System.Drawing.Point(413, 17);
+            this.chkFiltroExecutado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkFiltroExecutado.Name = "chkFiltroExecutado";
-            this.chkFiltroExecutado.Size = new System.Drawing.Size(71, 16);
+            this.chkFiltroExecutado.Size = new System.Drawing.Size(87, 18);
             this.chkFiltroExecutado.TabIndex = 226;
             this.chkFiltroExecutado.Text = "Executado";
             this.chkFiltroExecutado.UseVisualStyleBackColor = true;
@@ -352,9 +334,10 @@
             // 
             // txtFiltrar
             // 
-            this.txtFiltrar.Location = new System.Drawing.Point(11, 13);
+            this.txtFiltrar.Location = new System.Drawing.Point(13, 16);
+            this.txtFiltrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(214, 20);
+            this.txtFiltrar.Size = new System.Drawing.Size(250, 22);
             this.txtFiltrar.TabIndex = 221;
             this.txtFiltrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltrar_KeyPress);
             // 
@@ -364,19 +347,41 @@
             this.chkFiltroQuitado.Checked = true;
             this.chkFiltroQuitado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroQuitado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroQuitado.Location = new System.Drawing.Point(271, 12);
+            this.chkFiltroQuitado.Location = new System.Drawing.Point(316, 15);
+            this.chkFiltroQuitado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkFiltroQuitado.Name = "chkFiltroQuitado";
-            this.chkFiltroQuitado.Size = new System.Drawing.Size(47, 16);
+            this.chkFiltroQuitado.Size = new System.Drawing.Size(56, 18);
             this.chkFiltroQuitado.TabIndex = 225;
             this.chkFiltroQuitado.Text = "Pago";
             this.chkFiltroQuitado.UseVisualStyleBackColor = true;
             this.chkFiltroQuitado.CheckedChanged += new System.EventHandler(this.chkFiltroQuitado_CheckedChanged);
             // 
+            // chartLinhaHistorico
+            // 
+            this.chartLinhaHistorico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartLinhaHistorico.Diagram = xyDiagram1;
+            this.chartLinhaHistorico.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.LeftOutside;
+            this.chartLinhaHistorico.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.Bottom;
+            this.chartLinhaHistorico.Legend.Name = "Default Legend";
+            this.chartLinhaHistorico.Location = new System.Drawing.Point(635, 64);
+            this.chartLinhaHistorico.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chartLinhaHistorico.Name = "chartLinhaHistorico";
+            series1.Name = "valor";
+            this.chartLinhaHistorico.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.chartLinhaHistorico.Size = new System.Drawing.Size(841, 429);
+            this.chartLinhaHistorico.TabIndex = 231;
+            // 
             // frmEstatisticaPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 405);
+            this.ClientSize = new System.Drawing.Size(1480, 498);
+            this.Controls.Add(this.chartLinhaHistorico);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.chkFiltroDemais);
             this.Controls.Add(this.chkFiltroMensal);
@@ -388,12 +393,16 @@
             this.Controls.Add(this.chkFiltroQuitado);
             this.Controls.Add(this.gcPedidos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmEstatisticaPedido";
             this.Text = "Estatística de Pedidos";
             this.Load += new System.EventHandler(this.frmCalculaTotalPedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvPedidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPedidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFiltrar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLinhaHistorico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,7 +413,6 @@
         internal DevExpress.XtraGrid.Columns.GridColumn data;
         internal DevExpress.XtraGrid.Columns.GridColumn cliente;
         internal DevExpress.XtraGrid.Columns.GridColumn pedido;
-        internal DevExpress.XtraGrid.Columns.GridColumn seq;
         internal DevExpress.XtraGrid.Views.Grid.GridView gvPedidos;
         internal DevExpress.XtraGrid.GridControl gcPedidos;
         internal DevComponents.Editors.ComboItem ComboItem12;
@@ -419,7 +427,6 @@
         internal DevComponents.Editors.ComboItem ComboItem3;
         internal DevComponents.Editors.ComboItem ComboItem2;
         internal DevComponents.Editors.ComboItem ComboItem1;
-        private DevExpress.XtraGrid.Columns.GridColumn executado;
         private DevExpress.XtraEditors.DropDownButton btnFiltrar;
         internal System.Windows.Forms.CheckBox chkFiltroDemais;
         internal System.Windows.Forms.CheckBox chkFiltroMensal;
@@ -429,5 +436,6 @@
         internal System.Windows.Forms.CheckBox chkFiltroExecutado;
         private DevExpress.XtraEditors.TextEdit txtFiltrar;
         internal System.Windows.Forms.CheckBox chkFiltroQuitado;
+        internal DevExpress.XtraCharts.ChartControl chartLinhaHistorico;
     }
 }

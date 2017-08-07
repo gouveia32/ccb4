@@ -122,10 +122,15 @@ namespace GUI
             }
 
             BLLPedido bll = new BLLPedido();
-            if (txtFiltrar.Text == "")
+            if (filtro == "")
                 gcPedidos.DataSource = bll.Filtrar(txtFiltrar.Text, "");
             else
                 gcPedidos.DataSource = bll.Filtrar(txtFiltrar.Text, filtro);
+
+            chartLinhaHistorico.DataSource = gcPedidos.DataSource;
+            //ccHistorico.Series[0].DataSource = dgLog.DataSource;
+            chartLinhaHistorico.Series[0].ArgumentDataMember = "data";
+            chartLinhaHistorico.Series[0].ValueDataMembers[0] = "valor";
 
             if (txtFiltrar.Text == "")
             {
@@ -147,19 +152,15 @@ namespace GUI
         {
             dtCalc = new DataTable();
 
-            dtCalc.Columns.Add("seq");
             dtCalc.Columns.Add("pedido");
             dtCalc.Columns.Add("cliente");
             dtCalc.Columns.Add("data");
-            dtCalc.Columns.Add("executado");
             dtCalc.Columns.Add("valor");
             gcPedidos.DataSource = dtCalc;
-            gvPedidos.Columns[0].Width = 35;
-            gvPedidos.Columns[1].Width = 55;
-            gvPedidos.Columns[2].Width = 130;
-            gvPedidos.Columns[3].Width = 80;
-            gvPedidos.Columns[4].Width = 60;
-            gvPedidos.Columns[5].Width = 90;
+            gvPedidos.Columns[0].Width = 55;
+            gvPedidos.Columns[1].Width = 200;
+            gvPedidos.Columns[2].Width = 100;
+            gvPedidos.Columns[3].Width = 100;
 
             Filtrar();
         }
