@@ -55,6 +55,11 @@ namespace BLL
             return DALobj.Filtrar(ra.RetiraAcento(valor), where);
         }
 
+        public DataTable FiltrarPedido(String valor, String where)
+        {
+            return DALobj.FiltrarPedido(ra.RetiraAcento(valor), where);
+        }
+
         public DataTable CarregaTodosPedidos()
         {
             return DALobj.CarregaTodosPedidos();

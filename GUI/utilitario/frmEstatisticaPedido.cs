@@ -123,14 +123,19 @@ namespace GUI
 
             BLLPedido bll = new BLLPedido();
             if (filtro == "")
+            {
                 gcPedidos.DataSource = bll.Filtrar(txtFiltrar.Text, "");
+                chartLinhaHistorico.DataSource = bll.FiltrarPedido(txtFiltrar.Text, "");
+            }
             else
+            {
                 gcPedidos.DataSource = bll.Filtrar(txtFiltrar.Text, filtro);
+                chartLinhaHistorico.DataSource = bll.FiltrarPedido(txtFiltrar.Text, filtro);
+            }
 
-            chartLinhaHistorico.DataSource = gcPedidos.DataSource;
             //ccHistorico.Series[0].DataSource = dgLog.DataSource;
-            chartLinhaHistorico.Series[0].ArgumentDataMember = "data";
-            chartLinhaHistorico.Series[0].ValueDataMembers[0] = "valor";
+            chartLinhaHistorico.Series[0].ArgumentDataMember = "ano_mes";
+            chartLinhaHistorico.Series[0].ValueDataMembers[0] = "total";
 
             if (txtFiltrar.Text == "")
             {
@@ -158,7 +163,7 @@ namespace GUI
             dtCalc.Columns.Add("valor");
             gcPedidos.DataSource = dtCalc;
             gvPedidos.Columns[0].Width = 55;
-            gvPedidos.Columns[1].Width = 200;
+            gvPedidos.Columns[1].Width = 150;
             gvPedidos.Columns[2].Width = 100;
             gvPedidos.Columns[3].Width = 100;
 

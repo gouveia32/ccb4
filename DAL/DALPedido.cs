@@ -312,5 +312,34 @@ namespace DAL
             return bd.exePesquisa(sql, null);
         }
 
+        public DataTable FiltrarPedido(String valor, String where = "")
+        {
+            DataTable tabela = new DataTable();
+            string sWhere = "";
+
+            if (valor.Contains("|"))
+            {
+                sWhere = ProcessaOR(valor);
+            }
+            else if (valor.Contains("&"))
+            {
+                sWhere = ProcessaAND(valor);
+            }
+            else
+            {
+                if (valor.Contains("/"))
+                {
+                    valor = InverteData(valor);
+                }
+
+                sWhere = string.Format("(clientes.nome LIKE '%{0:s}%' OR obs LIKE '%{0:s}%' OR data_abertura LIKE '%{0:s}%')", valor);
+            }
+
+            if (where != "")
+                sWhere += " And " + where;
+
+            sql = "SELECT pedidos.id AS id, clientes.nome AS cliente, data_abertura AS data, obs, SUM(valor) AS total, YEAR(data_abertura) AS ano, MONTH(data_abertura) AS mes, DATE_FORMAT(data_abertura,'%m_%Y') AS ano_mes  FROM pedidos JOIN clientes ON clientes.id=pedidos.cliente_id WHERE " + sWhere + " GROUP BY DATE_FORMAT(data_abertura,'%m_%Y') ORDER BY pedidos.id";
+            return bd.exePesquisa(sql, null);
+        }
     }
 }

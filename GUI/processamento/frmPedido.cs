@@ -444,6 +444,7 @@ namespace GUI
                 gvRegistros.Columns[2].Width = 90;
                 gvRegistros.Columns[3].Visible = false;
                 gvRegistros.Columns[4].Visible = false;
+
                 Carrega_Item(0); // mostra 1o item
             }
         }
