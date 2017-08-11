@@ -180,11 +180,11 @@
             this.gcPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.gcPedidos.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.gcPedidos.Location = new System.Drawing.Point(3, 51);
+            this.gcPedidos.Location = new System.Drawing.Point(4, 52);
             this.gcPedidos.MainView = this.gvPedidos;
             this.gcPedidos.Margin = new System.Windows.Forms.Padding(2);
             this.gcPedidos.Name = "gcPedidos";
-            this.gcPedidos.Size = new System.Drawing.Size(535, 349);
+            this.gcPedidos.Size = new System.Drawing.Size(469, 349);
             this.gcPedidos.TabIndex = 114;
             this.gcPedidos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPedidos});
@@ -240,7 +240,7 @@
             // btnFiltrar
             // 
             this.btnFiltrar.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
-            this.btnFiltrar.Location = new System.Drawing.Point(230, 12);
+            this.btnFiltrar.Location = new System.Drawing.Point(182, 12);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(36, 21);
             this.btnFiltrar.TabIndex = 223;
@@ -253,7 +253,7 @@
             this.chkFiltroDemais.Checked = true;
             this.chkFiltroDemais.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroDemais.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroDemais.Location = new System.Drawing.Point(467, 28);
+            this.chkFiltroDemais.Location = new System.Drawing.Point(419, 28);
             this.chkFiltroDemais.Name = "chkFiltroDemais";
             this.chkFiltroDemais.Size = new System.Drawing.Size(55, 16);
             this.chkFiltroDemais.TabIndex = 230;
@@ -265,7 +265,7 @@
             // 
             this.chkFiltroMensal.AutoSize = true;
             this.chkFiltroMensal.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroMensal.Location = new System.Drawing.Point(467, 12);
+            this.chkFiltroMensal.Location = new System.Drawing.Point(419, 12);
             this.chkFiltroMensal.Name = "chkFiltroMensal";
             this.chkFiltroMensal.Size = new System.Drawing.Size(54, 16);
             this.chkFiltroMensal.TabIndex = 229;
@@ -279,7 +279,7 @@
             this.chkFiltroNaoExecutado.Checked = true;
             this.chkFiltroNaoExecutado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroNaoExecutado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroNaoExecutado.Location = new System.Drawing.Point(354, 30);
+            this.chkFiltroNaoExecutado.Location = new System.Drawing.Point(306, 30);
             this.chkFiltroNaoExecutado.Name = "chkFiltroNaoExecutado";
             this.chkFiltroNaoExecutado.Size = new System.Drawing.Size(92, 16);
             this.chkFiltroNaoExecutado.TabIndex = 228;
@@ -293,7 +293,7 @@
             this.chkFiltroNaoQuitado.Checked = true;
             this.chkFiltroNaoQuitado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroNaoQuitado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroNaoQuitado.Location = new System.Drawing.Point(271, 28);
+            this.chkFiltroNaoQuitado.Location = new System.Drawing.Point(223, 28);
             this.chkFiltroNaoQuitado.Name = "chkFiltroNaoQuitado";
             this.chkFiltroNaoQuitado.Size = new System.Drawing.Size(68, 16);
             this.chkFiltroNaoQuitado.TabIndex = 227;
@@ -306,7 +306,7 @@
             this.btnX.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
             this.btnX.Image = ((System.Drawing.Image)(resources.GetObject("btnX.Image")));
             this.btnX.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnX.Location = new System.Drawing.Point(207, 13);
+            this.btnX.Location = new System.Drawing.Point(159, 13);
             this.btnX.Name = "btnX";
             this.btnX.Size = new System.Drawing.Size(18, 18);
             this.btnX.TabIndex = 222;
@@ -317,7 +317,7 @@
             // 
             this.chkFiltroExecutado.AutoSize = true;
             this.chkFiltroExecutado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroExecutado.Location = new System.Drawing.Point(354, 14);
+            this.chkFiltroExecutado.Location = new System.Drawing.Point(306, 14);
             this.chkFiltroExecutado.Name = "chkFiltroExecutado";
             this.chkFiltroExecutado.Size = new System.Drawing.Size(71, 16);
             this.chkFiltroExecutado.TabIndex = 226;
@@ -327,9 +327,9 @@
             // 
             // txtFiltrar
             // 
-            this.txtFiltrar.Location = new System.Drawing.Point(11, 13);
+            this.txtFiltrar.Location = new System.Drawing.Point(4, 13);
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(214, 20);
+            this.txtFiltrar.Size = new System.Drawing.Size(173, 20);
             this.txtFiltrar.TabIndex = 221;
             this.txtFiltrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltrar_KeyPress);
             // 
@@ -339,7 +339,7 @@
             this.chkFiltroQuitado.Checked = true;
             this.chkFiltroQuitado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFiltroQuitado.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFiltroQuitado.Location = new System.Drawing.Point(271, 12);
+            this.chkFiltroQuitado.Location = new System.Drawing.Point(223, 12);
             this.chkFiltroQuitado.Name = "chkFiltroQuitado";
             this.chkFiltroQuitado.Size = new System.Drawing.Size(47, 16);
             this.chkFiltroQuitado.TabIndex = 225;
@@ -358,13 +358,13 @@
             this.chartLinhaHistorico.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Right;
             this.chartLinhaHistorico.Legend.Direction = DevExpress.XtraCharts.LegendDirection.BottomToTop;
             this.chartLinhaHistorico.Legend.Name = "Default Legend";
-            this.chartLinhaHistorico.Location = new System.Drawing.Point(544, 3);
+            this.chartLinhaHistorico.Location = new System.Drawing.Point(480, 3);
             this.chartLinhaHistorico.Name = "chartLinhaHistorico";
             series1.LegendName = "Default Legend";
             series1.Name = "valor";
             this.chartLinhaHistorico.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartLinhaHistorico.Size = new System.Drawing.Size(626, 398);
+            this.chartLinhaHistorico.Size = new System.Drawing.Size(690, 398);
             this.chartLinhaHistorico.TabIndex = 231;
             // 
             // frmEstatisticaPedido
