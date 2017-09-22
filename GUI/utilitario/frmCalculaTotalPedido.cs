@@ -51,7 +51,7 @@ namespace GUI
                         return;  //já havia digitado este pedido
                 }
 
-                BLLPedido bll = new BLLPedido();
+                PedidoBLL bll = new PedidoBLL();
                 Pedido modelo = new Pedido();
 
                 modelo = bll.CarregaPedido(Convert.ToInt32(txtPedido.Text));

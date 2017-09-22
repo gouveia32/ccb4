@@ -16,7 +16,7 @@ namespace GUI
 
         private void frmImprimeClientes_DataSourceDemanded(object sender, EventArgs e)
         {
-            BLLCliente bll = new BLLCliente();
+            ClienteBLL bll = new ClienteBLL();
             this.DataSource = bll.Filtrar("");
         }
     }

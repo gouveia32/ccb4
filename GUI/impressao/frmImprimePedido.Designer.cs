@@ -596,7 +596,7 @@
             // objectDataSource1
             // 
             this.objectDataSource1.Constructor = objectConstructorInfo1;
-            this.objectDataSource1.DataSource = typeof(DAL.DALItem);
+            this.objectDataSource1.DataSource = typeof(DAL.ItemDAL);
             this.objectDataSource1.Name = "objectDataSource1";
             // 
             // frmImprimePedido

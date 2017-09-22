@@ -221,7 +221,7 @@ namespace GUI
             }
 
             // dados do primeiro item
-            BLLItem bll = new BLLItem();
+            ItemBLL bll = new ItemBLL();
             Item item1 = new Item();
             if (gvItens.RowCount > 0)
             {
@@ -373,7 +373,7 @@ namespace GUI
                 }
             }
 
-            BLLPedido bll = new BLLPedido();
+            PedidoBLL bll = new PedidoBLL();
             if (filtro == "")
                 dgRegistros.DataSource = bll.Filtrar(txtFiltrar.Text, "");
             else
@@ -411,7 +411,7 @@ namespace GUI
             scc1.Panel2.Enabled = true;
 
             //CarregaCombo cbCliente
-            BLLCliente c = new BLLCliente();
+            ClienteBLL c = new ClienteBLL();
             cbCliente.DataSource = c.Filtrar("");
             cbCliente.DisplayMember = "nome";
             cbCliente.ValueMember = "id";
@@ -425,7 +425,7 @@ namespace GUI
             }
 
             //CarregaCombo rg_local
-            BLLLocal l = new BLLLocal();
+            LocalBLL l = new LocalBLL();
             DataTable dt = l.Filtrar("");
             if (dt.Rows.Count > 0)
             {
@@ -451,12 +451,12 @@ namespace GUI
 
         private void CarregaPedidoAtual(int pedido_id)
         {
-            BLLPedido bll = new BLLPedido();
+            PedidoBLL bll = new PedidoBLL();
             Pedido modelo = bll.CarregaPedido(pedido_id);
             PedidoModeloParaTela(modelo);
 
             //Carrega itens
-            BLLItem bllItem = new BLLItem();
+            ItemBLL bllItem = new ItemBLL();
             ItemCollection itemCollection = bllItem.CarregaItensDoPedido(modelo.id);
             dgItens.DataSource = itemCollection;
             ItensModeloParaTela(itemCollection);
@@ -474,13 +474,13 @@ namespace GUI
         {
             if (row >= 0)
             {
-                BLLPedido bll = new BLLPedido();
+                PedidoBLL bll = new PedidoBLL();
                 Pedido modelo = bll.CarregaPedido(Convert.ToInt32(gvRegistros.GetDataRow(row).ItemArray[0]));
                 PedidoModeloParaTela(modelo);
                 //alterabotoes(1);
 
                 //Carrega itens
-                BLLItem bllItem = new BLLItem();
+                ItemBLL bllItem = new ItemBLL();
 
                 dtItens = bllItem.ItensDoPedido(modelo.id);
                 dgItens.DataSource = dtItens;
@@ -491,7 +491,7 @@ namespace GUI
         {
             if (gvItens.RowCount < row ) return;
 
-            BLLItem bll = new BLLItem();
+            ItemBLL bll = new ItemBLL();
             Bordado bordado = new Bordado();
             Item item = new Item(bordado);
             if (txtId.Text == "")
@@ -685,7 +685,7 @@ namespace GUI
         void MontaCupom(System.Drawing.Printing.PrintPageEventArgs e)
         {
             //Carrega parametros
-            BLLParametros param = new BLLParametros();
+            ParametroBLLs param = new ParametroBLLs();
             Parametros modelo = param.CarregaModeloParametros(1);
 
             // fill page with text
@@ -857,7 +857,7 @@ namespace GUI
         void MontaProtocolo(System.Drawing.Printing.PrintPageEventArgs e)
         {
             //Carrega parametros
-            BLLParametros param = new BLLParametros();
+            ParametroBLLs param = new ParametroBLLs();
             Parametros modelo = param.CarregaModeloParametros(1);
 
             // fill page with text
@@ -987,7 +987,7 @@ namespace GUI
 
         private DateTime UltimoDoDia(DateTime dia, int pedido_id)
         {
-            BLLAgendaPedido bll = new BLLAgendaPedido();
+            AgendaPedidoBLL bll = new AgendaPedidoBLL();
             bll.ExcluirPorPedido(pedido_id);   // apaga inicialmente qualquer entrada do pedido 
             DataTable dt;
             dt = bll.CarregaUltimaEntrada(dia);
@@ -1001,7 +1001,7 @@ namespace GUI
 
         private void ApagaAgenda(int pedido_id)
         {
-            BLLAgendaPedido bll = new BLLAgendaPedido();
+            AgendaPedidoBLL bll = new AgendaPedidoBLL();
             bll.ExcluirPorPedido(pedido_id);
         }
 
@@ -1010,7 +1010,7 @@ namespace GUI
             if (gvItens.FocusedRowHandle < 0) return;
             DateTime dtI;
 
-            BLLAgendaPedido bll = new BLLAgendaPedido();
+            AgendaPedidoBLL bll = new AgendaPedidoBLL();
             AgendaPedido modelo = new AgendaPedido();
 
             modelo = bll.EntradaDoPedido(pedido_id); // se não existir vem nulo
@@ -1049,7 +1049,7 @@ namespace GUI
 
 
                 //objeto para gravar os dados no bd
-                BLLPedido bll = new BLLPedido();
+                PedidoBLL bll = new PedidoBLL();
 
                 if (modelo.id == 0)
                 {
@@ -1313,7 +1313,7 @@ namespace GUI
             Gravar(); //Efetiva a baixa
 
             //Baixa na agenda
-            BLLAgendaPedido bll = new BLLAgendaPedido();
+            AgendaPedidoBLL bll = new AgendaPedidoBLL();
             bll.AlteraSituacao(pedido_atual, 0);
 
             if (chkFiltroExecutado.Checked)
@@ -1456,7 +1456,7 @@ namespace GUI
             ItemTelaParaGrade(linha);
             Item item = new Item();
             ItemGradeParaModelo(linha, item);
-            BLLItem bll = new BLLItem();
+            ItemBLL bll = new ItemBLL();
             if (bll.ItemExiste(item))
             {
                 bll.Altera(item);

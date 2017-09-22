@@ -24,7 +24,7 @@ namespace GUI
 
         public void FiltrarClientes(string filtro)
         {
-            BLLCliente bll = new BLLCliente();
+            ClienteBLL bll = new ClienteBLL();
 
             dgClientes.DataSource = bll.Filtrar(filtro);
         }
@@ -33,7 +33,7 @@ namespace GUI
         {
             if (gvClientes.SelectedRowsCount < 1) return;
 
-            BLLCliente bll = new BLLCliente();
+            ClienteBLL bll = new ClienteBLL();
 
             modeloCliente = bll.CarregaCliente(Convert.ToInt32(gvClientes.GetDataRow(gvClientes.FocusedRowHandle).ItemArray[0]));
             this.DialogResult = System.Windows.Forms.DialogResult.OK;

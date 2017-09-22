@@ -88,7 +88,7 @@ namespace GUI
                 TelaParaModelo(modeloCliente);
 
                 //objeto para gravar os dados no bd
-                BLLCliente bll = new BLLCliente();
+                ClienteBLL bll = new ClienteBLL();
 
                 if (modeloCliente.id == 0)
                 {

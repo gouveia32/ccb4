@@ -157,7 +157,7 @@ namespace GUI
             //alterabotoes(1);
 
             //Carrega Historico
-            BLLLinhaHistorico bllLH = new BLLLinhaHistorico();
+            LinhaHistoricoBLL bllLH = new LinhaHistoricoBLL();
             dgLog.DataSource = bllLH.Filtrar("", string.Format("linha_id={0} AND data >= '{1:yyyy-MM-dd}'",
                     linha,
                     deDataInicial.EditValue));
@@ -359,7 +359,7 @@ namespace GUI
             bllC.Altera(modeloL);
 
             //Grava Historico
-            BLLLinhaHistorico bllH = new BLLLinhaHistorico();
+            LinhaHistoricoBLL bllH = new LinhaHistoricoBLL();
             LinhaHistorico modeloH = new LinhaHistorico();
             modeloH.linha_id = modeloL.codigo;
             modeloH.data = DateTime.Now;
@@ -383,7 +383,7 @@ namespace GUI
             bllC.Altera(modeloL);
 
             //Grava Historico
-            BLLLinhaHistorico bllH = new BLLLinhaHistorico();
+            LinhaHistoricoBLL bllH = new LinhaHistoricoBLL();
             LinhaHistorico modeloH = new LinhaHistorico();
             modeloH.linha_id = modeloL.codigo;
             modeloH.data = DateTime.Now;
@@ -407,7 +407,7 @@ namespace GUI
             bllC.Altera(modeloL);
 
             //Grava Historico
-            BLLLinhaHistorico bllH = new BLLLinhaHistorico();
+            LinhaHistoricoBLL bllH = new LinhaHistoricoBLL();
             LinhaHistorico modeloH = new LinhaHistorico();
             modeloH.linha_id = modeloL.codigo;
             modeloH.data = DateTime.Now;
@@ -431,7 +431,7 @@ namespace GUI
             bllC.Altera(modeloL);
 
             //Grava Historico
-            BLLLinhaHistorico bllH = new BLLLinhaHistorico();
+            LinhaHistoricoBLL bllH = new LinhaHistoricoBLL();
             LinhaHistorico modeloH = new LinhaHistorico();
             modeloH.linha_id = modeloL.codigo;
             modeloH.data = DateTime.Now;

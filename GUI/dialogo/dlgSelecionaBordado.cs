@@ -31,7 +31,7 @@ namespace GUI
 
         public void FiltrarBordados (string filtro)
         {
-            BLLBordado bll = new BLLBordado();
+            BordadoBLL bll = new BordadoBLL();
 
             dgBordados.DataSource = bll.Filtrar(filtro);
         }
@@ -43,7 +43,7 @@ namespace GUI
             if (gvBordados.SelectedRowsCount < 1) return;
             bordado_id = Convert.ToInt32(gvBordados.GetDataRow(gvBordados.FocusedRowHandle).ItemArray[0]);
 
-            BLLBordado bll = new BLLBordado();
+            BordadoBLL bll = new BordadoBLL();
             
             modeloBordado = bll.CarregaModeloBordado(bordado_id);
 
@@ -63,7 +63,7 @@ namespace GUI
             }
 
             //carrega Notas Específicas, se tiver
-            BLLNotaEspecifica bllNota = new BLLNotaEspecifica();
+            NotaEspecificaBLL bllNota = new NotaEspecificaBLL();
             //DataTable tabelaNota = new DataTable();
             dgNotas.DataSource = bllNota.NotasDoBordado(modeloBordado.id);
 

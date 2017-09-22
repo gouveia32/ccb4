@@ -90,12 +90,12 @@ namespace GUI
             dgLinhas_Utilizadas.DataSource = tabela;
 
             //carrega Notas Específicas, se tiver
-            BLLNotaEspecifica bllNota = new BLLNotaEspecifica();
+            NotaEspecificaBLL bllNota = new NotaEspecificaBLL();
             //DataTable tabelaNota = new DataTable();
             dgNotas.DataSource = bllNota.NotasDoBordado(modelo.id);
 
             //Carrega catalogos
-            BLLCatalogo bllCat = new BLLCatalogo();
+            CatalogoBLL bllCat = new CatalogoBLL();
             dgCatalogos.DataSource = bllCat.CarregaCatalogosDoBordado(modelo.id);
         }
 
@@ -121,7 +121,7 @@ namespace GUI
         {
             fp.MostraAgaurde("Aguarde", "Carregando dados...");
             LimpaTela(); 
-            BLLBordado bll = new BLLBordado();
+            BordadoBLL bll = new BordadoBLL();
             string where = "";
             if (cbFiltroCatalogo.Text != "Todos")
             {
@@ -174,14 +174,14 @@ namespace GUI
         private void frmCadastroBordado_Load(object sender, EventArgs e)
         {
             //Filtro Catalogo
-            BLLCatalogo c = new BLLCatalogo();
+            CatalogoBLL c = new CatalogoBLL();
             cbFiltroCatalogo.DataSource = c.TodosCatalogos("Todos");
             cbFiltroCatalogo.DisplayMember = "nome";
             cbFiltroCatalogo.ValueMember = "id";
             //cbFiltroCatalogo.SelectedIndex = 0;
 
             //CarregaCombo Grupo_id
-            BLLGrupo g = new BLLGrupo();
+            GrupoBLL g = new GrupoBLL();
             cbGrupo.DataSource = g.TodosGrupos("");
             cbGrupo.DisplayMember = "grupo";
             cbGrupo.ValueMember = "id";
@@ -210,7 +210,7 @@ namespace GUI
 
         private void CarregaBordado(int bordado_id)
         {
-            BLLBordado bll = new BLLBordado();
+            BordadoBLL bll = new BordadoBLL();
             Bordado modelo = bll.CarregaModeloBordado(bordado_id);
             ModeloParaTela(modelo);
         }
@@ -278,7 +278,7 @@ namespace GUI
                 TelaParaModelo(modelo);
 
                 //objeto para gravar os dados no bd
-                BLLBordado bll = new BLLBordado();
+                BordadoBLL bll = new BordadoBLL();
 
                 if (this.operacao == "inserir")
                 {
@@ -312,7 +312,7 @@ namespace GUI
                 DialogResult d = MessageBox.Show("Deseja excluir o registro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
                 if (d.ToString() == "Yes")
                 {
-                    BLLBordado bll = new BLLBordado();
+                    BordadoBLL bll = new BordadoBLL();
                     bll.Excluir(Convert.ToInt32(txtId.Text));
                     LimpaTela();
                     Filtrar();
@@ -366,7 +366,7 @@ namespace GUI
 
         private void GravaNota(dlgNota f)
         {
-            BLLNotaEspecifica bll = new BLLNotaEspecifica();
+            NotaEspecificaBLL bll = new NotaEspecificaBLL();
             NotaEspecifica modelo = new NotaEspecifica();
             modelo.bordado_id = Convert.ToInt32(txtId.Text);
             modelo.cliente_id = Convert.ToInt32(f.cbCliente.SelectedValue);
@@ -422,7 +422,7 @@ namespace GUI
         private void btnApagarNota_Click(object sender, EventArgs e)
         {
             if (gvNotas.SelectedRowsCount < 1) return;
-            BLLNotaEspecifica bll = new BLLNotaEspecifica();
+            NotaEspecificaBLL bll = new NotaEspecificaBLL();
             if (MessageBox.Show("Confirma exclusão? ",
                 "NOTA: " + gvNotas.GetDataRow(gvNotas.FocusedRowHandle).ItemArray[1].ToString(), 
                 MessageBoxButtons.YesNo) == DialogResult.Yes)

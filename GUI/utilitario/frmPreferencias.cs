@@ -92,7 +92,7 @@ namespace GUI
                 TelaParaModelo(modelo);
                 modelo.id = 1;    //Considera 1 como sendo o perfil válido
 
-                BLLParametros bllParametros = new BLLParametros();
+                ParametroBLLs bllParametros = new ParametroBLLs();
                 bllParametros.GravaModeloParametros(modelo);
 
                 MessageBox.Show ("Gravado!");

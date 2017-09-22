@@ -22,12 +22,12 @@ namespace GUI
         private void frmImprimePedido_DataSourceDemanded(object sender, EventArgs e)
         {
             //Carrega parametros
-            BLLParametros p = new BLLParametros();
+            ParametroBLLs p = new ParametroBLLs();
             Parametros modelo = p.CarregaModeloParametros(1);
             xlblEndereco.Text = modelo.endereco;
             xlblTelefones.Text = modelo.telefone;
 
-            BLLItem bll = new BLLItem();
+            ItemBLL bll = new ItemBLL();
             DataTable tabela = new DataTable();
             tabela = bll.ItensDoPedido(Pedido);
 

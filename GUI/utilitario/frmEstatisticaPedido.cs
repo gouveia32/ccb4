@@ -121,7 +121,7 @@ namespace GUI
                 }
             }
 
-            BLLPedido bll = new BLLPedido();
+            PedidoBLL bll = new PedidoBLL();
             if (filtro == "")
             {
                 gcPedidos.DataSource = bll.Filtrar(txtFiltrar.Text, "");

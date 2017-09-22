@@ -78,7 +78,7 @@ namespace GUI
         
         private void Filtrar(int Posicionar_id = 0)
         {
-            BLLCliente bll = new BLLCliente();
+            ClienteBLL bll = new ClienteBLL();
             dgRegistros.DataSource = bll.Filtrar(txtFiltrar.Text);
             if (Posicionar_id > 0)
                 loc.Localizar(gdRegistros, Posicionar_id.ToString(), 0, true);
@@ -149,7 +149,7 @@ namespace GUI
         {
             if (e.FocusedRowHandle >= 0)
             {
-                BLLCliente bll = new BLLCliente();
+                ClienteBLL bll = new ClienteBLL();
                 Cliente modelo = bll.CarregaCliente(Convert.ToInt32(gdRegistros.GetDataRow(e.FocusedRowHandle).ItemArray[0]));
                 ModeloParaTela(modelo);
                 //alterabotoes(1);
@@ -203,7 +203,7 @@ namespace GUI
                 TelaParaModelo(modelo);
 
                 //objeto para gravar os dados no bd
-                BLLCliente bll = new BLLCliente();
+                ClienteBLL bll = new ClienteBLL();
 
                 if (this.operacao == "inserir")
                 {
@@ -237,7 +237,7 @@ namespace GUI
                 DialogResult d = MessageBox.Show("Deseja excluir o registro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
                 if (d.ToString() == "Yes")
                 {
-                    BLLCliente bll = new BLLCliente();
+                    ClienteBLL bll = new ClienteBLL();
                     bll.Exclui(Convert.ToInt32(txtId.Text));
                     LimpaTela();
                     Filtrar();

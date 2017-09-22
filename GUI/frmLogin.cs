@@ -104,7 +104,7 @@ namespace GUI
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            BLLUsuario bllUsuario = new BLLUsuario();
+            UsuarioBLL bllUsuario = new UsuarioBLL();
 
             Usuario us = bllUsuario.CarregaUsuario(txtUsuario.Text, txtSenha.Text);
 

@@ -46,25 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassBD.cs" />
-    <Compile Include="DALAgendaCriacao.cs" />
-    <Compile Include="DALAgendaPedido.cs" />
-    <Compile Include="DALBordados.cs" />
-    <Compile Include="DALCatalogo.cs" />
-    <Compile Include="DALCliente.cs" />
-    <Compile Include="DALEmpregado.cs" />
-    <Compile Include="DALFornecedor.cs" />
-    <Compile Include="DALGrupo.cs" />
-    <Compile Include="DALItem.cs" />
-    <Compile Include="DALLinha.cs" />
-    <Compile Include="DALLinhaHistorico.cs" />
-    <Compile Include="DALLog.cs" />
-    <Compile Include="DALNotaEspecifica.cs" />
-    <Compile Include="DALParametros.cs" />
-    <Compile Include="DALPedido.cs" />
-    <Compile Include="DALUsuario.cs" />
-    <Compile Include="DALLocal.cs" />
-    <Compile Include="MySqlParametro.cs" />
+    <Compile Include="Util\ClassBD.cs" />
+    <Compile Include="AgendaCriacaoDAL.cs" />
+    <Compile Include="AgendaPedidoDAL.cs" />
+    <Compile Include="BordadosDAL.cs" />
+    <Compile Include="CatalogoDAL.cs" />
+    <Compile Include="ClienteDAL.cs" />
+    <Compile Include="EmpregadoDAL.cs" />
+    <Compile Include="FornecedorDAL.cs" />
+    <Compile Include="GrupoDAL.cs" />
+    <Compile Include="ItemDAL.cs" />
+    <Compile Include="LinhaDAL.cs" />
+    <Compile Include="LinhaHistoricoDAL.cs" />
+    <Compile Include="LogDAL.cs" />
+    <Compile Include="NotaEspecificaDAL.cs" />
+    <Compile Include="Util\ParametrosDAL.cs" />
+    <Compile Include="PedidoDAL.cs" />
+    <Compile Include="UsuarioDAL.cs" />
+    <Compile Include="LocalDAL.cs" />
+    <Compile Include="Util\MySqlParametro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

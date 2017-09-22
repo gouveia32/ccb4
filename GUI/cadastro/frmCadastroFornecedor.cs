@@ -81,7 +81,7 @@ namespace GUI
 
         private void Filtrar(int Posicionar_id = 0)
         {
-            BLLFornecedor bll = new BLLFornecedor();
+            FornecedorBLL bll = new FornecedorBLL();
             dgRegistros.DataSource = bll.Filtrar(txtFiltrar.Text);
             dgRegistros.DataSource = bll.Filtrar(txtFiltrar.Text);
             if (Posicionar_id > 0)
@@ -124,7 +124,7 @@ namespace GUI
         {
             if (e.FocusedRowHandle >= 0)
             {
-                BLLFornecedor bll = new BLLFornecedor();
+                FornecedorBLL bll = new FornecedorBLL();
                 Fornecedor modelo = bll.CarregaModeloFornecedor(Convert.ToInt32(gdRegistros.GetDataRow(e.FocusedRowHandle).ItemArray[0]));
                 ModeloParaTela(modelo);
                 //alterabotoes(1);
@@ -157,7 +157,7 @@ namespace GUI
                 TelaParaModelo(modelo);
 
                 //objeto para gravar os dados no bd
-                BLLFornecedor bll = new BLLFornecedor();
+                FornecedorBLL bll = new FornecedorBLL();
 
                 if (this.operacao == "inserir")
                 {
@@ -191,7 +191,7 @@ namespace GUI
                 DialogResult d = MessageBox.Show("Deseja excluir o registro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
                 if (d.ToString() == "Yes")
                 {
-                    BLLFornecedor bll = new BLLFornecedor();
+                    FornecedorBLL bll = new FornecedorBLL();
                     bll.Exclui(Convert.ToInt32(txtId.Text));
                     LimpaTela();
                     Filtrar();

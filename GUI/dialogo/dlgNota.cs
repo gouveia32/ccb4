@@ -44,7 +44,7 @@ namespace GUI
         public void CarregaComboClientes()
         {
             //Carrega combo Cliente
-            BLLCliente bll = new BLLCliente();
+            ClienteBLL bll = new ClienteBLL();
 
             cbCliente.DataSource = bll.Filtrar("");
             cbCliente.DisplayMember = "nome";

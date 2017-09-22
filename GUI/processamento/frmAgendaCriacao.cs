@@ -18,7 +18,7 @@ namespace GUI
         DateTime inicioSemana;
         private AppointmentBaseCollection collection;
 
-        BLLAgendaCriacao bll = new BLLAgendaCriacao();
+        AgendaCriacaoBLL bll = new AgendaCriacaoBLL();
         private MySqlDataAdapter EntradasMySqlDataAdapter = new MySqlDataAdapter();
         private MySqlCommandBuilder EntradasMySqlCommandBuilder = new MySqlCommandBuilder();
 
@@ -357,7 +357,7 @@ namespace GUI
             DateTime m = Convert.ToDateTime(string.Format("{0:yyyy-MM-dd} 07:50", dia));
             DataTable dt;
 
-            BLLAgendaCriacao bllu = new BLLAgendaCriacao();
+            AgendaCriacaoBLL bllu = new AgendaCriacaoBLL();
 
             dt = bllu.CarregaUltimaEntrada(dia);
             if (dt.Rows.Count == 1)

@@ -18,7 +18,7 @@ namespace GUI
         DateTime inicioSemana;
         private AppointmentBaseCollection collection;
 
-        BLLAgendaPedido bll = new BLLAgendaPedido();
+        AgendaPedidoBLL bll = new AgendaPedidoBLL();
         private MySqlDataAdapter EntradasMySqlDataAdapter = new MySqlDataAdapter();
         private MySqlCommandBuilder EntradasMySqlCommandBuilder = new MySqlCommandBuilder();
 
@@ -355,7 +355,7 @@ namespace GUI
             DateTime m = Convert.ToDateTime(string.Format("{0:yyyy-MM-dd} 07:50", dia));
             DataTable dt;
 
-            BLLAgendaPedido bllu = new BLLAgendaPedido();
+            AgendaPedidoBLL bllu = new AgendaPedidoBLL();
 
             dt = bllu.CarregaUltimaEntrada( dia);
             if (dt.Rows.Count == 1)
@@ -396,7 +396,7 @@ namespace GUI
                         DataTable dt;
                         string where = string.Format("start='{0:yyyy-MM-dd HH:mm:ss}' AND pedido_id={1:d}", SchedulerControl.SelectedAppointments[0].Start, SchedulerControl.SelectedAppointments[0].Location);
 
-                        //BLLAgendaPedido bll = new BLLAgendaPedido();
+                        //AgendaPedidoBLL bll = new AgendaPedidoBLL();
 
                         dt = bll.CarregaEntradas(where);
                         if (dt.Rows.Count > 0)

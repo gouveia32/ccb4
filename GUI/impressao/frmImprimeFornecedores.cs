@@ -16,7 +16,7 @@ namespace GUI
 
         private void frmImprimeFornecedores_DataSourceDemanded(object sender, EventArgs e)
         {
-            BLLFornecedor bll = new BLLFornecedor();
+            FornecedorBLL bll = new FornecedorBLL();
             this.DataSource = bll.Filtrar("");
         }
     }
