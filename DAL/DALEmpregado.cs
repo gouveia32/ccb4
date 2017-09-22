@@ -161,28 +161,17 @@ namespace DAL
             modelo.id = Convert.ToInt32(registro["id"].ToString());
             modelo.nome = Convert.ToString(registro["nome"]);
             modelo.funcao = Convert.ToString(registro["funcao"]);
+            modelo.nascimento = Convert.ToString(registro["nascimento"]);
+            modelo.admissao = Convert.ToString(registro["admissao"]);
+            modelo.demissao = registro["demissao"].ToString();
 
-            DateTime? dt = null;
+            //   DateTime? dt = null;
 
-            if (registro["nascimento"] != DBNull.Value)
-            {
-                dt = (DateTime)registro["nascimento"];
-            }
-            modelo.nascimento = Convert.ToDateTime(dt);
-
-            dt = null;
-            if (registro["admissao"] != DBNull.Value)
-            {
-                dt = (DateTime)registro["admissao"];
-            }
-            modelo.admissao = Convert.ToDateTime(dt);
-
-            dt = null;
-            if (registro["demissao"] != DBNull.Value)
-            {
-                dt = (DateTime)registro["demissao"];
-            }
-            modelo.demissao = Convert.ToDateTime(dt);
+            //  if (registro["nascimento"] != DBNull.Value)
+            //  {
+            //      dt = (DateTime)registro["nascimento"];
+            //  }
+            //  modelo.nascimento = Convert.ToDateTime(dt);
 
             modelo.endereco = Convert.ToString(registro["endereco"]);
             modelo.cidade = Convert.ToString(registro["cidade"]);

@@ -31,7 +31,7 @@ namespace GUI
             txtNome.Text = "";
             deNascimento.EditValue = Convert.ToDateTime(null);
             deAdmissao.EditValue = Convert.ToDateTime(null);
-            deDemissao.EditValue = Convert.ToDateTime(null);
+            deDemissao.EditValue = "";
             txtFuncao.Text = "";
             txtTelefone1.Text = "";
             txtTelefone2.Text = "";
@@ -70,9 +70,9 @@ namespace GUI
             else
                 modelo.id = Convert.ToInt32(txtId.Text);
             modelo.nome = txtNome.Text;
-            modelo.nascimento = Convert.ToDateTime(deNascimento.EditValue);
-            modelo.admissao = Convert.ToDateTime(deAdmissao.EditValue);
-            modelo.demissao = Convert.ToDateTime(deDemissao.EditValue);
+            modelo.nascimento = Convert.ToString(deNascimento.EditValue);
+            modelo.admissao = Convert.ToString(deAdmissao.EditValue);
+            modelo.demissao = string.Format("{0:d}",deDemissao.EditValue);
             modelo.funcao = txtFuncao.Text;
             modelo.endereco = txtEndereco.Text;
             modelo.cidade = txtCidade.Text;

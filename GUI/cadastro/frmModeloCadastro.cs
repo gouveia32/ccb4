@@ -25,8 +25,8 @@ namespace GUI
             // 2 = Preparar para Inserir/Alterar um registro
             // 3 = Prepara para Excluir ou Alterar
             //split1.Expanded  = false;
-            scc1.Panel2.Enabled = false;
-            scc1.Panel2.Visible = false;
+            //scc1.Panel2.Enabled = false;
+            //scc1.Panel2.Visible = false;
             //btnInserir.Enabled = false;
             //btnAlterar.Enabled = false;
             //btnAlterar.Down = true;
@@ -43,7 +43,7 @@ namespace GUI
             {
                 //scc1.Collapsed = false;
                 //scc1.SplitterPosition = 480;
-                scc1.Panel2.Visible = true;
+                //scc1.Panel2.Visible = true;
                 //btnInserir.Enabled = true;
                 btnExcluir.Enabled = true;
                 //btnAlterar.Down = true;
@@ -57,8 +57,8 @@ namespace GUI
             if (op == 2)
             {
                 //scc1.Collapsed = true;
-                scc1.Panel2.Enabled = true;
-                scc1.Panel2.Visible = true;
+                //scc1.Panel2.Enabled = true;
+                //scc1.Panel2.Visible = true;
                 btnGravar.Enabled = true;
                 btnCancelar.Enabled = true;
             }
@@ -66,8 +66,8 @@ namespace GUI
             if (op == 3)
             {
                 //scc1.Collapsed = true;
-                scc1.Panel2.Enabled = false;
-                scc1.Panel2.Visible = true;
+                //scc1.Panel2.Enabled = false;
+                //scc1.Panel2.Visible = true;
                 //btnAlterar.Enabled = true;
                 btnAlterar.Down = true;
                 btnExcluir.Enabled = true;

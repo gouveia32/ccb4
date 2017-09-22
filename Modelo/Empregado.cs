@@ -7,9 +7,9 @@ namespace Modelo
     {
         public string nome { get; set; }
         public string funcao { get; set; }
-        public DateTime? nascimento { get; set; }
-        public DateTime? admissao { get; set; }
-        public DateTime? demissao { get; set; }
+        public string nascimento { get; set; }
+        public string admissao { get; set; }
+        public string demissao { get; set; }
         public string endereco { get; set; }
         public string cidade { get; set; }
         public string uf { get; set; }
